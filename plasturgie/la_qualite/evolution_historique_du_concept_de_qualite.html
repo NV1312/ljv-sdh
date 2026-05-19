@@ -1,0 +1,2674 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+  <title>Evolution historique du concept de qualit&eacute;</title>
+
+
+  <meta content="ressources" name="description">
+
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+  <script>
+// fonction pour dessiner
+function draw1()
+{ // Largeur et hauteur en pixels
+var W1=1000;H1=450;
+var canvas1=document.getElementById("graphe");
+canvas1.width=W1;canvas1.height=H1;
+var ctx=canvas1.getContext("2d");
+// etape 1 -----------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=4;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(10, 100, 90, 50);ctx.stroke();
+ctx.rect(10, 100, 90, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 100, 100, 50);ctx.stroke();
+ctx.rect(150, 100, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 300, 100, 50);ctx.stroke();
+ctx.rect(150, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 200, 100, 50);ctx.stroke();
+ctx.rect(300, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 300, 100, 50);ctx.stroke();
+ctx.rect(300, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(450, 200, 100, 50);ctx.stroke();
+ctx.rect(450, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(600, 250, 100, 50);ctx.stroke();
+ctx.rect(600, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(750, 250, 100, 50);ctx.stroke();
+ctx.rect(750, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(900, 250, 90, 50);ctx.stroke();
+ctx.rect(900, 250, 90, 50);ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Début", 30, 130);
+ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("A", 190, 130);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("B", 190, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("C", 340, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("D", 340, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("E", 490, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("F", 640, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("G", 790, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Fin", 930, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("Le graphe s ecrit de la gauche vers la droite.", 50, 20);
+ctx.fillText("On évite, au maximum, de couper les transitions (flèches).", 50, 40);
+ctx.fillText("On commence le graphe par une case début.On finit le graphe par une case fin.", 50, 60);
+ctx.stroke();
+// --------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(100,125);
+ctx.lineTo(100+50,125);
+// --------------------------
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125-5);
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125+5);
+// --------------------------
+ctx.moveTo(100,125);
+ctx.lineTo(100+30,325);
+ctx.lineTo(100+50,325);
+// --------------------------
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325-5);
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325+5);
+ctx.moveTo(250,325);
+ctx.lineTo(250+50,325);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325-5);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325+5);
+// --------------------------
+ctx.moveTo(250,325);
+ctx.lineTo(300-20,225+10);
+ctx.lineTo(300,225+10);
+ctx.lineTo(300-10,225-5+10);
+ctx.moveTo(300,225+10);
+ctx.lineTo(300-10,225+5+10);
+// --------------------------
+ctx.moveTo(250,125);
+ctx.lineTo(300-20,225-10);
+ctx.lineTo(300,225-10);
+// --------------------------
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225-5-10);
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225+5-10);
+// --------------------------
+ctx.moveTo(400,225);
+ctx.lineTo(450,225);
+// --------------------------
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225-5);
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225+5);
+// --------------------------
+ctx.moveTo(550,225);
+ctx.lineTo(600-20,275-10);
+ctx.lineTo(600,275-10);
+// --------------------------
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265-5);
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265+5);
+// --------------------------
+ctx.moveTo(400,325);
+ctx.lineTo(600-20,265+20);
+ctx.lineTo(600,265+20);
+// --------------------------
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285-5);
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285+5);
+// --------------------------
+ctx.moveTo(700,275);
+ctx.lineTo(750,275);
+// --------------------------
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275-5);
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275+5);
+// --------------------------
+ctx.moveTo(850,275);
+ctx.lineTo(900,275);
+// --------------------------
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275-5);
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275+5);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("4", 235, 145);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("7", 235, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 385, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("12", 380, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("3", 535, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("6", 685, 295);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 835, 295);
+ctx.stroke();
+// --------------------------
+}
+function draw2()
+{ // Largeur et hauteur en pixels
+var W2=1000;H2=450;
+var canvas2=document.getElementById("graphe");
+canvas2.width=W2;canvas2.height=H2;
+var ctx=canvas2.getContext("2d");
+// etape 1 -----------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=4;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(10, 100, 90, 50);ctx.stroke();
+ctx.rect(10, 100, 90, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 100, 100, 50);ctx.stroke();
+ctx.rect(150, 100, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 300, 100, 50);ctx.stroke();
+ctx.rect(150, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 200, 100, 50);ctx.stroke();
+ctx.rect(300, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 300, 100, 50);ctx.stroke();
+ctx.rect(300, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(450, 200, 100, 50);ctx.stroke();
+ctx.rect(450, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(600, 250, 100, 50);ctx.stroke();
+ctx.rect(600, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(750, 250, 100, 50);ctx.stroke();
+ctx.rect(750, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(900, 250, 90, 50);ctx.stroke();
+ctx.rect(900, 250, 90, 50);ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Début", 30, 130);
+ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("A", 190, 130);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("B", 190, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("C", 340, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("D", 340, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("E", 490, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("F", 640, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("G", 790, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Fin", 930, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("La durée du projet est calculée en partant de la gauche vers la droite.", 50, 20);
+ctx.fillText("On écrit pour chaque tâche le début et la fin de la tâche.", 50, 40);
+ctx.stroke();
+// --------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(100,125);
+ctx.lineTo(100+50,125);
+// --------------------------
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125-5);
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125+5);
+// --------------------------
+ctx.moveTo(100,125);
+ctx.lineTo(100+30,325);
+ctx.lineTo(100+50,325);
+// --------------------------
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325-5);
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325+5);
+ctx.moveTo(250,325);
+ctx.lineTo(250+50,325);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325-5);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325+5);
+// --------------------------
+ctx.moveTo(250,325);
+ctx.lineTo(300-20,225+10);
+ctx.lineTo(300,225+10);
+ctx.lineTo(300-10,225-5+10);
+ctx.moveTo(300,225+10);
+ctx.lineTo(300-10,225+5+10);
+// --------------------------
+ctx.moveTo(250,125);
+ctx.lineTo(300-20,225-10);
+ctx.lineTo(300,225-10);
+// --------------------------
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225-5-10);
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225+5-10);
+// --------------------------
+ctx.moveTo(400,225);
+ctx.lineTo(450,225);
+// --------------------------
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225-5);
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225+5);
+// --------------------------
+ctx.moveTo(550,225);
+ctx.lineTo(600-20,275-10);
+ctx.lineTo(600,275-10);
+// --------------------------
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265-5);
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265+5);
+// --------------------------
+ctx.moveTo(400,325);
+ctx.lineTo(600-20,265+20);
+ctx.lineTo(600,265+20);
+// --------------------------
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285-5);
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285+5);
+// --------------------------
+ctx.moveTo(700,275);
+ctx.lineTo(750,275);
+// --------------------------
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275-5);
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275+5);
+// --------------------------
+ctx.moveTo(850,275);
+ctx.lineTo(900,275);
+// --------------------------
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275-5);
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275+5);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("4", 235, 145);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("7", 235, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 385, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("12", 380, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("3", 535, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("6", 685, 295);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 835, 295);
+ctx.stroke();
+// etape 2 ----------------------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 170);
+ctx.fillText("4", 235, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 370);
+ctx.fillText("7", 235, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 270);
+ctx.fillText("9", 385, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 370);
+ctx.fillText("19", 380, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("9", 455, 270);
+ctx.fillText("12", 530, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 320);
+ctx.fillText("25", 675, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 320);
+ctx.fillText("27", 825, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 325);
+ctx.stroke();
+}
+//---------------------------------------------
+function draw3()
+{ // Largeur et hauteur en pixels
+var W1=1000;H1=450;
+var canvas=document.getElementById("graphe");
+canvas.width=W1;canvas.height=H1;
+var ctx=canvas.getContext("2d");
+// etape 1 -----------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=4;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(10, 100, 90, 50);ctx.stroke();
+ctx.rect(10, 100, 90, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 100, 100, 50);ctx.stroke();
+ctx.rect(150, 100, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 300, 100, 50);ctx.stroke();
+ctx.rect(150, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 200, 100, 50);ctx.stroke();
+ctx.rect(300, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 300, 100, 50);ctx.stroke();
+ctx.rect(300, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(450, 200, 100, 50);ctx.stroke();
+ctx.rect(450, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(600, 250, 100, 50);ctx.stroke();
+ctx.rect(600, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(750, 250, 100, 50);ctx.stroke();
+ctx.rect(750, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(900, 250, 90, 50);ctx.stroke();
+ctx.rect(900, 250, 90, 50);ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Début", 30, 130);
+ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("A", 190, 130);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("B", 190, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("C", 340, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("D", 340, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("E", 490, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("F", 640, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("G", 790, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Fin", 930, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("On écrit le chemin en partant de la droite vers la gauche.", 50, 20);
+ctx.stroke();
+// --------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(100,125);
+ctx.lineTo(100+50,125);
+// --------------------------
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125-5);
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125+5);
+// --------------------------
+ctx.moveTo(100,125);
+ctx.lineTo(100+30,325);
+ctx.lineTo(100+50,325);
+// --------------------------
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325-5);
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325+5);
+ctx.moveTo(250,325);
+ctx.lineTo(250+50,325);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325-5);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325+5);
+// --------------------------
+ctx.moveTo(250,325);
+ctx.lineTo(300-20,225+10);
+ctx.lineTo(300,225+10);
+ctx.lineTo(300-10,225-5+10);
+ctx.moveTo(300,225+10);
+ctx.lineTo(300-10,225+5+10);
+// --------------------------
+ctx.moveTo(250,125);
+ctx.lineTo(300-20,225-10);
+ctx.lineTo(300,225-10);
+// --------------------------
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225-5-10);
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225+5-10);
+// --------------------------
+ctx.moveTo(400,225);
+ctx.lineTo(450,225);
+// --------------------------
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225-5);
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225+5);
+// --------------------------
+ctx.moveTo(550,225);
+ctx.lineTo(600-20,275-10);
+ctx.lineTo(600,275-10);
+// --------------------------
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265-5);
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265+5);
+// --------------------------
+ctx.moveTo(400,325);
+ctx.lineTo(600-20,265+20);
+ctx.lineTo(600,265+20);
+// --------------------------
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285-5);
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285+5);
+// --------------------------
+ctx.moveTo(700,275);
+ctx.lineTo(750,275);
+// --------------------------
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275-5);
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275+5);
+// --------------------------
+ctx.moveTo(850,275);
+ctx.lineTo(900,275);
+// --------------------------
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275-5);
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275+5);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("4", 235, 145);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("7", 235, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 385, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("12", 380, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("3", 535, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("6", 685, 295);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 835, 295);
+ctx.stroke();
+// etape 2 ----------------------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 170);
+ctx.fillText("4", 235, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 370);
+ctx.fillText("7", 235, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 270);
+ctx.fillText("9", 385, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 370);
+ctx.fillText("19", 380, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("9", 455, 270);
+ctx.fillText("12", 530, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 320);
+ctx.fillText("25", 675, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 320);
+ctx.fillText("27", 825, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 325);
+ctx.stroke();
+// etape 3 ----------------------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 90);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("10", 155, 90);
+ctx.fillText("14", 230, 90);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 290);
+ctx.fillText("7", 235, 290);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("14", 305, 190);
+ctx.fillText("16", 380, 190);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 290);
+ctx.fillText("19", 380, 290);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("16", 455, 190);
+ctx.fillText("19", 530, 190);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 240);
+ctx.fillText("25", 675, 240);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 240);
+ctx.fillText("27", 825, 240);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 245);
+ctx.stroke();
+}
+//---------------------------------------------
+function draw4()
+{ // Largeur et hauteur en pixels
+var W1=1000;H1=450;
+var canvas=document.getElementById("graphe");
+canvas.width=W1;canvas.height=H1;
+var ctx=canvas.getContext("2d");
+// etape 1 -----------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=4;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(10, 100, 90, 50);ctx.stroke();
+ctx.rect(10, 100, 90, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 100, 100, 50);ctx.stroke();
+ctx.rect(150, 100, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 300, 100, 50);ctx.stroke();
+ctx.rect(150, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 200, 100, 50);ctx.stroke();
+ctx.rect(300, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 300, 100, 50);ctx.stroke();
+ctx.rect(300, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(450, 200, 100, 50);ctx.stroke();
+ctx.rect(450, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(600, 250, 100, 50);ctx.stroke();
+ctx.rect(600, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(750, 250, 100, 50);ctx.stroke();
+ctx.rect(750, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(900, 250, 90, 50);ctx.stroke();
+ctx.rect(900, 250, 90, 50);ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Début", 30, 130);
+ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("A", 190, 130);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("B", 190, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("C", 340, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("D", 340, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("E", 490, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("F", 640, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("G", 790, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Fin", 930, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("On calcul les marges pour chaque tâche.", 50, 20);
+ctx.stroke();
+// --------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(100,125);
+ctx.lineTo(100+50,125);
+// --------------------------
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125-5);
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125+5);
+// --------------------------
+ctx.moveTo(100,125);
+ctx.lineTo(100+30,325);
+ctx.lineTo(100+50,325);
+// --------------------------
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325-5);
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325+5);
+ctx.moveTo(250,325);
+ctx.lineTo(250+50,325);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325-5);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325+5);
+// --------------------------
+ctx.moveTo(250,325);
+ctx.lineTo(300-20,225+10);
+ctx.lineTo(300,225+10);
+ctx.lineTo(300-10,225-5+10);
+ctx.moveTo(300,225+10);
+ctx.lineTo(300-10,225+5+10);
+// --------------------------
+ctx.moveTo(250,125);
+ctx.lineTo(300-20,225-10);
+ctx.lineTo(300,225-10);
+// --------------------------
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225-5-10);
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225+5-10);
+// --------------------------
+ctx.moveTo(400,225);
+ctx.lineTo(450,225);
+// --------------------------
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225-5);
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225+5);
+// --------------------------
+ctx.moveTo(550,225);
+ctx.lineTo(600-20,275-10);
+ctx.lineTo(600,275-10);
+// --------------------------
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265-5);
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265+5);
+// --------------------------
+ctx.moveTo(400,325);
+ctx.lineTo(600-20,265+20);
+ctx.lineTo(600,265+20);
+// --------------------------
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285-5);
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285+5);
+// --------------------------
+ctx.moveTo(700,275);
+ctx.lineTo(750,275);
+// --------------------------
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275-5);
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275+5);
+// --------------------------
+ctx.moveTo(850,275);
+ctx.lineTo(900,275);
+// --------------------------
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275-5);
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275+5);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("4", 235, 145);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("7", 235, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 385, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("12", 380, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("3", 535, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("6", 685, 295);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 835, 295);
+ctx.stroke();
+// etape 2 ----------------------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 170);
+ctx.fillText("4", 235, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 370);
+ctx.fillText("7", 235, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 270);
+ctx.fillText("9", 385, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 370);
+ctx.fillText("19", 380, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("9", 455, 270);
+ctx.fillText("12", 530, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 320);
+ctx.fillText("25", 675, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 320);
+ctx.fillText("27", 825, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 325);
+ctx.stroke();
+// etape 3 ----------------------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 90);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("10", 155, 90);
+ctx.fillText("14", 230, 90);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 290);
+ctx.fillText("7", 235, 290);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("14", 305, 190);
+ctx.fillText("16", 380, 190);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 290);
+ctx.fillText("19", 380, 290);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("16", 455, 190);
+ctx.fillText("19", 530, 190);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 240);
+ctx.fillText("25", 675, 240);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 240);
+ctx.fillText("27", 825, 240);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 245);
+ctx.stroke();
+// etape 4 -----------------------------------
+// --------------------------
+ctx.fillStyle="#FF0000";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("10", 235-7, 145-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 235, 345-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 385, 245-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 380, 345-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 535, 245-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 685, 295-25);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 835, 295-25);
+ctx.stroke();
+}
+//---------------------------------------------
+function draw5()
+{ // Largeur et hauteur en pixels
+var W1=1000;H1=450;
+var canvas=document.getElementById("graphe");
+canvas.width=W1;canvas.height=H1;
+var ctx=canvas.getContext("2d");
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("Le chemin critique est le chemin ou les marges sont à zéro.", 50, 20);
+ctx.stroke();
+// etape 1 -----------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=4;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.fillStyle = "#FFFF00";
+ctx.fillRect(10, 100, 90, 50);ctx.stroke();
+ctx.rect(10, 100, 90, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 100, 100, 50);ctx.stroke();
+ctx.rect(150, 100, 100, 50);ctx.stroke();
+ctx.fillStyle = "#FFFF00";
+ctx.fillRect(150, 300, 100, 50);ctx.stroke();
+ctx.rect(150, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 200, 100, 50);ctx.stroke();
+ctx.rect(300, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "#FFFF00";
+ctx.fillRect(300, 300, 100, 50);ctx.stroke();
+ctx.rect(300, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(450, 200, 100, 50);ctx.stroke();
+ctx.rect(450, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "#FFFF00";
+ctx.fillRect(600, 250, 100, 50);ctx.stroke();
+ctx.rect(600, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "#FFFF00";
+ctx.fillRect(750, 250, 100, 50);ctx.stroke();
+ctx.rect(750, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "#FFFF00";
+ctx.fillRect(900, 250, 90, 50);ctx.stroke();
+ctx.rect(900, 250, 90, 50);ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Début", 30, 130);
+ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("A", 190, 130);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("B", 190, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("C", 340, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("D", 340, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("E", 490, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("F", 640, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("G", 790, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Fin", 930, 130+150);
+ctx.stroke();
+// --------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(100,125);
+ctx.lineTo(100+50,125);
+// --------------------------
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125-5);
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125+5);
+// --------------------------
+ctx.moveTo(100,125);
+ctx.lineTo(100+30,325);
+ctx.lineTo(100+50,325);
+// --------------------------
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325-5);
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325+5);
+ctx.moveTo(250,325);
+ctx.lineTo(250+50,325);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325-5);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325+5);
+// --------------------------
+ctx.moveTo(250,325);
+ctx.lineTo(300-20,225+10);
+ctx.lineTo(300,225+10);
+ctx.lineTo(300-10,225-5+10);
+ctx.moveTo(300,225+10);
+ctx.lineTo(300-10,225+5+10);
+// --------------------------
+ctx.moveTo(250,125);
+ctx.lineTo(300-20,225-10);
+ctx.lineTo(300,225-10);
+// --------------------------
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225-5-10);
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225+5-10);
+// --------------------------
+ctx.moveTo(400,225);
+ctx.lineTo(450,225);
+// --------------------------
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225-5);
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225+5);
+// --------------------------
+ctx.moveTo(550,225);
+ctx.lineTo(600-20,275-10);
+ctx.lineTo(600,275-10);
+// --------------------------
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265-5);
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265+5);
+// --------------------------
+ctx.moveTo(400,325);
+ctx.lineTo(600-20,265+20);
+ctx.lineTo(600,265+20);
+// --------------------------
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285-5);
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285+5);
+// --------------------------
+ctx.moveTo(700,275);
+ctx.lineTo(750,275);
+// --------------------------
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275-5);
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275+5);
+// --------------------------
+ctx.moveTo(850,275);
+ctx.lineTo(900,275);
+// --------------------------
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275-5);
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275+5);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("4", 235, 145);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("7", 235, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 385, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("12", 380, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("3", 535, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("6", 685, 295);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 835, 295);
+ctx.stroke();
+// etape 2 ----------------------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 170);
+ctx.fillText("4", 235, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 370);
+ctx.fillText("7", 235, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 270);
+ctx.fillText("9", 385, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 370);
+ctx.fillText("19", 380, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("9", 455, 270);
+ctx.fillText("12", 530, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 320);
+ctx.fillText("25", 675, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 320);
+ctx.fillText("27", 825, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 325);
+ctx.stroke();
+// etape 3 ----------------------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 90);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("10", 155, 90);
+ctx.fillText("14", 230, 90);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 290);
+ctx.fillText("7", 235, 290);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("14", 305, 190);
+ctx.fillText("16", 380, 190);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 290);
+ctx.fillText("19", 380, 290);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("16", 455, 190);
+ctx.fillText("19", 530, 190);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 240);
+ctx.fillText("25", 675, 240);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 240);
+ctx.fillText("27", 825, 240);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 245);
+ctx.stroke();
+// etape 4 -----------------------------------
+// --------------------------
+ctx.fillStyle="#FF0000";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("10", 235-7, 145-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 235, 345-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 385, 245-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 380, 345-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 535, 245-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 685, 295-25);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 835, 295-25);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#000000";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Chemin critique: début - B - D - F - G - fin", 335, 420);
+ctx.stroke();
+}
+//---------------------------------------------
+//---------------------------------------------
+function draw6()
+{ // Largeur et hauteur en pixels
+var W1=1000;H1=450;
+var canvas=document.getElementById("graphe");
+canvas.width=W1;canvas.height=H1;
+var ctx=canvas.getContext("2d");
+ctx.fillStyle="#000000";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 22px Arial";
+ctx.fillText("Tracé du graphe PERT", 335, 220);
+ctx.stroke();
+}
+  </script>
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+<br>
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+  <tbody>
+
+    <tr>
+
+      <td>
+      <div style="text-align: left;"></div>
+
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+        <tbody>
+
+          <tr>
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="background-color: rgb(64, 64, 64);">
+            <div id="menu">
+            <ul>
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">Evolution
+historique du concept de qualit&eacute;</span></big></big></big></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 992px; height: 392px;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; width: 544px;">1.
+                  <a href="#1"><span style="text-decoration: underline;">Origines artisanales &agrave; la formalisation des premi&egrave;res r&egrave;gles</span></a><br>
+
+                  <br>
+
+                  <span style="font-family: Arial; font-weight: bold;">2. <a href="#2"><span style="text-decoration: underline;">De la r&eacute;flexion philosophique &agrave; l&rsquo;enjeu &eacute;conomique</span></a></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;"><br>
+
+3. <a href="#3"><span style="text-decoration: underline;">De la production artisanale &agrave; la production industrielle</span></a><br>
+
+                  <br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><a href="#4"><span style="text-decoration: underline;"></span></a></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span><span style="font-family: Arial; font-weight: bold;">4. <a href="#4"><span style="text-decoration: underline;">Du contr&ocirc;le &agrave; la ma&icirc;trise de la qualit&eacute;</span></a><br>
+
+                  <br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span><span style="font-family: Arial; font-weight: bold;">5. <a href="#5"><span style="text-decoration: underline;">La qualit&eacute; &agrave; l&rsquo;&egrave;re de la normalisation et de la mondialisation</span></a><br>
+
+                  <br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;">6.&nbsp;<a href="#6"><span style="text-decoration: underline;">Conclusion</span></a><br>
+
+                  <br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span><span style="font-family: Arial; font-weight: bold;">7. <a href="#7"><span style="text-decoration: underline;">Fichiers</span></a></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;"><span style="text-decoration: underline;"></span></span></td>
+
+                  <td style="text-align: center; width: 442px;"><img style="width: 500px; height: 223px;" alt="" src="image_054.png"><br>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="text-align: center;">La
+d&eacute;finition du terme <big><span style="font-weight: bold;">qualit&eacute;</span></big>
+constitue un enjeu complexe, tant ce concept a plusieurs sens et est
+&eacute;volutif. <br>
+
+            <br>
+
+Dans une perspective industrielle, <big><span style="font-weight: bold;">la qualit&eacute;</span></big>
+peut &ecirc;tre comprise comme une mani&egrave;re
+d&rsquo;&ecirc;tre non mesurable qui conf&egrave;re
+&agrave; un produit ou &agrave; un service une valeur plus ou
+moins grande, par opposition &agrave; la quantit&eacute;.
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;"><big><big>1.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>Origines artisanales &agrave; la
+formalisation des premi&egrave;res r&egrave;gles</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 54px;">Depuis la
+pr&eacute;histoire, l&rsquo;&ecirc;tre humain
+con&ccedil;oit et fabrique des outils. Le concepteur, le fabricant
+et l&rsquo;utilisateur ne faisaient alors qu&rsquo;une seule et
+m&ecirc;me personne : la qualit&eacute; du produit
+&eacute;tait implicite, d&eacute;coulant directement du
+savoir-faire et de la responsabilit&eacute; individuelle. Aucun
+contr&ocirc;le externe n&rsquo;&eacute;tait
+n&eacute;cessaire.
+            <br>
+
+            <br>
+
+Avec la formation des premi&egrave;res
+soci&eacute;t&eacute;s organis&eacute;es, cette exigence
+s&rsquo;est institutionnalis&eacute;e. Vers 2000 av. J.-C., le
+roi de Babylone Hammourabi mit en place un syst&egrave;me de
+r&eacute;gulation formalis&eacute;e &agrave; travers un
+code, grav&eacute; sur une st&egrave;le publique. Certains
+articles, instauraient la responsabilit&eacute; du producteur
+envers le consommateur, l&rsquo;une des premi&egrave;res formes
+connues d&rsquo;obligation de r&eacute;sultat.
+            <br>
+
+            <br>
+
+Des exemples similaires apparaissent en &Eacute;gypte ancienne,
+avec des proc&eacute;dures de v&eacute;rification du travail
+d&egrave;s 1450 av. J.-C. . <br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;"><big><big>2.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>Les 5 principes
+du Lean Management</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: left;">
+            <div style="margin-left: 54px;">
+            <div style="text-align: center;">Quelques
+si&egrave;cles plus tard, Aristote propose une
+d&eacute;finition philosophique de la qualit&eacute;.
+            <br>
+
+            <br>
+
+&laquo; Ce qui fait qu&rsquo;on dit des &ecirc;tres
+qu&rsquo;ils sont de telle fa&ccedil;on. &raquo;
+            <br>
+
+            <br>
+
+Il en fait une cat&eacute;gorie du sensible, oppos&eacute;e
+&agrave; la quantit&eacute;, et donc non mesurable. Cette
+distinction fonde l&rsquo;id&eacute;e que la qualit&eacute;
+rel&egrave;ve d&rsquo;une appr&eacute;ciation subjective et
+immat&eacute;rielle.
+            <br>
+
+            </div>
+
+            <br>
+
+            <div style="text-align: center;">Au XVII&#7497;
+si&egrave;cle, la notion acquiert une dimension
+&eacute;conomique et strat&eacute;gique. Jean-Baptiste Colbert
+impose un contr&ocirc;le rigoureux dans les manufactures
+fran&ccedil;aises afin d&rsquo;assurer la r&eacute;putation
+du &laquo; made in France &raquo; :
+            <br>
+
+            <br>
+
+&laquo; Si nos fabriques imposent &agrave; force de soin la
+qualit&eacute; sup&eacute;rieure de nos produits, les
+&eacute;trangers trouveront avantage &agrave; se fournir en
+France. &raquo;
+            <br>
+
+            <br>
+
+La qualit&eacute; devient ainsi un instrument de politique
+&eacute;conomique et de comp&eacute;titivit&eacute;.
+            </div>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;"><big><big>3.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3"></a>De la production artisanale &agrave;
+la production industrielle</big></big><big><big>
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="height: 10px; text-align: right;">
+            <div style="margin-left: 54px; text-align: left;">
+            <div style="text-align: justify;">Jusqu&rsquo;au
+XVIII&#7497; si&egrave;cle, la qualit&eacute; demeure
+associ&eacute;e au savoir-faire artisanal. L&rsquo;artisan
+garantit lui-m&ecirc;me la conformit&eacute; du produit, dans
+un contexte de faible concurrence et de demande sup&eacute;rieure
+&agrave; l&rsquo;offre.
+            <br>
+
+            </div>
+
+            <br>
+
+            <div style="text-align: justify;">Avec la
+R&eacute;volution industrielle, la production de masse et la
+m&eacute;canisation fragmentent le processus : concepteur,
+producteur et client deviennent des acteurs distincts. La
+qualit&eacute; doit alors &ecirc;tre d&eacute;finie,
+mesur&eacute;e et contr&ocirc;l&eacute;e.
+Les premi&egrave;res fonctions d&rsquo;inspection apparaissent
+dans les secteurs militaires et ferroviaires, avec une approche
+essentiellement corrective, centr&eacute;e sur le
+contr&ocirc;le a posteriori.
+            </div>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>4.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="4"></a>Du
+contr&ocirc;le &agrave; la ma&icirc;trise de la
+qualit&eacute;</big></big><big><big>&nbsp;</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="height: 10px;">
+            <div style="margin-left: 54px; text-align: justify;">1
+Au d&eacute;but du XX&#7497; si&egrave;cle, les travaux de Taylor et
+Ford instaurent la standardisation et la productivit&eacute; comme
+valeurs dominantes. <br>
+
+            <br>
+
+Toutefois, cette logique de rendement tend &agrave;
+n&eacute;gliger la dimension humaine du travail.
+            <br>
+
+            <br>
+
+Dans les ann&eacute;es 1930, Walter A. Shewhart introduit les
+premiers contr&ocirc;les statistiques de
+proc&eacute;d&eacute;s (SPC), amor&ccedil;ant le passage
+d&rsquo;une qualit&eacute; subie &agrave; une
+qualit&eacute; ma&icirc;tris&eacute;e. <br>
+
+            <br>
+
+Apr&egrave;s 1945, les apports de Deming et Juran, notamment au
+Japon, transforment la qualit&eacute; en une philosophie de
+management participatif, centr&eacute;e sur la satisfaction client
+et l&rsquo;am&eacute;lioration continue (kaizen).
+            <br>
+
+            <br>
+
+Dans les ann&eacute;es 1950, l&rsquo;entreprise Toyota met en
+&oelig;uvre une v&eacute;ritable r&eacute;volution
+organisationnelle avec le Toyota Production System (TPS).
+Inspir&eacute; des principes de Deming et Juran, ce
+mod&egrave;le repose sur le Juste-&agrave;-Temps et la
+recherche du z&eacute;ro d&eacute;faut. <br>
+
+            <br>
+
+La qualit&eacute; devient une responsabilit&eacute; collective,
+int&eacute;gr&eacute;e &agrave; chaque &eacute;tape du
+processus, et non plus une simple fonction d&rsquo;inspection. Ce
+mod&egrave;le inspirera les d&eacute;marches.
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>5.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="5"></a>La
+qualit&eacute; &agrave; l&rsquo;&egrave;re de la
+normalisation et de la mondialisatio</big></big><big><big>n</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 54px;">La seconde
+moiti&eacute; du XX&#7497; si&egrave;cle voit na&icirc;tre une
+approche syst&eacute;mique et normalis&eacute;e.
+            <br>
+
+            <br>
+
+La publication de la s&eacute;rie ISO 9000 en 1987 marque une
+&eacute;tape majeure : la qualit&eacute; devient un
+syst&egrave;me de management, int&eacute;grant la
+tra&ccedil;abilit&eacute;, la documentation, la
+ma&icirc;trise des processus et la satisfaction client.
+            <br>
+
+            <br>
+
+&Agrave; l&rsquo;&egrave;re du num&eacute;rique, la
+qualit&eacute; d&eacute;passe la simple conformit&eacute; :
+elle englobe d&eacute;sormais la durabilit&eacute;, la
+responsabilit&eacute; soci&eacute;tale des entreprises (RSE),
+l&rsquo;innovation, la fiabilit&eacute; des algorithmes et la
+confiance num&eacute;rique. <br>
+
+            <br>
+
+Elle est devenue un v&eacute;ritable levier strat&eacute;gique
+pour assurer la performance et la p&eacute;rennit&eacute; des
+organisations globales.
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>6.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="6"></a>En
+conclusion</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 54px; text-align: justify;">L&rsquo;&eacute;volution
+du concept de qualit&eacute; r&eacute;v&egrave;le un long
+cheminement : d&rsquo;une exigence personnelle et intuitive
+&agrave; une d&eacute;marche collective, mesurable et
+certifi&eacute;e.
+            <br>
+
+            <br>
+
+De l&rsquo;artisan &agrave; l&rsquo;entreprise globale, la
+qualit&eacute; s&rsquo;est impos&eacute;e comme un outil
+strat&eacute;gique, au croisement de la technique, de
+l&rsquo;&eacute;thique et de l&rsquo;&eacute;conomie,
+capable de guider la performance, la
+comp&eacute;titivit&eacute; et la confiance dans un monde en
+constante mutation.
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>7.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="7"></a>Fichiers</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="evolution_historique_du_concept_de_qualite.docx">Fichier word</a>&nbsp;
+&nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 5px;"></td>
+
+                  <td style="text-align: center;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="evolution_historique_du_concept_de_qualite.pdf" target="_blank">Fichier
+PDF</a>&nbsp;&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+</body>
+</html>

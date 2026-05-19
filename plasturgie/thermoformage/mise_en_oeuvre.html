@@ -1,0 +1,1776 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+  <title>Bac pro PLC -Mondeville - Mise en oeuvre</title>
+
+
+  <meta content="ressources" name="description">
+
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link href="css" rel="stylesheet" type="text/css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+  <tbody>
+
+    <tr>
+
+      <td>
+      <div style="text-align: center;"></div>
+
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+        <tbody>
+
+          <tr>
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="background-color: rgb(64, 64, 64);">
+            <div id="menu">
+            <ul>
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">Mise en oeuvre</span></big></big></big></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 468px;" colspan="1" rowspan="1"><span style="font-family: Arial; font-weight: bold;">1. <a href="#1"><span style="text-decoration: underline;">Pr&eacute;paration
+mati&egrave;re</span></a></span><br style="font-family: Arial; font-weight: bold;">
+
+                  <span style="font-family: Arial; font-weight: bold;"></span><br style="font-family: Arial; font-weight: bold;">
+
+                  <span style="font-family: Arial; font-weight: bold;">2. <a href="#2"><span style="text-decoration: underline;">Cycle
+de fabrication</span></a><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><br>
+
+                  <span style="text-decoration: underline;"></span></span><span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 2.1.
+&nbsp;<a href="mise_en_oeuvre.html#21">Poste commun</a><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><span style="text-decoration: underline;"> <br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 2.2.
+&nbsp;<a href="mise_en_oeuvre.html#22">Postes
+s&eacute;par&eacute;s</a><br>
+
+                  </span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">3. <a href="#3">Param&egrave;tres de r&eacute;glage
+d&rsquo;une machine de thermoformage</a><br>
+
+                  <br>
+
+                  <span style="text-decoration: underline;"></span></span><span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 3.1.
+&nbsp;<a href="#31">Les vitesses</a><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><span style="text-decoration: underline;"> <br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 3.2.
+&nbsp;<a href="#32">R&eacute;glage des courses</a><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><span style="text-decoration: underline;"> <br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 3.3.
+&nbsp;<a href="#33">R&eacute;glage des temps</a><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><span style="text-decoration: underline;"> <br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 3.4.
+&nbsp;<a href="mise_en_oeuvre.html#34">R&eacute;glage
+du vides</a><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><span style="text-decoration: underline;"> <br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 3.5.
+&nbsp;<a href="mise_en_oeuvre.html#35">Remarques pour
+le r&eacute;glage des machines</a><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;">4. <a href="mise_en_oeuvre.html#4">Montage d&eacute;montage du
+moule </a></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;"><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;">5. <a href="mise_en_oeuvre.html#5">Les chauffes</a></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;"><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;">6. <a href="mise_en_oeuvre.html#6">R&eacute;glages du vide </a></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;"><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;">7. <a href="mise_en_oeuvre.html#7">Conformation des
+pi&egrave;ces </a></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;"><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;">8. <a href="mise_en_oeuvre.html#8">Op&eacute;ration de
+reprises </a></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;"><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;">9. <a href="#9">Fichiers</a></span><span style="font-family: Arial; font-weight: bold;"><br>
+
+                  </span></td>
+
+                  <td style="width: 576px; text-align: center;"><img style="width: 500px; height: 333px;" alt="" src="image059.png"><br>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>1.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>Pr&eacute;paration mati&egrave;re
+                  <br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 52px;">On
+&eacute;tuve les plaques de polym&egrave;res hygroscopiques
+tels que les styr&eacute;niques, polycarbonates, PMMA.<br>
+
+            <br>
+
+            <div style="text-align: center;">
+            <table style="width: 800px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="2" cellspacing="2">
+
+              <tbody>
+
+                <tr align="center">
+
+                  <td><img style="width: 430px; height: 296px;" alt="" src="image058.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="text-align: center;">Etuves
+&agrave; plateaux.</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            <br>
+
+            <small>Hygroscopique : un <span style="font-weight: bold;">mat&eacute;riau hygroscopique</span>
+poss&egrave;de la propri&eacute;t&eacute; de fixer une
+certaine quantit&eacute; de l'humidit&eacute; contenue dans
+l'air ou d'eau liquide (&agrave; son contact).</small> </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>2.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>Cycle de fabrication<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>2.1.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="21"></a>Poste commun<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="height: 10px;">
+            <div style="margin-left: 105px;">Le cycle se
+d&eacute;roule comme suit que l&rsquo;on soit en machine
+automatique ou semi automatique : <br>
+
+            <br>
+
+&nbsp; &nbsp; &nbsp;- Mise en place de la feuille ; <br>
+
+&nbsp; &nbsp; &nbsp;- Fermer le cadre serre flanc ; <br>
+
+&nbsp; &nbsp; &nbsp;- Avancer le panneau de chauffe ; <br>
+
+&nbsp; &nbsp; &nbsp;- Recul du panneau de chauffe ; <br>
+
+&nbsp; &nbsp; &nbsp;- Bullage &eacute;ventuel ; <br>
+
+&nbsp; &nbsp; &nbsp;- Pistonnage &eacute;ventuel ; <br>
+
+&nbsp; &nbsp; &nbsp;- Mont&eacute;e du moule ; <br>
+
+&nbsp; &nbsp; &nbsp;- D&eacute;but de
+l&rsquo;aspiration ; <br>
+
+&nbsp; &nbsp; &nbsp;- Mise en route des ventilateurs de
+refroidissement ; <br>
+
+&nbsp; &nbsp; &nbsp;- Arr&ecirc;t des ventilateurs ; <br>
+
+&nbsp; &nbsp; &nbsp;- Fin de l&rsquo;aspiration et
+envoi de l&rsquo;air de d&eacute;moulage ; <br>
+
+&nbsp; &nbsp; &nbsp;- Descente de la table ; <br>
+
+&nbsp; &nbsp; &nbsp;- Ouverture du cadre serre flanc ; <br>
+
+&nbsp; &nbsp; &nbsp;- Evacuation de la pi&egrave;ce. <br>
+
+            <br>
+
+Remarque : le temps de chauffe ne se fait pas en temps
+masqu&eacute;. </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>2.2.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="22"></a>Poste s&eacute;par&eacute;s<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 105px;">Pour les
+postes &agrave; haute cadence, le cycle se d&eacute;roule comme
+suit : <br>
+
+            <br>
+
+&nbsp; &nbsp; &nbsp;- Engagement de la mati&egrave;re
+dans les cha&icirc;nes
+&agrave; picots ; <br>
+
+&nbsp; &nbsp; &nbsp;- Avance du pas de la
+mati&egrave;re ; <br>
+
+&nbsp; &nbsp; &nbsp;- Fermeture de la cloche
+(sup&eacute;rieure et
+inf&eacute;rieure) ; <br>
+
+&nbsp; &nbsp; &nbsp;- Fermeture du moule ; <br>
+
+&nbsp; &nbsp; &nbsp;- Aspiration et ou soufflage ; <br>
+
+&nbsp; &nbsp; &nbsp;- Envoi de l&rsquo;air de
+d&eacute;moulage ; <br>
+
+&nbsp; &nbsp; &nbsp;- Ouverture du moule ; <br>
+
+&nbsp; &nbsp; &nbsp;- Ouverture cloche ; <br>
+
+&nbsp; &nbsp; &nbsp;- Avanc&eacute;e de la
+mati&egrave;re. <br>
+
+            <br>
+
+Ces op&eacute;rations correspondent au temps total de chauffe. Le
+temps de chauffe se faisant en temps masqu&eacute;, on divise le
+temps de cycle par deux.
+De plus, la d&eacute;coupe et l&rsquo;empilage se font en
+simultan&eacute; avec le formage. </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>3.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3"></a>Param&egrave;tres de
+r&eacute;glage d&rsquo;une machine de thermoformage<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>3.1.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="31"></a>Les vitesses<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 105px;"><span style="font-weight: bold;">Mont&eacute;e de la table : <br>
+
+            <br>
+
+            </span>C'est une vitesse tr&egrave;s importante
+puisque &agrave; la fin de ce mouvement on proc&egrave;de au
+formage. <br>
+
+En r&egrave;gle g&eacute;n&eacute;rale, il faut qu'elle
+soit rapide (temps de cycle) ; le r&eacute;glage sera &agrave;
+affiner suivant chaque cas de figure. <br>
+
+            <br>
+
+            <span style="font-weight: bold;">Descente de
+la table : <br>
+
+            <br>
+
+            </span>Il faut toujours travailler le plus vite
+possible. <br>
+
+Mais attention pour les pi&egrave;ces hautes et avec un angle de
+d&eacute;pouille faible, il faudra travailler plus lentement
+principalement au d&eacute;collage de la pi&egrave;ce. <br>
+
+            <br>
+
+            <span style="font-weight: bold;">Serre Flancs
+: <br>
+
+            <br>
+
+            </span>Seule la vitesse de fermeture est importante. <br>
+
+Elle doit &ecirc;tre rapide de fa&ccedil;on &agrave;
+assurer un bon blocage de la mati&egrave;re et &eacute;galement
+une bonne &eacute;tanch&eacute;it&eacute;. <br>
+
+A noter toutefois que sur machine hautes cadences si ce mouvement est
+trop rapide, le serre flanc peut venir taper sur les protections de
+cha&icirc;nes. <br>
+
+            <br>
+
+            <span style="font-weight: bold;">D&eacute;coupe
+: <br>
+
+            <br>
+
+            </span>Elle peut &ecirc;tre lente c'est le cas
+sur S/B ( Styr&egrave;ne Butadi&egrave;ne), le temps de
+fonctionnement &eacute;tant court par rapport au temps de formage
+par contre sur d'autre type de machine il faudra que son temps de
+fonctionnement soit le plus court possible de fa&ccedil;on
+&agrave; ne pas limiter les cadences. <br>
+
+            <br>
+
+            <span style="font-weight: bold;">Le
+poin&ccedil;on : <br>
+
+            <br>
+
+            </span>D&eacute;pend de la vitesse de
+mont&eacute;e du moule et surtout du r&eacute;sultat
+souhait&eacute;. <br>
+
+            <br>
+
+            <span style="font-weight: bold;">L'aspiration
+: <br>
+
+            <br>
+
+            </span>Elle influence beaucoup sur la
+cr&eacute;ation de plis. <br>
+
+Si elle est r&eacute;glable cela permettra de diminuer le risque de
+formation de plis. <br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>3.2.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="32"></a>R&eacute;glage des courses<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 105px;">Elles doivent
+&ecirc;tre les plus courtes possibles. </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>3.3.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="33"></a>R&eacute;glage des temps<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 105px; text-align: justify;"><span style="font-weight: bold;">Le temps de chauffe :
+            </span><br>
+
+            <br>
+
+V&eacute;ritablement important, car c'est lui qui conditionne le
+formage.
+            <br>
+
+Il faut toujours garder &agrave; l'esprit que l'on doit
+thermoformer la mati&egrave;re la plus froide possible, ceci pour
+une question d'&eacute;nergie, de cadence et risque de
+cr&eacute;ation d&eacute;fauts. <br>
+
+Ce temps d&eacute;pend de la mati&egrave;re, de son
+&eacute;paisseur, du rapport H/D et &eacute;galement du type
+d'&eacute;metteurs Infra Rouge.
+            <br>
+
+            <br>
+
+Les temps donn&eacute;s dans le tableau ci-dessous, sont des
+valeurs indicatives pour une seule chauffe, en respectant les valeurs
+de temp&eacute;ratures. En cas de double chauffe, il faut
+r&eacute;duire le temps de 30%.<br>
+
+            <br>
+
+            <table style="text-align: left; width: 100%;" border="1" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="background-color: rgb(204, 204, 255);">
+                  </td>
+
+                  <td style="font-weight: bold; text-align: center; width: 100px; background-color: rgb(204, 204, 255);">Ep.
+                  <br>
+
+mm </td>
+
+                  <td style="font-weight: bold; text-align: center; width: 100px; background-color: rgb(204, 204, 255);">Temps
+                  <br>
+
+s </td>
+
+                  <td style="font-weight: bold; text-align: center; width: 100px; background-color: rgb(204, 204, 255);">Ep.
+                  <br>
+
+mm&nbsp; </td>
+
+                  <td style="font-weight: bold; text-align: center; width: 100px; background-color: rgb(204, 204, 255);">
+Temps
+                  <br>
+
+s</td>
+
+                  <td style="font-weight: bold; text-align: center; width: 100px; background-color: rgb(204, 204, 255);">
+Ep.
+                  <br>
+
+mm</td>
+
+                  <td style="font-weight: bold; text-align: center; width: 100px; background-color: rgb(204, 204, 255);">
+Temps
+                  <br>
+
+s</td>
+
+                  <td style="font-weight: bold; text-align: center; width: 100px; background-color: rgb(204, 204, 255);">
+Ep.
+                  <br>
+
+mm</td>
+
+                  <td style="font-weight: bold; text-align: center; width: 100px; background-color: rgb(204, 204, 255);">Temps
+                  <br>
+
+s
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-weight: bold; height: 30px; text-align: center; background-color: rgb(204, 204, 255);">PS&nbsp;
+                  </td>
+
+                  <td style="text-align: center;">1
+                  </td>
+
+                  <td style="text-align: center;">30</td>
+
+                  <td style="text-align: center;">1.5</td>
+
+                  <td style="text-align: center;">45</td>
+
+                  <td style="text-align: center;">2</td>
+
+                  <td style="text-align: center;">60</td>
+
+                  <td style="text-align: center;">3</td>
+
+                  <td style="text-align: center;">90</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-weight: bold; height: 30px; text-align: center; background-color: rgb(204, 204, 255);">ABS&nbsp;</td>
+
+                  <td style="text-align: center;">1</td>
+
+                  <td style="text-align: center;">40</td>
+
+                  <td style="text-align: center;">1.5</td>
+
+                  <td style="text-align: center;">60</td>
+
+                  <td style="text-align: center;">2</td>
+
+                  <td style="text-align: center;">80</td>
+
+                  <td style="text-align: center;">3</td>
+
+                  <td style="text-align: center;">120</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-weight: bold; height: 30px; text-align: center; background-color: rgb(204, 204, 255);">PP&nbsp;</td>
+
+                  <td style="text-align: center;">1</td>
+
+                  <td style="text-align: center;">50</td>
+
+                  <td style="text-align: center;">1.5</td>
+
+                  <td style="text-align: center;">75</td>
+
+                  <td style="text-align: center;">2</td>
+
+                  <td style="text-align: center;">100</td>
+
+                  <td style="text-align: center;">3</td>
+
+                  <td style="text-align: center;">150</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-weight: bold; height: 30px; text-align: center; background-color: rgb(204, 204, 255);">PE&nbsp;</td>
+
+                  <td style="text-align: center;">1</td>
+
+                  <td style="text-align: center;">50</td>
+
+                  <td style="text-align: center;">1.5</td>
+
+                  <td style="text-align: center;">75</td>
+
+                  <td style="text-align: center;">2</td>
+
+                  <td style="text-align: center;">100</td>
+
+                  <td style="text-align: center;">3</td>
+
+                  <td style="text-align: center;">150</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-weight: bold; height: 30px; text-align: center; background-color: rgb(204, 204, 255);">PETG&nbsp;</td>
+
+                  <td style="text-align: center;">1</td>
+
+                  <td style="text-align: center;">30</td>
+
+                  <td style="text-align: center;">1.5</td>
+
+                  <td style="text-align: center;">45</td>
+
+                  <td style="text-align: center;">2</td>
+
+                  <td style="text-align: center;">60</td>
+
+                  <td style="text-align: center;">3</td>
+
+                  <td style="text-align: center;">90</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-weight: bold; height: 30px; text-align: center; background-color: rgb(204, 204, 255);">PVC&nbsp;</td>
+
+                  <td style="text-align: center;">1</td>
+
+                  <td style="text-align: center;">30</td>
+
+                  <td style="text-align: center;">1.5</td>
+
+                  <td style="text-align: center;">45</td>
+
+                  <td style="text-align: center;">2</td>
+
+                  <td style="text-align: center;">60</td>
+
+                  <td style="text-align: center;">3</td>
+
+                  <td style="text-align: center;">90</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-weight: bold; height: 30px; text-align: center; background-color: rgb(204, 204, 255);">PC</td>
+
+                  <td style="text-align: center;">1</td>
+
+                  <td style="text-align: center;">60</td>
+
+                  <td style="text-align: center;">1.5</td>
+
+                  <td style="text-align: center;">90</td>
+
+                  <td style="text-align: center;">2</td>
+
+                  <td style="text-align: center;">120</td>
+
+                  <td style="text-align: center;">3</td>
+
+                  <td style="text-align: center;">180</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            <br>
+
+            <small>Epaisseur (Ep.) en millim&egrave;tre
+            <br>
+
+Temps en seconde
+            </small><br>
+
+            <br>
+
+            <span style="font-weight: bold;">Le temps de
+bullage :
+            </span><br>
+
+            <br>
+
+Il doit &ecirc;tre court mais avec un grand d&eacute;bit d'air
+(cas de faibles &eacute;paisseurs).
+            <br>
+
+            <br>
+
+            <span style="font-weight: bold;">Retard
+mont&eacute;e de table ou retard descente poin&ccedil;on :
+            </span><br>
+
+            <br>
+
+A r&eacute;gler en fonction des applications.
+            <br>
+
+            <br>
+
+            <span style="font-weight: bold;">Retard
+aspiration :
+            </span><br>
+
+            <br>
+
+A r&eacute;gler en fonction des applications.
+            <br>
+
+Cependant 2 ou 3 dixi&egrave;mes de seconde sont
+conseill&eacute;es pour des &eacute;paisseurs de l'ordre de 400
+&agrave; 600 microns, pour des pi&egrave;ces
+&eacute;paisses, on peut aller jusqu'&agrave; quelques
+secondes.
+            <br>
+
+            <br style="font-weight: bold;">
+
+            <span style="font-weight: bold;">Temps
+d'aspiration ou temps de formage :
+            </span><br>
+
+            <br>
+
+Sur certaines machines, ce temps n'est pas r&eacute;glable
+puisqu'il d&eacute;pend du temps de refroidissement.
+            <br>
+
+            <br>
+
+            <span style="font-weight: bold;">Temps de
+refroidissement :
+            </span><br>
+
+            <br>
+
+Si le moule n'est pas r&eacute;gul&eacute;, il est au minimum
+&eacute;gal au temps de chauffe.
+            <br>
+
+Dans le cas des pi&egrave;ces &eacute;paisses, il peut
+m&ecirc;me &ecirc;tre tr&egrave;s sup&eacute;rieur. <br>
+
+Sur machine hautes cadences les porte moule sont toujours
+r&eacute;gul&eacute;s en temp&eacute;rature.
+            <br>
+
+            <br>
+
+            <big>Temps de d&eacute;moulage :
+            </big><br>
+
+            <br>
+
+Il doit &ecirc;tre suffisamment long pour d&eacute;coller
+totalement la pi&egrave;ce du moule.
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>3.4.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="34"></a>R&eacute;glage du vide<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 105px;">Au
+d&eacute;part d'une production, on r&egrave;gle toujours le
+vide au maximum, sauf quand il y a risque d'&eacute;crasement,
+exemple les Skin-Pack.&nbsp;<br>
+
+            <br>
+
+Il faudra &eacute;galement le diminuer si les trous d'aspiration
+apparaissent sur la pi&egrave;ce.
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>3.5.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="35"></a>Remarques pour le r&eacute;glage des
+machines<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 105px;">Il faut
+toujours lors du d&eacute;moulage que le temps de retard descente
+table soit plus petit que le temps de soufflage.
+            <br>
+
+            <br>
+
+Au d&eacute;but d&rsquo;une fabrication on r&egrave;gle le
+vide au maximum puis on affine le r&eacute;glage.
+            <br>
+
+            <br>
+
+La vitesse d&rsquo;aspiration influe
+&eacute;norm&eacute;ment sur la formation de plis. <br>
+
+            <br>
+
+Plus c&rsquo;est rapide plus il y a des risques de plis.
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>4.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="4"></a>Montage d&eacute;montage du moule </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 54px;">Avant de
+monter ou de d&eacute;monter un moule, il faut contr&ocirc;ler
+les points suivants :
+            <br>
+
+            <br>
+
+&nbsp; &nbsp; &nbsp;- propret&eacute; du moule ;
+            <br>
+
+&nbsp; &nbsp; &nbsp;- contr&ocirc;ler les joints
+d&rsquo;&eacute;tanch&eacute;it&eacute;
+ext&eacute;rieurs au moule ;
+            <br>
+
+&nbsp; &nbsp; &nbsp;- contr&ocirc;ler les
+&eacute;tanch&eacute;it&eacute;s machines ;
+            <br>
+
+&nbsp; &nbsp; &nbsp;- v&eacute;rifier les versions
+d&rsquo;outillage ;
+            <br>
+
+&nbsp; &nbsp; &nbsp;- contr&ocirc;ler la machine avant
+de d&eacute;monter la fabrication pr&eacute;c&eacute;dente
+.
+            <br>
+
+            <br>
+
+Avant de d&eacute;monter il faut r&eacute;cup&eacute;rer un
+dernier formage pour prot&eacute;ger l&rsquo;outillage et
+contr&ocirc;ler la fabrication.
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>5.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="5"></a>Les chauffes</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 54px;">
+            <table style="width: 500px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="text-align: center; font-weight: bold; background-color: rgb(204, 204, 255);">Polym&egrave;re&nbsp;&nbsp;
+                  </td>
+
+                  <td style="text-align: center; font-weight: bold; background-color: rgb(204, 204, 255);">Temp&eacute;rature
+thermoformage
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="text-align: center; background-color: rgb(204, 204, 255);">PS</td>
+
+                  <td style="text-align: center;">130
+&agrave; 185 &deg;C
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="text-align: center; background-color: rgb(204, 204, 255);">
+ABS&nbsp;</td>
+
+                  <td style="text-align: center;">130
+&agrave; 180 &deg;C
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="text-align: center; background-color: rgb(204, 204, 255);">PP
+                  <br>
+
+                  </td>
+
+                  <td style="text-align: center;">150
+&agrave; 165 &deg;C
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="text-align: center; background-color: rgb(204, 204, 255);">PE
+                  <br>
+
+                  </td>
+
+                  <td style="text-align: center;">130
+&agrave; 170 &deg;C</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="text-align: center; background-color: rgb(204, 204, 255);">PETG
+                  <br>
+
+                  </td>
+
+                  <td style="text-align: center;">120
+&agrave; 170 &deg;C</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="text-align: center; background-color: rgb(204, 204, 255);">PVC
+                  <br>
+
+                  </td>
+
+                  <td style="text-align: center;">100
+&agrave; 155 &deg;C</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="text-align: center; background-color: rgb(204, 204, 255);">PC</td>
+
+                  <td style="text-align: center;">170
+&agrave; 200 &deg;C</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            <br>
+
+Les temp&eacute;ratures sont donn&eacute;es &agrave; titre
+indicatives, il faut se r&eacute;f&eacute;rer aux fiches
+mati&egrave;res.
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>6.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="6"></a>R&eacute;glages du vide </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 54px;">Au
+d&eacute;part d&rsquo;une production, on r&egrave;gle
+toujours le vide au maximum, sauf quand il y a risque
+d&rsquo;&eacute;crasement (exemple p&eacute;lliplacage-skin
+pack). <br>
+
+            <br>
+
+Il faudra le diminuer, si les trous d&rsquo;aspiration apparaissent
+sur la pi&egrave;ce.
+            <br>
+
+            <br>
+
+Ce r&eacute;glage se fait en pourcentage de vide (valeur de
+d&eacute;pression) et &eacute;galement en vitesse
+d&rsquo;aspiration. <br>
+
+            <br>
+
+Les deux param&egrave;tres sont &agrave; r&eacute;gler au
+cas par cas.
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>7.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="7"></a>Conformation des pi&egrave;ces </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 54px;">Les
+pi&egrave;ces de fortes &eacute;paisseurs sont
+plac&eacute;es, apr&egrave;s thermoformage, sur un conformateur
+pour achever leur refroidissement. <br>
+
+            <br>
+
+Le conformateur garantit la g&eacute;om&eacute;trie de la
+pi&egrave;ce thermoform&eacute;e.</div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;&nbsp;<big><big>8.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="8"></a>Op&eacute;ration de reprises </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 54px;">Les pi&egrave;ces thermoform&eacute;es doivent &ecirc;tre d&eacute;tour&eacute;es. <br>
+            <br>
+Cette op&eacute;ration permet de les s&eacute;parer du squelette de la plaque (rebut).
+            <br>
+            <br>
+On peut utiliser diff&eacute;rentes techniques de d&eacute;tourage :
+            <br>
+            <br>
+&nbsp; &nbsp; &nbsp;- d&eacute;coupe au rouleau ;
+            <br>
+&nbsp; &nbsp; &nbsp;- d&eacute;coupe au massicot ;
+            <br>
+&nbsp; &nbsp; &nbsp;- d&eacute;coupe &agrave; l&rsquo;emporte pi&egrave;ce ;
+            <br>
+&nbsp; &nbsp; &nbsp;- d&eacute;coupe &agrave; la guillotine ;
+            <br>
+&nbsp; &nbsp; &nbsp;- d&eacute;coupe &agrave; la scie circulaire ou &agrave; la scie &agrave; ruban ;
+            <br>
+&nbsp; &nbsp; &nbsp;- Centre d&rsquo;usinage.
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>9.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="9"></a>Fichiers</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="mise_en_oeuvre.docx">Fichier word</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 5px;"></td>
+
+                  <td style="text-align: center;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="mise_en_oeuvre.pdf" target="_blank">Fichier
+PDF</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+
+</body>
+</html>

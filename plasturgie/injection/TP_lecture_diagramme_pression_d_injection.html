@@ -1,0 +1,1248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>Bac pro PLC -Mondeville -
+tp_lecture_diagramme_pression_d_injection</title>
+
+
+  <meta name="description" content="ressources">
+
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+  <tbody>
+
+    <tr>
+
+      <td>
+      <div style="text-align: center;"></div>
+
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+        <tbody>
+
+          <tr>
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="background-color: rgb(64, 64, 64);">
+            <div id="menu">
+            <ul>
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">TP lecture du
+diagramme pression d'injection </span></big></big></big></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td><span style="font-family: Arial; font-weight: bold;">1. <a href="#1"><span style="text-decoration: underline;">Pr&eacute;ambule</span></a></span><br style="font-family: Arial; font-weight: bold;">
+
+                  <span style="font-family: Arial; font-weight: bold;"></span><br style="font-family: Arial; font-weight: bold;">
+
+                  <span style="font-family: Arial; font-weight: bold;">2. <span style="text-decoration: underline;"><a href="#2">Tableau
+des relev&eacute;s</a><br>
+
+                  <br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span><span style="font-family: Arial; font-weight: bold;">3. <span style="text-decoration: underline;"><a href="#3">Proc&eacute;dure</a><br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;"><a href="#4"><span style="text-decoration: underline;"></span></a></span><span style="font-family: Arial; font-weight: bold;"><br>
+
+4. <a href="#4">Fichiers</a></span></td>
+
+                  <td style="width: 560px; text-align: center;"><img src="image_094.png" alt="" style="width: 424px; height: 230px;"> </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>1.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>Pr&eacute;ambule<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;" align="center">
+
+            <td>
+            <div style="text-align: left;"></div>
+
+            <div text-align="" left="">
+            <div style="text-align: left;"><span style="text-decoration: underline; font-weight: bold;">Objectif
+: </span><br>
+
+            <span style="text-decoration: underline; font-weight: bold;"></span><br>
+
+            <span style="text-decoration: underline; font-weight: bold;"></span>Etre
+capable de d&eacute;finir la pression hydraulique &agrave;
+appliquer sur le
+v&eacute;rin d&rsquo;injection en fonction d&rsquo;une
+pression mati&egrave;re donn&eacute;e par le
+fabriquant. </div>
+
+            <br>
+
+            <div style="text-align: left;"><span style="font-weight: bold; text-decoration: underline;">Comp&eacute;tences
+vis&eacute;es :</span> <br>
+
+            <br>
+
+Collecter les informations &eacute;crites, orales ou
+informatis&eacute;es li&eacute;es au fonctionnement de
+l&rsquo;aire et/ou du poste de fabrication.
+Rendre compte du travail effectu&eacute;.
+Renseigner les fiches et les documents techniques.&nbsp;<br>
+
+            <br>
+
+            <span style="font-weight: bold; text-decoration: underline;">On
+donne : </span><br>
+
+            <span style="font-weight: bold; text-decoration: underline;"></span><br>
+
+            <span style="font-weight: bold; text-decoration: underline;"></span>&nbsp;
+&nbsp; &nbsp;-&nbsp; les fiches machines avec les
+caract&eacute;ristiques<br>
+
+            <br>
+
+            <span style="font-weight: bold; text-decoration: underline;">On
+demande :</span><br>
+
+            </div>
+
+            <br>
+
+            <table style="text-align: left; width: 900px;" border="1" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 100px; height: 30px; font-weight: bold; text-align: center; background-color: rgb(255, 204, 255);">Comp&eacute;tence</td>
+
+                  <td style="font-weight: bold; text-align: center; background-color: rgb(255, 204, 255); width: 350px;">Travail
+et
+crit&egrave;res
+d&rsquo;&eacute;valuation</td>
+
+                  <td style="font-weight: bold; text-align: center; background-color: rgb(255, 204, 255); width: 50px;" colspan="2" rowspan="1">Bar&egrave;me</td>
+
+                  <td style="font-weight: bold; text-align: center; background-color: rgb(255, 204, 255); width: 50px;">Note</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 30px;" colspan="1" rowspan="1">C 08 </td>
+
+                  <td style="width: 350px;">Rechercher
+le diam&egrave;tre de la vis d&rsquo;injection.</td>
+
+                  <td style="width: 339px;" ="">Le
+diam&egrave;tre de vis est indiqu&eacute;.<br>
+
+                  </td>
+
+                  <td style="text-align: center; width: 50px;">1
+pts</td>
+
+                  <td style="width: 50px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td>C 08 </td>
+
+                  <td style="width: 350px;">Rechercher la
+pression maximum
+mati&egrave;re injectable en fonction du diam&egrave;tre de la
+vis sur votre machine.&nbsp; </td>
+
+                  <td style="width: 339px;">La pression
+mati&egrave;re maximum est
+correcte.&nbsp; </td>
+
+                  <td style="text-align: center; width: 50px;">2
+pts</td>
+
+                  <td style="width: 50px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td>C 25 </td>
+
+                  <td style="width: 350px;"> Rechercher la
+pression maximum hydraulique
+sur votre machine pour
+l&rsquo;injection.&nbsp;</td>
+
+                  <td style="width: 339px;">&nbsp;La
+pression maximum hydraulique
+est correcte.&nbsp;</td>
+
+                  <td style="text-align: center; width: 50px;">0,5
+pts</td>
+
+                  <td style="width: 50px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td colspan="1" rowspan="4">C 01,
+C 08 </td>
+
+                  <td style="width: 350px;" colspan="1" rowspan="4">Construire le
+graphique
+th&eacute;orique des pressions hydrauliques en
+fonction des pressions mati&egrave;res sur papier
+millim&eacute;tr&eacute;.&nbsp;</td>
+
+                  <td style="width: 339px;">Les
+unit&eacute;s et les axes sont
+document&eacute;s.&nbsp;</td>
+
+                  <td style="text-align: center; width: 50px;">4
+pts</td>
+
+                  <td style="width: 50px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="width: 339px;">Les
+&eacute;chelles des axes sont
+indiqu&eacute;es.&nbsp;</td>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="width: 50px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="width: 339px;">Les points
+permettant de tracer la courbe
+sont pr&eacute;sents et correspondent aux valeurs
+relev&eacute;es.&nbsp;</td>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="width: 50px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="width: 339px;">La droite est
+trac&eacute;e et est
+correcte.</td>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="width: 50px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td>C 04 </td>
+
+                  <td style="width: 350px;">D&eacute;terminer
+l&rsquo;&eacute;quation de la droite (la droite est du type
+Y=aX+b) avec
+un rendement de 100%.&nbsp;</td>
+
+                  <td style="width: 339px;">L&rsquo;&eacute;quation
+est
+correcte.&nbsp;</td>
+
+                  <td style="text-align: center; width: 50px;">4
+pts</td>
+
+                  <td style="width: 50px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td>C 14 </td>
+
+                  <td style="width: 350px;">D&eacute;terminer
+graphiquement la
+pression hydraulique minimum et maximum
+pour une pression mati&egrave;re entre 800 et 1000 bar .</td>
+
+                  <td style="width: 339px;">Les valeurs
+sont en ad&eacute;quation
+avec la courbe trac&eacute;e.&nbsp;</td>
+
+                  <td style="text-align: center; width: 50px;">0,5
+pts </td>
+
+                  <td style="width: 50px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td colspan="1" rowspan="1">C 03,
+C 04 </td>
+
+                  <td style="width: 350px;">D&eacute;terminer
+analytiquement la pression hydraulique minimum et maximum
+pour une pression mati&egrave;re entre 800 et 1000 bar. </td>
+
+                  <td style="width: 339px;">Les valeurs
+sont correctes.&nbsp;</td>
+
+                  <td style="text-align: center; width: 50px;">16
+pts</td>
+
+                  <td style="width: 50px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td>C 18 </td>
+
+                  <td style="width: 350px;"> Tracer la
+droite correspondant au
+rendement de 85% sur le graphique
+(utiliser une couleur diff&eacute;rente pour cette
+droite).&nbsp;</td>
+
+                  <td style="width: 339px;">La droite est
+trac&eacute;e et
+correcte.&nbsp;</td>
+
+                  <td style="text-align: center; width: 50px;">6
+pts</td>
+
+                  <td style="width: 50px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td>C 13 </td>
+
+                  <td style="width: 350px;">D&eacute;terminer
+l&rsquo;&eacute;quation de la droite (la droite est du type
+Y=aX+b) avec
+un rendement de 85%.&nbsp;</td>
+
+                  <td style="width: 339px;">L&rsquo;&eacute;quation
+est
+correcte.&nbsp;</td>
+
+                  <td style="text-align: center; width: 50px;">1
+pt</td>
+
+                  <td style="width: 50px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td colspan="1" rowspan="1">C 03 </td>
+
+                  <td style="width: 350px;">D&eacute;terminer
+graphiquement la pression hydraulique minimum et maximum
+pour une pression mati&egrave;re entre 800 et 1000 bar avec un
+rendement de
+85%.&nbsp; </td>
+
+                  <td style="width: 339px;">Les valeurs
+sont en ad&eacute;quation
+avec la courbe trac&eacute;e.&nbsp;</td>
+
+                  <td style="text-align: center; width: 50px;">5&nbsp;pts</td>
+
+                  <td style="width: 50px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td colspan="1" rowspan="1">C 03,
+C 17 </td>
+
+                  <td style="width: 350px;">D&eacute;terminer
+analytiquement la pression hydraulique minimum et maximum
+pour une pression mati&egrave;re entre 800 et 1000 bar avec un
+rendement de
+85%.&nbsp; </td>
+
+                  <td style="width: 339px;">&nbsp;Les
+valeurs sont correctes.</td>
+
+                  <td style="text-align: center; width: 50px;">2
+pts</td>
+
+                  <td style="width: 50px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 30px;">C 06 </td>
+
+                  <td style="width: 350px;">Respect des
+consignes. </td>
+
+                  <td style="width: 339px;"></td>
+
+                  <td style="text-align: center; width: 50px;">3
+pts</td>
+
+                  <td style="width: 50px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 30px;">C 18 </td>
+
+                  <td style="width: 350px;">Soins de la
+r&eacute;daction du
+document.</td>
+
+                  <td style="width: 339px;"></td>
+
+                  <td style="text-align: center; width: 50px;">3
+pts</td>
+
+                  <td style="width: 50px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 30px;"></td>
+
+                  <td style="width: 350px;"></td>
+
+                  <td style="width: 339px;"></td>
+
+                  <td style="text-align: center; width: 50px;"><span style="font-weight: bold;">73 pts</span></td>
+
+                  <td style="width: 50px;"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>2.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>Tableau des relev&eacute;s<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="width: 900px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="5" cellspacing="0">
+
+              <tbody>
+
+                <tr style="font-family: Arial; font-weight: bold;" align="center">
+
+                  <td style="background-color: rgb(204, 204, 255);">Tableau
+des relev&eacute;s</td>
+
+                </tr>
+
+                <tr style="font-family: Arial; font-weight: bold; color: rgb(255, 255, 255);">
+
+                  <td style="background-color: rgb(204, 0, 0);">Condition
+d'essais</td>
+
+                </tr>
+
+                <tr style="font-family: Arial; font-weight: bold;">
+
+                  <td colspan="1" rowspan="1" style="width: 356px;">Machine : <span style="font-weight: normal;">. . .
+. . . . . . . . . . . . &nbsp;.</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . .</span><span style="font-weight: normal;"></span></td>
+
+                </tr>
+
+                <tr style="font-family: Arial; font-weight: bold;">
+
+                  <td colspan="1" rowspan="1" style="width: 356px;">&nbsp;&Oslash;
+vis : <span style="font-weight: normal;">. . .
+. . . . . . . . . . . . &nbsp;.</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . .</span> </td>
+
+                </tr>
+
+                <tr style="font-family: Arial; font-weight: bold;">
+
+                  <td colspan="1" rowspan="1" style="width: 356px;">Pression maximum
+mati&egrave;re injectable : <span style="font-weight: normal;">.
+. .
+. . . . . . . . . . . . &nbsp;.</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . .</span> </td>
+
+                </tr>
+
+                <tr style="font-family: Arial; font-weight: bold;">
+
+                  <td colspan="1" rowspan="1">Pression
+maximum hydraulique
+machine pour l&rsquo;injection : <span style="font-weight: normal;">. . .
+. . . . . . . . . . . . &nbsp;.</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . .</span> </td>
+
+                </tr>
+
+                <tr style="font-family: Arial; font-weight: bold; color: rgb(255, 255, 255);">
+
+                  <td style="background-color: rgb(204, 0, 0);">Feuille
+de calculs</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; width: 356px;" colspan="1" rowspan="1">Graphe des pressions
+hydrauliques en fonction des pressions mati&egrave;res&nbsp; </td>
+
+                </tr>
+
+                <tr style="font-family: Arial; font-weight: bold;">
+
+                  <td>Equation de la droite du type y = a x + b
+avec un rendement
+&agrave; 100% : <br>
+
+                  <span style="font-weight: normal;">. . .
+. . . . . . . . . . . . &nbsp;.</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . .&nbsp;</span><span style="font-weight: normal;"></span><span style="font-weight: normal;"></span><span style="font-weight: normal;"></span></td>
+
+                </tr>
+
+                <tr style="font-family: Arial; font-weight: bold;">
+
+                  <td style="width: 356px;" colspan="1" rowspan="1">Pression hydraulique minimum
+et maximum pour une pression mati&egrave;re entre 800 et 1000 bar
+(m&eacute;thode graphique) : <br>
+
+                  <span style="font-weight: normal;">. . .
+. . . . . . . . . . . . &nbsp;.</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . .</span></td>
+
+                </tr>
+
+                <tr style="font-family: Arial; font-weight: bold;">
+
+                  <td style="width: 356px;" colspan="1" rowspan="1">&nbsp;Pression
+hydraulique minimum et maximum pour une pression mati&egrave;re
+entre 800 et 1000 bar (m&eacute;thode analytique) : <br>
+
+                  <span style="font-weight: normal;">. . .
+. . . . . . . . . . . . &nbsp;.</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . .</span></td>
+
+                </tr>
+
+                <tr style="font-family: Arial; font-weight: bold;">
+
+                  <td style="width: 356px;" colspan="1" rowspan="1">Graphe des pressions hydrauliques en fonction
+des pressions mati&egrave;res avec un rendement &agrave;
+0,85%&nbsp; </td>
+
+                </tr>
+
+                <tr style="font-family: Arial; font-weight: bold;">
+
+                  <td>Equation de la droite du type y = a x + b
+avec un rendement &agrave; 85% : <br>
+
+                  <span style="font-weight: normal;">. . .
+. . . . . . . . . . . . &nbsp;.</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . .</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . .</span></td>
+
+                </tr>
+
+                <tr style="font-family: Arial; font-weight: bold;">
+
+                  <td style="width: 356px;" colspan="1" rowspan="1">&nbsp;Pression hydraulique minimum et
+maximum pour une pression mati&egrave;re entre
+800 et 1000 bar avec un rendement &agrave; 0,85 (m&eacute;thode
+graphique) : <br>
+
+                  <span style="font-weight: normal;">. . .
+. . . . . . . . . . . . &nbsp;.</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . .</span></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="background-color: rgb(204, 0, 0);"><span style="font-family: Arial; font-weight: bold; color: rgb(255, 255, 255);">Graphe</span></td>
+
+                </tr>
+
+                <tr align="center">
+
+                  <td><img style="width: 602px; height: 963px;" alt="" src="papier_millimetre.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>3.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3"></a>Proc&eacute;dure<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td> <big> </big><big> </big>
+            <table style="width: 900px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="5" cellspacing="0">
+
+              <tbody>
+
+                <tr style="font-weight: bold; font-family: Arial;">
+
+                  <td style="text-align: center; background-color: rgb(204, 204, 255);" colspan="2" rowspan="1"><big>Proc&eacute;dure
+                  <br>
+
+presse Boy 25 et Boy 50 </big></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center; font-weight: bold; background-color: rgb(204, 204, 255);"><big>N&deg;
+                  </big></td>
+
+                  <td style="font-family: Arial; text-align: center; font-weight: bold; background-color: rgb(204, 204, 255);"><big>Op&eacute;rations</big></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">1
+                  </td>
+
+                  <td style="font-family: Arial; height: 30px;">Rechercher
+le diam&egrave;tre de la vis d&rsquo;injection.&nbsp; </td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">2</td>
+
+                  <td style="font-family: Arial;">Rechercher
+la pression maximum mati&egrave;re injectable en fonction du
+diam&egrave;tre de la vis sur votre machine.&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">3</td>
+
+                  <td style="font-family: Arial;">Rechercher
+la pression maximum hydraulique sur votre machine pour
+l&rsquo;injection.&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">4</td>
+
+                  <td style="font-family: Arial;">Construire
+le graphique th&eacute;orique des pressions hydrauliques en
+fonction des pressions mati&egrave;res sur papier
+millim&eacute;tr&eacute; en indiquant les
+&eacute;chelles et en documentant les axes.&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">5
+                  </td>
+
+                  <td style="font-family: Arial;">D&eacute;terminer
+l&rsquo;&eacute;quation de la droite (la droite est du type
+y=ax+b) avec
+un rendement de 100%.&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">6
+                  </td>
+
+                  <td style="font-family: Arial;">D&eacute;terminer
+graphiquement la pression hydraulique minimum et maximum
+pour une pression mati&egrave;re entre 800 et 1000 bar.&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">7</td>
+
+                  <td style="font-family: Arial;">D&eacute;terminer
+analytiquement la pression hydraulique minimum et maximum
+pour une pression mati&egrave;re entre 800 et 1000 bar.&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">8</td>
+
+                  <td style="font-family: Arial;">Tracer
+la droite correspondant au rendement de 85% sur le graphique
+(utiliser une couleur diff&eacute;rente pour cette
+droite).&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">9</td>
+
+                  <td style="font-family: Arial;">D&eacute;terminer
+l&rsquo;&eacute;quation de la droite (la droite est du type
+y=ax+b) avec
+un rendement de 85%.&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">10</td>
+
+                  <td style="font-family: Arial;">D&eacute;terminer
+graphiquement la pression hydraulique minimum et maximum
+pour une pression mati&egrave;re entre 800 et 1000 bar avec un
+rendement &agrave;
+0,85%.&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">11</td>
+
+                  <td style="font-family: Arial;">D&eacute;terminer
+analytiquement la pression hydraulique minimum et maximum
+pour une pression mati&egrave;re entre 800 et 1000 bar avec un
+rendement &agrave;
+0,85%.</td>
+
+                </tr>
+
+                <tr style="font-weight: bold; color: rgb(255, 255, 255);">
+
+                  <td colspan="1" rowspan="1" style="background-color: rgb(204, 0, 0); font-family: Arial;"></td>
+
+                  <td style="font-family: Arial; background-color: rgb(204, 0, 0);">Faire
+valider par le professeur.</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>4.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="4"></a>Fichiers</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="tp_lecture_diagramme_pression_d_injection.docx">Fichier
+word</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 5px;"></td>
+
+                  <td style="text-align: center;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="tp_lecture_diagramme_pression_d_injection.pdf" target="_blank">Fichier
+PDF</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 10px;"></td>
+
+                  <td></td>
+
+                </tr>
+
+                <tr>
+
+                  <td>
+                  <div style="text-align: right;">
+                  <script>
+function passWord() {
+var testV = 1;
+var pass1 = prompt('Veuillez entrer le mot de passe',' ');
+while (testV < 3) {
+if (!pass1) history.go(-1);
+if (pass1.toLowerCase() == "nvgsdh") {
+alert('Mot de passe correct !');
+window.open('tp_lecture_diagramme_pression_d_injection_feuille_calcul.html');
+break ;
+} testV+=1;
+var pass1 = prompt('Accès interdit - Mot de passe incorrect. Veuillez réessayer.','Mot de passe');
+}
+if (pass1.toLowerCase()!="plc2025" & testV ==3) history.go(-1);
+return " ";
+} </script>
+                  <form><input value="Fiche calculs" onclick="passWord()" type="button"> &nbsp;
+&nbsp; </form>
+
+                  </div>
+
+                  <span style="font-family: Arial; color: rgb(64, 64, 64);"></span>
+                  </td>
+
+                  <td></td>
+
+                </tr>
+
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+
+</body>
+</html>

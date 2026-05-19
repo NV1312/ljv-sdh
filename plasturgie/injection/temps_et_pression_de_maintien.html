@@ -1,0 +1,830 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+  <title>Bac pro PLC -Mondeville - temps et pression de maintien</title>
+
+
+  <meta content="ressources" name="description">
+
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+  <tbody>
+
+    <tr>
+
+      <td>
+      <div style="text-align: center;"></div>
+
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+        <tbody>
+
+          <tr>
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="background-color: rgb(64, 64, 64);">
+            <div id="menu">
+            <ul>
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">Temps et
+pression de maintien</span></big></big></big></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 468px;" colspan="1" rowspan="1"><span style="font-family: Arial; font-weight: bold;">1. <a href="#1"><span style="text-decoration: underline;">La
+pression de maintien</span></a></span><br style="font-family: Arial; font-weight: bold;">
+
+                  <span style="font-family: Arial; font-weight: bold;"></span><br style="font-family: Arial; font-weight: bold;">
+
+                  <span style="font-family: Arial; font-weight: bold;">2. <a href="#2">Le temps de maintien</a><br>
+
+                  <br>
+
+3. <a href="#3">Influence de la pression de maintien</a><br>
+
+                  <br>
+
+4. <a href="#4">D&eacute;termination pratique de la
+pression et du temps maintien</a><br>
+
+                  <span style="text-decoration: underline;">
+                  <br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 4.1.
+&nbsp;<a href="#41">Pour la pression de maintien</a><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><span style="text-decoration: underline;"> <br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 4.2.
+&nbsp;<a href="#42">Pour le temps de maintien</a><br>
+
+                  <br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;">5. <a href="#5">Fichiers</a></span><span style="font-family: Arial; font-weight: bold;"><br>
+
+                  </span></td>
+
+                  <td style="text-align: right; width: 576px;"><img style="width: 535px; height: 240px;" alt="" src="image_094.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">Le maintien
+correspond &agrave; l&rsquo;injection quasi-statique,
+c'est-&agrave;-dire que l&rsquo;on maintien en pression la
+mati&egrave;re dans le moule, juste apr&egrave;s
+l&rsquo;injection dynamique, de fa&ccedil;on &agrave;
+&eacute;viter le retrait du thermoplastique dans le moule. Il se
+r&egrave;gle par 2 param&egrave;tres important qui sont la
+pression et le temps.</td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>1.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>La
+pression de maintien<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;" align="center">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 52px;">Elle va
+permettre de maintenir la pi&egrave;ce contre les parois de
+l&rsquo;empreinte du moule. Elle doit &ecirc;tre suffisante
+pour cela, g&eacute;n&eacute;ralement elle correspond
+&agrave; 50 &agrave; 80 % de la pression d&rsquo;injection
+dynamique. <br>
+
+            <br>
+
+Elle peut &ecirc;tre d&eacute;termin&eacute;e de
+fa&ccedil;on pr&eacute;cise en effectuant des pes&eacute;es
+successives avec diff&eacute;rentes valeurs de pressions. <br>
+
+            <br>
+
+Le passage en pression de maintien (de la phase dynamique &agrave;
+la phase quasi-statique) s&rsquo;appelle le point de commutation. <br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>2.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>Le temps de maintien<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 54px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr align="justify">
+
+                  <td colspan="2" rowspan="1">C&rsquo;est
+le temps n&eacute;cessaire &agrave; la solidification des
+seuils d&rsquo;injection,
+en effet &agrave; partir du moment o&ugrave; les seuils
+d&rsquo;injection sont solidifi&eacute;s
+la pression ne peut plus &ecirc;tre transmise &agrave; la
+pi&egrave;ce. <br>
+
+                  <br>
+
+En cons&eacute;quence plus
+les seuils seront &eacute;pais ou large, plus le temps de maintien
+sera long.&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="vertical-align: top;"><br>
+
+On peut d&eacute;terminer de fa&ccedil;on pr&eacute;cise le
+temps de maintien de la m&ecirc;me
+fa&ccedil;on que pour la pression en effectuant des
+pes&eacute;es, avec une pression
+constante et en faisant varier le temps.</td>
+
+                  <td><img style="width: 315px; height: 158px;" alt="" src="image_123.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>3.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3"></a>Influence
+de la pression de maintien<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 54px;">La pression de
+maintien agit sur : <br>
+
+            <br>
+
+            <div style="margin-left: 80px;">-&nbsp;Le
+retrait de la pi&egrave;ce : dimension, aspect (retassure) ; <br>
+
+            <br>
+
+-&nbsp;Le poids, car si le retrait est moindre, la pi&egrave;ce
+est plus volumineuse ; <br>
+
+            <br>
+
+-&nbsp;Caract&eacute;ristique physique et thermique
+&agrave; cause des variations du compactage. <br>
+
+            </div>
+
+            <br>
+
+La pression et le profil de maintien seront ajust&eacute;s en
+fonction de ses crit&egrave;res de qualit&eacute;s
+donn&eacute;es sur le cahier de charges.<br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>4.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="4"></a>D&eacute;termination
+pratique de la pression et du temps de maintien</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 54px; text-align: left;">La
+recherche th&eacute;orique de ces param&egrave;tres
+n&rsquo;est pas abordable pour tous et ne donne que des
+r&eacute;sultats approch&eacute;s. <br>
+
+            <br>
+
+Il faut &eacute;tablir une corr&eacute;lation entre les
+variations de temp&eacute;rature, de temps et de pression. <br>
+
+            <br>
+
+Pour des pi&egrave;ces de qualit&eacute; moyenne &agrave;
+l&rsquo;atelier, on proc&egrave;de de la mani&egrave;re
+suivante. <br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>4.1.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="41"></a>Pour
+la pression de maintien<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 105px;">Pour la
+pression et le temps la m&eacute;thode est identique. On fait
+varier le param&egrave;tre d&rsquo;&eacute;tude et on
+observe l&rsquo;&eacute;volution de la masse de la
+moul&eacute;e en fonction du param&egrave;tre
+d&rsquo;&eacute;tude. <br>
+
+            <br>
+
+Pour cela il faut construire une courbe de variation de la masse en
+fonction du param&egrave;tre d&rsquo;&eacute;tude. <br>
+
+            <br>
+
+            <span style="font-weight: bold; text-decoration: underline;">Exemple
+: </span><br>
+
+            <br>
+
+Analyse de l&rsquo;&eacute;volution de la masse en
+fonction de la pression de maintien. </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="text-align: center;"></div>
+
+            <div style="margin-left: 105px;">
+            <div style="text-align: center;"><img style="width: 679px; height: 250px;" alt="" src="image_124.png"><br>
+
+            </div>
+
+            <br>
+
+            <div style="text-align: center;"><img style="width: 641px; height: 290px;" alt="" src="image_125.png"></div>
+
+            </div>
+
+            <br>
+
+            <br>
+
+            <p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 2cm; line-height: normal; text-align: center;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Par
+observation du
+graphe on peut conclure que la pression de maintien pour cette
+pi&egrave;ce doit &ecirc;tre
+comprise entre 30 et 35 bars.<o:p></o:p></span></p>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>4.2.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="42"></a>Pour
+le temps de maintien<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 105px;">Pour le temps
+de maintien on utilise la m&ecirc;me m&eacute;thode. <br>
+
+            <br>
+
+Tant que le seuil d&rsquo;injection n&rsquo;est pas
+gel&eacute;, la pression de maintien continue &agrave; nourrir
+l&rsquo;empreinte qui prend du poids. Aussit&ocirc;t que le
+seuil est gel&eacute;, la pression de maintien n&rsquo;aura
+plus aucun effet sur la pi&egrave;ce et deviendra inutile. <br>
+
+            <br>
+
+On peut d&eacute;terminer exp&eacute;rimentalement le temps de
+maintien optimum en le faisant varier et en pesant au fur et
+&agrave; mesure la pi&egrave;ce. </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="text-align: center;"> </div>
+
+            <div style="margin-left: 105px;">
+            <div style="text-align: center;"><img style="width: 651px; height: 123px;" alt="" src="image_126.png"><br>
+
+            </div>
+
+            <br>
+
+            <div style="text-align: center;"><img style="width: 551px; height: 378px;" alt="" src="image_127.png"><br>
+
+            </div>
+
+            <br>
+
+            <p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal; text-align: center;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Par
+observation du graphe on peut conclure que le temps de maintien est de
+7 s.<o:p></o:p></span></p>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>5.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="5"></a>Fichiers</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="temps_et_pression_de_maintien.docx">Fichier word</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 5px;"></td>
+
+                  <td style="text-align: center;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="temps_et_pression_de_maintien.pdf" target="_blank">Fichier
+PDF</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+
+</body>
+</html>

@@ -1,0 +1,1398 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+  <title>Bac pro PLC -Mondeville - signalisation danger et
+securite;</title>
+
+
+  <meta content="ressources" name="description">
+
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+  <tbody>
+
+    <tr>
+
+      <td>
+      <div style="text-align: center;"></div>
+
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+        <tbody>
+
+          <tr>
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="background-color: rgb(64, 64, 64);">
+            <div id="menu">
+            <ul>
+
+              <li style="font-family: Arial;"><a href="../../accueil.html"> Accueil </a></li>
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">Signalisation
+danger et s&eacute;curit&eacute;</span></big></big></big></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial;"><span style="font-weight: bold;">&nbsp;1. <a href="#1">D&eacute;finition</a></span><a style="font-weight: bold;" href="#1"><br>
+
+                  </a> <br style="font-weight: bold;">
+
+                  <span style="font-weight: bold;">&nbsp;2.
+                  </span><a href="#2"><span style="text-decoration: underline;"><span style="font-weight: bold;">Champ d'application</span></span></a><br style="font-weight: bold;">
+
+                  <br style="font-weight: bold;">
+
+                  <span style="font-weight: bold;"></span><span style="font-weight: bold;"> &nbsp;3. </span><a href="#3"><span style="font-weight: bold;">Terminologie</span></a><br>
+
+                  <br style="font-weight: bold;">
+
+                  <span style="font-weight: bold;"></span><span style="font-weight: bold;"> &nbsp;4. </span><a href="#4"><span style="font-weight: bold;">Mode
+de signalisation</span></a><br>
+
+                  <br>
+
+                  <span style="font-weight: bold;"></span><span style="font-weight: bold;">&nbsp;5. </span><a href="#5"><span style="text-decoration: underline;"><span style="font-weight: bold;">Signalisation des couleurs</span></span></a><br>
+
+                  <br>
+
+                  <span style="font-weight: bold;">&nbsp;6.
+                  </span><span style="text-decoration: underline;"><span style="font-weight: bold;"><a href="#6">Panneaux
+d'interdiction</a><br>
+
+                  </span></span><br>
+
+                  <span style="font-weight: bold;">&nbsp;7.
+                  </span><span style="text-decoration: underline;"><span style="font-weight: bold;"><a href="#7">Panneaux
+d'avertissement de risque ou de danger</a><br>
+
+                  <br>
+
+                  </span></span><span style="font-weight: bold;">&nbsp;8. </span><span style="text-decoration: underline;"><span style="font-weight: bold;"><a href="#8">Panneaux
+d'obligation</a><br>
+
+                  </span></span><br>
+
+                  <span style="font-weight: bold;">&nbsp;9.
+                  </span><span style="text-decoration: underline;"><span style="font-weight: bold;"><a href="#9">Panneaux
+de sauvetage ou de secours</a><br>
+
+                  </span></span><br>
+
+                  <span style="font-weight: bold;">10. </span><a href="#10"><span style="text-decoration: underline;"><span style="font-weight: bold;">Panneaux concernant le
+mat&eacute;riel ou l'&eacute;quipement de lutte contre
+l'incendie</span></span></a><br style="font-weight: bold;">
+
+                  <br style="font-weight: bold;">
+
+                  <span style="font-weight: bold;">11.<a href="#6"> </a></span><a href="#12"><span style="font-weight: bold;">Fichiers</span></a></td>
+
+                  <td style="text-align: right;"><img style="width: 280px; height: 277px;" alt="" src="image_017.png"><br>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>1.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>D&eacute;finition<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;" align="justify">
+
+            <td>
+            <div style="margin-left: 54px;">Une
+signalisation de s&eacute;curit&eacute; ou de sant&eacute;
+est une signalisation qui, rapport&eacute;e &agrave; un objet,
+une activit&eacute; ou &agrave; une situation
+d&eacute;termin&eacute;e, fournie une indication relative
+&agrave; la s&eacute;curit&eacute; ou &agrave; la
+sant&eacute;. Elle prend la forme, selon le cas, d&rsquo;un
+panneau, d&rsquo;une couleur, d&rsquo;un signal lumineux ou
+acoustique &laquo; Arr&ecirc;t&eacute; du 4 novembre 1993
+&raquo;.</div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr align="justify">
+
+            <td>
+            <table style="width: 100%; text-align: left; margin-left: 0px; margin-right: 0px;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>2.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>Champ d'application<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 54px;">Sont soumis
+aux dispositions les &eacute;tablissements industriels, commerciaux
+et agricoles de quelques natures qu'ils soient, publics ou
+priv&eacute;s, la&iuml;ques ou religieux, m&ecirc;me
+s&rsquo;ils ont un caract&egrave;re coop&eacute;ratif ou
+d&rsquo;enseignement professionnel.</div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr align="justify">
+
+            <td>
+            <table style="width: 100%; text-align: left; margin-left: 0px; margin-right: 0px;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>3.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3"></a>Terminologie<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;" align="justify">
+
+            <td>
+            <div style="margin-left: 52px;">
+            <table class="MsoTableGrid" style="border: medium none ; border-collapse: collapse; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr style="height: 36.85pt;">
+
+                  <td style="padding: 0cm 5.4pt; vertical-align: top; width: 219.75pt; height: 36.85pt;">
+                  <p class="MsoNormal" style="text-align: right;" align="right"><b style=""><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Signal
+d&rsquo;interdiction&nbsp;:<span style="color: black; letter-spacing: -0.05pt;"><o:p></o:p></span></span></b></p>
+
+                  </td>
+
+                  <td style="padding: 0cm 5.4pt; width: 295.9pt; height: 36.85pt;" valign="top" width="395">
+                  <p class="MsoNormal" style="text-align: justify;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Signal
+qui interdit un comportement susceptible de faire courir ou de
+provoquer un danger.<o:p></o:p></span></p>
+
+                  </td>
+
+                </tr>
+
+                <tr style="height: 22.7pt;">
+
+                  <td style="padding: 0cm 5.4pt; width: 219.75pt; height: 22.7pt;" valign="top" width="293">
+                  <p class="MsoNormal" style="text-align: right;" align="right"><b style=""><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Signal
+d&rsquo;avertissement&nbsp;:<span style="color: black; letter-spacing: -0.05pt;"><o:p></o:p></span></span></b></p>
+
+                  </td>
+
+                  <td style="padding: 0cm 5.4pt; width: 295.9pt; height: 22.7pt;" valign="top" width="395">
+                  <p class="MsoNormal" style="text-align: justify;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Signal
+qui avertit d&rsquo;un risque ou d&rsquo;un danger.<o:p></o:p></span></p>
+
+                  </td>
+
+                </tr>
+
+                <tr style="height: 22.7pt;">
+
+                  <td style="padding: 0cm 5.4pt; width: 219.75pt; height: 22.7pt;" valign="top" width="293">
+                  <p class="MsoNormal" style="text-align: right;" align="right"><b style=""><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Signal
+d&rsquo;obligation&nbsp;:<span style="color: black; letter-spacing: -0.05pt;"><o:p></o:p></span></span></b></p>
+
+                  </td>
+
+                  <td style="padding: 0cm 5.4pt; width: 295.9pt; height: 22.7pt;" valign="top" width="395">
+                  <p class="MsoNormal" style="text-align: justify;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Signal
+qui prescrit un comportement d&eacute;termin&eacute;.<b><span style="color: black; letter-spacing: -0.05pt;"><o:p></o:p></span></b></span></p>
+
+                  </td>
+
+                </tr>
+
+                <tr style="height: 48.2pt;">
+
+                  <td style="padding: 0cm 5.4pt; width: 219.75pt; height: 48.2pt;" valign="top" width="293">
+                  <p class="MsoNormal" style="text-align: right;" align="right"><b style=""><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Signal
+de sauvetage ou de secours&nbsp;:<o:p></o:p></span></b></p>
+
+                  </td>
+
+                  <td style="padding: 0cm 5.4pt; width: 295.9pt; height: 48.2pt;" valign="top" width="395">
+                  <p class="MsoNormal" style="text-align: justify;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Signal
+qui donne des indications relatives aux issues<span style="">&nbsp;
+                  </span>de secours et aux moyens de secours ou
+de sauvetage.<o:p></o:p></span></p>
+
+                  </td>
+
+                </tr>
+
+                <tr style="height: 36.85pt;">
+
+                  <td style="padding: 0cm 5.4pt; width: 219.75pt; height: 36.85pt;" valign="top" width="293">
+                  <p class="MsoNormal" style="text-align: right;" align="right"><b style=""><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Signal
+d&rsquo;indication&nbsp;:<o:p></o:p></span></b></p>
+
+                  </td>
+
+                  <td style="padding: 0cm 5.4pt; width: 295.9pt; height: 36.85pt;" valign="top" width="395">
+                  <p class="MsoNormal" style="text-align: justify;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Signal
+qui fournit d&rsquo;autres indications que celles
+&eacute;num&eacute;r&eacute;es aux points
+pr&eacute;c&eacute;dents.<o:p></o:p></span></p>
+
+                  </td>
+
+                </tr>
+
+                <tr style="height: 48.2pt;">
+
+                  <td style="padding: 0cm 5.4pt; width: 219.75pt; height: 48.2pt;" valign="top" width="293">
+                  <p class="MsoNormal" style="text-align: right;" align="right"><b style=""><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Panneau&nbsp;:<o:p></o:p></span></b></p>
+
+                  </td>
+
+                  <td style="padding: 0cm 5.4pt; width: 295.9pt; height: 48.2pt;" valign="top" width="395">
+                  <p class="MsoNormal" style="text-align: justify;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Signal
+qui, par la combinaison d&rsquo;une forme
+g&eacute;om&eacute;trique, de couleur et d&rsquo;un symbole
+ou pictogramme, fournit une indication d&eacute;termin&eacute;e.<o:p></o:p></span></p>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;<big><big>4.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="4"></a>Mode de signalisation<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 54px;">La
+signalisation est : <br>
+
+            <ul>
+
+              <li>Soit permanente : panneaux, couleurs,
+&eacute;tiquetages ;</li>
+
+              <li>Soit occasionnelle : signaux lumineux, signaux
+acoustiques.</li>
+
+            </ul>
+
+L&rsquo;efficacit&eacute; d&rsquo;une signalisation ne doit
+&ecirc;tre mise en cause par : <br>
+
+            <ul>
+
+              <li>La pr&eacute;sence d&rsquo;une autre
+indication ou d&rsquo;une autre source
+d&rsquo;&eacute;mission du m&ecirc;me type qui affecte la
+visibilit&eacute; ou l&rsquo;audibilit&eacute; ;</li>
+
+              <li>Une mauvaise conception, un nombre insuffisant,
+un mauvais emplacement, un mauvais &eacute;tat ou un mauvais
+fonctionnement des moyens ou dispositifs de signalisation.</li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 1px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>5.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="5"></a>Signalisation des couleurs<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 54px;">
+            <table style="width: 750px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="2" cellspacing="2">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 167px; text-align: center; background-color: rgb(204, 204, 204);"><b><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; letter-spacing: -0.05pt; color: black;">Couleur</span></b></td>
+
+                  <td style="width: 242px; text-align: center; background-color: rgb(204, 204, 204);"><b><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; letter-spacing: -0.05pt; color: black;">Signification</span></b></td>
+
+                  <td style="width: 313px; text-align: center; background-color: rgb(204, 204, 204);"><b><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; letter-spacing: -0.05pt; color: black;">Indication</span></b></td>
+
+                </tr>
+
+                <tr>
+
+                  <td colspan="1" rowspan="3" style="width: 167px; text-align: center; background-color: rgb(255, 204, 204);"><b style=""><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Rouge</span></b></td>
+
+                  <td style="width: 242px; background-color: rgb(255, 204, 204);"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Signal
+d&rsquo;interdiction</span></td>
+
+                  <td style="width: 313px; background-color: rgb(255, 204, 204);"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Attitude
+dangereuse</span></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="width: 242px; background-color: rgb(255, 204, 204);"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Danger-
+alarme</span></td>
+
+                  <td style="width: 313px; background-color: rgb(255, 204, 204);">
+                  <p class="MsoNormal" style="text-align: justify;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Stop,
+arr&ecirc;t, dispositifs de coupure d&rsquo;urgence.<o:p></o:p></span></p>
+
+                  <span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Evacuation</span></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="width: 242px; background-color: rgb(255, 204, 204);"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Mat&eacute;riel
+et &eacute;quipement de lutte contre l&rsquo;incendie</span></td>
+
+                  <td style="width: 313px; background-color: rgb(255, 204, 204);"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Identification
+et localisation</span></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="width: 167px; text-align: center; background-color: rgb(255, 255, 102);">
+                  <p class="MsoNormal"><b style=""><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Jaune<o:p></o:p></span></b></p>
+
+                  <p class="MsoNormal"><b style=""><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">ou<o:p></o:p></span></b></p>
+
+                  <b style=""><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">jaune-orang&eacute;</span></b></td>
+
+                  <td style="width: 242px; background-color: rgb(255, 255, 102);"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Signal
+d&rsquo;avertissement</span></td>
+
+                  <td style="width: 313px; background-color: rgb(255, 255, 102);"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Attention,
+pr&eacute;caution</span></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="width: 167px; text-align: center; background-color: rgb(204, 204, 255);"><b style=""><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Bleu</span></b></td>
+
+                  <td style="width: 242px; background-color: rgb(204, 204, 255);"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Signal
+d&rsquo;obligation</span></td>
+
+                  <td style="width: 313px; background-color: rgb(204, 204, 255);"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Comportement
+ou action sp&eacute;cifique&nbsp;; obligation de porter un
+&eacute;quipement individuel de s&eacute;curit&eacute;</span></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="width: 167px; text-align: center; background-color: rgb(153, 255, 153);" colspan="1" rowspan="2"><b style=""><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Vert</span></b></td>
+
+                  <td style="width: 242px; background-color: rgb(153, 255, 153);"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Signal
+de sauvetage ou de secours</span></td>
+
+                  <td style="width: 313px; background-color: rgb(153, 255, 153);"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Portes,
+issues, voies, mat&eacute;riels, postes, locaux</span></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="width: 242px; background-color: rgb(153, 255, 153);"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Situation
+de s&eacute;curit&eacute;</span></td>
+
+                  <td style="width: 313px; background-color: rgb(153, 255, 153);"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Retour
+&agrave; la normale</span></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>6.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="6"></a>Panneaux
+d'interdiction</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 54px;"><span style="text-decoration: underline; font-weight: bold;">Caract&eacute;ristiques
+:</span> <br>
+
+            <ul>
+
+              <li>Forme ronde ; </li>
+
+              <li>Pictogramme noir sur fond blanc, bande
+descendant de gauche
+&agrave; droite &agrave; 45&deg; .&nbsp; </li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial; text-decoration: underline; font-weight: bold;">
+
+            <td>
+            <div style="margin-left: 54px;">Exemples :</div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 54px;">
+            <table style="width: 500px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="text-align: center;"><img style="width: 172px; height: 171px;" alt="" src="image_009.png"></td>
+
+                  <td style="text-align: center;"><img style="width: 172px; height: 171px;" alt="" src="image_010.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="text-align: center; color: rgb(255, 0, 0); font-weight: bold;">D&eacute;fense
+de fumer&nbsp; </td>
+
+                  <td style="text-align: center; color: rgb(255, 0, 0); font-weight: bold;">Flamme
+interdite <br>
+
+D&eacute;fense de fumer</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>7.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="7"></a>Panneaux
+d'avertissement de risque ou de danger</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 54px;"><span style="text-decoration: underline; font-weight: bold;">Caract&eacute;ristiques
+:</span> <br>
+
+            <ul>
+
+              <li>Forme triangulaire ; </li>
+
+              <li>Pictogramme noir sur fond jaune.&nbsp; </li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial; text-decoration: underline; font-weight: bold;">
+
+            <td>
+            <div style="margin-left: 54px;">Exemples :</div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 54px;">
+            <table style="width: 500px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="text-align: center;"><img style="width: 172px; height: 171px;" alt="" src="image_011.png"></td>
+
+                  <td style="text-align: center;"><img style="width: 172px; height: 171px;" alt="" src="image_012.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="text-align: center; color: rgb(255, 0, 0); font-weight: bold;">Mati&egrave;res
+inflammables </td>
+
+                  <td style="text-align: center; color: rgb(255, 0, 0); font-weight: bold;">Mati&egrave;res
+explosives</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>8.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="8"></a>Panneaux
+d'obligation</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 54px;"><span style="text-decoration: underline; font-weight: bold;">Caract&eacute;ristiques
+:</span> <br>
+
+            <ul>
+
+              <li>Forme ronde ; </li>
+
+              <li>Pictogramme blanc sur fond bleu. </li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial; text-decoration: underline; font-weight: bold;">
+
+            <td>
+            <div style="margin-left: 54px;">Exemples :</div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 54px;">
+            <table style="width: 500px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="text-align: center;"><img style="width: 172px; height: 171px;" alt="" src="image_013.png"></td>
+
+                  <td style="text-align: center;"><img style="width: 172px; height: 171px;" alt="" src="image_014.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="text-align: center; color: rgb(255, 0, 0); font-weight: bold;">Lunettes
+de protection<br>
+
+obligatoire&nbsp; </td>
+
+                  <td style="text-align: center; color: rgb(255, 0, 0); font-weight: bold;">Casque
+de protection<br>
+
+obligatoire</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>9.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="9"></a>Panneaux
+de sauvetage ou de secours</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 54px;"><span style="text-decoration: underline; font-weight: bold;">Caract&eacute;ristiques
+:</span> <br>
+
+            <ul>
+
+              <li>Forme rectangulaire ou carr&eacute;e ; </li>
+
+              <li>Pictogramme blanc sur fond vert.&nbsp; </li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial; text-decoration: underline; font-weight: bold;">
+
+            <td>
+            <div style="margin-left: 54px;">Exemples :</div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 54px;">
+            <table style="width: 500px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td colspan="1" rowspan="1" style="text-align: center;"><img style="width: 500px; height: 171px;" alt="" src="image_015.png"><br>
+
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td colspan="1" rowspan="1" style="text-align: center; color: rgb(255, 0, 0); font-weight: bold;">Direction
+&agrave; suivre</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>10.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="10"></a>Panneaux
+concernant le mat&eacute;riel ou l&rsquo;&eacute;quipement
+de lutte contre l&rsquo;incendie</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 54px;"><span style="text-decoration: underline; font-weight: bold;">Caract&eacute;ristiques
+:</span> <br>
+
+            <ul>
+
+              <li>Forme rectangulaire ou carr&eacute;e ; </li>
+
+              <li>Pictogramme blanc sur fond rouge.&nbsp; </li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial; text-decoration: underline; font-weight: bold;">
+
+            <td>
+            <div style="margin-left: 54px;">Exemples :</div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 54px;">
+            <table style="width: 500px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td colspan="1" rowspan="1" style="text-align: center;"><img style="width: 500px; height: 171px;" alt="" src="image_016.png"><br>
+
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td colspan="1" rowspan="1" style="text-align: center; color: rgb(255, 0, 0); font-weight: bold;">Direction
+&agrave; suivre</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>11.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="11"></a>Exemples
+d'application</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"> </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="text-align: center;">
+            <div style="margin-left: 54px;"><img style="width: 786px; height: 411px;" alt="" src="image_001.png"><br>
+
+            <br>
+
+            <img style="width: 786px; height: 586px;" alt="" src="image_002.png"><br>
+
+            <br>
+
+            <img style="width: 786px; height: 519px;" alt="" src="image_003.png"><br>
+
+            <br>
+
+            <img style="width: 786px; height: 372px;" alt="" src="image_004.png"><br>
+
+            <br>
+
+            <img style="width: 786px; height: 339px;" alt="" src="image_005.png"></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"> </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>12.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="12"></a>Fichiers</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="signalisation_securite_et_danger.docx">Fichier
+word</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 5px;"></td>
+
+                  <td style="text-align: center;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="signalisation_securite_et_danger.pdf" target="_blank">Fichier
+PDF</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+
+</body>
+</html>

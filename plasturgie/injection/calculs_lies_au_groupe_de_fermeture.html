@@ -1,0 +1,1736 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>Bac pro PLC -Mondeville - calculs li&eacute;s au
+groupe de fermeture</title>
+
+
+  <meta name="description" content="ressources">
+
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+  <tbody>
+
+    <tr>
+
+      <td>
+      <div style="text-align: right;"></div>
+
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+        <tbody>
+
+          <tr>
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="background-color: rgb(64, 64, 64);">
+            <div id="menu">
+            <ul>
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">Calculs
+li&eacute;s au groupe de fermeture</span></big></big></big></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td><span style="font-family: Arial; font-weight: bold;">1. <a href="#1"><span style="text-decoration: underline;">Analyse
+des forces, pressions et surfaces</span></a></span><br style="font-family: Arial; font-weight: bold;">
+
+                  <span style="font-family: Arial; font-weight: bold;"></span><br style="font-family: Arial; font-weight: bold;">
+
+                  <span style="font-family: Arial; font-weight: bold;">2. <a href="#2">La pression d'injection: Pi</a><br>
+
+                  <br>
+
+3. <span style="text-decoration: underline;"><a href="#3">La pression d'injection dans le moule: Pim</a><br>
+
+                  <br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">4.<a href="#4"> <span style="text-decoration: underline;">La
+surface frontale de la moul&eacute;e: Sf</span></a></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;"><span style="text-decoration: underline;"></span> <br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;">5.&nbsp;<a href="#5">La force d'injection dans le moule: Fim</a><br>
+
+                  <br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;">6.&nbsp;<a href="#6">La force de verrouillage du moule: Fv</a><br>
+
+                  <br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;">7.&nbsp;<a href="#7">La pression de verrouillage du moule: Pv</a></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;"><br>
+
+                  <span style="font-weight: bold;">&nbsp;
+&nbsp; 7.1.</span></span><big style="font-family: Arial; font-weight: bold;"> <small><a href="#71">D&eacute;termination par calcul</a><br>
+
+                  <br>
+
+                  </small></big><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;">&nbsp;
+&nbsp; 7.2.</span></span><big style="font-family: Arial; font-weight: bold;"> <small><a href="#72">D&eacute;termination par abaque</a><br>
+
+                  <br>
+
+                  </small></big><span style="font-family: Arial; font-weight: bold;">8.&nbsp;<a href="#8">Les formules</a></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;"><br>
+
+9. <a href="#9">Fichiers</a></span></td>
+
+                  <td style="text-align: right;"><img style="width: 604px; height: 302px;" alt="" src="image_060.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>1.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>Analyse
+des forces, pressions et surfaces<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr align="center">
+
+            <td>
+            <div style="margin-left: 52px;"><img style="width: 809px; height: 475px;" alt="" src="image_061.png"><br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="text-align: center;"></div>
+
+            <div style="margin-left: 54px; text-align: center;"><img style="width: 812px; height: 353px;" alt="" src="image_062.png"></div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>2.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>La
+pression d'injection: Pi<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64); font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 54px; text-align: justify;">Elle
+est donn&eacute;e sur la fiche technique du fabricant de
+mati&egrave;re. Le pr&eacute;cis des mati&egrave;res
+plastiques propose des valeurs &agrave; utiliser en fonction des
+mati&egrave;res (ordre de grandeur). Pour le calcul, on prendra la
+valeur maximale pr&eacute;conis&eacute;e.<br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>3.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3"></a>La
+pression d'injection dans le moule: Pim<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 54px;">La
+mati&egrave;re plastique &agrave; l&rsquo;&eacute;tat
+fondu est un fluide plus ou moins visqueux. On constate une baisse de
+la pression entre l&rsquo;avant de la vis et l&rsquo;empreinte.
+            <br>
+
+            <br>
+
+Cette baisse est due aux pertes de charges : <br>
+
+            <br>
+
+            <div style="margin-left: 40px;">-&nbsp;
+viscosit&eacute; de la mati&egrave;re fondue ; <br>
+
+-&nbsp;longueur de cheminement de la mati&egrave;re ; <br>
+
+-&nbsp;changement de direction ; <br>
+
+-&nbsp;forme et section du seuil d&rsquo;injection ; <br>
+
+-&nbsp;section des canaux d&rsquo;alimentation et
+&eacute;paisseur de la pi&egrave;ce ; <br>
+
+- &eacute;tat de surface des usinages. <br>
+
+            </div>
+
+            <br>
+
+La globalisation de toutes ces pertes entra&icirc;ne une baisse de
+pression admissible dans le moule de 40 &agrave; 60%. <br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 54px;">
+            <table style="font-weight: bold; font-family: Arial; width: 300px; height: 30px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="text-align: center; background-color: rgb(255, 204, 204);">Pim
+= Pi &ndash; pertes de charges</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>4.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="4"></a>La
+surface frontale de la moul&eacute;e: Sf<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 54px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td>La surface frontale est comparable
+&agrave; l&rsquo;ombre de la pi&egrave;ce
+projet&eacute;e si elle est &eacute;clair&eacute;e suivant
+une direction g&eacute;n&eacute;ralement perpendiculaire au
+plan de joint.</td>
+
+                  <td colspan="1" rowspan="2"><img style="width: 380px; height: 287px;" alt="" src="image_063.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="text-align: center;"><img style="width: 355px; height: 158px;" alt="" src="image_064.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 54px;"><span style="font-weight: bold; text-decoration: underline;">D&eacute;finition
+: </span><br>
+
+            <br>
+
+La surface frontale d&rsquo;une moul&eacute;e est une surface
+plane sur laquelle vient se r&eacute;partir la mati&egrave;re
+sous pression. G&eacute;n&eacute;ralement elle se trouve dans
+le plan de joint du moule. <br>
+
+            <br>
+
+Pour une presse horizontale, la surface frontale se trouve sur un plan
+vertical qui est perpendiculaire &agrave; l&rsquo;axe de la vis
+d&rsquo;injection. <br>
+
+            <br>
+
+Pour une presse verticale, cette surface se trouve sur un plan
+horizontal perpendiculaire &agrave; l&rsquo;axe de la vis
+d&rsquo;injection. <br>
+
+            <br>
+
+Pour une presse d&rsquo;angle (injection par plan de joint), cette
+surface est parall&egrave;le &agrave; l&rsquo;axe de la vis
+d&rsquo;injection quand celui-ci est vertical. </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>5.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="5"></a>La
+force d'injection dans le moule: Fim<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 105px;">
+            <table style="width: 100%; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td colspan="2" rowspan="1">
+                  <hr style="width: 100%; height: 2px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="vertical-align: top;">
+                  <div style="text-align: justify;"><span style="font-family: Arial;">Lors de l&rsquo;injection,
+la mati&egrave;re se r&eacute;partie dans l&rsquo;empreinte
+sous l&rsquo;action de la pression d&rsquo;injection. <br>
+
+                  <br>
+
+La pi&egrave;ce inject&eacute;e exerce une pression sur
+l&rsquo;empreinte fixe et mobile. <br>
+
+                  <br>
+
+Cette pression d&rsquo;injection dans le moule (Pim) tend
+&agrave; ouvrir le moule. </span> </div>
+
+                  </td>
+
+                  <td><img style="width: 628px; height: 364px;" alt="" src="image_065.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td colspan="2" rowspan="1">
+                  <hr style="width: 100%; height: 2px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="vertical-align: top; font-family: Arial;">
+                  <div style="text-align: justify;">La
+pression de la mati&egrave;re dans l&rsquo;empreinte se
+r&eacute;partit sur toutes les surfaces moulantes et engendre une
+force &agrave; l&rsquo;int&eacute;rieur du moule.</div>
+
+                  </td>
+
+                  <td><img style="width: 550px; height: 319px;" alt="" src="image_066.png"><br>
+
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td colspan="2" rowspan="1">
+                  <hr style="width: 100%; height: 2px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; vertical-align: top; text-align: justify;">On
+peut
+s&rsquo;simplifier la forme de la pi&egrave;ce en ne prenant en
+compte que la surface frontale.<br>
+
+                  <br>
+
+Les forces engendr&eacute;es par la pression d&rsquo;injection
+dans le moule sont perpendiculaires &agrave; la surface frontale. </td>
+
+                  <td><img style="width: 628px; height: 364px;" alt="" src="image_067.png"><br>
+
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td colspan="2" rowspan="1">
+                  <hr style="width: 100%; height: 2px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="vertical-align: top; font-family: Arial;">
+                  <div style="text-align: justify;">Pour
+les calculs, on prendra en compte la r&eacute;sultante des forces
+(Fim).<br>
+
+                  <br>
+
+                  <table style="width: 250px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+                    <tbody>
+
+                      <tr style="font-weight: bold;">
+
+                        <td style="text-align: center; height: 30px; background-color: rgb(255, 204, 204);">Fim
+= Pim x Sf</td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="text-align: center;"><br>
+
+avec Fim en DaN<br>
+
+Pim en bar<br>
+
+Sf en cm2</td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                  <br>
+
+                  </div>
+
+                  <br>
+
+                  </td>
+
+                  <td><img style="width: 628px; height: 364px;" alt="" src="image_068.png"><br>
+
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td colspan="2" rowspan="1">
+                  <hr style="width: 100%; height: 2px;"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>6.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="6"></a>La
+force de verrouillage du moule: Fv<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 54px;">La force de
+verrouillage est au minimum &eacute;gale &agrave; la force
+d&rsquo;injection dans le moule. <br>
+
+            <br>
+
+On lui applique un coefficient de
+s&eacute;curit&eacute; de 10 % pour &ecirc;tre sur que le
+moule ne s&rsquo;ouvre pas. <br>
+
+            <span style="text-decoration: underline; font-weight: bold;"></span></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial; font-weight: bold;">
+
+            <td>
+            <div style="margin-left: 54px;">
+            <table style="width: 400px; height: 40px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="background-color: rgb(255, 204, 204);">
+                  <div style="text-align: center;"><span style="font-weight: bold;">Fv = Fim x (1 + coefficient de
+s&eacute;curit&eacute;)</span></div>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 54px;"><span style="text-decoration: underline; font-weight: bold;">Remarque
+:</span> <br>
+
+            <br>
+
+            </div>
+
+            <div style="margin-left: 80px;">- Augmenter la
+force de verrouillage sans raison, provoque une
+d&eacute;pense d&rsquo;&eacute;nergie et une usure inutile
+du groupe fermeture. <br>
+
+            <br>
+
+- Les &eacute;vents du moule peuvent se
+trouver &eacute;cras&eacute;s emp&ecirc;chant
+l&rsquo;air de s&rsquo;&eacute;chapper. Des
+d&eacute;fauts apparaissent sur les pi&egrave;ces,
+pr&eacute;sence de bulles ou traces de flash (bulles qui ont
+explos&eacute; sous la pression). <br>
+
+            <br>
+
+-&nbsp;La connaissance de cette valeur permet &eacute;galement
+de
+choisir le tonnage d&rsquo;une presse. </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>7.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="7"></a>La
+pression de verrouillage du moule: Pv<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 54px;">La pression de
+verrouillage est d&eacute;termin&eacute;e par calcul ou par un
+abaque de la machine.</div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>7.1.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="71"></a>D&eacute;termination
+par calculs<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 105px;">
+            <table style="width: 270px; height: 80px; text-align: left; margin-left: auto; margin-right: auto; background-color: rgb(255, 204, 204);" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="text-align: center;">
+                  <table style="width: 250px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+                    <tbody>
+
+                      <tr>
+
+                        <td style="font-family: Arial; font-weight: bold; text-align: center;"></td>
+
+                        <td style="font-family: Arial; font-weight: bold; text-align: center;">Fv
+x Phydraulique maxi</td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="font-family: Arial; font-weight: bold; text-align: center;">Pv
+= </td>
+
+                        <td style="font-family: Arial; font-weight: bold; text-align: center;">
+                        <hr style="width: 100%; height: 2px;"></td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="font-family: Arial; font-weight: bold; text-align: center;"></td>
+
+                        <td style="font-family: Arial; font-weight: bold; text-align: center;">Fv
+maxi</td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 105px;"><span style="font-weight: bold; text-decoration: underline;">Exemple
+:</span><br>
+
+            <br>
+
+Pression verrouillage maxi : 242 bar <br>
+
+Force de verrouillage maxi : 251 kN <br>
+
+            <br>
+
+Pour une force de verrouillage de 150 kN, la formule donne le
+r&eacute;sultat :<br>
+
+            <br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 105px;">
+            <table style="width: 500px; height: 80px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="text-align: center;">
+                  <table style="width: 450px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+                    <tbody>
+
+                      <tr>
+
+                        <td style="font-family: Arial; font-weight: bold; text-align: center;"></td>
+
+                        <td style="text-align: center; font-weight: bold; font-family: Arial;">Fv
+x Phydraulique maxi</td>
+
+                        <td style="font-weight: bold; font-family: Arial;"></td>
+
+                        <td style="font-weight: bold; font-family: Arial;">150 x 242</td>
+
+                        <td style="font-weight: bold; font-family: Arial;"></td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="font-family: Arial; font-weight: bold; text-align: center;">Pv
+= </td>
+
+                        <td style="text-align: center; font-weight: bold; font-family: Arial;">
+                        <hr style="width: 100%; height: 2px;"></td>
+
+                        <td style="font-weight: bold; font-family: Arial;">&nbsp;=&nbsp;</td>
+
+                        <td style="font-weight: bold; font-family: Arial;">
+                        <hr style="width: 100%; height: 2px;"></td>
+
+                        <td style="font-weight: bold; font-family: Arial;">&nbsp;=
+144,7 bar</td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="font-family: Arial; font-weight: bold; text-align: center;"></td>
+
+                        <td style="text-align: center; font-weight: bold; font-family: Arial;">Fv
+maxi</td>
+
+                        <td style="font-weight: bold; font-family: Arial;"></td>
+
+                        <td style="font-weight: bold; font-family: Arial;">251</td>
+
+                        <td style="font-weight: bold; font-family: Arial;"></td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>7.2.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="72"></a>D&eacute;termination
+par abaque<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 105px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; width: 400px;">Pour
+une force de verrouillage de 150 kN, l&rsquo;abaque donne le
+r&eacute;sultat 145 bar.</td>
+
+                  <td style="text-align: center;"><img style="width: 455px; height: 309px;" alt="" src="image_069.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>8.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="8"></a>Les
+formules<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 54px;">
+            <table style="width: 600px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="2" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td>
+                  <table style="width: 600px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+                    <tbody>
+
+                      <tr>
+
+                        <td style="font-family: Arial; font-weight: bold; background-color: rgb(255, 204, 255); height: 40px;">&nbsp;
+&nbsp;Pression d'injection</td>
+
+                        <td style="font-family: Arial; background-color: rgb(255, 204, 255); height: 40px;">&nbsp;
+&nbsp;Pi</td>
+
+                        <td style="font-family: Arial; background-color: rgb(255, 204, 255);">&nbsp;
+&nbsp;bar</td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td colspan="3" rowspan="1">
+                        <hr style="width: 100%; height: 2px;"></td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="font-family: Arial; font-weight: bold; height: 40px;">&nbsp;
+&nbsp;Pression d'injection dans le moule</td>
+
+                        <td style="font-family: Arial;">&nbsp;
+&nbsp;Pim</td>
+
+                        <td style="font-family: Arial;">&nbsp;
+&nbsp;bar</td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="font-family: Arial; font-weight: bold; height: 70px;"></td>
+
+                        <td style="font-family: Arial;" colspan="2" rowspan="1">&nbsp; &nbsp;Pim = Pi
+- pertes de charges<br>
+
+&nbsp; &nbsp;pertes de charges entre 40 et 60%<br>
+
+&nbsp; &nbsp;pertes de charges = (0,4 ou 0,6) x Pi</td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td colspan="3" rowspan="1">
+                        <hr style="width: 100%; height: 2px;"></td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="font-family: Arial; font-weight: bold; background-color: rgb(255, 204, 255); height: 40px;">&nbsp;
+&nbsp;La surface frontale de la moul&eacute;e</td>
+
+                        <td style="font-family: Arial; background-color: rgb(255, 204, 255);">&nbsp;
+&nbsp;Sf</td>
+
+                        <td style="font-family: Arial; background-color: rgb(255, 204, 255);">&nbsp;
+&nbsp;cm2</td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td colspan="3" rowspan="1">
+                        <hr style="width: 100%; height: 2px;"></td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="font-family: Arial; font-weight: bold; height: 40px;">&nbsp;
+&nbsp;La force d'injection dans le moule</td>
+
+                        <td style="font-family: Arial;">&nbsp;
+&nbsp;Fim</td>
+
+                        <td style="font-family: Arial;">&nbsp;
+&nbsp;da N (Newton)</td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="font-family: Arial; font-weight: bold; height: 40px;"></td>
+
+                        <td style="font-family: Arial;" colspan="2" rowspan="1">&nbsp; &nbsp;Fim =
+Pim x Sf</td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td colspan="3" rowspan="1">
+                        <hr style="width: 100%; height: 2px;"></td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="font-family: Arial; font-weight: bold; background-color: rgb(255, 204, 255); height: 40px;">&nbsp;
+&nbsp;La force de verrouillage du moule</td>
+
+                        <td style="font-family: Arial; background-color: rgb(255, 204, 255);">&nbsp;
+&nbsp;Fv</td>
+
+                        <td style="font-family: Arial; background-color: rgb(255, 204, 255);">&nbsp;
+&nbsp;da N (Newton)</td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="font-family: Arial; font-weight: bold; background-color: rgb(255, 204, 255); height: 50px;"></td>
+
+                        <td style="font-family: Arial; background-color: rgb(255, 204, 255);" colspan="2" rowspan="1">&nbsp; &nbsp;Fv = Fim
+x (1 + coefficient de s&eacute;curit&eacute;)<br>
+
+&nbsp; &nbsp;coefficient de s&eacute;curit&eacute; = 10%</td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td colspan="3" rowspan="1">
+                        <hr style="width: 100%; height: 2px;"></td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="font-family: Arial; font-weight: bold; height: 40px;">&nbsp;
+&nbsp;La pression de verrouillage du moule</td>
+
+                        <td style="font-family: Arial;">&nbsp;
+&nbsp;Pv</td>
+
+                        <td style="font-family: Arial;">&nbsp;
+&nbsp;bar</td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="height: 70px;"></td>
+
+                        <td colspan="2" rowspan="1">
+                        <table style="width: 200px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+                          <tbody>
+
+                            <tr>
+
+                              <td style="font-family: Arial;"></td>
+
+                              <td style="text-align: center; font-family: Arial;">Fv x Pv maxi</td>
+
+                            </tr>
+
+                            <tr>
+
+                              <td style="text-align: right; font-family: Arial;">Pv = </td>
+
+                              <td style="text-align: center; font-family: Arial;">
+                              <hr style="width: 100%; height: 2px; margin-left: auto; margin-right: auto;"></td>
+
+                            </tr>
+
+                            <tr>
+
+                              <td style="font-family: Arial;"></td>
+
+                              <td style="text-align: center; font-family: Arial;">Fv maxi</td>
+
+                            </tr>
+
+                          </tbody>
+                        </table>
+
+                        </td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>9.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="9"></a>Fichiers</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td colspan="4" rowspan="1">
+                  <hr style="width: 100%; height: 2px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="vertical-align: top; font-family: Arial; font-weight: bold;" colspan="1" rowspan="3">Enseignant</td>
+
+                  <td style="height: 30px;">
+                  <div style="text-align: right;">
+                  <script>
+function passWord1() {
+var testV = 1;
+var pass1 = prompt('Veuillez entrer le mot de passe',' ');
+while (testV < 3) {
+if (!pass1) history.go(-1);
+if (pass1.toLowerCase() == "nvgsdh") {
+alert('Mot de passe correct !');
+window.open('calculs_lies_au_groupe_de_fermeture.docx');
+break ;
+} testV+=1;
+var pass1 = prompt('Accès interdit - Mot de passe incorrect. Veuillez réessayer.','Mot de passe');
+}
+if (pass1.toLowerCase()!="sesame" & testV ==3) history.go(-1);
+return " ";
+} </script>
+                  <form><input value="Fichier WORD" onclick="passWord1()" type="button"></form>
+
+                  </div>
+
+                  <span style="font-family: Arial; color: rgb(64, 64, 64);"></span></td>
+
+                  <td style="width: 20px;"></td>
+
+                  <td style="height: 30px; vertical-align: top;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 10px;"></td>
+
+                  <td></td>
+
+                  <td></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 30px;">
+                  <div style="text-align: right;">
+                  <script>
+function passWord2() {
+var testV = 1;
+var pass1 = prompt('Veuillez entrer le mot de passe',' ');
+while (testV < 3) {
+if (!pass1) history.go(-1);
+if (pass1.toLowerCase() == "nvgsdh") {
+alert('Mot de passe correct !');
+window.open('calculs_lies_au_groupe_de_fermeture.pdf');
+break ;
+} testV+=1;
+var pass1 = prompt('Accès interdit - Mot de passe incorrect. Veuillez réessayer.','Mot de passe');
+}
+if (pass1.toLowerCase()!="sesame" & testV ==3) history.go(-1);
+return " ";
+} </script>
+                  <form><input value="Fichier PDF" onclick="passWord2()" type="button"></form>
+
+                  </div>
+
+                  <span style="font-family: Arial; color: rgb(64, 64, 64);"></span></td>
+
+                  <td></td>
+
+                  <td style="vertical-align: top; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td colspan="4" rowspan="1">
+                  <hr style="width: 100%; height: 2px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold;">El&egrave;ve</td>
+
+                  <td style="height: 30px;">
+                  <div style="text-align: right;">
+                  <script>
+function passWord3() {
+var testV = 1;
+var pass1 = prompt('Veuillez entrer le mot de passe',' ');
+while (testV < 3) {
+if (!pass1) history.go(-1);
+if (pass1.toLowerCase() == "nvgsdh") {
+alert('Mot de passe correct !');
+window.open('calculs_lies_au_groupe_de_fermeture_e.docx');
+break ;
+} testV+=1;
+var pass1 = prompt('Accès interdit - Mot de passe incorrect. Veuillez réessayer.','Mot de passe');
+}
+if (pass1.toLowerCase()!="sesame" & testV ==3) history.go(-1);
+return " ";
+} </script>
+                  <form><input value="Fichier WORD" onclick="passWord3()" type="button"></form>
+
+                  </div>
+
+                  <span style="font-family: Arial; color: rgb(64, 64, 64);"></span></td>
+
+                  <td></td>
+
+                  <td style="height: 25px; width: 25px; text-align: center; vertical-align: top;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td></td>
+
+                  <td style="height: 10px;"></td>
+
+                  <td></td>
+
+                  <td></td>
+
+                </tr>
+
+                <tr>
+
+                  <td></td>
+
+                  <td style="height: 30px;">
+                  <div style="text-align: right;">
+                  <script>
+function passWord4() {
+var testV = 1;
+var pass1 = prompt('Veuillez entrer le mot de passe',' ');
+while (testV < 3) {
+if (!pass1) history.go(-1);
+if (pass1.toLowerCase() == "nvgsdh") {
+alert('Mot de passe correct !');
+window.open('calculs_lies_au_groupe_de_fermeture_e.pdf');
+break ;
+} testV+=1;
+var pass1 = prompt('Accès interdit - Mot de passe incorrect. Veuillez réessayer.','Mot de passe');
+}
+if (pass1.toLowerCase()!="sesame" & testV ==3) history.go(-1);
+return " ";
+} </script>
+                  <form><input value="Fichier PDF" onclick="passWord4()" type="button"></form>
+
+                  </div>
+
+                  <span style="font-family: Arial; color: rgb(64, 64, 64);"></span></td>
+
+                  <td></td>
+
+                  <td style="text-align: center; vertical-align: top;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td colspan="4" rowspan="1">
+                  <hr style="width: 100%; height: 2px;"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+
+</body>
+</html>

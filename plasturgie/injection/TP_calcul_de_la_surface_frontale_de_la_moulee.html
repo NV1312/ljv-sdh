@@ -1,0 +1,1435 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  
+
+
+  
+  <title>Bac pro PLC -Mondeville - tp_calcul de la surface frontale de la moul&eacute;e</title>
+  <meta name="description" content="ressources">
+
+
+  
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+  
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+
+
+  
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+
+  
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+
+  
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td>
+      
+      <div style="text-align: center;"></div>
+
+
+      
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+
+        <tbody>
+
+
+          <tr>
+
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+
+          </tr>
+
+
+          <tr style="color: rgb(64, 64, 64);">
+
+
+            <td style="background-color: rgb(64, 64, 64);">
+            
+            <div id="menu">
+            
+            <ul>
+
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+
+            
+            </ul>
+
+
+            </div>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+          </tr>
+
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">TP Calcul de
+la surface frontale de la moul&eacute;e </span></big></big></big></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+          </tr>
+
+
+          <tr style="color: rgb(64, 64, 64);">
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td><span style="font-family: Arial; font-weight: bold;">1. <a href="#1"><span style="text-decoration: underline;">Pr&eacute;ambule</span></a></span><br style="font-family: Arial; font-weight: bold;">
+
+
+                  <span style="font-family: Arial; font-weight: bold;"></span><br style="font-family: Arial; font-weight: bold;">
+
+
+                  <span style="font-family: Arial; font-weight: bold;">2. <span style="text-decoration: underline;"><a href="#2">Tableau
+des relev&eacute;s</a><br>
+
+
+                  <br>
+
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span><span style="font-family: Arial; font-weight: bold;">3. <span style="text-decoration: underline;"><a href="#3">Proc&eacute;dure</a><br>
+
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;"><a href="#4"><span style="text-decoration: underline;"></span></a></span><span style="font-family: Arial; font-weight: bold;"><br>
+
+
+4. <a href="#4">Fichiers</a></span></td>
+
+
+                  <td style="width: 560px; text-align: center;"><img src="image_214.png" alt="" style="width: 500px; height: 500px;"> </td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+          </tr>
+
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>1.&nbsp;</big></big></td>
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>Pr&eacute;ambule<br>
+
+
+                  </big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr style="font-family: Arial;" align="center">
+
+
+            <td>
+            
+            <div style="text-align: left;"></div>
+
+
+            
+            <div text-align="" left="">
+            
+            <div style="text-align: left;"><span style="text-decoration: underline; font-weight: bold;">Objectif
+: </span><br>
+
+
+            <span style="text-decoration: underline; font-weight: bold;"></span><br>
+
+
+            <span style="text-decoration: underline; font-weight: bold;"></span>Etre
+capable de d&eacute;terminer la surface frontale de la
+moul&eacute;e. </div>
+
+
+            <br>
+
+
+            
+            <div style="text-align: left;"><span style="font-weight: bold; text-decoration: underline;">Comp&eacute;tences
+vis&eacute;es :</span> <br>
+
+
+            <br>
+
+
+Collecter les informations &eacute;crites, orales ou
+informatis&eacute;es li&eacute;es au fonctionnement de
+l&rsquo;aire et/ou du poste de fabrication.<br>
+
+
+Rendre compte du travail effectu&eacute;. <br>
+
+
+Participer &agrave; la vie de l&rsquo;&eacute;quipe de
+production.
+            <br>
+
+
+Renseigner les fiches et les documents techniques. <br>
+
+
+D&eacute;coder les documents techniques.
+            <br>
+
+
+            <br>
+
+
+            <span style="font-weight: bold; text-decoration: underline;">On
+donne : </span><br>
+
+
+            <span style="font-weight: bold; text-decoration: underline;"></span><br>
+
+
+            <span style="font-weight: bold; text-decoration: underline;"></span>
+&nbsp; &nbsp; - les moul&eacute;es <br>
+
+
+&nbsp; &nbsp; - le mode op&eacute;ratoire
+            <br>
+
+
+&nbsp; &nbsp; - les instruments de mesure
+            <br>
+
+
+            <br>
+
+
+            <span style="font-weight: bold; text-decoration: underline;">On
+demande :</span><br>
+
+
+            </div>
+
+
+            <br>
+
+
+            
+            <table style="text-align: left; width: 900px;" border="1" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="width: 100px; height: 30px; font-weight: bold; text-align: center; background-color: rgb(255, 204, 255);">Comp&eacute;tence</td>
+
+
+                  <td style="font-weight: bold; text-align: center; background-color: rgb(255, 204, 255); width: 350px;">Travail
+et
+crit&egrave;res
+d&rsquo;&eacute;valuation</td>
+
+
+                  <td style="font-weight: bold; text-align: center; background-color: rgb(255, 204, 255); width: 50px;" colspan="2" rowspan="1">Bar&egrave;me</td>
+
+
+                  <td style="font-weight: bold; text-align: center; background-color: rgb(255, 204, 255); width: 50px;">Note</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="height: 30px;" colspan="1" rowspan="4">C 18 </td>
+
+
+                  <td colspan="1" rowspan="4" style="width: 350px;">Repr&eacute;senter
+la surface frontale de la moul&eacute;e sur feuille en reportant
+les cotes essentielles.
+Choisir une &eacute;chelle adapt&eacute;e &agrave; la
+feuille de dessin.
+                  </td>
+
+
+                  <td style="width: 339px;" ="">L&rsquo;&eacute;chelle
+est adapt&eacute;e &agrave; la feuille (2pts)
+                  <br>
+
+
+L&rsquo;&eacute;chelle n&rsquo;est pas adapt&eacute;e
+(0pt)
+                  <br>
+
+
+                  <br>
+
+
+                  </td>
+
+
+                  <td style="text-align: center; width: 50px;">2&nbsp;pts</td>
+
+
+                  <td style="width: 50px;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="width: 339px;">
+L&rsquo;&eacute;chelle est indiqu&eacute;e sur le dessin
+(2pts)
+L&rsquo;&eacute;chelle n&rsquo;est pas indiqu&eacute;e
+(0pt)
+                  <br>
+
+
+                  </td>
+
+
+                  <td style="text-align: center; width: 50px;">2
+pts</td>
+
+
+                  <td style="width: 50px;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="width: 339px;">&nbsp;.&nbsp;La
+surface frontale de la moul&eacute;e est
+repr&eacute;sent&eacute;e et elle est correcte (4pts).
+                  <br>
+
+
+La surface frontale de la moul&eacute;e est incompl&egrave;te
+(2pts)
+                  <br>
+
+
+La surface frontale de la moul&eacute;e est fausse ou non
+repr&eacute;sent&eacute;e (0pts)
+                  <br>
+
+
+                  </td>
+
+
+                  <td style="text-align: center; width: 50px;">4&nbsp;pts</td>
+
+
+                  <td style="width: 50px;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="width: 339px;">Les cotes
+essentielles sont repr&eacute;sent&eacute;es (2pts).
+La cotation est incompl&egrave;te (1pts)
+                  <br>
+
+
+La cotation n&rsquo;est pas repr&eacute;sent&eacute;e (0
+pts).</td>
+
+
+                  <td style="text-align: center; width: 50px;">2&nbsp;pts</td>
+
+
+                  <td style="width: 50px;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td>C 08&nbsp;
+                  </td>
+
+
+                  <td style="width: 350px;">D&eacute;terminer
+la surface frontale r&eacute;elle du moule.&nbsp;
+                  <br>
+
+
+                  </td>
+
+
+                  <td style="width: 339px;">La surface
+frontale est correcte et justifi&eacute;e (6pts).<br>
+
+
+La surface frontale est incorrecte et justifi&eacute;e (3 pts).
+                  <br>
+
+
+La surface frontale est incorrecte et non justifi&eacute;e (0 pt).
+                  <br>
+
+
+                  </td>
+
+
+                  <td style="text-align: center; width: 50px;">6&nbsp;pts
+                  </td>
+
+
+                  <td style="width: 50px;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td colspan="1" rowspan="1"> C
+06&nbsp;</td>
+
+
+                  <td style="width: 350px;"> Respect des
+consignes.&nbsp;</td>
+
+
+                  <td style="width: 339px;"><br>
+
+
+                  </td>
+
+
+                  <td style="text-align: center; width: 50px;">1
+pt</td>
+
+
+                  <td style="width: 50px;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td> C 18</td>
+
+
+                  <td style="width: 350px;">Soins de la
+r&eacute;daction du document.</td>
+
+
+                  <td style="width: 339px;"><br>
+
+
+                  </td>
+
+
+                  <td style="text-align: center; width: 50px;">3&nbsp;pts</td>
+
+
+                  <td style="width: 50px;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="height: 30px;"></td>
+
+
+                  <td style="width: 350px;"></td>
+
+
+                  <td style="width: 339px;"></td>
+
+
+                  <td style="text-align: center; width: 50px;"><span style="font-weight: bold;">20 pts</span></td>
+
+
+                  <td style="width: 50px;"></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </div>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>2.&nbsp;</big></big></td>
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>Tableau des relev&eacute;s<br>
+
+
+                  </big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="width: 900px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="5" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr style="font-family: Arial; font-weight: bold;" align="center">
+
+
+                  <td style="background-color: rgb(204, 204, 255);">Tableau
+des relev&eacute;s</td>
+
+
+                </tr>
+
+
+                <tr style="font-family: Arial; font-weight: bold; color: rgb(255, 255, 255);">
+
+
+                  <td style="background-color: rgb(204, 0, 0);">Feuille
+de calculs</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; width: 356px;" colspan="1" rowspan="1">Surface frontale de la
+moul&eacute;e</td>
+
+
+                </tr>
+
+
+                <tr style="font-family: Arial; font-weight: bold;">
+
+
+                  <td>Surface frontale de la moul&eacute;e<br>
+
+
+                  <span style="font-weight: normal;">. . .
+. . . . . . . . . . . . &nbsp;.</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . .&nbsp;</span><span style="font-weight: normal;">.
+. .
+. . . . . . . . . . . . &nbsp;.</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . .&nbsp;</span><span style="font-weight: normal;">.
+. .
+. . . . . . . . . . . . &nbsp;.</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . .&nbsp;</span><span style="font-weight: normal;">.
+. .
+. . . . . . . . . . . . &nbsp;.</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . .&nbsp;</span><span style="font-weight: normal;">.
+. .
+. . . . . . . . . . . . &nbsp;.</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . .&nbsp;</span><span style="font-weight: normal;">.
+. .
+. . . . . . . . . . . . &nbsp;.</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . .&nbsp;</span><span style="font-weight: normal;">.
+. .
+. . . . . . . . . . . . &nbsp;.</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . .&nbsp;</span><span style="font-weight: normal;"></span><span style="font-weight: normal;"></span><span style="font-weight: normal;"></span></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="background-color: rgb(204, 0, 0);"><span style="font-family: Arial; font-weight: bold; color: rgb(255, 255, 255);">Repr&eacute;sentation
+graphique</span></td>
+
+
+                </tr>
+
+
+                <tr align="center">
+
+
+                  <td>
+                  <table style="text-align: left; width: 800px;" border="1" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <td><br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><img style="width: 800px; height: 129px;" alt="" src="image_221.png"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <br>
+
+
+                  </td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>3.&nbsp;</big></big></td>
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3"></a>Proc&eacute;dure<br>
+
+
+                  </big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td> <big> </big><big> </big>
+            
+            <table style="width: 900px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="5" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr style="font-weight: bold; font-family: Arial;">
+
+
+                  <td style="text-align: center; background-color: rgb(204, 204, 255);" colspan="2" rowspan="1"><big>Proc&eacute;dure
+                  </big></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; text-align: center; font-weight: bold; background-color: rgb(204, 204, 255);"><big>N&deg;
+                  </big></td>
+
+
+                  <td style="font-family: Arial; text-align: center; font-weight: bold; background-color: rgb(204, 204, 255);"><big>Op&eacute;rations</big></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; text-align: center;">1
+                  </td>
+
+
+                  <td style="font-family: Arial; height: 30px;">Repr&eacute;senter
+la surface frontale de la moul&eacute;e sur la feuille de dessin en
+prenant une &eacute;chelle adapt&eacute;e.
+                  <br>
+
+Utiliser les instruments de mesure adapt&eacute;e.
+                  <br>
+
+
+                  </td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; text-align: center;">2</td>
+
+
+                  <td style="font-family: Arial;">Reporter les cotes essentielles pour le calcul de la surface frontale de la moul&eacute;e sur la feuille de dessin.
+                  </td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; text-align: center;">3</td>
+
+
+                  <td style="font-family: Arial;">D&eacute;terminer la surface frontale r&eacute;elle du moule (Sf) pour cela il faut :
+                  <br>
+
+                  <br>
+
+- d&eacute;composer les surfaces en &eacute;l&eacute;ments simple ;
+                  <br>
+
+- relever le cotes de chaque &eacute;l&eacute;ment simple ;
+                  <br>
+
+- calculer (SF=&Sigma; Surface Frontale des &eacute;l&eacute;ments simples).
+Faire valider par le professeur.&nbsp;</td>
+
+
+                </tr>
+
+
+
+
+
+
+
+
+
+
+                <tr style="font-weight: bold; color: rgb(255, 255, 255);">
+
+
+                  <td colspan="1" rowspan="1" style="background-color: rgb(204, 0, 0); font-family: Arial;"></td>
+
+
+                  <td style="font-family: Arial; background-color: rgb(204, 0, 0);">Faire
+valider par le professeur.</td>
+
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">4</td>
+
+                  <td style="font-family: Arial;">Rendre les documents au professeur ainsi que le mat&eacute;riel.</td>
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>4.&nbsp;</big></big></td>
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="4"></a>Fichiers</big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="tp_calcul_de_la_surface_frontale_de_la_moulee.docx">Fichier
+word</a>
+&nbsp; &nbsp;</td>
+
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="height: 5px;"></td>
+
+
+                  <td style="text-align: center;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="tp_calcul_de_la_surface_frontale_de_la_moulee.pdf" target="_blank">Fichier
+PDF</a>
+&nbsp; &nbsp;</td>
+
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+
+                </tr>
+
+
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+
+          </tr>
+
+
+        
+        </tbody>
+      
+      </table>
+
+
+      </td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+</body>
+</html>

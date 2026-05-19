@@ -1,0 +1,1347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+
+
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+  
+
+
+  
+  
+  
+  
+  
+  <title>Bac pro PLC -Mondeville - tp_lecture_diagramme_pression_d_injection</title>
+  <meta name="description" content="ressources">
+
+
+
+
+  
+  
+  
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  
+  
+  
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+
+
+  
+  
+  
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+
+
+
+  
+  
+  
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+
+
+
+  
+  
+  
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  
+  
+  
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  
+  
+  
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+  
+  
+  
+  <script>
+// fonction pour dessiner
+function draw(f,f1,f2,f3,f4,f5,f6){ // Largeur et hauteur en pixels
+var W=1000;H=500;
+var W1=1000;H1=700;
+var canvas=document.getElementById("graphe");
+canvas.width=W1;canvas.height=H1;
+var ctx=canvas.getContext("2d");
+// nb de pixels pour une unité
+var sc=10;
+var scH=20;
+var scV=35;
+var u=eval(f);
+var u1=eval(f1);
+var u2=eval(f2);
+var u3=eval(f3);
+var u4=eval(f4);
+var u5=eval(f5);
+var u6=eval(f6);
+u=eval(f);
+u1=eval(f1);
+u2=eval(f2);
+u3=eval(f3);
+u4=eval(f4);
+u5=eval(f5);
+u6=eval(f6);
+ctx.strokeStyle="#071907";
+ctx.moveTo(0,H-scH);
+ctx.lineTo(W,H-scH);
+ctx.moveTo(scV,0);
+ctx.lineTo(scV,H);
+ctx.stroke();
+// tracé du quadrillage--------------------------
+ctx.strokeStyle="#ff0000";
+ctx.beginPath();
+ctx.lineWidth=0.5;
+// lignes horizontales---------------------------
+for(var i=0;i<=H/scH;i++){
+ctx.moveTo(0,H-scH*i)
+ctx.lineTo(W,H-scH*i)
+}
+// lignes verticales-----------------------------
+for(var i=0;i<=W/scV;i++){
+ctx.moveTo(scV*i,H-0)
+ctx.lineTo(scV*i,H-H)
+}
+ctx.stroke();
+// fleche axe ------------------------------------------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(W-2,H-scH);
+ctx.lineTo(W-2-3,H-scH+3);
+ctx.lineTo(W-2-3,H-scH-3);
+ctx.lineTo(W-2,H-scH);
+ctx.stroke();
+//----------------------------------------------------------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(scV,3);
+ctx.lineTo(scV-3,3+3);
+ctx.lineTo(scV+3,3+3);
+ctx.lineTo(scV,3);
+ctx.stroke();
+//-----------------------------------------------
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText("bar", 2, scH);
+ctx.stroke();
+//-----------------------------------------------
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText("Pression presse", scV+10, scH);
+ctx.stroke();
+//-----------------------------------------------
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText("bar", W-40, H-2);
+ctx.stroke();
+//-----------------------------------------------
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText("Pression injection", W-160, H-scH-2);
+ctx.stroke();
+// tracé echelle--------------------------------------------------------------------
+ctx.strokeStyle="#0000FF";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(scV,H-scH);
+ctx.lineTo(scV,H-scH-scH);
+ctx.stroke();
+ctx.strokeStyle="#0000FF";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(scV,H-scH);
+ctx.lineTo(scV+scV,H-scH);
+ctx.stroke();
+// tracé echelle fleche---------------------------
+ctx.strokeStyle="#0000FF";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(scV,H-scH);
+ctx.moveTo(scV,H-scH-scH);
+ctx.lineTo(scV-3,H-scH-scH+3);
+ctx.lineTo(scV+3,H-scH-scH+3);
+ctx.lineTo(scV,H-scH-scH);
+ctx.stroke();
+// aaa--------------------------------------------
+ctx.strokeStyle="#0000FF";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(scV+scV,H-scH);
+ctx.lineTo(scV+scV-3,H-scH+3);
+ctx.lineTo(scV+scV-3,H-scH-3);
+ctx.lineTo(scV+scV,H-scH);
+ctx.stroke();
+// tracé echelle ecriture-------------------------
+ctx.fillStyle="#0000FF";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText(10, 5, H-scH-scH);
+ctx.stroke();
+ctx.fillStyle="#0000FF";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText(100, scV+scV, H-3);
+ctx.stroke();
+// tracé de la fonction--------------------------
+ctx.strokeStyle="#0000FF";
+ctx.lineWidth=3;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(scV,H-scH);
+ctx.lineTo(scV+(u*scV/100),(H-scH-((u1*scH)/10)));
+ctx.stroke();
+// ecriture-------------------------------------
+ctx.strokeStyle="#0000FF";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText(u1, 5, (H-scH-((u1*scH)/10)));
+ctx.stroke();
+// ecriture-------------------------------------
+ctx.strokeStyle="#0000FF";
+ctx.lineWidth=3;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText(u, scV+(u*scV/100), H-3);
+ctx.stroke();
+// tracé courbe----------------------------------
+ctx.lineWidth=7;
+ctx.strokeStyle="#FF0000";
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(scV,H-scH);
+ctx.lineTo(scV+(9000*scV/100),(H-scH-((u2*9000*scH)/10)));
+ctx.stroke();
+// tracé courbe rendement----------------------------------
+ctx.lineWidth=7;
+ctx.strokeStyle="#FF00FF";
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(scV,H-scH);
+ctx.lineTo(scV+(9000*scV/100),(H-scH-((u6*9000*scH)/10)));
+ctx.stroke();
+// tracé droite verticale valeur-----------------
+ctx.strokeStyle="#196F3D ";
+ctx.lineWidth=3;
+ctx.setLineDash([5, 5]);
+ctx.beginPath();
+ctx.moveTo(scV+(u3*scV/100),H-scH+10);
+ctx.lineTo(scV+(u3*scV/100),H-scH-((u2*u3*scH)/10));
+ctx.stroke();
+ctx.strokeStyle="#196F3D ";
+ctx.lineWidth=3;
+ctx.setLineDash([5, 5]);
+ctx.beginPath();
+ctx.moveTo(scV-10,H-scH-((u2*u3*scH)/10));
+ctx.lineTo(scV+(u3*scV/100),H-scH-((u2*u3*scH)/10));
+ctx.stroke();
+//-----------------------------------------------
+ctx.fillStyle="#196F3D";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText(u3, scV+(u3*scV/100), H-3);
+ctx.stroke();
+ctx.fillStyle="#196F3D";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+var u40=Math.ceil(u2*u3);
+u2=u2*1000;
+u2=Math.ceil(u2);
+u2=u2/1000;
+ctx.fillText(u40, 5, (H-scH-((u40*scH)/10)));
+var u100= "Y = "+u2 +" x " + u3 +" = "+u40;
+ctx.fillText(u100, 100, 600);
+ctx.stroke();
+// tracé droite verticale valeur-----------------
+ctx.strokeStyle="#FF0040 ";
+ctx.lineWidth=3;
+ctx.setLineDash([5, 5]);
+ctx.beginPath();
+ctx.moveTo(scV+(u4*scV/100),H-scH+10);
+ctx.lineTo(scV+(u4*scV/100),H-scH-((u2*u4*scH)/10));
+ctx.stroke();
+ctx.strokeStyle="#FF0040 ";
+ctx.lineWidth=3;
+ctx.setLineDash([5, 5]);
+ctx.beginPath();
+ctx.moveTo(scV-10,H-scH-((u2*u4*scH)/10));
+ctx.lineTo(scV+(u4*scV/100),H-scH-((u2*u4*scH)/10));
+ctx.stroke();
+//--------------------------------------------
+ctx.fillStyle="#FF0040";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText(u4, scV+(u4*scV/100), H-3);
+ctx.stroke();
+ctx.fillStyle="#FF0040";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+var u50=Math.ceil(u2*u4);
+u2=u2*1000;
+u2=Math.ceil(u2);
+u2=u2/1000;
+ctx.fillText(u50, 5, (H-scH-((u50*scH)/10)));
+var u101= "Y = "+u2 +" x " + u4 +" = "+u50;
+ctx.fillText(u101, 400, 600);
+ctx.stroke();
+// rendement-----------------------------------
+ctx.lineWidth=3;
+ctx.strokeStyle="#00FF00";
+ctx.setLineDash([]);
+ctx.beginPath();
+with(Math) { y=0;
+ctx.moveTo(scV,H-scH);
+ctx.lineTo(scV+(9000*scV*u5/100),(H-scH-((u2*9000*scH)/10)));
+ctx.stroke();
+}
+//--------------------------------------------
+ctx.strokeStyle="#FF0040 ";
+ctx.lineWidth=3;
+ctx.setLineDash([5, 5]);
+ctx.beginPath();
+ctx.moveTo(scV+(u4*scV/100),H-scH+10);
+ctx.lineTo(scV+(u4*scV/100),H-scH-((u2*u4*scH)/(10*u5)));
+ctx.stroke();
+//--------------------------------------------
+ctx.strokeStyle="#FF0040 ";
+ctx.lineWidth=3;
+ctx.setLineDash([5, 5]);
+ctx.beginPath();
+ctx.moveTo(scV-10,H-scH-((u2*u4*scH)/(10*u5)));
+ctx.lineTo(scV+(u4*scV/100),H-scH-((u2*u4*scH)/(10*u5)));
+ctx.stroke();
+//--------------------------------------------
+ctx.fillStyle="#FF0040";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+var u51= Math.ceil((u2*u4)/u5);
+u2=u2*1000;
+u2=Math.ceil(u2);
+u2=u2/1000;
+ctx.fillText(u51, 5, (H-scH-((u51*scH)/10)));
+var u102= "Y = "+u2 +" x " + u4 +" / "+u5+" = "+u51;
+ctx.fillText(u102, 400, 650);
+ctx.stroke();
+//--------------------------------------------
+ctx.strokeStyle="#196F3D";
+ctx.lineWidth=3;
+ctx.setLineDash([5, 5]);
+ctx.beginPath();
+ctx.moveTo(scV+(u3*scV/100),H-scH+10);
+ctx.lineTo(scV+(u3*scV/100),H-scH-((u2*u3*scH)/(10*u5)));
+ctx.stroke();
+//--------------------------------------------
+ctx.strokeStyle="#196F3D";
+ctx.lineWidth=3;
+ctx.setLineDash([5, 5]);
+ctx.beginPath();
+ctx.moveTo(scV-10,H-scH-((u2*u3*scH)/(10*u5)));
+ctx.lineTo(scV+(u3*scV/100),H-scH-((u2*u3*scH)/(10*u5)));
+ctx.stroke();
+//-------------------------------------------
+ctx.fillStyle="#196F3D";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+var u52= Math.ceil((u2*u3)/u5);
+ctx.fillText(u52, 5, (H-scH-((u52*scH)/10)));
+u2=u2*1000;
+u2=Math.ceil(u2);
+u2=u2/1000;
+var u103= "Y = "+u2 +" x " + u3 +" / "+u5+" = "+u52;
+ctx.fillText(u103, 100, 650);
+ctx.stroke();
+// traceé droite-------------------------------
+ctx.strokeStyle="#0000FF";
+ctx.lineWidth=3;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(scV,H-scH);
+ctx.lineTo(scV+(u*scV/100),(H-scH-((u1*scH)/10)));
+ctx.stroke();
+// tracé valeur horizontale------------------------
+ctx.strokeStyle="#0000FF";
+ctx.lineWidth=3;
+ctx.setLineDash([5, 5]);
+ctx.beginPath();
+ctx.moveTo(scV-10,(H-scH-((u1*scH)/10)));
+ctx.lineTo(scV+(u*scV/100),(H-scH-((u1*scH)/10)));
+ctx.stroke();
+// tracé valeur verticale--------------------------
+ctx.strokeStyle="#0000FF";
+ctx.lineWidth=3;
+ctx.setLineDash([5, 5]);
+ctx.beginPath();
+ctx.moveTo(scV+(u*scV/100),H-scH+10);
+ctx.lineTo(scV+(u*scV/100),(H-scH-((u1*scH)/10)));
+ctx.stroke();
+//---------------------------------------------
+ctx.strokeStyle="#0000FF";
+ctx.lineWidth=20;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(0,520);
+ctx.lineTo(20,520);
+ctx.stroke();
+ctx.fillStyle="#000000";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "16px Arial";
+ctx.fillText("Graphe à partir des valeurs", 20, 525);
+ctx.stroke();
+//---------------------------------------------
+ctx.strokeStyle="#FF0000";
+ctx.lineWidth=20;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(230,520);
+ctx.lineTo(230+20,520);
+ctx.stroke();
+ctx.fillStyle="#000000";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "16px Arial";
+ctx.fillText("Equation sans rendement", 20+230, 525);
+ctx.stroke();
+//---------------------------------------------
+ctx.strokeStyle="#FF00FF";
+ctx.lineWidth=20;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(450,520);
+ctx.lineTo(20+450,520);
+ctx.stroke();
+ctx.fillStyle="#000000";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "16px Arial";
+ctx.fillText("Equation avec rendement", 470, 525);
+ctx.stroke();
+//-------------------------------------------
+ctx.strokeStyle="#00FF00";
+ctx.lineWidth=20;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(670,520);
+ctx.lineTo(20+670,520);
+ctx.stroke();
+ctx.fillStyle="#000000";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "16px Arial";
+ctx.fillText("Equation théorique avec rendement", 20+670, 525);
+ctx.stroke();
+//---------------------------------------------
+ctx.fillStyle="#000000";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText("Calcul des valeurs de pressions à partir des équation:", 20, 570);
+ctx.stroke();
+} //-------------------------------------------
+tracer();
+function tracer(){var b=document.forms[0].formule.value;
+if (b !=""){var f="0+" + b}
+else {var f="0"}
+var c=document.forms[0].formule2.value;
+if (c !="") {var f1="0+" + c}
+else {var f1="0"};
+var d=document.forms[0].formule3.value;
+if (d !="") {var f2="0+" + d}
+else {var f2="0"};
+var e=document.forms[0].formule4.value;
+if (e !=""){var f3="0+" + e}
+else {var f3="0"};
+var g=document.forms[0].formule5.value;
+if (g !=""){var f4="0+" + g}
+else {var f4="0"};
+var h=document.forms[0].formule6.value;
+if (h !=""){var f5="0+" + h}
+else {var f5="0"};
+var i=document.forms[0].formule7.value;
+if (i !=""){var f6="0+" + i}
+else {var f6="0"};
+draw(f,f1,f2,f3,f4,f5,f6);
+}
+//-----------------------------------------------------------------------------------
+//-->
+  </script>
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+
+
+
+
+
+
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <td>
+      
+      
+      
+      <div style="text-align: left;"></div>
+
+
+
+
+      
+      
+      
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+
+        <tbody>
+
+
+
+
+          <tr>
+
+
+
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+
+
+
+          </tr>
+
+
+
+
+          <tr style="color: rgb(64, 64, 64);">
+
+
+
+
+            <td style="background-color: rgb(64, 64, 64);">
+            
+            
+            
+            <div id="menu">
+            
+            
+            
+            <ul>
+
+
+
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+
+
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+
+
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+
+
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+
+
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+
+
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+
+
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+
+
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+
+
+
+            
+            
+            
+            </ul>
+
+
+
+
+            </div>
+
+
+
+
+            </td>
+
+
+
+
+          </tr>
+
+
+
+
+          <tr>
+
+
+
+
+            <td>
+            
+            
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+
+
+          </tr>
+
+
+
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+
+
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">TP lecture du
+diagramme pression d'injection<br>
+
+
+
+Feuille de calcul</span></big></big></big></td>
+
+
+
+
+          </tr>
+
+
+
+
+          <tr>
+
+
+
+
+            <td>
+            
+            
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+
+
+          </tr>
+
+
+
+
+          <tr style="color: rgb(64, 64, 64);">
+
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+
+          </tr>
+
+
+
+
+          <tr>
+
+
+
+
+            <td>
+            
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+
+              <tbody>
+
+
+
+
+                <tr>
+
+
+
+
+                  <td style="font-family: Arial; font-weight: bold;">1.
+                  <a href="#1">Feuille de calcul</a><br>
+
+
+
+
+                  </td>
+
+
+
+
+                  <td style="width: 560px; text-align: center;"><img src="image_094.png" alt="" style="width: 424px; height: 230px;"> </td>
+
+
+
+
+                </tr>
+
+
+
+
+              
+              
+              
+              </tbody>
+            
+            
+            
+            </table>
+
+
+
+
+            </td>
+
+
+
+
+          </tr>
+
+
+
+
+          <tr>
+
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+
+          </tr>
+
+
+
+
+          <tr>
+
+
+
+
+            <td>
+            
+            
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+
+
+          </tr>
+
+
+
+
+          <tr>
+
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+
+          </tr>
+
+
+
+
+          <tr>
+
+
+
+
+            <td>
+            
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+
+              <tbody>
+
+
+
+
+                <tr>
+
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;"><big><big>1.&nbsp;</big></big></td>
+
+
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>Feuille de calcul</big></big></td>
+
+
+
+
+                </tr>
+
+
+
+
+              
+              
+              
+              </tbody>
+            
+            
+            
+            </table>
+
+
+
+
+            </td>
+
+
+
+
+          </tr>
+
+
+
+
+          <tr>
+
+
+
+
+            <td style="height: 20px;"></td>
+
+
+
+
+          </tr>
+
+
+
+
+          <tr>
+
+
+
+
+            <td>
+            
+            
+            
+            <div style="margin-left: 52px;"><span style="font-family: Arial; font-weight: bold;">Machine: </span>
+            
+            
+            
+            <select style="font-family: Arial;" id="anneau_M">
+            <option value="">--S&eacute;lectioner--</option>
+            <option value="Boy 25 M">boy25</option>
+            <option value="Boy 50 M">boy50</option>
+            </select>
+
+
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: Arial; font-weight: bold;">
+Diam&egrave;tre vis: </span>
+            
+            
+            
+            <select style="font-family: Arial;" id="anneau_M">
+            <option style="font-family: Arial;" value="">--S&eacute;lectioner--</option>
+            <option style="font-family: Arial;" value="24">24</option>
+            <option style="font-family: Arial;" value="28">28</option>
+            <option style="font-family: Arial;" value="32">32</option>
+            <option style="font-family: Arial;" value="38">38</option>
+            <option style="font-family: Arial;" value="42">42</option>
+            </select>
+
+
+
+
+            <span style="font-family: Arial;">&nbsp;mm</span><br style="font-family: Arial;">
+
+
+
+
+            <br>
+
+
+
+
+            
+            
+            
+            <form action="javascript:void(0)">
+              
+              
+              
+              <div style="text-align: center;"></div>
+
+
+
+
+              
+              
+              
+              <p style="font-family: Arial; text-align: left;"><span style="font-weight: bold;">Pression
+maximum mati&egrave;re
+injectable:&nbsp;</span> <input value="0" name="formule" size="15">
+bar&nbsp;</p>
+
+
+
+
+              <span style="font-family: Arial;"></span>
+              
+              
+              
+              <p style="font-family: Arial; text-align: left;"><span style="font-weight: bold;">Pression
+maximum hydraulique machine pour l&rsquo;injection:</span> <input value="0" name="formule2" size="15"> bar</p>
+
+
+
+
+              
+              
+              
+              <div style="text-align: center;">
+              
+              
+              
+              <div style="text-align: left;"><span style="font-family: Arial;"><span style="font-weight: bold;">Equation:</span>
+Y
+=&nbsp;</span><input value="0" name="formule3" style="font-family: Arial;" size="15"><span style="font-family: Arial;">
+* X (avec un rendement
+&agrave; 100%)</span><br>
+
+
+
+
+              </div>
+
+
+
+
+              <span style="font-family: Arial;"></span></div>
+
+
+
+
+              <span style="font-family: Arial;"><br>
+
+
+
+
+              </span>
+              
+              
+              
+              <div style="text-align: center;">
+              
+              
+              
+              <div style="text-align: left;"><span style="font-family: Arial;"><span style="font-weight: bold;">Pression hydraulique minimum et
+maximum pour une pression
+mati&egrave;re entre 800 et 1000 bar (m&eacute;thode graphique)
+:</span><br>
+
+
+
+
+              <br>
+
+
+
+
+              </span></div>
+
+
+
+
+              <span style="font-family: Arial;"></span></div>
+
+
+
+
+              
+              
+              
+              <div style="text-align: left;"><span style="font-family: Arial;">mini: </span><input value="0" name="formule4" style="font-family: Arial;" size="15"><span style="font-family: Arial;">
+&nbsp;bar &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; maxi:&nbsp;</span><input value="0" name="formule5" style="font-family: Arial;" size="15"><span style="font-family: Arial;">
+&nbsp;bar<br>
+
+
+
+
+&nbsp; &nbsp;</span></div>
+
+
+
+
+              
+              
+              
+              <div style="text-align: center;">
+              
+              
+              
+              <div style="text-align: left;"><span style="font-family: Arial;"><span style="font-weight: bold;">Equation:</span>
+Y
+= </span><input value="0" size="15" onchange="return IsFloat(this.value, 'pesée 1', 'R_A', 'RectCalc()')" name="formule7"><span style="font-family: Arial;">&nbsp;*
+X (avec un rendement
+&agrave;&nbsp;</span><input value="0" name="formule6" size="15"><span style="font-family: Arial;">&nbsp;)</span><br>
+
+
+
+
+              </div>
+
+
+
+
+              <span style="font-family: Arial;"></span></div>
+
+
+
+
+              <span style="font-family: Arial;"></span>
+              
+              
+              
+              <p style="font-family: Arial;"></p>
+
+
+
+
+              
+              
+              
+              <p style="font-family: Arial;"><br>
+
+
+
+
+              </p>
+
+
+
+
+              
+              
+              
+              <p style="font-family: Arial; text-align: center;"><input name="Envoi" value="Tracer" onclick="tracer()" type="submit"></p>
+
+
+
+
+            </form>
+
+
+
+
+            </div>
+
+
+
+
+            </td>
+
+
+
+
+          </tr>
+
+
+
+
+          <tr>
+
+
+
+
+            
+            
+            
+            <form action="javascript:void(0)"></form>
+
+
+
+              <td style="height: 10px;">
+              
+            
+            
+            <p><canvas id="graphe" width="400" height="300"></canvas></p>
+
+
+
+
+              </td>
+
+
+
+
+            
+
+          </tr>
+
+
+
+
+          <tr>
+
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+
+          </tr>
+
+
+
+
+          <tr>
+
+
+
+
+            <td>
+            
+            
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+
+
+          </tr>
+
+
+
+
+          <tr>
+
+
+
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+
+
+
+          </tr>
+
+
+
+
+        
+        
+        
+        </tbody>
+      
+      
+      
+      </table>
+
+
+
+
+      </td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+  
+</table>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,2494 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+  
+
+
+  
+  
+  
+  <title>Bac pro PLC -Mondeville - Les filetages</title>
+  <meta name="description" content="ressources">
+
+
+
+  
+  
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  
+  
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+
+
+  
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+
+  
+  
+  <link href="css" rel="stylesheet" type="text/css">
+
+
+
+  
+  
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+
+
+  
+  
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+
+
+  
+  
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  
+  
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  
+  
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+  <tbody>
+
+
+
+    <tr>
+
+
+
+      <td>
+      
+      
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+        <tbody>
+
+
+
+          <tr>
+
+
+
+            <td style="vertical-align: top; height: 110px;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="color: rgb(64, 64, 64);">
+
+
+
+            <td style="background-color: rgb(64, 64, 64);">
+            
+            
+            <div id="menu">
+            
+            
+            <ul>
+
+
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+
+
+            
+            
+            </ul>
+
+
+
+            </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">Les filetages</span></big></big></big></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="color: rgb(64, 64, 64);">
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;">
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="width: 607px;"><span style="font-family: Arial;"><span style="font-weight: bold;">1. <a href="#1"><span style="text-decoration: underline;">G&eacute;n&eacute;ralit&eacute;s</span></a><a href="#1"><span style="text-decoration: underline;"></span></a><br>
+
+
+                  </span></span><span style="font-family: Arial;"></span><span style="font-family: Arial;"><span style="font-weight: bold;"><a href="#13"><span style="text-decoration: underline;"></span></a></span><br>
+
+
+                  </span><span style="font-family: Arial; font-weight: bold;">&nbsp; &nbsp; 1.1.
+&nbsp;<a href="#11">D&eacute;finitions</a><br>
+
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><br>
+
+
+
+
+&nbsp; &nbsp; 1.2.
+&nbsp;<a href="#12"><span style="text-decoration: underline;">Emplois</span></a></span><br style="font-weight: bold;">
+
+
+                  <span style="font-family: Arial;"><span style="font-weight: bold;"></span> <br style="font-weight: bold;">
+
+
+
+                  <span style="font-weight: bold;">2.<a href="#2"> Caract&eacute;ristiques</a></span><br style="font-weight: bold;">
+
+
+
+                  <span style="font-weight: bold;"></span></span><span style="font-family: Arial; font-weight: bold;"><br>
+
+
+
+
+&nbsp; &nbsp; 2.1.
+&nbsp;<a href="#21"><span style="text-decoration: underline;">Le diam&egrave;tre nominal</span></a></span><br style="font-weight: bold;">
+
+
+                  <span style="font-family: Arial;"><span style="font-weight: bold;"></span> </span><span style="font-family: Arial; font-weight: bold;"><br>
+
+
+
+
+&nbsp; &nbsp; 2.2.
+&nbsp;<a href="#22"><span style="text-decoration: underline;">Le pas</span></a></span><br style="font-weight: bold;">
+
+
+                  <span style="font-family: Arial;"><span style="font-weight: bold;"></span> </span><span style="font-family: Arial; font-weight: bold;"><br>
+
+
+
+
+&nbsp; &nbsp; 2.3.
+&nbsp;<a href="#23"><span style="text-decoration: underline;">Nombre de filets</span></a></span><br style="font-weight: bold;">
+
+
+                  <span style="font-family: Arial;"><span style="font-weight: bold;"></span> </span><span style="font-family: Arial; font-weight: bold;"><br>
+
+
+
+
+&nbsp; &nbsp; 2.4.
+&nbsp;<a href="#24"><span style="text-decoration: underline;">Sens de l'h&eacute;lice</span></a></span><br style="font-weight: bold;">
+
+
+                  <span style="font-family: Arial;"><span style="font-weight: bold;"></span> </span><span style="font-family: Arial; font-weight: bold;"><br>
+
+
+
+
+&nbsp; &nbsp; 2.5.
+&nbsp;<a href="#25"><span style="text-decoration: underline;">Principaux profils de filets</span></a></span><br>
+
+
+                  <span style="font-family: Arial;"><span style="font-weight: bold;"><a href="le_dessin_technique.html#annexe"><span style="text-decoration: underline;"></span></a></span><span style="font-weight: bold;"><a href="atomes_et_molecules_des_matieres_plastiques.html#5"><span style="text-decoration: underline;"></span></a></span></span><span style="font-family: Arial;"><span style="font-weight: bold;"></span><span style="font-weight: bold;"><a href="le_dessin_technique.html#5"><span style="text-decoration: underline;"></span></a></span></span><span style="font-family: Arial;"><span style="font-weight: bold;"><a href="#annexe"><span style="text-decoration: underline;"></span></a></span><span style="font-weight: bold;"><a href="atomes_et_molecules_des_matieres_plastiques.html#5"><span style="text-decoration: underline;"></span></a></span><span style="font-weight: bold;"></span></span><span style="font-family: Arial;"><span style="font-weight: bold;"></span><span style="font-weight: bold;"><a href="#5"><span style="text-decoration: underline;"></span></a></span><br style="font-weight: bold;">
+
+
+
+                  <span style="font-weight: bold;">3. <a href="#3">Fichiers</a></span></span></td>
+
+
+
+                  <td style="width: 437px; text-align: center;"><img style="width: 532px; height: 284px;" alt="" src="image043.png"><br>
+
+
+
+                  </td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>1.&nbsp;</big></big></td>
+
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>G&eacute;n&eacute;ralit&eacute;s</big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr style="color: rgb(64, 64, 64);">
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="width: 50px;"></td>
+
+
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>1.1.&nbsp;</big></big></td>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="11"></a>D&eacute;finitions<br>
+
+
+
+                  </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"> </td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;">
+
+
+
+            <td style="height: 10px; text-align: justify;">
+            
+            
+            <div style="margin-left: 105px;">Un filetage
+est obtenu &agrave; partir d'un cylindre (ou un c&ocirc;ne) sur
+lequel on a ex&eacute;cut&eacute; une ou plusieurs rainures
+h&eacute;lico&iuml;dales. <br>
+
+
+
+            <br>
+
+
+
+La partie pleine restante est appel&eacute;e filet, On dit qu'une
+tige est &laquo; filet&eacute;e ext&eacute;rieurement
+&raquo; ou &laquo; filet&eacute;e &raquo; et qu'un trou
+est &laquo; filet&eacute;e int&eacute;rieurement
+&raquo; ou &laquo;taraud&eacute; &raquo;. <br>
+
+
+
+            <br>
+
+
+
+Une tige filet&eacute;e est aussi appel&eacute;e vis et un trou
+taraud&eacute; &eacute;crou. <br>
+
+
+
+            </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 105px; text-align: center;"><img style="width: 500px; height: 209px;" alt="" src="image027.png"></div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="width: 50px;"></td>
+
+
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>1.2.&nbsp;</big></big></td>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="12"></a>Emplois<br>
+
+
+
+                  </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;">
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 105px;">Le
+syst&egrave;me vis-&eacute;crou permet : <br>
+
+
+
+            
+            
+            <ul>
+
+
+
+              <li>d'assembler d'une mani&egrave;re
+d&eacute;montable deux pi&egrave;ces (liaison des roues d'une
+voiture par exemple) ;</li>
+
+
+
+            
+            
+            </ul>
+
+
+
+            
+            
+            <ul>
+
+
+
+              <li>de transmettre un mouvement (vis
+d'&eacute;tau par exemple). </li>
+
+
+
+            
+            
+            </ul>
+
+
+
+            </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 105px; text-align: center;"><img style="width: 700px; height: 350px;" alt="" src="image028.png"></div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>2.&nbsp;</big></big></td>
+
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>Caract&eacute;ristiques
+                  </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;">
+
+
+
+            <td style="text-align: justify;">
+            
+            
+            <div style="margin-left: 52px;">La valeur des
+caract&eacute;ristiques d'un filetage d&eacute;pend de son
+utilisation. <br>
+
+
+
+            </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="width: 50px;"></td>
+
+
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>2.1.&nbsp;</big></big></td>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="21"></a>Le
+diam&egrave;tre nominal<br>
+
+
+
+                  </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;">
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 105px;">Le
+diam&egrave;tre nominal d'une vis, ou d'un &eacute;crou, est
+une notion utilis&eacute;e pour la d&eacute;signation. <br>
+
+
+
+            <br>
+
+
+
+La valeur du diam&egrave;tre nominal correspond, aux
+tol&eacute;rances pr&egrave;s, au diam&egrave;tre
+ext&eacute;rieur de la vis. <br>
+
+
+
+            <br>
+
+
+
+Par d&eacute;finition, la vis et l'&eacute;crou ont le
+m&ecirc;me diam&egrave;tre nominal : d nominal = D nominal.
+            </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 105px; text-align: center;"><img style="width: 908px; height: 270px;" alt="" src="image029.png"></div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="width: 50px;"></td>
+
+
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>2.2.&nbsp;</big></big></td>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="22"></a>Le
+pas<br>
+
+
+
+                  </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;">
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 105px;">Le pas est la
+distance qui s&eacute;pare deux sommets cons&eacute;cutifs du
+filet. <br>
+
+
+
+            <br>
+
+
+
+Les normes ont pr&eacute;vu que pour chaque diam&egrave;tre
+nominal, il existe un pas usuel.
+            </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;">
+            
+            
+            <div style="margin-left: 105px;"></div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 105px; text-align: center;"><img style="width: 763px; height: 200px;" alt="" src="image030.png"></div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="width: 50px;"></td>
+
+
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>2.3.&nbsp;</big></big></td>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="23"></a>Nombre
+de filets<br>
+
+
+
+                  </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;">
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 105px;">G&eacute;n&eacute;ralement
+une vis ne comprend qu&rsquo;un seul filet mais si on souhaite
+avoir une plus grande avance pour un tour de vis, on utilise des vis
+&agrave; plusieurs filets.
+            <br>
+
+
+
+            <br>
+
+
+
+Pour celles-ci on r&eacute;alise c&ocirc;te &agrave;
+c&ocirc;te deux ou plusieurs filets identiques enroul&eacute;s
+en parall&egrave;le.
+            </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;">
+            
+            
+            <div style="margin-left: 105px;"></div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 105px; text-align: center;"><img style="width: 738px; height: 185px;" alt="" src="image031.png"></div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="width: 50px;"></td>
+
+
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>2.4.&nbsp;</big></big></td>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="24"></a>Sens
+de l'h&eacute;lice<br>
+
+
+
+                  </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 105px;">
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; text-align: justify;">Le sens de
+l'h&eacute;lice est dit &laquo; &agrave; droite &raquo;
+si en mettant l'axe de la vis vertical le filet monte vers la droite. <br>
+
+
+
+                  <br>
+
+
+
+Il est dit &laquo; &agrave; gauche &raquo; si le filet
+monte vers la gauche.
+                  <br>
+
+
+
+                  <br>
+
+
+
+                  
+                  
+                  <ul>
+
+
+
+                    <li>Un &eacute;crou &agrave; droite
+p&eacute;n&egrave;tre dans une vis &agrave; droite en
+tournant dans le sens horaire. </li>
+
+
+
+                  
+                  
+                  </ul>
+
+
+
+                  <br>
+
+
+
+                  
+                  
+                  <ul>
+
+
+
+                    <li>Un &eacute;crou &agrave; gauche
+p&eacute;n&egrave;tre dans une vis &agrave; gauche en
+tournant dans le sens anti-horaire.
+                    </li>
+
+
+
+                  
+                  
+                  </ul>
+
+
+
+                  </td>
+
+
+
+                  <td><img style="width: 382px; height: 206px;" alt="" src="image032.png"></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;">
+            
+            
+            <div style="margin-left: 105px;"></div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="width: 50px;"></td>
+
+
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>2.5.&nbsp;</big></big></td>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="25"></a>Principaux
+profils de filets<br>
+
+
+
+                  </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);">
+
+
+
+            <td style="height: 10px;"> </td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;">
+
+
+
+            <td style="text-align: justify;">
+            
+            
+            <div style="margin-left: 105px;"><big style="text-decoration: underline;"><span style="font-weight: bold;">Le profil m&eacute;trique ISO
+(triangulaire) :</span></big><br>
+
+
+
+&nbsp; <br>
+
+
+
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="width: 500px; vertical-align: top;">Le profil m&eacute;trique ISO est
+utilis&eacute; pour la majorit&eacute; des pi&egrave;ces
+filet&eacute;es.<br>
+
+
+
+                  <br>
+
+
+
+&nbsp;<span style="font-weight: bold;">D&eacute;signation
+:</span> <br>
+
+
+
+M diam&egrave;tre x pas <br>
+
+
+
+On termine avec la qualit&eacute; du filetage ou du taraudage
+                  <br>
+
+
+
+                  <br>
+
+
+
+                  <span style="font-weight: bold;">Exemples
+:</span> <br>
+
+
+
+M 20 - 5g (vis M 20 &agrave; pas gros)
+                  <br>
+
+
+
+M 20 x 1,5 - 4H (taraudage M 20 &agrave; pas fin de 1,5)
+                  </td>
+
+
+
+                  <td style="text-align: center;"><img style="width: 400px; height: 197px;" alt="" src="image033.png"></td>
+
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td colspan="2" rowspan="1">
+                  
+                  
+                  <hr style="width: 100%; height: 2px;"></td>
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;">
+            
+            
+            <div style="margin-left: 105px;"></div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 105px;"> <big style="text-decoration: underline;"><span style="font-weight: bold;"><span style="font-family: Arial;">Le profil </span></span><span style="font-family: Arial; font-weight: bold;">
+trap&eacute;zo&iuml;dal</span></big><big><span style="font-weight: bold;"><span style="font-family: Arial; text-decoration: underline;"> :</span><br style="font-family: Arial;">
+
+
+&nbsp; &nbsp;</span></big>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="width: 500px; font-family: Arial; vertical-align: top;">II permet de r&eacute;aliser des vis de man&oelig;uvre ou de
+transmission d'efforts.<br>
+
+
+Ce type de profil accepte mieux les traitements thermiques que le filet
+triangulaire. <br>
+
+
+                  <br>
+
+
+                  <span style="font-weight: bold;">D&eacute;signation : </span><br>
+
+
+Tr diam&egrave;tre x Pas <br>
+
+
+On
+termine avec la
+qualit&eacute; du filetage ou du taraudage
+.<br>
+
+
+                  <br>
+
+
+                  <span style="font-weight: bold;">Exemples : </span><br>
+
+
+Tr 24 x 5 (vis &agrave; 1 filet, d = 24, pas de 5)
+                  <br>
+
+
+Tr 24 x 5 H (idem avec pas &agrave; gauche)
+                  <br>
+
+
+Tr 24 x 15 (P5) (vis &agrave; plusieurs filets, d = 24, pas de 15,
+pas de
+profil de 5)
+                  </td>
+
+
+
+                  <td style="text-align: center;"><img style="width: 400px; height: 378px;" alt="" src="image034.png"></td>
+
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td colspan="2" rowspan="1">
+                  
+                  
+                  <hr style="width: 100%; height: 2px;"></td>
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;">
+            
+            
+            <div style="margin-left: 105px;"></div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;">
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 105px;"><big><span style="font-weight: bold; text-decoration: underline;">Le profil rond :</span><br style="font-weight: bold;">
+
+
+            </big><br>
+
+
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="width: 500px; vertical-align: top;">C'est le plus r&eacute;sistant aux chocs. <br>
+
+
+                  <br>
+
+
+Il peut supporter des
+efforts
+importants et sa forme arrondie limite le
+ph&eacute;nom&egrave;ne de concentrations
+de contraintes.
+                  <br>
+
+
+                  <br>
+
+
+                  <span style="font-weight: bold;">D&eacute;signation : </span><br>
+
+
+Rd diam&egrave;tre x Pas <br>
+
+
+                  <br>
+
+
+Exemple : <br>
+
+
+Rd 24 x
+3 (vis d=24, pas de
+3)
+                  <br>
+
+
+Rd 36 x 4, &agrave; gauche, 3 filets (vis d = 36, pas de 4, 3
+filets &agrave; gauche)
+                  </td>
+
+
+                  <td style="text-align: center;"><img style="width: 400px; height: 335px;" alt="" src="image035.png"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td colspan="2" rowspan="1">
+                  
+                  
+                  <hr style="width: 100%; height: 2px;"></td>
+
+
+                </tr>
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+            </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;">
+            
+            
+            <div style="margin-left: 105px;"></div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;">
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 105px;"><big style="text-decoration: underline;"><span style="font-weight: bold;">Le profil gaz
+:</span></big><br>
+
+
+            <br>
+
+
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="width: 500px;">II est utilis&eacute; dans les installations utilisant des fluides.
+                  <br>
+
+
+                  <br>
+
+
+Deux cas
+peuvent se pr&eacute;senter :
+                  <br>
+
+
+                  <br>
+
+
+                  
+                  
+                  <ul>
+
+
+                    <li>Assemblages sans &eacute;tanch&eacute;it&eacute; : vis et
+&eacute;crou ont un profil cylindrique
+;
+                    </li>
+
+
+                  
+                  
+                  </ul>
+
+
+                  
+                  
+                  <ul>
+
+
+                    <li>Assemblages &eacute;tanches : vis &agrave; profil conique et
+&eacute;crou &agrave; profil cylindrique (l'&eacute;tanch&eacute;it&eacute; dans le
+filet est assur&eacute;e par le serrage
+m&eacute;tal sur m&eacute;tal et, au besoin, par interposition
+d'une p&acirc;te &agrave; joint).
+                    </li>
+
+
+                  
+                  
+                  </ul>
+
+
+                  <br>
+
+
+                  <span style="font-weight: bold;">D&eacute;signation filetages &eacute;tanches : </span><br>
+
+
+R si filetage
+ext&eacute;rieur conique
+diam&egrave;tre (en pouce)
+                  <br>
+
+
+Rp si filetage int&eacute;rieur cylindrique diam&egrave;tre (en
+pouce)
+avec LH si filet &agrave; gauche.
+                  <br>
+
+
+                  <br>
+
+
+                  <span style="font-weight: bold;">Exemple : </span><br>
+
+
+R 1&frac12; (vis, filetage ext&eacute;rieur conique,
+diam&egrave;tre 1&frac12; pouce)
+                  <br>
+
+
+Rp 1&frac12; (&eacute;crou, filetage int&eacute;rieur
+cylindrique, diam&egrave;tre 1&frac12; pouce)<br>
+
+
+                  <br>
+
+
+                  <span style="font-weight: bold;">D&eacute;signation des filetages non &eacute;tanches :
+                  </span><br>
+
+
+G, diam&egrave;tre (en pouce), classe de tol&eacute;rance (A ou
+B pour les vis
+uniquement)
+                  <br>
+
+
+                  <br>
+
+
+                  <span style="font-weight: bold;">Exemple : </span><br>
+
+
+G 2&frac12;-A (vis, filetage ext&eacute;rieur
+cylindrique, diam&egrave;tre G 2&frac12; en
+pouce, classe de tol&eacute;rance)
+                  <br>
+
+
+G 2&frac12; (&eacute;crou, filetage int&eacute;rieur
+cylindrique, diam&egrave;tre G 2&frac12; en pouce)</td>
+
+
+                  <td style="text-align: center; vertical-align: top;"><img style="width: 400px; height: 262px;" alt="" src="image036.png"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td colspan="2" rowspan="1">
+                  
+                  
+                  <hr style="width: 100%; height: 2px;"></td>
+
+
+                </tr>
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+            </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;">
+            
+            
+            <div style="margin-left: 105px;"></div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr style="color: rgb(64, 64, 64);">
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>3.&nbsp;</big></big></td>
+
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3"></a>Fichiers<br>
+
+
+
+                  </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr style="color: rgb(64, 64, 64);">
+
+
+
+            <td style="height: 10px;"><br>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="les_filetages.docx">Fichier
+word </a>&nbsp;
+&nbsp;</td>
+
+
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td style="height: 5px;"></td>
+
+
+
+                  <td style="text-align: center;"></td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="les_filetages.pdf" target="_blank">Fichier
+PDF</a>
+&nbsp; &nbsp;</td>
+
+
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+
+
+          </tr>
+
+
+
+        
+        
+        </tbody>
+      
+      
+      </table>
+
+
+
+      </td>
+
+
+
+    </tr>
+
+
+
+  
+  
+  </tbody>
+</table>
+
+
+
+<br>
+
+
+
+</body>
+</html>

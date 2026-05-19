@@ -1,0 +1,841 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+  <title>Bac pro PLC -Mondeville - le moule- fonction
+&eacute;jection</title>
+
+
+  <meta content="ressources" name="description">
+
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+  <tbody>
+
+    <tr>
+
+      <td>
+      <div style="text-align: center; margin-left: 40px;"></div>
+
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+        <tbody>
+
+          <tr>
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="background-color: rgb(64, 64, 64);">
+            <div id="menu">
+            <ul>
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">Le
+moule - Fonction &eacute;jection</span></big></big></big></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td><span style="font-family: Arial; font-weight: bold;">1. <a href="#1"><span style="text-decoration: underline;">Introduction</span></a></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;"> </span><span style="font-family: Arial; font-weight: bold;"></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">2. <a href="#2">Le r&ocirc;le de l'&eacute;jection</a><br>
+
+                  </span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">3. <a href="#3">Solutions constructives d'&eacute;jection</a><br>
+
+                  </span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">4. <a href="#4">Caract&eacute;ristiques d'un
+syst&egrave;me d'&eacute;jection</a><br>
+
+                  </span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">5. <a href="#5">La s&eacute;curit&eacute;
+d'&eacute;jection</a></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><br>
+
+6. <a href="#6">Fichiers</a></span></td>
+
+                  <td style="text-align: center;"><img style="width: 500px; height: 289px;" alt="" src="image_008.png"><br>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>1.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>Introduction<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 50px;">Cette fonction
+assure l&rsquo;extraction correcte des pi&egrave;ces et suivant
+besoin de leur syst&egrave;me
+d&rsquo;alimentation (carotte, canaux alimentation) hors de
+l&rsquo;outillage. <br>
+
+L&rsquo;&eacute;tude des plans de joint
+et du sens de d&eacute;moulage d&eacute;termine la partie de
+l&rsquo;outillage sur laquelle est implant&eacute; le
+syst&egrave;me d&rsquo;&eacute;jection, qui est en
+g&eacute;n&eacute;rale, dans la plupart des ca, la partie
+mobile.<br>
+
+            <br>
+
+Ces &eacute;l&eacute;ments peuvent &ecirc;tre
+command&eacute;s soit par:<br>
+
+            <ul>
+
+              <li>de l'hydraulique, </li>
+
+              <li>du pneumatique, </li>
+
+              <li>du m&eacute;canique. </li>
+
+            </ul>
+
+            <br>
+
+Il est aussi possible de faire une &eacute;jection en plusieurs
+phases pour &eacute;jecter la carotte avant la pi&egrave;ce ou
+inversement. <br>
+
+            <br>
+
+Cette fonction prend en compte les param&egrave;tres suivants : <br>
+
+les caract&eacute;ristiques du polym&egrave;re, <br>
+
+            <ul>
+
+              <li>le calcul d&rsquo;effort
+d&rsquo;&eacute;jection, </li>
+
+              <li>les formes et dimensions des zones de retenues.</li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 50px; text-align: center;"><img style="width: 409px; height: 300px;" alt="" src="image_057.png"></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>2.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>Le
+r&ocirc;le de l'&eacute;jection<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr align="center">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 50px;">Les fonctions
+associ&eacute;es aux &eacute;jecteurs peuvent &ecirc;tre: <br>
+
+            <ul>
+
+              <li>de d&eacute;mouler la pi&egrave;ce
+apr&egrave;s ouverture du plan de joint,</li>
+
+              <li>de remise &agrave; z&eacute;ro des
+plaques d&rsquo;&eacute;jection,</li>
+
+              <li>de d&eacute;moulage de la carotte par un
+arrache carotte, </li>
+
+              <li>de retenir la carotte lors de la
+s&eacute;paration des plaques,</li>
+
+              <li>d&rsquo;&eacute;vents ou de soupape, </li>
+
+              <li>d&rsquo;accroche lors de mouvement
+lat&eacute;raux. </li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>3.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3"></a>Solution
+constructives d&rsquo;&eacute;jection<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 50px;">
+            <table style="text-align: left; width: 100%;" border="1" cellpadding="5" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-weight: bold; text-align: center; font-family: Arial;">Ejection&nbsp;</td>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: center;">Dessin
+associ&eacute;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: right;">Ejecteurs
+cylindriques</td>
+
+                  <td style="text-align: center;"><img style="width: 687px; height: 118px;" alt="" src="image_058.png"> </td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: right;">Ejecteurs
+&eacute;paul&eacute;s</td>
+
+                  <td style="text-align: center;"><img style="width: 687px; height: 112px;" alt="" src="image_059.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: right;">Ejecteurs
+&agrave; t&ecirc;tes coniques</td>
+
+                  <td style="text-align: center;"><img style="width: 688px; height: 117px;" alt="" src="image_060.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: right;">Ejecteurs
+lames</td>
+
+                  <td style="text-align: center;"><img style="width: 688px; height: 118px;" alt="" src="image_061.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: right;">Ejecteurs
+tubulaires</td>
+
+                  <td style="text-align: center;"><img style="width: 688px; height: 118px;" alt="" src="image_062.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: right;">Ejecteurs
+en forme</td>
+
+                  <td style="text-align: center;"><img style="width: 687px; height: 113px;" alt="" src="image_063.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: right;">Ejection
+par plaques d&eacute;v&eacute;tisseuses</td>
+
+                  <td style="text-align: center;"><img style="width: 680px; height: 361px;" alt="" src="image_064.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: right;">Ejection
+par air</td>
+
+                  <td style="text-align: center;"><img style="width: 680px; height: 234px;" alt="" src="image_065.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: right;">Ejection
+avec contre d&eacute;pouille</td>
+
+                  <td style="text-align: center;"><img style="width: 680px; height: 347px;" alt="" src="image_066.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: right;">Ejection
+avec cale montante</td>
+
+                  <td style="text-align: center;"><img style="width: 680px; height: 441px;" alt="" src="image_067.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: right;">Ejection
+par devissage</td>
+
+                  <td style="text-align: center;"><img style="width: 680px; height: 437px;" alt="" src="image_068.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>4.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="4"></a>Caract&eacute;ristiques
+d&rsquo;un syst&egrave;me d&rsquo;&eacute;jection<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 50px;">En fonction de
+la forme, le nombre ainsi que des sp&eacute;cifications des cahiers
+des charges, on choisi un type d&rsquo;&eacute;jection selon :<br>
+
+            <ul style="text-align: justify;">
+
+              <li><span style="font-weight: bold;">forme
+des &eacute;jecteurs :</span> On favorise la forme
+circulaire autant que possible (facilit&eacute;
+d&rsquo;usinage). On utilise des &eacute;jecteurs &agrave;
+lame si l&rsquo;appui se trouve sur un rebord ou &agrave;
+l&rsquo;extr&eacute;mit&eacute; d&rsquo;une nervure ou
+bien tubulaire si on ait en pr&eacute;sence d&rsquo;une forme
+circulaire creuse &agrave; d&eacute;mouler.</li>
+
+            </ul>
+
+            <ul style="text-align: justify;">
+
+              <li><span style="font-weight: bold;">Le
+nombre des &eacute;jecteurs :</span> Le plus grands nombres
+possibles afin d&rsquo;assurer une extraction sans
+probl&egrave;me, mais tout en essayant de r&eacute;duire le
+co&ucirc;t d&rsquo;outillage.</li>
+
+            </ul>
+
+            <ul style="text-align: justify;">
+
+              <li><span style="font-weight: bold;">Le
+positionnement des &eacute;jecteurs :</span> On essaye de
+les placer sur des surfaces non visibles et non fonctionnelles
+&agrave; proximit&eacute; des endroits ou l&rsquo;empreinte
+est profonde (nervure, bossage, rebord...), ou encore, &agrave;
+proximit&eacute; imm&eacute;diate des
+contre-d&eacute;pouilles ou des surfaces ayant des
+d&eacute;pouilles faibles, proche des seuils sous-marins.</li>
+
+            </ul>
+
+            <ul>
+
+              <li><span style="font-weight: bold;">La
+longueur des &eacute;jecteurs :</span> Chaque
+&eacute;jecteur est ajust&eacute; individuellement par rapport
+&agrave; la surface de l&rsquo;empreinte&nbsp;</li>
+
+            </ul>
+
+            <ul style="text-align: justify;">
+
+              <li><span style="font-weight: bold;">La
+course
+d&rsquo;&eacute;jection: </span>Elle sera au minimum
+&eacute;gale
+&agrave; la profondeur maxi de l&rsquo;empreinte &agrave;
+d&eacute;mouler ou de la longueur du noyau. </li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>5.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="5"></a>La
+s&eacute;curit&eacute; d&rsquo;&eacute;jection<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 50px;">Afin
+d&rsquo;&eacute;viter
+toute d&eacute;t&eacute;rioration de l&rsquo;outillage, il
+est
+imp&eacute;ratif qu&rsquo;&agrave; la fermeture du moule le
+dispositif
+d&rsquo;&eacute;jection soit rentr&eacute;. <br>
+
+            <br>
+
+Les syst&egrave;mes permettant le retour de la batterie
+d&rsquo;&eacute;jection sont:<br>
+
+            <ul>
+
+              <li>les ressorts, </li>
+
+              <li>les v&eacute;rins, </li>
+
+              <li>les &eacute;jecteurs de remise &agrave;
+z&eacute;ro, </li>
+
+              <li>&nbsp;&hellip;. </li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>6.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="6"></a>Fichiers</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="le_moule_fonction_ejection.docx">Fichier word</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 5px;"></td>
+
+                  <td style="text-align: center;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="le_moule_fonction_ejection.pdf" target="_blank">Fichier
+PDF</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+
+</body>
+</html>

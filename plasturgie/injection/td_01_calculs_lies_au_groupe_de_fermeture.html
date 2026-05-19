@@ -1,0 +1,1180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>Bac pro PLC -Mondeville - TD 01 calculs li&eacute;s
+au groupe de fermeture</title>
+
+
+  <meta name="description" content="ressources">
+
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+  <style>
+.help {cursor: help;}
+  </style>
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+  <script type="text/javascript">
+function correction01(imgid) {
+var img = document.getElementById(imgid);
+if (img.src.match(/image_242.png/)) {
+img.src = "./image_243.png";
+}
+else {
+img.src = "./image_242.png";
+}
+}
+function correction02(imgid) {
+var img = document.getElementById(imgid);
+if (img.src.match(/image_244.png/)) {
+img.src = "./image_245.png";
+}
+else {
+img.src = "./image_244.png";
+}
+}
+function correction03(imgid) {
+var img = document.getElementById(imgid);
+if (img.src.match(/image_246.png/)) {
+img.src = "./image_247.png";
+}
+else {
+img.src = "./image_246.png";
+}
+}
+function correction04(imgid) {
+var img = document.getElementById(imgid);
+if (img.src.match(/image_248.png/)) {
+img.src = "./image_249.png";
+}
+else {
+img.src = "./image_248.png";
+}
+}
+function correction05(imgid) {
+var img = document.getElementById(imgid);
+if (img.src.match(/image_250.png/)) {
+img.src = "./image_251.png";
+}
+else {
+img.src = "./image_250.png";
+}
+}
+function correction06(imgid) {
+var img = document.getElementById(imgid);
+if (img.src.match(/image_253.png/)) {
+img.src = "./image_254.png";
+}
+else {
+img.src = "./image_253.png";
+}
+}
+function correction07(imgid) {
+var img = document.getElementById(imgid);
+if (img.src.match(/image_255.png/)) {
+img.src = "./image_256.png";
+}
+else {
+img.src = "./image_255.png";
+}
+}
+function correction08(imgid) {
+var img = document.getElementById(imgid);
+if (img.src.match(/image_026.png/)) {
+img.src = "./image_025.png";
+}
+else {
+img.src = "./image_026.png";
+}
+}
+function myFunction01() {
+var x = document.getElementById("myDIV01");
+if (x.style.display === "none") {
+x.style.display = "block";
+document.getElementById("button01").innerHTML = "Cacher";
+} else {
+x.style.display = "none";
+document.getElementById("button01").innerHTML = "Afficher";
+}
+}
+function myFunction02() {
+var x = document.getElementById("myDIV02");
+if (x.style.display === "none") {
+x.style.display = "block";
+document.getElementById("button02").innerHTML = "Cacher";
+} else {
+x.style.display = "none";
+document.getElementById("button02").innerHTML = "Afficher";
+}
+}
+function myFunction03() {
+var x = document.getElementById("myDIV03");
+if (x.style.display === "none") {
+x.style.display = "block";
+document.getElementById("button03").innerHTML = "Cacher";
+} else {
+x.style.display = "none";
+document.getElementById("button03").innerHTML = "Afficher";
+}
+}
+function myFunction04() {
+var x = document.getElementById("myDIV04");
+if (x.style.display === "none") {
+x.style.display = "block";
+document.getElementById("button04").innerHTML = "Cacher";
+} else {
+x.style.display = "none";
+document.getElementById("button04").innerHTML = "Afficher";
+}
+}
+function myFunction05() {
+var x = document.getElementById("myDIV05");
+if (x.style.display === "none") {
+x.style.display = "block";
+document.getElementById("button05").innerHTML = "Cacher";
+} else {
+x.style.display = "none";
+document.getElementById("button05").innerHTML = "Afficher";
+}
+}
+function myFunction06() {
+var x = document.getElementById("myDIV06");
+if (x.style.display === "none") {
+x.style.display = "block";
+document.getElementById("button06").innerHTML = "Cacher";
+} else {
+x.style.display = "none";
+document.getElementById("button06").innerHTML = "Afficher";
+}
+}
+function myFunction07() {
+var x = document.getElementById("myDIV07");
+if (x.style.display === "none") {
+x.style.display = "block";
+document.getElementById("button07").innerHTML = "Cacher";
+} else {
+x.style.display = "none";
+document.getElementById("button07").innerHTML = "Afficher";
+}
+}
+function myFunction08() {
+var x = document.getElementById("myDIV08");
+if (x.style.display === "none") {
+x.style.display = "block";
+document.getElementById("button08").innerHTML = "Cacher";
+} else {
+x.style.display = "none";
+document.getElementById("button08").innerHTML = "Afficher";
+}
+}
+  </script>
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+  <tbody>
+
+    <tr>
+
+      <td>
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+        <tbody>
+
+          <tr>
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="background-color: rgb(64, 64, 64);">
+            <div id="menu">
+            <ul>
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">TD 01 Calculs
+li&eacute;s au groupe de fermeture</span></big></big></big></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold;">1.
+                  <a href="#1"><span style="text-decoration: underline;">Calculer la surface
+frontale Sf en mm2</span></a><br>
+
+                  <br>
+
+                  <span style="font-family: Arial; font-weight: bold;">2. <a href="#2"><span style="text-decoration: underline;">Calculer
+la surface frontale Sf en cm2</span></a><br>
+
+                  <br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;">3. <a href="#3"><span style="text-decoration: underline;">Calculer
+la pression
+d&rsquo;injection dans le moule : Pim</span></a><br>
+
+                  <br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;">4. <a href="#4"><span style="text-decoration: underline;">Calculer
+la force
+d&rsquo;injection dans le moule : Fim</span></a><br>
+
+                  <br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;">5. <a href="#5"><span style="text-decoration: underline;">Calculer
+la force de
+verrouillage du moule Fv en daN</span></a><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;">6. <a href="#6"><span style="text-decoration: underline;">Calculer
+la force de
+verrouillage du moule Fv en T</span></a><br>
+
+                  <br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;">7. <a href="#7"><span style="text-decoration: underline;">Choix
+de la presse</span></a><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="text-decoration: underline;"></span></span><span style="font-family: Arial; font-weight: bold;">8. <a href="#8"><span style="text-decoration: underline;">Fichiers</span></a></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;"><span style="text-decoration: underline;"><br>
+
+                  <br>
+
+                  </span></span> </td>
+
+                  <td style="text-align: center; width: 400px;"><img style="width: 604px; height: 302px;" alt="" src="image_060.png"> </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: center;">Choix de la
+presse &agrave; injecter en fonction de la mati&egrave;re et de
+la surface frontale. <br>
+
+            <br>
+
+On donne : <br>
+
+&nbsp;Mati&egrave;re : PE<br>
+
+&nbsp;Pression d&rsquo;injection 600 bars <br>
+
+Pertes de charges 50% <br>
+
+Coefficient de s&eacute;curit&eacute; 10% <br>
+
+Presse disponible : 25T, 35T, 50T, 125T </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="text-align: center;"><img style="width: 651px; height: 673px;" alt="" src="image_241.png"></div>
+
+            <br>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="height: 10px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;"><big><big>1.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>Calculer
+la surface frontale Sf en mm2</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial; font-weight: bold;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 54px;">Calculer la
+surface frontale Sf en mm2 &nbsp; &nbsp; <button id="button01" onclick="myFunction01()">Afficher</button></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div id="myDIV01" style="margin-left: 54px; display: none;">
+            <table id="mytable01" style="width: 100%; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="text-align: center;"><img style="width: 522px; height: 454px;" id="c01" src="image_242.png" alt="Mon image"><br>
+
+                  <br>
+
+                  <br>
+
+                  <table style="width: 200px; height: 72px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+                    <tbody>
+
+                      <tr>
+
+                        <td> <a href="9938700_manuel_d_utilisation.html">
+                        <p class="help"><img style="border: 0px solid ; width: 200px; height: 72px;" alt="" src="../connaissances_generales/triangle_equilateral_002.png" onmouseout="this.src='../connaissances_generales/triangle_equilateral_002.png'" onmouseover="this.src='../connaissances_generales/triangle_equilateral_001.png'"></p>
+
+                        </a>
+                        </td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 10px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="text-align: center;"><button id="button" onclick="correction01('c01')">Correction</button>
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td style="height: 10px;">
+            <div style="margin-left: 54px;">
+            <hr style="width: 100%; height: 2px;"></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;"><big><big>2.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>Calculer
+la surface frontale Sf en cm2</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial; font-weight: bold;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 54px;">Calculer la
+surface frontale Sf en cm2 &nbsp; &nbsp; <button id="button02" onclick="myFunction02()">Afficher</button></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div id="myDIV02" style="margin-left: 54px; display: none;">
+            <table id="mytable02" style="width: 100%; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="text-align: center;"><img style="width: 181px; height: 92px;" id="c02" src="image_244.png" alt="Mon image"> </td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 10px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="text-align: center;"><button id="button" onclick="correction02('c02')">Correction</button>
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;"><big><big>3.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3"></a>Calculer
+la pression d&rsquo;injection dans le moule : Pim</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 54px;"><span style="font-family: Arial; font-weight: bold;">Calculer la
+surface frontale Sf en cm2</span> &nbsp; &nbsp; <button id="button03" onclick="myFunction03()">Afficher</button></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div id="myDIV03" style="margin-left: 54px; display: none;">
+            <table id="mytable03" style="width: 100%; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="text-align: center;"><img style="width: 279px; height: 144px;" id="c03" src="image_246.png" alt="Mon image"> </td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 10px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="text-align: center;"><button id="button" onclick="correction03('c03')">Correction</button>
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;"><big><big>4.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="4"></a>Calculer
+la force d&rsquo;injection dans le moule : Fim</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 54px;"><span style="font-family: Arial; font-weight: bold;">Calculer la
+force d&rsquo;injection dans le moule : Fim</span> &nbsp;
+&nbsp; <button id="button04" onclick="myFunction04()">Afficher</button></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div id="myDIV04" style="margin-left: 54px; display: none;">
+            <table id="mytable04" style="width: 100%; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="text-align: center;"><img style="width: 222px; height: 122px;" id="c04" src="image_248.png" alt="Mon image"> </td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 10px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="text-align: center;"><button id="button" onclick="correction04('c04')">Correction</button>
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;"><big><big>5.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="5"></a>Calculer
+la force de verrouillage du moule Fv en daN</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 54px;"><span style="font-family: Arial; font-weight: bold;">Calculer la
+force de verrouillage du moule Fv en daN</span> &nbsp;
+&nbsp; <button id="button05" onclick="myFunction05()">Afficher</button></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div id="myDIV05" style="margin-left: 54px; display: none;">
+            <table id="mytable01" style="width: 100%; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="text-align: center;"><img style="width: 373px; height: 191px;" id="c05" src="image_250.png" alt="Mon image"> </td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 10px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="text-align: center;"><button id="button" onclick="correction05('c05')">Correction</button>
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;"><big><big>6.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="6"></a>Calculer
+la force de verrouillage du moule Fv en T</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 54px;"><span style="font-family: Arial; font-weight: bold;">Calculer la
+force de verrouillage du moule Fv en T</span> &nbsp;
+&nbsp; <button id="button06" onclick="myFunction06()">Afficher</button></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div id="myDIV06" style="margin-left: 54px; display: none;">
+            <table id="mytable06" style="width: 100%; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="text-align: center;"><img style="width: 207px; height: 123px;" id="c06" src="image_253.png" alt="Mon image"> </td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 10px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="text-align: center;"><button id="button" onclick="correction06('c06')">Correction</button>
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;"><big><big>7.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="7"></a>Choix
+de la presse</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 54px;"><span style="font-family: Arial; font-weight: bold;">Choix de la
+presse</span> &nbsp;
+&nbsp; <button id="button07" onclick="myFunction07()">Afficher</button></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div id="myDIV07" style="margin-left: 54px; display: none;">
+            <table id="mytable07" style="width: 100%; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="text-align: center;"><img style="width: 538px; height: 89px;" id="c07" src="image_255.png" alt="Mon image"> </td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 10px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="text-align: center;"><button id="button" onclick="correction07('c07')">Correction</button>
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>8.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="8"></a>Fichiers</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="td_01_calculs_lies_au_groupe_de_fermeture.docx">Fichier
+word</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 5px;"></td>
+
+                  <td style="text-align: center;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="td_01_calculs_lies_au_groupe_de_fermeture.pdf" target="_blank">Fichier
+PDF</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+</body>
+</html>

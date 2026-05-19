@@ -1,0 +1,3604 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+  
+
+
+  
+  
+  
+  <title>Bac pro PLC -Mondeville - le diagramme de pert</title>
+  <meta name="description" content="ressources">
+
+
+
+  
+  
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  
+  
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+
+
+  
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+
+  
+  
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+
+
+
+  
+  
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+
+
+  
+  
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+
+
+  
+  
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  
+  
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  
+  
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+  
+  
+  <script>
+// fonction pour dessiner
+function draw1()
+{ // Largeur et hauteur en pixels
+var W1=1000;H1=450;
+var canvas1=document.getElementById("graphe");
+canvas1.width=W1;canvas1.height=H1;
+var ctx=canvas1.getContext("2d");
+// etape 1 -----------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=4;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(10, 100, 90, 50);ctx.stroke();
+ctx.rect(10, 100, 90, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 100, 100, 50);ctx.stroke();
+ctx.rect(150, 100, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 300, 100, 50);ctx.stroke();
+ctx.rect(150, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 200, 100, 50);ctx.stroke();
+ctx.rect(300, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 300, 100, 50);ctx.stroke();
+ctx.rect(300, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(450, 200, 100, 50);ctx.stroke();
+ctx.rect(450, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(600, 250, 100, 50);ctx.stroke();
+ctx.rect(600, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(750, 250, 100, 50);ctx.stroke();
+ctx.rect(750, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(900, 250, 90, 50);ctx.stroke();
+ctx.rect(900, 250, 90, 50);ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Début", 30, 130);
+ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("A", 190, 130);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("B", 190, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("C", 340, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("D", 340, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("E", 490, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("F", 640, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("G", 790, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Fin", 930, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("Le graphe s ecrit de la gauche vers la droite.", 50, 20);
+ctx.fillText("On évite, au maximum, de couper les transitions (flèches).", 50, 40);
+ctx.fillText("On commence le graphe par une case début.On finit le graphe par une case fin.", 50, 60);
+ctx.stroke();
+// --------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(100,125);
+ctx.lineTo(100+50,125);
+// --------------------------
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125-5);
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125+5);
+// --------------------------
+ctx.moveTo(100,125);
+ctx.lineTo(100+30,325);
+ctx.lineTo(100+50,325);
+// --------------------------
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325-5);
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325+5);
+ctx.moveTo(250,325);
+ctx.lineTo(250+50,325);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325-5);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325+5);
+// --------------------------
+ctx.moveTo(250,325);
+ctx.lineTo(300-20,225+10);
+ctx.lineTo(300,225+10);
+ctx.lineTo(300-10,225-5+10);
+ctx.moveTo(300,225+10);
+ctx.lineTo(300-10,225+5+10);
+// --------------------------
+ctx.moveTo(250,125);
+ctx.lineTo(300-20,225-10);
+ctx.lineTo(300,225-10);
+// --------------------------
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225-5-10);
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225+5-10);
+// --------------------------
+ctx.moveTo(400,225);
+ctx.lineTo(450,225);
+// --------------------------
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225-5);
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225+5);
+// --------------------------
+ctx.moveTo(550,225);
+ctx.lineTo(600-20,275-10);
+ctx.lineTo(600,275-10);
+// --------------------------
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265-5);
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265+5);
+// --------------------------
+ctx.moveTo(400,325);
+ctx.lineTo(600-20,265+20);
+ctx.lineTo(600,265+20);
+// --------------------------
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285-5);
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285+5);
+// --------------------------
+ctx.moveTo(700,275);
+ctx.lineTo(750,275);
+// --------------------------
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275-5);
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275+5);
+// --------------------------
+ctx.moveTo(850,275);
+ctx.lineTo(900,275);
+// --------------------------
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275-5);
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275+5);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("4", 235, 145);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("7", 235, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 385, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("12", 380, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("3", 535, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("6", 685, 295);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 835, 295);
+ctx.stroke();
+// --------------------------
+}
+function draw2()
+{ // Largeur et hauteur en pixels
+var W2=1000;H2=450;
+var canvas2=document.getElementById("graphe");
+canvas2.width=W2;canvas2.height=H2;
+var ctx=canvas2.getContext("2d");
+// etape 1 -----------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=4;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(10, 100, 90, 50);ctx.stroke();
+ctx.rect(10, 100, 90, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 100, 100, 50);ctx.stroke();
+ctx.rect(150, 100, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 300, 100, 50);ctx.stroke();
+ctx.rect(150, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 200, 100, 50);ctx.stroke();
+ctx.rect(300, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 300, 100, 50);ctx.stroke();
+ctx.rect(300, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(450, 200, 100, 50);ctx.stroke();
+ctx.rect(450, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(600, 250, 100, 50);ctx.stroke();
+ctx.rect(600, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(750, 250, 100, 50);ctx.stroke();
+ctx.rect(750, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(900, 250, 90, 50);ctx.stroke();
+ctx.rect(900, 250, 90, 50);ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Début", 30, 130);
+ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("A", 190, 130);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("B", 190, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("C", 340, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("D", 340, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("E", 490, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("F", 640, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("G", 790, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Fin", 930, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("La durée du projet est calculée en partant de la gauche vers la droite.", 50, 20);
+ctx.fillText("On écrit pour chaque tâche le début et la fin de la tâche.", 50, 40);
+ctx.stroke();
+// --------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(100,125);
+ctx.lineTo(100+50,125);
+// --------------------------
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125-5);
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125+5);
+// --------------------------
+ctx.moveTo(100,125);
+ctx.lineTo(100+30,325);
+ctx.lineTo(100+50,325);
+// --------------------------
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325-5);
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325+5);
+ctx.moveTo(250,325);
+ctx.lineTo(250+50,325);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325-5);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325+5);
+// --------------------------
+ctx.moveTo(250,325);
+ctx.lineTo(300-20,225+10);
+ctx.lineTo(300,225+10);
+ctx.lineTo(300-10,225-5+10);
+ctx.moveTo(300,225+10);
+ctx.lineTo(300-10,225+5+10);
+// --------------------------
+ctx.moveTo(250,125);
+ctx.lineTo(300-20,225-10);
+ctx.lineTo(300,225-10);
+// --------------------------
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225-5-10);
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225+5-10);
+// --------------------------
+ctx.moveTo(400,225);
+ctx.lineTo(450,225);
+// --------------------------
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225-5);
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225+5);
+// --------------------------
+ctx.moveTo(550,225);
+ctx.lineTo(600-20,275-10);
+ctx.lineTo(600,275-10);
+// --------------------------
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265-5);
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265+5);
+// --------------------------
+ctx.moveTo(400,325);
+ctx.lineTo(600-20,265+20);
+ctx.lineTo(600,265+20);
+// --------------------------
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285-5);
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285+5);
+// --------------------------
+ctx.moveTo(700,275);
+ctx.lineTo(750,275);
+// --------------------------
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275-5);
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275+5);
+// --------------------------
+ctx.moveTo(850,275);
+ctx.lineTo(900,275);
+// --------------------------
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275-5);
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275+5);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("4", 235, 145);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("7", 235, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 385, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("12", 380, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("3", 535, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("6", 685, 295);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 835, 295);
+ctx.stroke();
+// etape 2 ----------------------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 170);
+ctx.fillText("4", 235, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 370);
+ctx.fillText("7", 235, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 270);
+ctx.fillText("9", 385, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 370);
+ctx.fillText("19", 380, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("9", 455, 270);
+ctx.fillText("12", 530, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 320);
+ctx.fillText("25", 675, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 320);
+ctx.fillText("27", 825, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 325);
+ctx.stroke();
+}
+//---------------------------------------------
+function draw3()
+{ // Largeur et hauteur en pixels
+var W1=1000;H1=450;
+var canvas=document.getElementById("graphe");
+canvas.width=W1;canvas.height=H1;
+var ctx=canvas.getContext("2d");
+// etape 1 -----------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=4;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(10, 100, 90, 50);ctx.stroke();
+ctx.rect(10, 100, 90, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 100, 100, 50);ctx.stroke();
+ctx.rect(150, 100, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 300, 100, 50);ctx.stroke();
+ctx.rect(150, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 200, 100, 50);ctx.stroke();
+ctx.rect(300, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 300, 100, 50);ctx.stroke();
+ctx.rect(300, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(450, 200, 100, 50);ctx.stroke();
+ctx.rect(450, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(600, 250, 100, 50);ctx.stroke();
+ctx.rect(600, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(750, 250, 100, 50);ctx.stroke();
+ctx.rect(750, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(900, 250, 90, 50);ctx.stroke();
+ctx.rect(900, 250, 90, 50);ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Début", 30, 130);
+ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("A", 190, 130);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("B", 190, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("C", 340, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("D", 340, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("E", 490, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("F", 640, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("G", 790, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Fin", 930, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("On écrit le chemin en partant de la droite vers la gauche.", 50, 20);
+ctx.stroke();
+// --------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(100,125);
+ctx.lineTo(100+50,125);
+// --------------------------
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125-5);
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125+5);
+// --------------------------
+ctx.moveTo(100,125);
+ctx.lineTo(100+30,325);
+ctx.lineTo(100+50,325);
+// --------------------------
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325-5);
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325+5);
+ctx.moveTo(250,325);
+ctx.lineTo(250+50,325);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325-5);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325+5);
+// --------------------------
+ctx.moveTo(250,325);
+ctx.lineTo(300-20,225+10);
+ctx.lineTo(300,225+10);
+ctx.lineTo(300-10,225-5+10);
+ctx.moveTo(300,225+10);
+ctx.lineTo(300-10,225+5+10);
+// --------------------------
+ctx.moveTo(250,125);
+ctx.lineTo(300-20,225-10);
+ctx.lineTo(300,225-10);
+// --------------------------
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225-5-10);
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225+5-10);
+// --------------------------
+ctx.moveTo(400,225);
+ctx.lineTo(450,225);
+// --------------------------
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225-5);
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225+5);
+// --------------------------
+ctx.moveTo(550,225);
+ctx.lineTo(600-20,275-10);
+ctx.lineTo(600,275-10);
+// --------------------------
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265-5);
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265+5);
+// --------------------------
+ctx.moveTo(400,325);
+ctx.lineTo(600-20,265+20);
+ctx.lineTo(600,265+20);
+// --------------------------
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285-5);
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285+5);
+// --------------------------
+ctx.moveTo(700,275);
+ctx.lineTo(750,275);
+// --------------------------
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275-5);
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275+5);
+// --------------------------
+ctx.moveTo(850,275);
+ctx.lineTo(900,275);
+// --------------------------
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275-5);
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275+5);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("4", 235, 145);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("7", 235, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 385, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("12", 380, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("3", 535, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("6", 685, 295);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 835, 295);
+ctx.stroke();
+// etape 2 ----------------------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 170);
+ctx.fillText("4", 235, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 370);
+ctx.fillText("7", 235, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 270);
+ctx.fillText("9", 385, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 370);
+ctx.fillText("19", 380, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("9", 455, 270);
+ctx.fillText("12", 530, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 320);
+ctx.fillText("25", 675, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 320);
+ctx.fillText("27", 825, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 325);
+ctx.stroke();
+// etape 3 ----------------------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 90);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("10", 155, 90);
+ctx.fillText("14", 230, 90);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 290);
+ctx.fillText("7", 235, 290);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("14", 305, 190);
+ctx.fillText("16", 380, 190);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 290);
+ctx.fillText("19", 380, 290);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("16", 455, 190);
+ctx.fillText("19", 530, 190);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 240);
+ctx.fillText("25", 675, 240);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 240);
+ctx.fillText("27", 825, 240);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 245);
+ctx.stroke();
+}
+//---------------------------------------------
+function draw4()
+{ // Largeur et hauteur en pixels
+var W1=1000;H1=450;
+var canvas=document.getElementById("graphe");
+canvas.width=W1;canvas.height=H1;
+var ctx=canvas.getContext("2d");
+// etape 1 -----------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=4;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(10, 100, 90, 50);ctx.stroke();
+ctx.rect(10, 100, 90, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 100, 100, 50);ctx.stroke();
+ctx.rect(150, 100, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 300, 100, 50);ctx.stroke();
+ctx.rect(150, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 200, 100, 50);ctx.stroke();
+ctx.rect(300, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 300, 100, 50);ctx.stroke();
+ctx.rect(300, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(450, 200, 100, 50);ctx.stroke();
+ctx.rect(450, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(600, 250, 100, 50);ctx.stroke();
+ctx.rect(600, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(750, 250, 100, 50);ctx.stroke();
+ctx.rect(750, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(900, 250, 90, 50);ctx.stroke();
+ctx.rect(900, 250, 90, 50);ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Début", 30, 130);
+ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("A", 190, 130);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("B", 190, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("C", 340, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("D", 340, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("E", 490, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("F", 640, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("G", 790, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Fin", 930, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("On calcul les marges pour chaque tâche.", 50, 20);
+ctx.stroke();
+// --------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(100,125);
+ctx.lineTo(100+50,125);
+// --------------------------
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125-5);
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125+5);
+// --------------------------
+ctx.moveTo(100,125);
+ctx.lineTo(100+30,325);
+ctx.lineTo(100+50,325);
+// --------------------------
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325-5);
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325+5);
+ctx.moveTo(250,325);
+ctx.lineTo(250+50,325);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325-5);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325+5);
+// --------------------------
+ctx.moveTo(250,325);
+ctx.lineTo(300-20,225+10);
+ctx.lineTo(300,225+10);
+ctx.lineTo(300-10,225-5+10);
+ctx.moveTo(300,225+10);
+ctx.lineTo(300-10,225+5+10);
+// --------------------------
+ctx.moveTo(250,125);
+ctx.lineTo(300-20,225-10);
+ctx.lineTo(300,225-10);
+// --------------------------
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225-5-10);
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225+5-10);
+// --------------------------
+ctx.moveTo(400,225);
+ctx.lineTo(450,225);
+// --------------------------
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225-5);
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225+5);
+// --------------------------
+ctx.moveTo(550,225);
+ctx.lineTo(600-20,275-10);
+ctx.lineTo(600,275-10);
+// --------------------------
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265-5);
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265+5);
+// --------------------------
+ctx.moveTo(400,325);
+ctx.lineTo(600-20,265+20);
+ctx.lineTo(600,265+20);
+// --------------------------
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285-5);
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285+5);
+// --------------------------
+ctx.moveTo(700,275);
+ctx.lineTo(750,275);
+// --------------------------
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275-5);
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275+5);
+// --------------------------
+ctx.moveTo(850,275);
+ctx.lineTo(900,275);
+// --------------------------
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275-5);
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275+5);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("4", 235, 145);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("7", 235, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 385, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("12", 380, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("3", 535, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("6", 685, 295);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 835, 295);
+ctx.stroke();
+// etape 2 ----------------------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 170);
+ctx.fillText("4", 235, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 370);
+ctx.fillText("7", 235, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 270);
+ctx.fillText("9", 385, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 370);
+ctx.fillText("19", 380, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("9", 455, 270);
+ctx.fillText("12", 530, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 320);
+ctx.fillText("25", 675, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 320);
+ctx.fillText("27", 825, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 325);
+ctx.stroke();
+// etape 3 ----------------------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 90);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("10", 155, 90);
+ctx.fillText("14", 230, 90);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 290);
+ctx.fillText("7", 235, 290);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("14", 305, 190);
+ctx.fillText("16", 380, 190);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 290);
+ctx.fillText("19", 380, 290);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("16", 455, 190);
+ctx.fillText("19", 530, 190);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 240);
+ctx.fillText("25", 675, 240);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 240);
+ctx.fillText("27", 825, 240);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 245);
+ctx.stroke();
+// etape 4 -----------------------------------
+// --------------------------
+ctx.fillStyle="#FF0000";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("10", 235-7, 145-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 235, 345-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 385, 245-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 380, 345-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 535, 245-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 685, 295-25);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 835, 295-25);
+ctx.stroke();
+}
+//---------------------------------------------
+function draw5()
+{ // Largeur et hauteur en pixels
+var W1=1000;H1=450;
+var canvas=document.getElementById("graphe");
+canvas.width=W1;canvas.height=H1;
+var ctx=canvas.getContext("2d");
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("Le chemin critique est le chemin ou les marges sont à zéro.", 50, 20);
+ctx.stroke();
+// etape 1 -----------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=4;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.fillStyle = "#FFFF00";
+ctx.fillRect(10, 100, 90, 50);ctx.stroke();
+ctx.rect(10, 100, 90, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 100, 100, 50);ctx.stroke();
+ctx.rect(150, 100, 100, 50);ctx.stroke();
+ctx.fillStyle = "#FFFF00";
+ctx.fillRect(150, 300, 100, 50);ctx.stroke();
+ctx.rect(150, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 200, 100, 50);ctx.stroke();
+ctx.rect(300, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "#FFFF00";
+ctx.fillRect(300, 300, 100, 50);ctx.stroke();
+ctx.rect(300, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(450, 200, 100, 50);ctx.stroke();
+ctx.rect(450, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "#FFFF00";
+ctx.fillRect(600, 250, 100, 50);ctx.stroke();
+ctx.rect(600, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "#FFFF00";
+ctx.fillRect(750, 250, 100, 50);ctx.stroke();
+ctx.rect(750, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "#FFFF00";
+ctx.fillRect(900, 250, 90, 50);ctx.stroke();
+ctx.rect(900, 250, 90, 50);ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Début", 30, 130);
+ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("A", 190, 130);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("B", 190, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("C", 340, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("D", 340, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("E", 490, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("F", 640, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("G", 790, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Fin", 930, 130+150);
+ctx.stroke();
+// --------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(100,125);
+ctx.lineTo(100+50,125);
+// --------------------------
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125-5);
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125+5);
+// --------------------------
+ctx.moveTo(100,125);
+ctx.lineTo(100+30,325);
+ctx.lineTo(100+50,325);
+// --------------------------
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325-5);
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325+5);
+ctx.moveTo(250,325);
+ctx.lineTo(250+50,325);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325-5);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325+5);
+// --------------------------
+ctx.moveTo(250,325);
+ctx.lineTo(300-20,225+10);
+ctx.lineTo(300,225+10);
+ctx.lineTo(300-10,225-5+10);
+ctx.moveTo(300,225+10);
+ctx.lineTo(300-10,225+5+10);
+// --------------------------
+ctx.moveTo(250,125);
+ctx.lineTo(300-20,225-10);
+ctx.lineTo(300,225-10);
+// --------------------------
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225-5-10);
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225+5-10);
+// --------------------------
+ctx.moveTo(400,225);
+ctx.lineTo(450,225);
+// --------------------------
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225-5);
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225+5);
+// --------------------------
+ctx.moveTo(550,225);
+ctx.lineTo(600-20,275-10);
+ctx.lineTo(600,275-10);
+// --------------------------
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265-5);
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265+5);
+// --------------------------
+ctx.moveTo(400,325);
+ctx.lineTo(600-20,265+20);
+ctx.lineTo(600,265+20);
+// --------------------------
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285-5);
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285+5);
+// --------------------------
+ctx.moveTo(700,275);
+ctx.lineTo(750,275);
+// --------------------------
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275-5);
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275+5);
+// --------------------------
+ctx.moveTo(850,275);
+ctx.lineTo(900,275);
+// --------------------------
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275-5);
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275+5);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("4", 235, 145);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("7", 235, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 385, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("12", 380, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("3", 535, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("6", 685, 295);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 835, 295);
+ctx.stroke();
+// etape 2 ----------------------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 170);
+ctx.fillText("4", 235, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 370);
+ctx.fillText("7", 235, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 270);
+ctx.fillText("9", 385, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 370);
+ctx.fillText("19", 380, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("9", 455, 270);
+ctx.fillText("12", 530, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 320);
+ctx.fillText("25", 675, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 320);
+ctx.fillText("27", 825, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 325);
+ctx.stroke();
+// etape 3 ----------------------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 90);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("10", 155, 90);
+ctx.fillText("14", 230, 90);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 290);
+ctx.fillText("7", 235, 290);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("14", 305, 190);
+ctx.fillText("16", 380, 190);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 290);
+ctx.fillText("19", 380, 290);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("16", 455, 190);
+ctx.fillText("19", 530, 190);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 240);
+ctx.fillText("25", 675, 240);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 240);
+ctx.fillText("27", 825, 240);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 245);
+ctx.stroke();
+// etape 4 -----------------------------------
+// --------------------------
+ctx.fillStyle="#FF0000";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("10", 235-7, 145-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 235, 345-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 385, 245-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 380, 345-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 535, 245-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 685, 295-25);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 835, 295-25);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#000000";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Chemin critique: début - B - D - F - G - fin", 335, 420);
+ctx.stroke();
+}
+//---------------------------------------------
+//---------------------------------------------
+function draw6()
+{ // Largeur et hauteur en pixels
+var W1=1000;H1=450;
+var canvas=document.getElementById("graphe");
+canvas.width=W1;canvas.height=H1;
+var ctx=canvas.getContext("2d");
+ctx.fillStyle="#000000";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 22px Arial";
+ctx.fillText("Tracé du graphe PERT", 335, 220);
+ctx.stroke();
+}
+  </script>
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+
+
+<br>
+
+
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+  <tbody>
+
+
+
+    <tr>
+
+
+
+      <td>
+      
+      
+      <div style="text-align: left;"></div>
+
+
+
+      
+      
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+        <tbody>
+
+
+
+          <tr>
+
+
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="color: rgb(64, 64, 64);">
+
+
+
+            <td style="background-color: rgb(64, 64, 64);">
+            
+            
+            <div id="menu">
+            
+            
+            <ul>
+
+
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+
+
+            
+            
+            </ul>
+
+
+
+            </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">Le diagramme
+de PERT</span></big></big></big></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="color: rgb(64, 64, 64);">
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold;">1. <a href="#1"><span style="text-decoration: underline;">Introduction</span></a><br>
+                  <br>
+                  <span style="font-family: Arial; font-weight: bold;">2. <a href="#2"><span style="text-decoration: underline;">M&eacute;thode de construction d'un PERT</span></a></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span><br>
+
+
+                  <span style="font-family: Arial; font-weight: bold;"><br>
+
+
+3. <a href="#3"><span style="text-decoration: underline;">Convention de base d'un PERT</span></a><br>
+                  <br>
+                  </span><span style="font-family: Arial; font-weight: bold;">4. <a href="#4"><span style="text-decoration: underline;">Lecture d'un PERT</span></a></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span><br>
+
+
+                  <span style="font-family: Arial; font-weight: bold;"><br>
+
+
+5. <span style="text-decoration: underline;"><a href="#5">Exemple</a><br>
+                  <br>
+                  </span></span><span style="font-family: Arial; font-weight: bold;">
+
+6. <a href="#6"><span style="text-decoration: underline;">Fichiers</span></a></span><br>
+                  <span style="font-family: Arial; font-weight: bold;"><span style="text-decoration: underline;"><br>
+                  <br>
+                  </span></span>
+
+
+                  </td>
+
+
+
+                  <td style="width: 560px; text-align: center;"><img src="image_003.png" alt="" style="width: 285px; height: 384px;"> </td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;"><big><big>1.&nbsp;</big></big></td>
+
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>Introduction</big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;">
+
+
+
+            <td style="text-align: justify;">
+            
+            
+            <div style="margin-left: 54px;">Le PERT
+(Programm of Evaluation and Review Technic) est une technique
+d&rsquo;ordonnancement bas&eacute;e sur la th&eacute;orie
+des graphes, visant &agrave; optimiser la planification des
+t&acirc;ches d&rsquo;un projet. <br>
+
+
+
+            <br>
+
+
+
+Cette technique a &eacute;t&eacute; con&ccedil;ue par la
+marine am&eacute;ricaine en 1958 pour coordonner les
+t&acirc;ches du projet &laquo; POLARIS &raquo;. <br>
+
+
+
+            <br>
+
+
+
+Compte tenue de son efficacit&eacute;, elle s&rsquo;est
+rapidement impos&eacute;e au d&eacute;triment du diagramme de
+GANTT. </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;"><big><big>2.&nbsp;</big></big></td>
+
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>Feuille de calcul</big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;">
+
+
+
+            <td style="text-align: justify;">
+            
+            
+            <div style="margin-left: 54px;">Le recours au
+PERT suppose qu&rsquo;aient &eacute;t&eacute;
+identifi&eacute;es les diff&eacute;rentes t&acirc;ches
+n&eacute;cessaires &agrave; la r&eacute;alisation du
+projet, ainsi que leur dur&eacute;e et leurs t&acirc;ches
+ant&eacute;rieures. <br>
+
+
+
+            <br>
+
+
+
+Ces informations sont alors synth&eacute;tis&eacute;es dans un
+tableau. </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 54px; text-align: center; font-weight: bold;">
+            
+            
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="text-align: center; font-family: Arial; font-weight: bold; height: 30px;">T&acirc;che</td>
+
+
+
+                  <td style="text-align: center; font-family: Arial; font-weight: bold;">Dur&eacute;e</td>
+
+
+
+                  <td style="text-align: center; font-family: Arial; font-weight: bold;">Ant&eacute;riorit&eacute;</td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td style="text-align: center; font-family: Arial; background-color: rgb(255, 255, 153);"><br>
+
+
+
+                  <br>
+
+
+
+                  </td>
+
+
+
+                  <td style="text-align: center; font-family: Arial; background-color: rgb(255, 255, 153);"></td>
+
+
+
+                  <td style="text-align: center; font-family: Arial; background-color: rgb(255, 255, 153);"></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;"><big><big>3.&nbsp;</big></big></td>
+
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3"></a>Convention de base d&rsquo;un PERT </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;">
+
+
+
+            <td style="text-align: justify;">
+            
+            
+            <div style="margin-left: 54px;">Le PERT permet
+de
+repr&eacute;senter l&rsquo;ensemble des t&acirc;ches sur un
+graphe
+orient&eacute;, &agrave; partir duquel il sera possible
+d&rsquo;identifier leurs dates au plus t&ocirc;t et au plus
+tard et de
+calculer leur marges.
+            <br>
+
+
+
+            <br>
+
+
+
+Les principales conventions d&rsquo;un r&eacute;seau PERT sont
+les suivantes: <br>
+
+
+
+            
+            
+            <ul>
+
+
+
+              <li>chaque t&acirc;che est
+repr&eacute;sent&eacute;e par un rectangle,</li>
+
+
+
+            
+            
+            </ul>
+
+
+
+            
+            
+            <ul>
+
+
+
+              <li>les transitions entre t&acirc;ches sont
+repr&eacute;sent&eacute;es par des fl&egrave;ches.</li>
+
+
+
+            
+            
+            </ul>
+
+
+
+            <br>
+
+
+
+            
+            
+            <div style="text-align: center;"><img style="width: 490px; height: 86px;" alt="" src="image_001.png"><br>
+
+
+
+            <br>
+
+
+
+            
+            
+            <div style="text-align: left;">Le graphe
+poss&egrave;de en plus 2 t&acirc;ches:<br>
+
+
+
+            <br>
+
+
+
+            
+            
+            <ul>
+
+
+
+              <li>d&eacute;but,</li>
+
+
+
+            
+            
+            </ul>
+
+
+
+            
+            
+            <ul>
+
+
+
+              <li>fin.</li>
+
+
+
+            
+            
+            </ul>
+
+
+
+            
+            
+            <div style="text-align: center;"><img style="width: 945px; height: 82px;" alt="" src="image_002.png"></div>
+
+
+
+            </div>
+
+
+
+            </div>
+
+
+
+            </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;"><big><big>4.&nbsp;</big></big></td>
+
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="4"></a>Lecture d'un PERT</big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;">
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 54px;">Le graphe se
+lit de la gauche &agrave; la droite,
+c&rsquo;est-&agrave;-dire de l&rsquo;&eacute;tape
+d&eacute;but &agrave; l&rsquo;&eacute;tape de fin.
+            <br>
+
+
+
+            <br>
+
+
+
+Une nouvelle t&acirc;che ne peut commencer que lorsque toutes les
+t&acirc;ches pr&eacute;alables &agrave; sa
+r&eacute;alisation sont termin&eacute;es.
+            <br>
+
+
+
+            <br>
+
+
+
+            
+            
+            <div style="text-align: justify;">Une nouvelle
+t&acirc;che ne peut commencer que lorsque toutes les
+t&acirc;ches pr&eacute;alables &agrave; sa
+r&eacute;alisation sont termin&eacute;es.
+            <br>
+
+
+
+            <br>
+
+
+
+Celui-ci relie les &laquo; t&acirc;ches critiques &raquo;
+qui sont des t&acirc;ches dont le retard impliquera un retard
+effectif du projet.
+            </div>
+
+
+
+            </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;"><big><big>5.&nbsp;</big></big></td>
+
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="5"></a>Exemple</big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 54px;">
+            
+            
+            <table style="width: 500px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="1" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: center;">T&acirc;che
+                  </td>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: center;">Dur&eacute;e&nbsp;</td>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: center;">Ant&eacute;riorit&eacute;&nbsp;</td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; text-align: center;">A&nbsp;</td>
+
+
+
+                  <td style="font-family: Arial; text-align: center;">4</td>
+
+
+
+                  <td style="font-family: Arial; text-align: center;"></td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; text-align: center;">B</td>
+
+
+
+                  <td style="font-family: Arial; text-align: center;">7&nbsp;</td>
+
+
+
+                  <td style="font-family: Arial; text-align: center;"></td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; text-align: center;">C&nbsp;</td>
+
+
+
+                  <td style="font-family: Arial; text-align: center;">2&nbsp;</td>
+
+
+
+                  <td style="font-family: Arial; text-align: center;">A,B&nbsp;</td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; text-align: center;">D&nbsp;</td>
+
+
+
+                  <td style="font-family: Arial; text-align: center;">12</td>
+
+
+
+                  <td style="font-family: Arial; text-align: center;">B&nbsp;</td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; text-align: center;">E&nbsp;</td>
+
+
+
+                  <td style="font-family: Arial; text-align: center;">3&nbsp;</td>
+
+
+
+                  <td style="font-family: Arial; text-align: center;">C&nbsp;</td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; text-align: center;">F</td>
+
+
+
+                  <td style="font-family: Arial; text-align: center;">6&nbsp;</td>
+
+
+
+                  <td style="font-family: Arial; text-align: center;">C,D&nbsp;</td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; text-align: center;">G&nbsp;</td>
+
+
+
+                  <td style="font-family: Arial; text-align: center;">2&nbsp;</td>
+
+
+
+                  <td style="font-family: Arial; text-align: center;">F</td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 1px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 52px;"><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial;"></span><br>
+
+
+
+            <br style="font-family: Arial;">
+
+
+
+            
+            
+            <div style="text-align: left;"><button type="button" id="tracer 1" onclick="etape1();">tracer
+du graphe</button> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <button type="button" id="tracer 6" onclick="etape6();">Initialiser</button>
+            <br>
+
+
+
+            </div>
+
+
+
+            <br>
+
+
+
+            <button type="button" id="tracer 2" disabled="disabled" onclick="etape2();">Dur&eacute;e
+du projet</button> <br>
+
+
+
+            <br>
+
+
+
+            <button type="button" id="tracer 3" disabled="disabled" onclick="etape3();">Calcul des
+marges (&eacute;tape 1)</button> &nbsp; <button type="button" id="tracer 4" disabled="disabled" onclick="etape4();">Calcul des
+marges (&eacute;tape 2)</button> <br>
+
+
+
+            <br>
+
+
+
+            <button type="button" id="tracer 5" disabled="disabled" onclick="etape5();">Le chemin
+critique</button><br>
+
+
+
+            <br>
+
+
+
+            
+            
+            <script>
+let etape1 = () => {
+let element = document.getElementById('tracer 1');
+let disabled = element.getAttribute("disabled");
+if (disabled) {
+// element.removeAttribute("disabled");
+} else {
+element.setAttribute("disabled", "disabled");draw1();
+document.getElementById('tracer 2').disabled = false;
+}
+}
+let etape2 = () => {
+let element = document.getElementById('tracer 2');
+let disabled = element.getAttribute("disabled");
+if (disabled) {
+// element.removeAttribute("disabled");
+} else {
+element.setAttribute("disabled", "disabled");draw2();
+document.getElementById('tracer 3').disabled = false;
+}
+}
+let etape3 = () => {
+let element = document.getElementById('tracer 3');
+let disabled = element.getAttribute("disabled");
+if (disabled) {
+// element.removeAttribute("disabled");
+} else {
+element.setAttribute("disabled", "disabled");draw3();
+document.getElementById('tracer 4').disabled = false;
+}
+}
+let etape4 = () => {
+let element = document.getElementById('tracer 4');
+let disabled = element.getAttribute("disabled");
+if (disabled) {
+// element.removeAttribute("disabled");
+} else {
+element.setAttribute("disabled", "disabled");draw4();
+document.getElementById('tracer 5').disabled = false;
+}
+}
+let etape5 = () => {
+let element = document.getElementById('tracer 5');
+let disabled = element.getAttribute("disabled");
+if (disabled) {
+// element.removeAttribute("disabled");
+} else {
+element.setAttribute("disabled", "disabled");draw5();
+}
+}
+let etape6 = () => {
+let element = document.getElementById('tracer 6');
+let disabled = element.getAttribute("disabled");
+if (disabled) {
+// element.removeAttribute("disabled");
+} else {
+element.setAttribute("disabled", "disabled");draw6();
+document.getElementById('tracer 1').disabled = false;
+document.getElementById('tracer 2').disabled = true;
+document.getElementById('tracer 3').disabled = true;
+document.getElementById('tracer 4').disabled = true;
+document.getElementById('tracer 5').disabled = true;
+document.getElementById('tracer 6').disabled = false;
+}
+}
+            </script></div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 54px;">
+            
+            
+            <p><canvas id="graphe"></canvas></p>
+
+
+
+            </div>
+
+
+
+            
+            
+            <script>draw6();</script>
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>6.&nbsp;</big></big></td>
+
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="6"></a>Fichiers</big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="le_diagramme_de_pert.docx">Fichier word</a>
+&nbsp; &nbsp;</td>
+
+
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td style="height: 5px;"></td>
+
+
+
+                  <td style="text-align: center;"></td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="le_diagramme_de_pert.pdf" target="_blank">Fichier
+PDF</a>
+&nbsp; &nbsp;</td>
+
+
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+
+
+          </tr>
+
+
+
+        
+        
+        </tbody>
+      
+      
+      </table>
+
+
+
+      </td>
+
+
+
+    </tr>
+
+
+
+  
+  
+  </tbody>
+</table>
+
+
+
+</body>
+</html>

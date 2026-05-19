@@ -1,0 +1,1185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  
+
+
+  
+  <title>Bac pro PLC -Mondeville - descriptif du moule</title>
+  <meta name="description" content="ressources">
+
+
+  
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+  
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+
+
+  
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+
+  
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+
+  
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+</head>
+
+
+<body onload="initCalc();" class="default">
+
+
+<div class="container">
+<div class="row"><section class="col-lg-5 col-md-6 col-sm-6" id="contenu"></section>
+<script language="JavaScript"><!--
+function IsFloat(strString, err_msg, text_name, calc_type)
+{
+var strValidChars = "0123456789.";
+var strChar;
+var blnResult = true;
+var Decimal_Count = new Number(0);
+for (i = 0; i < strString.length && blnResult == true; i++)
+{
+strChar = strString.charAt(i);
+if (strChar == ".")
+{
+Decimal_Count = Decimal_Count + 1;
+}
+if ((strValidChars.indexOf(strChar) == -1) || (Decimal_Count > 1))
+{
+var err_msg_alert = 'Merci de rentrer un nombre décimal valide. Utiliser le point et non la virgule : par exemple 2.3 et non 2,3.'
+' textbox';
+eval('window.document.Calculation_Form.' + text_name + '.select()');
+alert(err_msg_alert);
+blnResult = false;
+this.select;
+return blnResult;
+}
+}
+return blnResult;
+}
+function RectCalc()
+{
+var blnNoNull = true;
+if (window.document.Calculation_Form.R_Epaisseur.value == "")
+{
+window.document.Calculation_Form.R_Epaisseur.select();
+alert("Merci de bien vouloir rentrer l'épaisseur du moule");
+blnNoNull = false;
+}
+else
+{
+if (window.document.Calculation_Form.R_Largeur.value == "")
+{
+window.document.Calculation_Form.R_Largeur.select();
+alert("Merci de bien vouloir rentrer la largeur du moule");
+blnNoNull = false;
+}
+else
+if (window.document.Calculation_Form.R_Hauteur.value == "")
+{
+window.document.Calculation_Form.R_Hauteur.select();
+alert("Merci de bien vouloir rentrer la hauteur du moule");
+blnNoNull = false;
+}
+}
+if (blnNoNull)
+{
+var R_Longueur = new Number(window.document.Calculation_Form.R_Epaisseur.value);
+var R_Largeur = new Number(window.document.Calculation_Form.R_Largeur.value);
+var R_Hauteur = new Number(window.document.Calculation_Form.R_Hauteur.value);
+var Calc_Rect1 = new Number(0);
+var Calc_Rect2 = new Number(0);
+var Calc_Rect3 = new Number(0);
+var Calc_Rect4 = new Number(0);
+var Calc_Rect5 = new Number(0);
+var Calc_Rect6 = new Number(0);
+var Calc_Rect7 = new Number(0);
+var Calc_Rect8 = new Number(0);
+var Calc_Rect9 = new Number(0);
+Calc_Rect1 = (R_Longueur*R_Largeur*R_Hauteur);
+Calc_Rect2 = (R_Longueur*R_Largeur*R_Hauteur/1000);
+Calc_Rect3 = (R_Longueur*R_Largeur*R_Hauteur*7.8/1000);
+Calc_Rect4 = (R_Longueur*R_Largeur*R_Hauteur*7.8/1000000);
+Calc_Rect5 = (R_Longueur*R_Largeur*R_Hauteur*7.8/1000000);
+Calc_Rect6 = (R_Longueur);
+Calc_Rect7 = (R_Largeur);
+Calc_Rect8 = (R_Hauteur);
+Calc_Rect9 = Calc_Rect1;
+Calc_Rect1 = Calc_Rect1*100;
+Calc_Rect1 = Math.ceil(Calc_Rect1);
+Calc_Rect1 = Calc_Rect1/100;
+window.document.Calculation_Form.Calc_Rect1.value = Calc_Rect1;
+Calc_Rect2 = Calc_Rect2*100;
+Calc_Rect2 = Math.ceil(Calc_Rect2);
+Calc_Rect2 = Calc_Rect2/100;
+window.document.Calculation_Form.Calc_Rect2.value = Calc_Rect2;
+Calc_Rect3 = Calc_Rect3*100;
+Calc_Rect3 = Math.ceil(Calc_Rect3);
+Calc_Rect3 = Calc_Rect3/100;
+window.document.Calculation_Form.Calc_Rect3.value = Calc_Rect3;
+Calc_Rect4 = Calc_Rect4*100;
+Calc_Rect4 = Math.ceil(Calc_Rect4);
+Calc_Rect4 = Calc_Rect4/100;
+window.document.Calculation_Form.Calc_Rect4.value = Calc_Rect4;
+Calc_Rect5 = Calc_Rect5*100;
+Calc_Rect5 = Math.ceil(Calc_Rect5);
+Calc_Rect5 = Calc_Rect5/100;
+window.document.Calculation_Form.Calc_Rect5.value = Calc_Rect5;
+window.document.Calculation_Form.Calc_Rect6.value = Calc_Rect6;
+window.document.Calculation_Form.Calc_Rect7.value = Calc_Rect7;
+window.document.Calculation_Form.Calc_Rect8.value = Calc_Rect8;
+window.document.Calculation_Form.Calc_Rect9.value = Calc_Rect1;
+window.document.Calculation_Form.Calc_Rect10.value = Calc_Rect2;
+window.document.Calculation_Form.Calc_Rect11.value = Calc_Rect3;
+}
+}
+//-->
+</script><br>
+
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td>
+      
+      <div style="text-align: right;"></div>
+
+
+      
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+
+        <tbody>
+
+
+          <tr>
+
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+
+          </tr>
+
+
+          <tr style="color: rgb(64, 64, 64);">
+
+
+            <td style="background-color: rgb(64, 64, 64);">
+            
+            <div id="menu">
+            
+            <ul>
+
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+
+            
+            </ul>
+
+
+            </div>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+          </tr>
+
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">Descriptif du
+moule</span></big></big></big></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+          </tr>
+
+
+          <tr style="color: rgb(64, 64, 64);">
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td><span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <a href="#1"><span style="text-decoration: underline;">Descriptif outillage</span></a><br>
+
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><br style="font-family: Arial; font-weight: bold;">
+
+
+                  <span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="#2">Buse
+moule</a></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span><span style="font-family: Arial; font-weight: bold;"></span><a href="#33"><span style="font-family: Arial; font-weight: bold;"></span></a><br>
+
+
+                  <span style="font-family: Arial; font-weight: bold;"> <br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="#3">Fichiers</a></span></td>
+
+
+                  <td style="text-align: right;"><img style="width: 604px; height: 349px;" alt="" src="image_008.png"><br>
+
+
+                  </td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+          </tr>
+
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;</td>
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>Descriptif
+outillage<br>
+
+
+                  </big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;">
+            
+            <div>
+            
+            <form name="Calculation_Form">
+              
+              <table style="width: 100%; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="0" cellspacing="0">
+
+
+                <tbody>
+
+
+                  <tr style="font-weight: bold;">
+
+
+                    <td style="width: 262px; height: 40px;" colspan="3" rowspan="1">
+                    
+                    <div style="text-align: center;"><span style="font-family: Arial;"><br>
+
+
+Masse
+du moule :&nbsp; </span><input value="0" name="Calc_Rect5" size="15"><span style="font-family: Arial;">&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; Kg (acier
+= 7,8 g / cm</span> <sup>3</sup><span style="font-family: Arial;">)</span></div>
+
+
+                    <br>
+
+
+                    </td>
+
+
+                  </tr>
+
+
+                  <tr>
+
+
+                    <td style="width: 210px; height: 84px;" colspan="1" rowspan="8"><img style="width: 505px; height: 402px;" alt="" src="image_004.png"></td>
+
+
+                    <td style="font-family: Arial; font-weight: bold; width: 201px; height: 40px;"><a href="anneau_de_levage.pdf" target="_blank">Anneau
+de levage</a> :</td>
+
+
+                    <td style="font-family: Arial; width: 262px; height: 40px;">
+                    
+                    <div style="text-align: center;"></div>
+
+
+                    
+                    <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+                      <tbody>
+
+
+                        <tr>
+
+
+                          <td style="text-align: center; width: 130px;"><label for="anneau"></label>
+                          
+                          <select id="anneau_M">
+                          <option value="">--S&eacute;lectioner--</option>
+                          <option value="M 6">M 6</option>
+                          <option value="M 8">M 8</option>
+                          <option value="M 10">M 10</option>
+                          <option value="M 12">M 12</option>
+                          <option value="M 14">M 14</option>
+                          <option value="M 16">M 16</option>
+                          <option value="M 18">M 18</option>
+                          <option value="M 20">M 20</option>
+                          </select>
+
+
+                          </td>
+
+
+                          <td>
+                          
+                          <p></p>
+
+
+                          
+                          <script>
+const select = document.querySelector('select');
+const para = document.querySelector('p');
+select.onchange = setAnneau_M;
+function setAnneau_M() {
+const choice = select.value;
+if(choice === 'M 6') {
+para.textContent = 'CMU a 90 kg';
+} else if(choice === 'M 8') {
+para.textContent = 'CMU a 140 kg';
+} else if(choice === 'M 10') {
+para.textContent = 'CMU a 230 kg';
+} else if(choice === 'M 12') {
+para.textContent = 'CMU a 340 kg';
+} else if(choice === 'M 14') {
+para.textContent = 'CMU a 500 kg';
+} else if(choice === 'M 16') {
+para.textContent = 'CMU a 700 kg';
+} else if(choice === 'M 18') {
+para.textContent = 'CMU a 930 kg';
+} else if(choice === 'M 20') {
+para.textContent = 'CMU a 1200 kg';
+} else {
+para.textContent = '';
+}
+} </script>
+                          </td>
+
+
+                        </tr>
+
+
+                      
+                      </tbody>
+                    
+                    </table>
+
+
+                    </td>
+
+
+                  </tr>
+
+
+                  <tr>
+
+
+                    <td style="font-family: Arial; font-weight: bold; width: 201px; height: 40px;">Hauteur
+du moule:</td>
+
+
+                    <td style="font-family: Arial; font-weight: bold; width: 262px; text-align: center; height: 40px;"><input value="0" name="R_Hauteur" onchange="return IsFloat(this.value, 'hauteur du parallélépipède rectangle', 'R_Hauteur', 'RectCalc()')" size="15"> &nbsp;mm</td>
+
+
+                  </tr>
+
+
+                  <tr>
+
+
+                    <td style="font-family: Arial; font-weight: bold; width: 201px; height: 40px;">Largeur
+du moule:</td>
+
+
+                    <td style="font-family: Arial; font-weight: bold; width: 262px; text-align: center; height: 40px;">&nbsp;<input value="0" name="R_Largeur" onchange="return IsFloat(this.value, 'largeur de la base du parallélépipède rectangle', 'R_Largeur', 'RectCalc()')" size="15"> &nbsp;mm</td>
+
+
+                  </tr>
+
+
+                  <tr>
+
+
+                    <td style="font-family: Arial; font-weight: bold; width: 201px; height: 40px;">&Eacute;paisseur
+moule :</td>
+
+
+                    <td style="text-align: center; height: 40px;"><input value="0" size="15" onchange="return IsFloat(this.value, 'longueur de la base du parallélépipède rectangle', 'R_Longueur', 'RectCalc()')" name="R_Epaisseur"> &nbsp;<span style="font-family: Arial; font-weight: bold;">mm</span></td>
+
+
+                  </tr>
+
+
+                  <tr>
+
+
+                    <td style="font-family: Arial; font-weight: bold; width: 201px; height: 40px;">&Oslash;
+bague de centrage :</td>
+
+
+                    <td style="font-weight: bold; text-align: right; width: 262px; font-family: Arial; height: 40px;">mm</td>
+
+
+                  </tr>
+
+
+                  <tr>
+
+
+                    <td style="font-family: Arial; font-weight: bold; width: 201px; height: 40px;">Longueur
+des colonnes :</td>
+
+
+                    <td style="font-family: Arial; font-weight: bold; text-align: right; width: 262px; height: 40px;">mm</td>
+
+
+                  </tr>
+
+
+                  <tr>
+
+
+                    <td style="font-family: Arial; font-weight: bold; width: 201px; height: 40px;">Course
+d'&eacute;jection maxi :</td>
+
+
+                    <td style="font-family: Arial; font-weight: bold; text-align: right; width: 262px; height: 40px;">mm</td>
+
+
+                  </tr>
+
+
+                  <tr>
+
+
+                    <td style="height: 84px;" colspan="2" rowspan="1">
+                    
+                    <center><input onclick="RectCalc()" value=" Calcul " style="width: 130px; height: 50px; font-size: 1em; background-color: steelblue; color: white; font-weight: bold; cursor: pointer;" type="button"> </center>
+
+
+                    </td>
+
+
+                  </tr>
+
+
+                  <tr>
+
+
+                    <td style="height: 10px;" colspan="3" rowspan="1"></td>
+
+
+                  </tr>
+
+
+                  <tr>
+
+
+                    <td colspan="3" rowspan="1" style="font-family: Arial; font-weight: bold;">Calcul du
+volume en mm <sup>3</sup><br>
+
+
+                    <br>
+
+
+                    <span style="font-weight: normal;">V =
+Epaisseur x Largeur x Hauteur<br>
+
+
+                    <br style="font-weight: normal;">
+
+
+                    </span><span style="font-weight: normal;">&nbsp;
+&nbsp;= </span><input value="0" name="Calc_Rect6" size="10"><span style="font-weight: normal;">
+x&nbsp;</span><input value="0" name="Calc_Rect7" size="10"><span style="font-weight: normal;">
+x&nbsp;</span><input value="0" name="Calc_Rect8" size="10"> &nbsp; &nbsp;<br>
+
+
+                    <br>
+
+
+&nbsp; <span style="font-weight: normal;">&nbsp;=</span>
+                    <input value="0" name="Calc_Rect1" size="15"> <span style="font-weight: normal;">mm
+                    </span><sup style="font-weight: normal;">3</sup><br>
+
+
+                    <br>
+
+
+                    </td>
+
+
+                  </tr>
+
+
+                  <tr>
+
+
+                    <td colspan="3" rowspan="1" style="font-family: Arial;"><span style="font-weight: bold;">Conversion du volume en cm </span><sup style="font-weight: bold;">3</sup><br>
+
+
+                    <br>
+
+
+V = Volume en&nbsp; mm <sup>3</sup> / 1000<br>
+
+
+&nbsp;&nbsp; &nbsp;<br>
+
+
+&nbsp; &nbsp; =&nbsp;<input value="0" name="Calc_Rect9" size="15"> &nbsp;/ 1000<br>
+
+
+                    <br>
+
+
+&nbsp; &nbsp; &nbsp;= <input value="0" name="Calc_Rect2" size="15"> cm <sup>3</sup>&nbsp;
+&nbsp; &nbsp;<br>
+
+
+&nbsp; &nbsp; &nbsp; </td>
+
+
+                  </tr>
+
+
+                  <tr>
+
+
+                    <td colspan="3" rowspan="1" style="font-family: Arial;"><span style="font-weight: bold;">Calcul de la masse en gr</span><br>
+
+
+                    <br>
+
+
+Masse du moule = Volume en&nbsp;cm <sup>3</sup> x masse volumique<br>
+
+
+                    <br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;= <input value="0" name="Calc_Rect10" size="15"> x 7,8<br>
+
+
+                    <br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; =&nbsp;<input value="0" name="Calc_Rect3" size="15"> gr &nbsp; &nbsp;
+&nbsp; <br>
+
+
+&nbsp; &nbsp;<br>
+
+
+                    </td>
+
+
+                  </tr>
+
+
+                  <tr>
+
+
+                    <td colspan="3" rowspan="1"><span style="font-weight: bold; font-family: Arial;">Conversion de
+la masse du moule en kg</span><br style="font-weight: bold; font-family: Arial;">
+
+
+                    <br style="font-family: Arial;">
+
+
+                    <span style="font-family: Arial;">Masse
+du moule = masse du moule en gr / 1000</span><br style="font-family: Arial;">
+
+
+                    <br style="font-family: Arial;">
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; = <input value="0" name="Calc_Rect11" size="15"> / 1000<br>
+
+
+                    <br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; = <input value="0" name="Calc_Rect4" size="15"><span style="font-family: Arial;"> kg &nbsp; </span>&nbsp;<br>
+
+
+                    <br>
+
+
+                    </td>
+
+
+                  </tr>
+
+
+                
+                </tbody>
+              
+              </table>
+
+
+            </form>
+
+
+            </div>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;">
+            
+            <div style="margin-left: 54px; text-align: center;"><br>
+
+
+            </div>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;&nbsp;<big><big>&nbsp;</big></big></td>
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>Buse moule </big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr style="font-family: Arial;">
+
+
+            <td style="text-align: justify;">
+            
+            <div>
+            
+            <table style="text-align: left; width: 100%;" border="1" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="text-align: center; width: 40px;" colspan="1" rowspan="2"><span style="font-weight: bold;">T<br>
+
+
+Y<br>
+
+
+P<br>
+
+
+E<br>
+
+
+                  <br>
+
+
+D<br>
+
+
+E<br>
+
+
+                  <br>
+
+
+P<br>
+
+
+O<br>
+
+
+R<br>
+
+
+T<br>
+
+
+E<br>
+
+
+E<br>
+
+
+                  </span></td>
+
+
+                  <td style="text-align: center; font-weight: bold; width: 285px; height: 40px;">Conique</td>
+
+
+                  <td style="text-align: center; font-weight: bold;">Sph&eacute;rique</td>
+
+
+                  <td style="text-align: center; font-weight: bold;">Plate</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="text-align: center; width: 285px;"><img style="width: 254px; height: 350px;" alt="" src="image_005.png"></td>
+
+
+                  <td style="text-align: center;"><img style="width: 263px; height: 350px;" alt="" src="image_006.png"></td>
+
+
+                  <td style="text-align: center;"><img style="width: 263px; height: 350px;" alt="" src="image_007.png"></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            <br>
+
+
+            </div>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;&nbsp;</td>
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3"></a>Fichiers</big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="descriptif_du_moule_detaille.docx">Fichier word</a>
+&nbsp; &nbsp;</td>
+
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="height: 5px;"></td>
+
+
+                  <td style="text-align: center;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="descriptif_du_moule_detaille.pdf" target="_blank">Fichier
+PDF</a>
+&nbsp; &nbsp;</td>
+
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+
+          </tr>
+
+
+        
+        </tbody>
+      
+      </table>
+
+
+      </td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+</div>
+
+
+</div>
+
+
+</body>
+</html>

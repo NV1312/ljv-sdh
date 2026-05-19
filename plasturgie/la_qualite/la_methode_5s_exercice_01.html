@@ -1,0 +1,2876 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+  <title>Bac pro PLC -La methode 5S exercice 01</title>
+
+
+  <meta content="ressources" name="description">
+
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+  <script>
+// fonction pour dessiner
+function draw1()
+{ // Largeur et hauteur en pixels
+var W1=1000;H1=450;
+var canvas1=document.getElementById("graphe");
+canvas1.width=W1;canvas1.height=H1;
+var ctx=canvas1.getContext("2d");
+// etape 1 -----------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=4;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(10, 100, 90, 50);ctx.stroke();
+ctx.rect(10, 100, 90, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 100, 100, 50);ctx.stroke();
+ctx.rect(150, 100, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 300, 100, 50);ctx.stroke();
+ctx.rect(150, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 200, 100, 50);ctx.stroke();
+ctx.rect(300, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 300, 100, 50);ctx.stroke();
+ctx.rect(300, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(450, 200, 100, 50);ctx.stroke();
+ctx.rect(450, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(600, 250, 100, 50);ctx.stroke();
+ctx.rect(600, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(750, 250, 100, 50);ctx.stroke();
+ctx.rect(750, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(900, 250, 90, 50);ctx.stroke();
+ctx.rect(900, 250, 90, 50);ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Début", 30, 130);
+ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("A", 190, 130);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("B", 190, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("C", 340, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("D", 340, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("E", 490, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("F", 640, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("G", 790, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Fin", 930, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("Le graphe s ecrit de la gauche vers la droite.", 50, 20);
+ctx.fillText("On évite, au maximum, de couper les transitions (flèches).", 50, 40);
+ctx.fillText("On commence le graphe par une case début.On finit le graphe par une case fin.", 50, 60);
+ctx.stroke();
+// --------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(100,125);
+ctx.lineTo(100+50,125);
+// --------------------------
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125-5);
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125+5);
+// --------------------------
+ctx.moveTo(100,125);
+ctx.lineTo(100+30,325);
+ctx.lineTo(100+50,325);
+// --------------------------
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325-5);
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325+5);
+ctx.moveTo(250,325);
+ctx.lineTo(250+50,325);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325-5);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325+5);
+// --------------------------
+ctx.moveTo(250,325);
+ctx.lineTo(300-20,225+10);
+ctx.lineTo(300,225+10);
+ctx.lineTo(300-10,225-5+10);
+ctx.moveTo(300,225+10);
+ctx.lineTo(300-10,225+5+10);
+// --------------------------
+ctx.moveTo(250,125);
+ctx.lineTo(300-20,225-10);
+ctx.lineTo(300,225-10);
+// --------------------------
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225-5-10);
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225+5-10);
+// --------------------------
+ctx.moveTo(400,225);
+ctx.lineTo(450,225);
+// --------------------------
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225-5);
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225+5);
+// --------------------------
+ctx.moveTo(550,225);
+ctx.lineTo(600-20,275-10);
+ctx.lineTo(600,275-10);
+// --------------------------
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265-5);
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265+5);
+// --------------------------
+ctx.moveTo(400,325);
+ctx.lineTo(600-20,265+20);
+ctx.lineTo(600,265+20);
+// --------------------------
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285-5);
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285+5);
+// --------------------------
+ctx.moveTo(700,275);
+ctx.lineTo(750,275);
+// --------------------------
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275-5);
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275+5);
+// --------------------------
+ctx.moveTo(850,275);
+ctx.lineTo(900,275);
+// --------------------------
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275-5);
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275+5);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("4", 235, 145);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("7", 235, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 385, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("12", 380, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("3", 535, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("6", 685, 295);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 835, 295);
+ctx.stroke();
+// --------------------------
+}
+function draw2()
+{ // Largeur et hauteur en pixels
+var W2=1000;H2=450;
+var canvas2=document.getElementById("graphe");
+canvas2.width=W2;canvas2.height=H2;
+var ctx=canvas2.getContext("2d");
+// etape 1 -----------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=4;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(10, 100, 90, 50);ctx.stroke();
+ctx.rect(10, 100, 90, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 100, 100, 50);ctx.stroke();
+ctx.rect(150, 100, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 300, 100, 50);ctx.stroke();
+ctx.rect(150, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 200, 100, 50);ctx.stroke();
+ctx.rect(300, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 300, 100, 50);ctx.stroke();
+ctx.rect(300, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(450, 200, 100, 50);ctx.stroke();
+ctx.rect(450, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(600, 250, 100, 50);ctx.stroke();
+ctx.rect(600, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(750, 250, 100, 50);ctx.stroke();
+ctx.rect(750, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(900, 250, 90, 50);ctx.stroke();
+ctx.rect(900, 250, 90, 50);ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Début", 30, 130);
+ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("A", 190, 130);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("B", 190, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("C", 340, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("D", 340, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("E", 490, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("F", 640, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("G", 790, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Fin", 930, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("La durée du projet est calculée en partant de la gauche vers la droite.", 50, 20);
+ctx.fillText("On écrit pour chaque tâche le début et la fin de la tâche.", 50, 40);
+ctx.stroke();
+// --------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(100,125);
+ctx.lineTo(100+50,125);
+// --------------------------
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125-5);
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125+5);
+// --------------------------
+ctx.moveTo(100,125);
+ctx.lineTo(100+30,325);
+ctx.lineTo(100+50,325);
+// --------------------------
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325-5);
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325+5);
+ctx.moveTo(250,325);
+ctx.lineTo(250+50,325);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325-5);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325+5);
+// --------------------------
+ctx.moveTo(250,325);
+ctx.lineTo(300-20,225+10);
+ctx.lineTo(300,225+10);
+ctx.lineTo(300-10,225-5+10);
+ctx.moveTo(300,225+10);
+ctx.lineTo(300-10,225+5+10);
+// --------------------------
+ctx.moveTo(250,125);
+ctx.lineTo(300-20,225-10);
+ctx.lineTo(300,225-10);
+// --------------------------
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225-5-10);
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225+5-10);
+// --------------------------
+ctx.moveTo(400,225);
+ctx.lineTo(450,225);
+// --------------------------
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225-5);
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225+5);
+// --------------------------
+ctx.moveTo(550,225);
+ctx.lineTo(600-20,275-10);
+ctx.lineTo(600,275-10);
+// --------------------------
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265-5);
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265+5);
+// --------------------------
+ctx.moveTo(400,325);
+ctx.lineTo(600-20,265+20);
+ctx.lineTo(600,265+20);
+// --------------------------
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285-5);
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285+5);
+// --------------------------
+ctx.moveTo(700,275);
+ctx.lineTo(750,275);
+// --------------------------
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275-5);
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275+5);
+// --------------------------
+ctx.moveTo(850,275);
+ctx.lineTo(900,275);
+// --------------------------
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275-5);
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275+5);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("4", 235, 145);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("7", 235, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 385, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("12", 380, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("3", 535, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("6", 685, 295);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 835, 295);
+ctx.stroke();
+// etape 2 ----------------------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 170);
+ctx.fillText("4", 235, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 370);
+ctx.fillText("7", 235, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 270);
+ctx.fillText("9", 385, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 370);
+ctx.fillText("19", 380, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("9", 455, 270);
+ctx.fillText("12", 530, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 320);
+ctx.fillText("25", 675, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 320);
+ctx.fillText("27", 825, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 325);
+ctx.stroke();
+}
+//---------------------------------------------
+function draw3()
+{ // Largeur et hauteur en pixels
+var W1=1000;H1=450;
+var canvas=document.getElementById("graphe");
+canvas.width=W1;canvas.height=H1;
+var ctx=canvas.getContext("2d");
+// etape 1 -----------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=4;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(10, 100, 90, 50);ctx.stroke();
+ctx.rect(10, 100, 90, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 100, 100, 50);ctx.stroke();
+ctx.rect(150, 100, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 300, 100, 50);ctx.stroke();
+ctx.rect(150, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 200, 100, 50);ctx.stroke();
+ctx.rect(300, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 300, 100, 50);ctx.stroke();
+ctx.rect(300, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(450, 200, 100, 50);ctx.stroke();
+ctx.rect(450, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(600, 250, 100, 50);ctx.stroke();
+ctx.rect(600, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(750, 250, 100, 50);ctx.stroke();
+ctx.rect(750, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(900, 250, 90, 50);ctx.stroke();
+ctx.rect(900, 250, 90, 50);ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Début", 30, 130);
+ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("A", 190, 130);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("B", 190, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("C", 340, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("D", 340, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("E", 490, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("F", 640, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("G", 790, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Fin", 930, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("On écrit le chemin en partant de la droite vers la gauche.", 50, 20);
+ctx.stroke();
+// --------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(100,125);
+ctx.lineTo(100+50,125);
+// --------------------------
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125-5);
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125+5);
+// --------------------------
+ctx.moveTo(100,125);
+ctx.lineTo(100+30,325);
+ctx.lineTo(100+50,325);
+// --------------------------
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325-5);
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325+5);
+ctx.moveTo(250,325);
+ctx.lineTo(250+50,325);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325-5);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325+5);
+// --------------------------
+ctx.moveTo(250,325);
+ctx.lineTo(300-20,225+10);
+ctx.lineTo(300,225+10);
+ctx.lineTo(300-10,225-5+10);
+ctx.moveTo(300,225+10);
+ctx.lineTo(300-10,225+5+10);
+// --------------------------
+ctx.moveTo(250,125);
+ctx.lineTo(300-20,225-10);
+ctx.lineTo(300,225-10);
+// --------------------------
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225-5-10);
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225+5-10);
+// --------------------------
+ctx.moveTo(400,225);
+ctx.lineTo(450,225);
+// --------------------------
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225-5);
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225+5);
+// --------------------------
+ctx.moveTo(550,225);
+ctx.lineTo(600-20,275-10);
+ctx.lineTo(600,275-10);
+// --------------------------
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265-5);
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265+5);
+// --------------------------
+ctx.moveTo(400,325);
+ctx.lineTo(600-20,265+20);
+ctx.lineTo(600,265+20);
+// --------------------------
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285-5);
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285+5);
+// --------------------------
+ctx.moveTo(700,275);
+ctx.lineTo(750,275);
+// --------------------------
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275-5);
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275+5);
+// --------------------------
+ctx.moveTo(850,275);
+ctx.lineTo(900,275);
+// --------------------------
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275-5);
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275+5);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("4", 235, 145);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("7", 235, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 385, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("12", 380, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("3", 535, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("6", 685, 295);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 835, 295);
+ctx.stroke();
+// etape 2 ----------------------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 170);
+ctx.fillText("4", 235, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 370);
+ctx.fillText("7", 235, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 270);
+ctx.fillText("9", 385, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 370);
+ctx.fillText("19", 380, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("9", 455, 270);
+ctx.fillText("12", 530, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 320);
+ctx.fillText("25", 675, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 320);
+ctx.fillText("27", 825, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 325);
+ctx.stroke();
+// etape 3 ----------------------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 90);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("10", 155, 90);
+ctx.fillText("14", 230, 90);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 290);
+ctx.fillText("7", 235, 290);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("14", 305, 190);
+ctx.fillText("16", 380, 190);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 290);
+ctx.fillText("19", 380, 290);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("16", 455, 190);
+ctx.fillText("19", 530, 190);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 240);
+ctx.fillText("25", 675, 240);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 240);
+ctx.fillText("27", 825, 240);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 245);
+ctx.stroke();
+}
+//---------------------------------------------
+function draw4()
+{ // Largeur et hauteur en pixels
+var W1=1000;H1=450;
+var canvas=document.getElementById("graphe");
+canvas.width=W1;canvas.height=H1;
+var ctx=canvas.getContext("2d");
+// etape 1 -----------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=4;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(10, 100, 90, 50);ctx.stroke();
+ctx.rect(10, 100, 90, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 100, 100, 50);ctx.stroke();
+ctx.rect(150, 100, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 300, 100, 50);ctx.stroke();
+ctx.rect(150, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 200, 100, 50);ctx.stroke();
+ctx.rect(300, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 300, 100, 50);ctx.stroke();
+ctx.rect(300, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(450, 200, 100, 50);ctx.stroke();
+ctx.rect(450, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(600, 250, 100, 50);ctx.stroke();
+ctx.rect(600, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(750, 250, 100, 50);ctx.stroke();
+ctx.rect(750, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(900, 250, 90, 50);ctx.stroke();
+ctx.rect(900, 250, 90, 50);ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Début", 30, 130);
+ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("A", 190, 130);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("B", 190, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("C", 340, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("D", 340, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("E", 490, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("F", 640, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("G", 790, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Fin", 930, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("On calcul les marges pour chaque tâche.", 50, 20);
+ctx.stroke();
+// --------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(100,125);
+ctx.lineTo(100+50,125);
+// --------------------------
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125-5);
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125+5);
+// --------------------------
+ctx.moveTo(100,125);
+ctx.lineTo(100+30,325);
+ctx.lineTo(100+50,325);
+// --------------------------
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325-5);
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325+5);
+ctx.moveTo(250,325);
+ctx.lineTo(250+50,325);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325-5);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325+5);
+// --------------------------
+ctx.moveTo(250,325);
+ctx.lineTo(300-20,225+10);
+ctx.lineTo(300,225+10);
+ctx.lineTo(300-10,225-5+10);
+ctx.moveTo(300,225+10);
+ctx.lineTo(300-10,225+5+10);
+// --------------------------
+ctx.moveTo(250,125);
+ctx.lineTo(300-20,225-10);
+ctx.lineTo(300,225-10);
+// --------------------------
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225-5-10);
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225+5-10);
+// --------------------------
+ctx.moveTo(400,225);
+ctx.lineTo(450,225);
+// --------------------------
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225-5);
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225+5);
+// --------------------------
+ctx.moveTo(550,225);
+ctx.lineTo(600-20,275-10);
+ctx.lineTo(600,275-10);
+// --------------------------
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265-5);
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265+5);
+// --------------------------
+ctx.moveTo(400,325);
+ctx.lineTo(600-20,265+20);
+ctx.lineTo(600,265+20);
+// --------------------------
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285-5);
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285+5);
+// --------------------------
+ctx.moveTo(700,275);
+ctx.lineTo(750,275);
+// --------------------------
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275-5);
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275+5);
+// --------------------------
+ctx.moveTo(850,275);
+ctx.lineTo(900,275);
+// --------------------------
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275-5);
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275+5);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("4", 235, 145);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("7", 235, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 385, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("12", 380, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("3", 535, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("6", 685, 295);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 835, 295);
+ctx.stroke();
+// etape 2 ----------------------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 170);
+ctx.fillText("4", 235, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 370);
+ctx.fillText("7", 235, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 270);
+ctx.fillText("9", 385, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 370);
+ctx.fillText("19", 380, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("9", 455, 270);
+ctx.fillText("12", 530, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 320);
+ctx.fillText("25", 675, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 320);
+ctx.fillText("27", 825, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 325);
+ctx.stroke();
+// etape 3 ----------------------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 90);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("10", 155, 90);
+ctx.fillText("14", 230, 90);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 290);
+ctx.fillText("7", 235, 290);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("14", 305, 190);
+ctx.fillText("16", 380, 190);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 290);
+ctx.fillText("19", 380, 290);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("16", 455, 190);
+ctx.fillText("19", 530, 190);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 240);
+ctx.fillText("25", 675, 240);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 240);
+ctx.fillText("27", 825, 240);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 245);
+ctx.stroke();
+// etape 4 -----------------------------------
+// --------------------------
+ctx.fillStyle="#FF0000";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("10", 235-7, 145-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 235, 345-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 385, 245-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 380, 345-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 535, 245-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 685, 295-25);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 835, 295-25);
+ctx.stroke();
+}
+//---------------------------------------------
+function draw5()
+{ // Largeur et hauteur en pixels
+var W1=1000;H1=450;
+var canvas=document.getElementById("graphe");
+canvas.width=W1;canvas.height=H1;
+var ctx=canvas.getContext("2d");
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("Le chemin critique est le chemin ou les marges sont à zéro.", 50, 20);
+ctx.stroke();
+// etape 1 -----------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=4;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.fillStyle = "#FFFF00";
+ctx.fillRect(10, 100, 90, 50);ctx.stroke();
+ctx.rect(10, 100, 90, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 100, 100, 50);ctx.stroke();
+ctx.rect(150, 100, 100, 50);ctx.stroke();
+ctx.fillStyle = "#FFFF00";
+ctx.fillRect(150, 300, 100, 50);ctx.stroke();
+ctx.rect(150, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 200, 100, 50);ctx.stroke();
+ctx.rect(300, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "#FFFF00";
+ctx.fillRect(300, 300, 100, 50);ctx.stroke();
+ctx.rect(300, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(450, 200, 100, 50);ctx.stroke();
+ctx.rect(450, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "#FFFF00";
+ctx.fillRect(600, 250, 100, 50);ctx.stroke();
+ctx.rect(600, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "#FFFF00";
+ctx.fillRect(750, 250, 100, 50);ctx.stroke();
+ctx.rect(750, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "#FFFF00";
+ctx.fillRect(900, 250, 90, 50);ctx.stroke();
+ctx.rect(900, 250, 90, 50);ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Début", 30, 130);
+ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("A", 190, 130);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("B", 190, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("C", 340, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("D", 340, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("E", 490, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("F", 640, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("G", 790, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Fin", 930, 130+150);
+ctx.stroke();
+// --------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(100,125);
+ctx.lineTo(100+50,125);
+// --------------------------
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125-5);
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125+5);
+// --------------------------
+ctx.moveTo(100,125);
+ctx.lineTo(100+30,325);
+ctx.lineTo(100+50,325);
+// --------------------------
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325-5);
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325+5);
+ctx.moveTo(250,325);
+ctx.lineTo(250+50,325);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325-5);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325+5);
+// --------------------------
+ctx.moveTo(250,325);
+ctx.lineTo(300-20,225+10);
+ctx.lineTo(300,225+10);
+ctx.lineTo(300-10,225-5+10);
+ctx.moveTo(300,225+10);
+ctx.lineTo(300-10,225+5+10);
+// --------------------------
+ctx.moveTo(250,125);
+ctx.lineTo(300-20,225-10);
+ctx.lineTo(300,225-10);
+// --------------------------
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225-5-10);
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225+5-10);
+// --------------------------
+ctx.moveTo(400,225);
+ctx.lineTo(450,225);
+// --------------------------
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225-5);
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225+5);
+// --------------------------
+ctx.moveTo(550,225);
+ctx.lineTo(600-20,275-10);
+ctx.lineTo(600,275-10);
+// --------------------------
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265-5);
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265+5);
+// --------------------------
+ctx.moveTo(400,325);
+ctx.lineTo(600-20,265+20);
+ctx.lineTo(600,265+20);
+// --------------------------
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285-5);
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285+5);
+// --------------------------
+ctx.moveTo(700,275);
+ctx.lineTo(750,275);
+// --------------------------
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275-5);
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275+5);
+// --------------------------
+ctx.moveTo(850,275);
+ctx.lineTo(900,275);
+// --------------------------
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275-5);
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275+5);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("4", 235, 145);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("7", 235, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 385, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("12", 380, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("3", 535, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("6", 685, 295);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 835, 295);
+ctx.stroke();
+// etape 2 ----------------------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 170);
+ctx.fillText("4", 235, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 370);
+ctx.fillText("7", 235, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 270);
+ctx.fillText("9", 385, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 370);
+ctx.fillText("19", 380, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("9", 455, 270);
+ctx.fillText("12", 530, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 320);
+ctx.fillText("25", 675, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 320);
+ctx.fillText("27", 825, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 325);
+ctx.stroke();
+// etape 3 ----------------------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 90);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("10", 155, 90);
+ctx.fillText("14", 230, 90);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 290);
+ctx.fillText("7", 235, 290);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("14", 305, 190);
+ctx.fillText("16", 380, 190);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 290);
+ctx.fillText("19", 380, 290);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("16", 455, 190);
+ctx.fillText("19", 530, 190);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 240);
+ctx.fillText("25", 675, 240);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 240);
+ctx.fillText("27", 825, 240);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 245);
+ctx.stroke();
+// etape 4 -----------------------------------
+// --------------------------
+ctx.fillStyle="#FF0000";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("10", 235-7, 145-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 235, 345-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 385, 245-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 380, 345-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 535, 245-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 685, 295-25);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 835, 295-25);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#000000";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Chemin critique: début - B - D - F - G - fin", 335, 420);
+ctx.stroke();
+}
+//---------------------------------------------
+//---------------------------------------------
+function draw6()
+{ // Largeur et hauteur en pixels
+var W1=1000;H1=450;
+var canvas=document.getElementById("graphe");
+canvas.width=W1;canvas.height=H1;
+var ctx=canvas.getContext("2d");
+ctx.fillStyle="#000000";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 22px Arial";
+ctx.fillText("Tracé du graphe PERT", 335, 220);
+ctx.stroke();
+}
+  </script>
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+<br>
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+  <tbody>
+
+    <tr>
+
+      <td>
+      <div style="text-align: left;"></div>
+
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+        <tbody>
+
+          <tr>
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="background-color: rgb(64, 64, 64);">
+            <div id="menu">
+            <ul>
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">La
+m&eacute;thode 5 S<br>
+
+Exercice</span></big></big></big></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 992px; height: 392px;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold;">1.
+                  <a href="#1"><span style="text-decoration: underline;">La ballade du dimanche</span></a><br>
+
+                  <br>
+
+                  <span style="font-family: Arial; font-weight: bold;">2. <a href="#2"><span style="text-decoration: underline;">Que peut-on retenir</span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;"><br>
+
+3. </span></a><a href="#3"><span style="text-decoration: underline;">Que peut-on faire</span></a><br>
+
+                  <br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><a href="#4"><span style="text-decoration: underline;"></span></a></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span><span style="font-family: Arial; font-weight: bold;">4. <a href="#4"><span style="text-decoration: underline;">Le 5 S en pratique</span></a><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><a href="la_metode_5s_exercice_01.html#4"><span style="text-decoration: underline;"></span></a></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span><span style="font-family: Arial; font-weight: bold;">5. <a href="#5"><span style="text-decoration: underline;">Fichiers</span></a></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;"><span style="text-decoration: underline;"></span></span></td>
+
+                  <td style="width: 560px; text-align: center;"><img style="width: 437px; height: 300px;" alt="" src="image_049.png"><br>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;" align="center">
+
+            <td>Retrouvez la famille Goujon, Jean : le
+p&egrave;re, Marie la m&egrave;re et Paul le
+fils, pour un dimanche matin comme on les aime... <br>
+
+            <br>
+
+(Cet extrait, tir&eacute; de
+l'ouvrage "La vie en Lean".)</td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;"><big><big>1.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>La
+ballade du dimanche</big></big><big><big>&nbsp;</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 54px;">&nbsp;Il
+fait tr&egrave;s beau, ce dimanche matin, et Jean est fermement
+d&eacute;cid&eacute; &agrave; aller faire une balade
+&agrave; v&eacute;lo avec Paul. Alors qu&rsquo;il fait part
+de son projet &agrave; son &eacute;pouse, cette
+derni&egrave;re lui indique que l&rsquo;id&eacute;e est
+excellente, mais que le v&eacute;lo du fiston a
+d&eacute;raill&eacute; le mercredi
+pr&eacute;c&eacute;dent au parc, et qu&rsquo;elle
+n&rsquo;a pas &eacute;t&eacute; en mesure de repositionner
+correctement la chaine.
+            <br>
+
+            <br>
+
+Il lui semble, ajoute-t-elle, que des outils sont
+n&eacute;cessaires pour ce faire. Or, elle indique ne pas avoir
+&eacute;t&eacute; en mesure de les trouver, au regard du bazar
+ambiant r&eacute;gnant dans le garage.
+            <br>
+
+            <br>
+
+Jean, un brin vex&eacute; par la pique de Marie, se lance alors
+dans une grande tirade visant &agrave; expliquer &agrave; cette
+derni&egrave;re qu&rsquo;il sait, quant &agrave; lui,
+parfaitement se retrouver dans son garage, et qu&rsquo;il aura
+t&ocirc;t fait de r&eacute;gler ce petit probl&egrave;me.
+            <br>
+
+            <br>
+
+Marie, taquine, prend les paris.
+            <br>
+
+            <br>
+
+Apr&egrave;s avoir jet&eacute; un rapide coup d&rsquo;oeil
+au v&eacute;lo, Jean conclut, comme Marie, qu&rsquo;il convient
+effectivement de d&eacute;monter la roue arri&egrave;re pour
+repositionner correctement la chaine. En effet, la bicyclette ne
+dispose pas d&rsquo;un d&eacute;railleur.
+            <br>
+
+            <br>
+
+Qu&rsquo;&agrave; cela ne tienne, il file au garage chercher
+les outils n&eacute;cessaires au desserrage de la roue. Mais il
+faut bien reconna&icirc;tre que l&rsquo;&eacute;tat de
+d&eacute;sordre qui y r&egrave;gne est important. En
+r&eacute;alit&eacute;, les Goujon n&rsquo;ont jamais
+r&eacute;ellement pris le temps de l&rsquo;am&eacute;nager
+depuis leur d&eacute;m&eacute;nagement, quelques mois plus
+t&ocirc;t. Ainsi, outils dispos&eacute;s
+p&ecirc;le-m&ecirc;le c&ocirc;toient, dans un joyeux
+capharna&uuml;m, cartons divers, et d&eacute;chets en attente
+d&rsquo;&ecirc;tre benn&eacute;s.
+            <br>
+
+            <br>
+
+Jean, de plus en plus agac&eacute;, est oblig&eacute; de
+reconna&icirc;tre que la t&acirc;che, apparemment simple, va
+s&rsquo;av&eacute;rer en r&eacute;alit&eacute; ardue.
+            <br>
+
+            <br>
+
+Apr&egrave;s 15 minutes d&rsquo;arch&eacute;ologie, il
+finit par d&eacute;nicher la bo&icirc;te &agrave; outils
+renfermant la cl&eacute; tant recherch&eacute;e. Il essaye la
+cl&eacute; de 14... trop petite... la cl&eacute; de 16... trop
+grande. Enfin fix&eacute;, il se met en qu&ecirc;te de celle de
+15.
+            <br>
+
+            <br>
+
+Apr&egrave;s avoir cherch&eacute; &agrave; deux reprises,
+les mains pleines de salet&eacute;s, et une petite coupure au doigt
+en prime, Jean se rend &agrave; l&rsquo;&eacute;vidence :
+la cl&eacute; de 15 est introuvable !
+            <br>
+
+            <br>
+
+Au bord de la crise de nerf, Il se r&eacute;sout finalement
+&agrave; solliciter un voisin. Incroyable de perdre autant de temps
+pour de telles b&ecirc;tises, ronchonne- t-il !
+Il est plus de midi quand le v&eacute;lo est enfin
+r&eacute;par&eacute;. <br>
+
+            <br>
+
+Deux heures ont &eacute;t&eacute; perdues, la
+matin&eacute;e est en partie g&acirc;ch&eacute;e.
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;"><big><big>2.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>Que
+peut-on retenir</big></big>&nbsp;</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: left;">
+            <div style="margin-left: 54px;">Voici les
+constats qu&rsquo;on peut retenir de cette situation :
+            <br>
+
+            <br>
+
+&bull; Jean rencontre des difficult&eacute;s &agrave;
+trouver sa bo&icirc;te &agrave; outils car son garage est mal
+rang&eacute; ;
+            <br>
+
+            <br>
+
+&bull; Il est oblig&eacute; de d&eacute;placer des cartons
+pour acc&eacute;der aux outils ;
+            <br>
+
+            <br>
+
+&bull; Certains &eacute;l&eacute;ments, destin&eacute;s
+&agrave; la d&eacute;chetterie, rendent la recherche laborieuse
+;
+            <br>
+
+            <br>
+
+&bull; Tout est m&eacute;lang&eacute; dans la boite
+&agrave; outils de Jean ;
+&bull; Il se blesse en cherchant la bonne cl&eacute;, et a les
+mains toutes sales, alors qu&rsquo;il n&rsquo;est
+m&ecirc;me pas encore intervenu sur la chaine du v&eacute;lo ;
+            <br>
+
+            <br>
+
+&bull; La cl&eacute; de 15 est introuvable, plusieurs
+hypoth&egrave;ses peuvent &ecirc;tre formul&eacute;es :
+            <br>
+
+            <br>
+
+            <div style="margin-left: 80px;">- Il
+n&rsquo;en a jamais poss&eacute;d&eacute;e ;
+            <br>
+
+            <br>
+
+- Elle est dans le garage, mais tellement mal rang&eacute;e
+qu&rsquo;elle est introuvable ;<br>
+
+            <br>
+
+- Elle est ailleurs (rang&eacute;e par ses soins dans un endroit
+inad&eacute;quat, ou pr&ecirc;t&eacute;e &agrave;
+quelqu&rsquo;un d&rsquo;autre et non restitu&eacute;e).
+            <br>
+
+            </div>
+
+            <br>
+
+&bull; La perte de temps est cons&eacute;quente et suscite
+l&rsquo;&eacute;nervement ;
+            <br>
+
+            <br>
+
+&bull; Jean se r&eacute;sout finalement &agrave; solliciter
+une aide ext&eacute;rieure, celle de son voisin, pour avancer.
+            <br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;"><big><big>3.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3"></a>Que
+peut-on faire</big></big><big><big> </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="height: 10px; text-align: right;">
+            <div style="text-align: left;"></div>
+
+            <div style="margin-left: 54px; text-align: left;">&bull;
+Jean doit s&rsquo;approprier l&rsquo;espace du garage.
+            <br>
+
+            <br>
+
+&bull; Il doit notamment s&rsquo;agir pour lui de
+d&eacute;sencombrer le lieu en jetant les
+&eacute;l&eacute;ments destin&eacute;s &agrave; la
+d&eacute;chetterie.
+            <br>
+
+            <br>
+
+&bull; Le rangement du garage s&rsquo;av&egrave;rera
+ensuite indispensable. <br>
+
+            <br>
+
+            <div style="margin-left: 40px;">Jean peut
+s&rsquo;appuyer pour cela sur quelques r&egrave;gles de bon
+sens : fr&eacute;quence d&rsquo;utilisation des outils,
+dangerosit&eacute; des produits entrepos&eacute;s, etc.
+            <br>
+
+            </div>
+
+            <br>
+
+&bull; Un grand nettoyage sera &eacute;galement
+n&eacute;cessaire pour faire place nette et &eacute;viter de se
+salir &agrave; chaque manipulation.
+            <br>
+
+            <br>
+
+&bull; Enfin, Jean pourra utiliser des &eacute;tiquettes et des
+panneaux pour situer chaque &eacute;l&eacute;ment de
+l&rsquo;espace et ainsi permettre de faciliter les recherches en
+cas de besoin, et en favoriser le maintien dans
+l&rsquo;&eacute;tat souhait&eacute;.
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;"><big><big>4.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="4"></a>Le
+5 S en pratique</big></big><big><big> </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 54px;">
+            <div style="text-align: center;"><big><span style="font-weight: bold;">La m&eacute;thode 5S</span></big>,
+constitu&eacute;e de <big><span style="font-weight: bold;">5
+&eacute;tapes</span></big>, vise &agrave;
+cr&eacute;er un environnement de travail organis&eacute;,
+propre, efficace, s&ucirc;r et propice &agrave;
+l&rsquo;atteinte des objectifs et &agrave;
+l&rsquo;am&eacute;lioration continue des pratiques.
+            <br>
+
+            <big style="font-weight: bold; color: rgb(255, 0, 0);"><big><br>
+
+&laquo; Une place pour chaque chose, chaque chose &agrave; sa
+place &raquo;
+            </big></big><br>
+
+            </div>
+
+            <br>
+
+            <br>
+
+            <big><big style="text-decoration: underline;"><span style="font-weight: bold;">Finalit&eacute;s :</span></big>
+            </big><br>
+
+            <br>
+
+&bull; <span style="font-weight: bold;">&Eacute;voluer</span>
+dans un environnement propre et s&ucirc;r. <br>
+
+            <br>
+
+            <div style="margin-left: 40px;">Cela aurait pu
+&eacute;viter &agrave; Jean de se salir les mains en
+recherchant la cl&eacute; N&deg;15 et de se couper, notamment ;<br>
+
+            </div>
+
+            <br>
+
+&bull; <span style="font-weight: bold;">Permettre
+&agrave; tout le monde de comprendre facilement
+l&rsquo;organisation </span>de l&rsquo;espace et le
+syst&egrave;me de rangement. <br>
+
+            <br>
+
+            <div style="margin-left: 40px;">Il est par
+exemple possible de mat&eacute;rialiser l&rsquo;emplacement de
+la tondeuse &agrave; gazon par un marquage au sol. <br>
+
+            <br>
+
+Il sera plus facile pour Jean de solliciter l&rsquo;aide de sa
+compagne ou de ses enfants ;
+            <br>
+
+            </div>
+
+            <br>
+
+&bull; <span style="font-weight: bold;">Permettre de
+d&eacute;tecter facilement et rapidement un probl&egrave;me</span>
+(&eacute;cart entre la situation cible et la situation
+constat&eacute;e) pour &ecirc;tre en mesure de le
+r&eacute;soudre. <br>
+
+            <br>
+
+            <div style="margin-left: 40px;">Admettons que
+la cl&eacute; de 15 ait un emplacement bien d&eacute;fini, son
+absence &agrave; l&rsquo;endroit pr&eacute;vu sera
+ais&eacute;ment d&eacute;tectable.
+            <br>
+
+            </div>
+
+            <br>
+
+            <big><big><span style="text-decoration: underline; font-weight: bold;">&Eacute;tapes
+de mise en &oelig;uvre :
+            </span></big></big><br>
+
+            <big><br style="font-weight: bold; text-decoration: underline;">
+
+            <span style="font-weight: bold; text-decoration: underline;">&bull;
+SEIRI (Trier) : <br>
+
+            <br>
+
+            </span></big>
+            <div style="margin-left: 40px;">&eacute;liminer
+les &eacute;l&eacute;ments inutiles, ne garder que
+l&rsquo;essentiel. Il s&rsquo;agira pour Jean
+d&rsquo;emmener &agrave; la d&eacute;chetterie ce qui a
+d&eacute;j&agrave; &eacute;t&eacute;
+identifi&eacute; comme &eacute;tant &agrave; jeter. Il
+pourra poursuivre l&rsquo;exercice en se posant la question plus
+largement ;
+            <br>
+
+            </div>
+
+            <br>
+
+            <big><span style="text-decoration: underline; font-weight: bold;">&bull;
+SEITON (mettre de l&rsquo;ordre) :</span></big> <br>
+
+            <br>
+
+            <div style="margin-left: 40px;">ranger les
+&eacute;l&eacute;ments en fonction de leur fr&eacute;quence
+d&rsquo;utilisation. Il s&rsquo;agira pour Jean de ranger les
+affaires de son garage en fonction des usages. Son taille haies par
+exemple, utilis&eacute; une fois par an, pourra &ecirc;tre
+stock&eacute;e en hauteur, &eacute;loign&eacute; de son
+&eacute;tabli. Scie(s), marteau(x), cl&eacute;s de serrage et
+petite visserie, utilis&eacute;s fr&eacute;quemment pour toutes
+sortes de petits bricolages, seront dispos&eacute;s au plus
+pr&egrave;s de l&rsquo;&eacute;tabli ;
+            <br>
+
+            </div>
+
+            <br>
+
+            <big><span style="text-decoration: underline; font-weight: bold;">&bull;
+SEISO (Nettoyer) : <br>
+
+            <br>
+
+            </span></big>
+            <div style="margin-left: 40px;">une fois
+l&rsquo;espace rang&eacute;, Jean pourra r&eacute;aliser un
+grand nettoyage. Un espace rang&eacute; et propre lui permettra
+d&rsquo;identifier facilement un probl&egrave;me. Par exemple,
+une fuite d&rsquo;huile de la tondeuse ;
+            <br>
+
+            </div>
+
+            <br>
+
+            <big><span style="text-decoration: underline; font-weight: bold;">&bull;
+SEIKETSU (Maintenir l&rsquo;ordre) : </span></big><br>
+
+            <br>
+
+            <div style="margin-left: 40px;">d&eacute;finir
+l&rsquo;&eacute;tat de r&eacute;f&eacute;rence dans
+lequel le garage doit normalement se trouver. Il peut s&rsquo;agir
+pour Jean de marquer des emplacements au sol (exemple de la tondeuse),
+ou encore, d&rsquo;afficher un panneau &laquo; produits
+chimiques, danger &raquo;. Concernant les bouteilles de verre
+&agrave; recycler, il pourrait s&rsquo;agir de mettre en place
+un bac dont la capacit&eacute; d&eacute;terminera le moment
+o&ugrave; il devra &ecirc;tre vid&eacute; ;
+            <br>
+
+            </div>
+
+            <br>
+
+            <big><span style="font-weight: bold; text-decoration: underline;">&bull;
+SHITSUKE (Suivre) :</span></big> <br>
+
+            <br>
+
+            <div style="margin-left: 40px;">v&eacute;rifier
+r&eacute;guli&egrave;rement la zone pour s&rsquo;assurer de
+la bonne application des r&egrave;gles et identifier des
+am&eacute;liorations &agrave; apporter.
+&emsp;
+            <br>
+
+            </div>
+
+            <br>
+
+            <br>
+
+            <big style="font-weight: bold; text-decoration: underline;"><big>Facteurs
+cl&eacute;s de succ&egrave;s :
+            </big></big><br>
+
+            <br>
+
+&bull; <big style="color: rgb(255, 0, 0);"><span style="font-weight: bold;">Impliquer largement.</span></big><span style="color: rgb(255, 0, 0);"> </span>Un chantier 5S
+doit mobiliser les diff&eacute;rentes personnes utilisant
+l&rsquo;espace concern&eacute;. Jean pourra impliquer sa
+famille lors des diff&eacute;rentes &eacute;tapes, ce qui lui
+&eacute;vitera de jeter des choses inutiles, de son point de vue
+uniquement, et de prendre en compte les enjeux de chacun dans la
+mani&egrave;re d&rsquo;agencer l&rsquo;espace ;
+            <br>
+
+            <br>
+
+&bull; <big style="color: rgb(255, 0, 0);"><span style="font-weight: bold;">Ne pas r&eacute;duire la
+d&eacute;marche &agrave; une simple journ&eacute;e</span></big>
+de rangement et de nettoyage, au risque de
+r&eacute;p&eacute;ter la m&ecirc;me op&eacute;ration,
+&agrave; intervalles r&eacute;guliers, sans entrer dans une
+boucle d&rsquo;am&eacute;lioration ;
+            <br>
+
+            <br>
+
+&bull; <big style="color: rgb(255, 0, 0);"><span style="font-weight: bold;">Utiliser le management visuel </span></big>autant
+que possible. Plus les r&egrave;gles d&eacute;finies sont
+mat&eacute;rialis&eacute;es : marquages au sol, panneaux,
+&eacute;tiquettes, codes couleurs, notamment, plus ces
+derni&egrave;res seront faciles &agrave; comprendre,
+&agrave; respecter et &agrave; maintenir dans le temps;
+            <br>
+
+            <big style="font-weight: bold; color: rgb(255, 0, 0);"><br>
+
+&bull; Montrer que des changements concrets sont possibles tout de
+suite</big>. La d&eacute;marche ne consiste pas &agrave;
+&eacute;laborer des plans sur la com&egrave;te, mais
+&agrave; mettre en place des solutions simples,
+imm&eacute;diatement op&eacute;rantes.
+Illustration :
+            <br>
+
+            <br>
+
+&bull; Pour le cas pr&eacute;cis des cl&eacute;s, celles-ci
+pourraient &ecirc;tre <big style="color: rgb(255, 0, 0);">dispos&eacute;es
+sur un panneau,</big> contre le mur, au niveau de
+l&rsquo;&eacute;tabli de Jean, dans la mesure o&ugrave; il
+est amen&eacute; &agrave; s&rsquo;en servir assez
+fr&eacute;quemment ;
+            <br>
+
+            <br>
+
+&bull; Les cl&eacute;s pourraient &ecirc;tre <big style="color: rgb(255, 0, 0);"><span style="font-weight: bold;">rang&eacute;es par taille
+d&eacute;croissante</span></big> pour faciliter la
+recherche de la r&eacute;f&eacute;rence recherch&eacute;e ;
+            <br>
+
+            <br>
+
+&bull; <big style="font-weight: bold; color: rgb(255, 0, 0);">Des
+empreintes</big> (management visuel) pourraient &ecirc;tre
+r&eacute;alis&eacute;es sur le panneau pour indiquer
+l&rsquo;emplacement de chaque cl&eacute; en fonction de sa
+taille.<br>
+
+            <br>
+
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td>Ces empreintes pr&eacute;sentent un
+double avantage :
+                  <br>
+
+                  <br>
+
+                  <div style="text-align: justify;">&bull;
+                  <big style="color: rgb(255, 0, 0);"><span style="font-weight: bold;">Faciliter le rangement</span></big>
+et &eacute;viter que les cl&eacute;s ne soient
+dispos&eacute;es diff&eacute;remment de ce qui a
+&eacute;t&eacute; d&eacute;fini ;
+                  <br>
+
+                  <br>
+
+&bull; <big style="font-weight: bold; color: rgb(255, 0, 0);">Permettre
+d&rsquo;identifier</big> tr&egrave;s facilement
+l&rsquo;absence d&rsquo;une cl&eacute;.
+                  </div>
+
+                  </td>
+
+                  <td><img style="width: 507px; height: 305px;" alt="" src="image_055.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>5.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="5"></a>Fichiers</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="la_methode_5s_exercice_01.docx">Fichier word</a>&nbsp;
+&nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 5px;"></td>
+
+                  <td style="text-align: center;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="la_methode_5s_exercice_01.pdf" target="_blank">Fichier
+PDF</a>&nbsp;&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+</body>
+</html>

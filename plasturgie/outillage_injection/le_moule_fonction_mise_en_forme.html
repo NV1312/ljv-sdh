@@ -1,0 +1,826 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+  <title>Bac pro PLC -Mondeville - le moule- fonction mise en
+forme</title>
+
+
+  <meta content="ressources" name="description">
+
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+  <tbody>
+
+    <tr>
+
+      <td>
+      <div style="text-align: center; margin-left: 40px;"></div>
+
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+        <tbody>
+
+          <tr>
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="background-color: rgb(64, 64, 64);">
+            <div id="menu">
+            <ul>
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">Le
+moule - Fonction mise en forme</span></big></big></big></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td><span style="font-family: Arial; font-weight: bold;">1. <a href="#1"><span style="text-decoration: underline;">Notion
+de d&eacute;pouille et contre-d&eacute;pouille</span></a></span><a href="#1"><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span><span style="font-family: Arial; font-weight: bold;"><br>
+
+                  </span></a><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 1.1. </span><a href="#11"><span style="font-family: Arial; font-weight: bold;">Forme non
+d&eacute;pouill&eacute;e</span></a><br>
+
+                  <br>
+
+                  <span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 1.2. </span><a href="#12"><span style="font-family: Arial; font-weight: bold;">Forme
+d&eacute;pouill&eacute;e</span></a><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;"> </span><span style="font-family: Arial; font-weight: bold;"></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 1.3. </span><a href="#13"><span style="font-family: Arial; font-weight: bold;">Forme en
+contre-d&eacute;pouill&eacute;e</span></a><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;"> </span><span style="font-family: Arial; font-weight: bold;"></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">2. <a href="#2">Le retrait</a><br>
+
+                  <br>
+
+                  </span> <span style="font-family: Arial; font-weight: bold;">3. <a href="#3">Les rayons d'usinage</a><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><br>
+
+4. <a href="#4">Fichiers</a></span></td>
+
+                  <td style="text-align: center;"><img style="width: 500px; height: 289px;" alt="" src="image_008.png"><br>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>1.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>Notion
+de d&eacute;pouille et contre-d&eacute;pouille<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 50px;">Les formes de
+la pi&egrave;ce, sa disposition dans l&rsquo;outillage,
+imposent la cr&eacute;ation de d&eacute;pouilles
+n&eacute;cessaires au d&eacute;moulage correcte de la
+pi&egrave;ce. <br>
+
+Dans certains cas, le d&eacute;moulage ne se fait pas naturellement
+et des contre-d&eacute;pouilles sont n&eacute;cessaires (cales
+montantes, tiroirs, coulisses, &hellip;). </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 60px;"><big><big>1.1.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="11"></a>Forme
+non d&eacute;pouill&eacute;e<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 100px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="5" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: justify;">Le
+d&eacute;moulage est difficile, voir impossible car il y a un
+frottement important entre les formes moulantes de
+l&rsquo;empreinte et la mati&egrave;re solidifi&eacute;e. <br>
+
+Ces frottements sont dus essentiellement au retrait de la
+mati&egrave;re lors de son refroidissement dans
+l&rsquo;empreinte. <br>
+
+La surface de contact de la pi&egrave;ce est importante pendant
+toute la phase de d&eacute;moulage. </td>
+
+                  <td><img style="width: 361px; height: 253px;" alt="" src="image_069.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 60px;"><big><big>1.2.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="12"></a>Forme
+d&eacute;pouill&eacute;e<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 100px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="5" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: justify;">Mettre des
+angles de d&eacute;pouilles facilite le d&eacute;moulage de
+l&rsquo;empreinte. <br>
+
+En g&eacute;n&eacute;ral les angles de d&eacute;pouille
+int&eacute;rieure sont plus importants que les angles de
+d&eacute;pouilles ext&eacute;rieures.<br>
+
+La surface de contact de la pi&egrave;ce est quasi nulle pendant la
+phase de d&eacute;moulage. </td>
+
+                  <td><img style="width: 361px; height: 253px;" alt="" src="image_070.png"></td>
+
+                </tr>
+
+                <tr align="center">
+
+                  <td colspan="2" rowspan="1"><img style="width: 464px; height: 228px;" alt="" src="image_071.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 60px;"><big><big>1.3.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="13"></a>Forme
+en contre-d&eacute;pouille<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 100px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="5" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: justify;">Pour se
+d&eacute;mouler de l&rsquo;outillage, une pi&egrave;ce en
+plastique ne doit pas avoir d&rsquo;&eacute;l&eacute;ments
+qui viennent lat&eacute;ralement emp&ecirc;cher son
+d&eacute;moulage naturel. <br>
+
+Si n&eacute;anmoins, il y a des formes comprenant des
+contre-d&eacute;pouilles, il faudra incorporer des
+&eacute;l&eacute;ments m&eacute;caniques pour favoriser le
+d&eacute;moulage (cales montantes, tiroirs, coulisses,
+&hellip;). <br>
+
+                  </td>
+
+                  <td><img style="width: 365px; height: 307px;" alt="" src="image_072.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>2.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>Le
+retrait<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr align="center">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 50px;">En effet,
+comme pratiquement tous les corps, la mati&egrave;re plastique se
+dilate par &eacute;l&eacute;vation de temp&eacute;rature. <br>
+
+Lors du refroidissement les pi&egrave;ces plastiques subissent donc
+logiquement un retrait (r&eacute;duction de dimension). <br>
+
+La pi&egrave;ce subir un premier retrait lors du refroidissement
+dans le moule.
+La diminution de volume de la pi&egrave;ce moul&eacute;e n'est
+pas encore termin&eacute;e.<br>
+
+Le retrait se poursuit
+dans le temps et tend vers une valeur "d&eacute;finitive" d'autant
+plus vite atteinte que la
+temp&eacute;rature de stockage est &eacute;lev&eacute;e
+(post-retrait). <br>
+
+En plasturgie, en g&eacute;n&eacute;ral, les thermoplastiques
+pr&eacute;sentent au refroidissement un retrait
+diff&eacute;rent pour chaque type de mati&egrave;re plastique. <br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 50px; text-align: center;"><img style="width: 694px; height: 498px;" alt="" src="image_073.png"></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 50px;">Il existe
+aussi en injection plastique un retrait dit diff&eacute;rentiel
+(suivant 2 axes) qui provoque des d&eacute;formations
+(gauchissement ou voilage). <br>
+
+Le retrait de moulage est indiqu&eacute; en %, on obtient les
+relations suivantes : <br>
+
+            <ul>
+
+              <li>Retrait au Moulage : RM= (Mf-L)/L &#8729;100</li>
+
+            </ul>
+
+            <ul>
+
+              <li>Post-Retrait : PR= (L-L1)/L &#8729;100</li>
+
+            </ul>
+
+            <ul>
+
+              <li>Retrait Total : RT= PR+RM </li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>3.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3"></a>Les
+rayons d&rsquo;usinage (cong&eacute;s) <br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 50px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="5" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: justify;">Les rayons
+d&rsquo;usinage, ne sont pas indispensables en moulage par
+injection. <br>
+
+Il est recommand&eacute; d&rsquo;y avoir recours pour
+diff&eacute;rentes raisons. <br>
+
+Ainsi, en &eacute;liminant les angles vifs on am&eacute;liore
+l&rsquo;&eacute;coulement du plastique, mais aussi la
+r&eacute;sistance
+de la pi&egrave;ce. <br>
+
+Le plastique qui remplit l&rsquo;empreinte du moule
+s&rsquo;&eacute;coule mieux lorsque les angles sont arrondis.<br>
+
+Le plastique suit le chemin o&ugrave; il rencontre le moins de
+r&eacute;sistance afin de minimiser les contraintes
+exerc&eacute;es sur
+le mat&eacute;riau et sur le moule. <br>
+
+Comme les d&eacute;pouilles, les rayons d&rsquo;usinage
+facilitent
+l&rsquo;&eacute;jection de la pi&egrave;ce, car les angles
+arrondis
+r&eacute;duisent le risque que la pi&egrave;ce
+adh&egrave;re au moule,
+provoquant sa d&eacute;formation, voire sa rupture. <br>
+
+                  </td>
+
+                  <td><img style="width: 317px; height: 302px;" alt="" src="image_074.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>4.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="4"></a>Fichiers</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="le_moule_fonction_mise_en_forme.docx">Fichier word</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 5px;"></td>
+
+                  <td style="text-align: center;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="le_moule_fonction_mise_en_forme.pdf" target="_blank">Fichier
+PDF</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+
+</body>
+</html>

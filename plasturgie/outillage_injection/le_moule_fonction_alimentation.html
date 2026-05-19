@@ -1,0 +1,2276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+  <title>Bac pro PLC -Mondeville - le moule- fonction alimentation</title>
+
+
+  <meta content="ressources" name="description">
+
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+  <tbody>
+
+    <tr>
+
+      <td>
+      <div style="text-align: center; margin-left: 40px;"></div>
+
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+        <tbody>
+
+          <tr>
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="background-color: rgb(64, 64, 64);">
+            <div id="menu">
+            <ul>
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">Le
+moule - Fonction alimentation</span></big></big></big></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td><span style="font-family: Arial; font-weight: bold;">1. <a href="#1"><span style="text-decoration: underline;">La
+fonction alimentation</span></a></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span><span style="font-family: Arial; font-weight: bold;"><br>
+
+                  </span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 1.1. </span><a href="#11"><span style="font-family: Arial; font-weight: bold;">L'alimentation
+avec d&eacute;chets</span></a><br>
+
+                  <br>
+
+                  <span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 1.2. </span><a href="#12"><span style="font-family: Arial; font-weight: bold;">L'alimentation
+sans d&eacute;chets</span></a><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;"> </span><span style="font-family: Arial; font-weight: bold;"></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">2. <a href="#2">La carotte</a><br>
+
+                  </span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">3. <a href="#3">Pi&egrave;ge &agrave; goutte froide</a><br>
+
+                  </span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">4. <a href="#4">Les canaux d'alimentation</a><br>
+
+                  </span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">5. <a href="#5">Les types de seuil d'injection (point d'injection)</a><br>
+
+                  <br>
+
+                  </span> <span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 5.1. </span><span style="font-family: Arial; font-weight: bold;"><a href="#51">Seuil en masse ou direct</a><br>
+
+                  </span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 5.2. </span><span style="font-family: Arial; font-weight: bold;"><a href="#52">Seuil capillaire central (pin-point)</a><br>
+
+                  </span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 5.3.&nbsp;</span><a href="#53"><span style="font-family: Arial; font-weight: bold;">Seuil
+annulaire</span></a><br>
+
+                  <br>
+
+                  <span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 5.4.&nbsp;</span><span style="font-family: Arial; font-weight: bold;"><a href="#54">Seuil conique ou en &eacute;ventail</a><br>
+
+                  </span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 5.5.&nbsp;</span><span style="font-family: Arial; font-weight: bold;"><a href="#55">Seuil en nappe</a><br>
+
+                  </span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 5.6.&nbsp;</span><span style="font-family: Arial; font-weight: bold;"><a href="#56">Seuil dit sous-marin ou en tunnel</a><br>
+
+                  </span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 5.7.&nbsp;</span><span style="font-family: Arial; font-weight: bold;"><a href="#57">Seuil &agrave; tunnel courbe</a><br>
+
+                  </span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 5.8.&nbsp;</span><span style="font-family: Arial; font-weight: bold;"><a href="#58">Seuil en diaphragme (en toile)</a><br>
+
+                  </span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 5.9.&nbsp;</span><span style="font-family: Arial; font-weight: bold;"><a href="#59">Seuil dit en &eacute;toile</a><br>
+
+                  </span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 5.10.<a href="#510">S</a></span><a href="#510"><span style="font-family: Arial; font-weight: bold;">euil dit en
+queue de carpe</span></a><br>
+
+                  <span style="font-family: Arial; font-weight: bold;"> </span><span style="font-family: Arial; font-weight: bold;"><br>
+
+6. <a href="#6">L'&eacute;ventation des empreintes</a><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><br>
+
+7. <a href="#7">Fichiers</a></span></td>
+
+                  <td style="text-align: center;"><img style="width: 500px; height: 289px;" alt="" src="image_008.png"><br>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>1.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>La
+fonction alimentation</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify; height: 54px;">
+            <div style="margin-left: 50px;">On
+distingue deux types d&rsquo;alimentation : <br>
+
+            </div>
+
+            <div style="margin-left: 10px;">
+            <div style="margin-left: 40px;">
+            <ul>
+
+              <li>l&rsquo;alimentation avec
+d&eacute;chets ;</li>
+
+              <li>l&rsquo;alimentation sans
+d&eacute;chets. </li>
+
+            </ul>
+
+            </div>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr align="center">
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 60px;"><big><big>1.1.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="11"></a>L'alimentation
+avec d&eacute;chets</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 110px;">L&rsquo;alimentation
+avec d&eacute;chet
+r&eacute;alis&eacute;e gr&acirc;ce &agrave;
+l&rsquo;usinage dans l&rsquo;outillage. <br>
+
+Ce type d&rsquo;alimentation minimise le co&ucirc;t de
+l&rsquo;outillage mais engendre un d&eacute;chet,
+qu&rsquo;il faudra si possible recycler. <br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="text-align: center;"></div>
+
+            <div style="margin-left: 110px; text-align: center;"><img style="width: 545px; height: 482px;" alt="" src="image_038.png"></div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 110px;">Elle est
+g&eacute;n&eacute;ralement compos&eacute;e de trois parties
+distinctes : <br>
+
+            <ul>
+
+              <li style="text-align: justify;">la buse
+moule (carotte): situ&eacute;e dans
+l&rsquo;axe de l&rsquo;outillage et vient en contact avec la
+buse machine de la presse lors du remplissage de l'empreinte et du
+maintien ; </li>
+
+              <li style="text-align: justify;">les canaux
+d&rsquo;injection (canal
+principal et secondaires): canaux distribuant la mati&egrave;re
+dans l&rsquo;outillage, en g&eacute;n&eacute;ral au niveau
+du plan de joint ; </li>
+
+              <li style="text-align: justify;">les seuils:
+restriction permettant la rupture
+entre l'alimentation et la pi&egrave;ce.&nbsp;</li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 110px;">Parfois, la
+carotte alimente en direct la pi&egrave;ce ce qui
+g&eacute;n&egrave;re :<br>
+
+            <ul>
+
+              <li>des pertes de charge minimales mais des
+traces
+visibles sur la
+pi&egrave;ce, </li>
+
+              <li>une fin du maintien
+d&eacute;termin&eacute;e par
+l&rsquo;&eacute;paisseur de la pi&egrave;ce et non celle du
+seuil, </li>
+
+              <li>des retraits &eacute;lev&eacute;s dans
+la carotte.</li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 60px;"><big><big>1.2.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="12"></a>L'alimentation
+sans d&eacute;chet</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 110px; text-align: justify;">L&rsquo;alimentation
+sans d&eacute;chet se fait gr&acirc;ce &agrave; un bloc
+chaud qui sera implant&eacute; dans l&rsquo;outillage. Cette
+technologie permet de supprimer les d&eacute;chets et de limiter
+les pertes de charge. L&rsquo;inconv&eacute;nient majeur reste
+le co&ucirc;t &agrave; l&rsquo;achat et la
+n&eacute;cessit&eacute; de g&eacute;rer celui-ci par
+l&rsquo;interm&eacute;diaire d&rsquo;un
+thermor&eacute;gulateur. <br>
+
+            <br>
+
+Dans certains cas, on peut avoir une configuration mixte avec la
+pr&eacute;sence d&rsquo;un bloc chaud et d&rsquo;une
+carotte. Dans ce type de situation,
+l&rsquo;int&eacute;r&ecirc;t majeur est de minimiser le
+poids de la carotte et de limiter les pertes de charge. <br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 110px; text-align: center;"><img style="width: 643px; height: 451px;" alt="" src="image_039.png"></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 110px;">L&rsquo;alimentation
+sans d&eacute;chet est g&eacute;n&eacute;ralement
+compos&eacute;e de trois parties distinctes : <br>
+
+            <ul>
+
+              <li>le re&ccedil;u de buse : elle est
+situ&eacute;e dans
+l&rsquo;axe de l&rsquo;outillage et vient en contact avec le
+nez de buse de la presse ; </li>
+
+              <li>les canaux chauds isol&eacute;s: permettent
+d&rsquo;assurer
+la distribution de la mati&egrave;re dans chacune des busettes
+&agrave; alimenter ; </li>
+
+              <li>la busette chauffante : partie en contact
+direct avec la
+pi&egrave;ce. </li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>2.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>La
+carotte<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr align="center">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 50px;">
+            <div style="text-align: justify;">Elle se
+trouve
+dans la buse c&ocirc;t&eacute; moule fixe ; elle permet
+d'alimenter les canaux d'alimentations qui vont jusqu'&agrave;
+l'entr&eacute;e de la pi&egrave;ce, appel&eacute;s point
+d&rsquo;injection. <br>
+
+            </div>
+
+Cette carotte peut alimenter directement la
+pi&egrave;ce et ceci n&eacute;cessite souvent un
+d&eacute;carottage &agrave; l'aide d'un outil coupant ou
+d&rsquo;une fraise. <br>
+
+Cette carotte peut &ecirc;tre
+remplac&eacute;e par une buse chaude qui maintient la
+mati&egrave;re dans l&rsquo;&eacute;tat dit liquide. </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 50px; text-align: center;"><img style="width: 469px; height: 378px;" alt="" src="image_040.png"></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>3.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3"></a>Pi&egrave;ge
+&agrave; goutte froide<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 50px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: justify;">Petit
+prolongement du syst&egrave;me d'alimentation situ&eacute;
+apr&egrave;s l'intersection avec la carotte ou le
+syst&egrave;me d'alimentation, suffisamment large pour recevoir une
+goutte froide de mati&egrave;re.</td>
+
+                  <td><img style="width: 486px; height: 176px;" alt="" src="image_041.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>4.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="4"></a>Les
+canaux d'alimentation<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 50px; text-align: center;"><img style="width: 645px; height: 185px;" alt="" src="image_042.png"></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 50px;">
+            <table style="text-align: left; width: 100%;" border="1" cellpadding="5" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td colspan="2" rowspan="1" style="font-family: Arial; text-align: center; font-weight: bold;">Type
+                  </td>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: center;">Avantages</td>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: center;">&nbsp;Inconv&eacute;nients</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold;">&nbsp;1
+                  </td>
+
+                  <td style="font-family: Arial;">Canal
+cylindrique</td>
+
+                  <td style="font-family: Arial;"> - C'est
+le canal le plus performant <br>
+
+- Il offre une section d'&eacute;coulement maximale pour un
+p&eacute;rim&egrave;tre minimal.</td>
+
+                  <td style="font-family: Arial;">-
+Usinage sur 2 plaques du moule.
+Cependant avec les machines &agrave;
+commande num&eacute;rique cet inconv&eacute;nient
+dispara&icirc;t. <br>
+
+- Utilisation difficile avec les moules 3
+plaques. <br>
+
+- Impossibilit&eacute; dans le cas de canaux sous chariot&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold;">2</td>
+
+                  <td style="font-family: Arial;">Canal
+cylindrique plus d&eacute;pouille pour d&eacute;porter le plan
+de joint</td>
+
+                  <td style="font-family: Arial;"> -
+Usinage sur une seule plaque <br>
+
+- Utilisation avec les moules 3 plaques<br>
+
+- Id&eacute;al pour le choix de canaux sous chariot&nbsp;</td>
+
+                  <td style="font-family: Arial;">-
+Difficult&eacute; pour la r&eacute;alisation de l'outil
+sp&eacute;cial : affutage d&eacute;licat. <br>
+
+- Obligation d&rsquo;utilisation d&rsquo;outil non
+standard <br>
+
+- Perte de mati&egrave;re par rapport au canal rond&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold;">3</td>
+
+                  <td style="font-family: Arial;">Canal
+trap&eacute;zo&iuml;dal&nbsp;</td>
+
+                  <td style="font-family: Arial;">-
+Usinage sur une seule plaque <br>
+
+- Utilisation avec les moules 3 plaques <br>
+
+- Outil sp&eacute;cial plus facile &agrave;
+affuter&nbsp;&nbsp;</td>
+
+                  <td style="font-family: Arial;">- Perte
+de mati&egrave;re par rapport au canal rond<br>
+
+- Obligation d&rsquo;utilisation d&rsquo;outil
+non-standard&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold;">4</td>
+
+                  <td style="font-family: Arial;">Canal
+&frac12; cylindrique&nbsp;&nbsp;</td>
+
+                  <td style="font-family: Arial;">-
+Simplicit&eacute; d&rsquo;usinage</td>
+
+                  <td style="font-family: Arial;">-
+Mauvais &eacute;coulement&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold;">5</td>
+
+                  <td style="font-family: Arial;">Canal
+rectangulaire&nbsp;</td>
+
+                  <td style="font-family: Arial;">-
+Facilit&eacute; d'ex&eacute;cution</td>
+
+                  <td style="font-family: Arial;"> -
+Mauvais d&eacute;moulage
+- Mauvais &eacute;coulement</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 50px;">Les
+caract&eacute;ristiques des canaux d&rsquo;alimentations sont :<br>
+
+            <ul>
+
+              <li>Le canal principal doit &ecirc;tre
+sup&eacute;rieur au
+&Oslash; d&rsquo;entr&eacute;e de la buse outillage pour
+faciliter la phase maintien lors de l&rsquo;injection.</li>
+
+              <li>La dimension des canaux d&eacute;pend
+g&eacute;n&eacute;ralement du diam&egrave;tre du seuil.</li>
+
+              <li>Le canal d&rsquo;alimentation du seuil est
+au moins
+&eacute;gal &agrave; 2 &agrave; 3 fois le
+diam&egrave;tre du seuil. </li>
+
+              <li>Pour limiter l&rsquo;effet des pertes de
+charges, le ratio entre
+le canal principal et les canaux est de 1,3 &agrave; 1,5
+(&Oslash; Principal = 1.3&agrave;1.5 x &Oslash;
+Secondaires). </li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 50px; text-align: center;"><img style="width: 560px; height: 396px;" alt="" src="image_043.png"></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>5.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="5"></a>Les
+types de seuil d&rsquo;injection (point d&rsquo;injection) <br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 50px;">Le seuil
+d&rsquo;injection ou point d&rsquo;injection est le point
+o&ugrave; la mati&egrave;re p&eacute;n&egrave;tre dans
+l&rsquo;empreinte du moule. <br>
+
+C&rsquo;est le point entre le canal
+d&rsquo;alimentation et la pi&egrave;ce. <br>
+
+En r&egrave;gle g&eacute;n&eacute;rale, le point
+d'injection est de petite taille et se solidifie en premier. </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 60px;"><big><big>5.1.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="51"></a>Seuil
+en masse ou direct<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 110px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td>Le point d'injection central est une
+carotte en c&ocirc;ne situ&eacute; au centre de la
+pi&egrave;ce. Utilis&eacute; pour les mati&egrave;res
+visqueuses.<br>
+
+                  <table style="text-align: left; width: 100%;" border="0" cellpadding="5" cellspacing="0">
+
+                    <tbody>
+
+                      <tr>
+
+                        <td style="text-align: right; font-weight: bold; color: rgb(0, 102, 0); width: 30px;">A
+:</td>
+
+                        <td>Tr&egrave;s bon remplissage <br>
+
+Bonne
+stabilit&eacute; dimensionnelle de la pi&egrave;ce</td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="text-align: right; font-weight: bold; color: rgb(204, 0, 0);">I
+:</td>
+
+                        <td>Op&eacute;ration de reprise pour
+enlever la carotte Trace non esth&eacute;tique sur la
+pi&egrave;ce</td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                  <br>
+
+&nbsp;&nbsp;&nbsp; </td>
+
+                  <td><img style="width: 281px; height: 182px;" alt="" src="image_044.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 60px;"><big><big>5.2.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="52"></a>Seuil
+Capillaire central (pin-point)<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 110px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td>Le point d'injection central est point
+capillaire situ&eacute; au centre de la pi&egrave;ce.
+Utilis&eacute; avec un moule canaux chauds (sans carotte) ou un
+moule 3 plaques.<br>
+
+                  <table style="text-align: left; width: 100%;" border="0" cellpadding="5" cellspacing="0">
+
+                    <tbody>
+
+                      <tr>
+
+                        <td style="text-align: right; font-weight: bold; color: rgb(0, 102, 0); width: 30px;">A
+:</td>
+
+                        <td> D&eacute;moulage automatique<br>
+
+Faible trace sur la pi&egrave;ce</td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="text-align: right; font-weight: bold; color: rgb(204, 0, 0);">I
+:</td>
+
+                        <td>Uniquement pour les
+mati&egrave;res fluides <br>
+
+Co&ucirc;t du moule &eacute;lev&eacute;</td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                  <br>
+
+&nbsp;&nbsp;&nbsp; </td>
+
+                  <td><img style="width: 281px; height: 182px;" alt="" src="image_045.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 60px;"><big><big>5.3.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="53"></a>Seuil
+annulaire<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 110px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td>Utilis&eacute; pour la
+r&eacute;alisation de pi&egrave;ce cylindrique ayant des
+noyaux, lorsque la concentricit&eacute; est importante et qu'aucune
+ligne de soudure n'est souhait&eacute;e. <br>
+
+                  <table style="text-align: left; width: 100%;" border="0" cellpadding="5" cellspacing="0">
+
+                    <tbody>
+
+                      <tr>
+
+                        <td style="text-align: right; font-weight: bold; color: rgb(0, 102, 0); width: 30px;">A
+:</td>
+
+                        <td>Remplissage uniforme de
+l&rsquo;empreinte</td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="text-align: right; font-weight: bold; color: rgb(204, 0, 0);">I
+:</td>
+
+                        <td>Op&eacute;ration de reprise pour
+enlever la carotte <br>
+
+D&eacute;chets importants </td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                  <br>
+
+&nbsp;&nbsp;&nbsp; </td>
+
+                  <td><img style="width: 286px; height: 198px;" alt="" src="image_046.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 60px;"><big><big>5.4.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="54"></a>Seuil
+conique ou en &eacute;ventail<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 110px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td>Utilis&eacute; pour les
+pi&egrave;ces de r&eacute;volution sym&eacute;trique avec
+noyau
+                  <table style="text-align: left; width: 100%;" border="0" cellpadding="5" cellspacing="0">
+
+                    <tbody>
+
+                      <tr>
+
+                        <td style="text-align: right; font-weight: bold; color: rgb(0, 102, 0); width: 30px;">A
+:</td>
+
+                        <td>Permet un &eacute;coulement
+&eacute;quilibr&eacute; de la mati&egrave;re autour du
+noyau <br>
+
+Peut permettre un d&eacute;grappage automatique</td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="text-align: right; font-weight: bold; color: rgb(204, 0, 0);">I
+:</td>
+
+                        <td>Op&eacute;ration de reprise pour
+enlever la carotte <br>
+
+D&eacute;chets importants</td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                  <br>
+
+&nbsp;&nbsp;&nbsp; </td>
+
+                  <td><img style="width: 340px; height: 202px;" alt="" src="image_047.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 60px;"><big><big>5.5.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="55"></a>Seuil
+en nappe<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 110px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial;">Utilis&eacute;
+pour des pi&egrave;ces plates de grande dimension devant
+pr&eacute;senter un faible voilage.&nbsp;<br>
+
+                  <table style="text-align: left; width: 100%;" border="0" cellpadding="5" cellspacing="0">
+
+                    <tbody>
+
+                      <tr>
+
+                        <td style="text-align: right; font-weight: bold; color: rgb(0, 102, 0); width: 30px;">A
+:</td>
+
+                        <td>Bonne qualit&eacute;
+dimensionnelle</td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="text-align: right; font-weight: bold; color: rgb(204, 0, 0);">I
+:</td>
+
+                        <td>Op&eacute;ration de reprise
+(esth&eacute;tisme)</td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                  <br>
+
+&nbsp;&nbsp;&nbsp; </td>
+
+                  <td><img style="width: 344px; height: 242px;" alt="" src="image_048.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 60px;"><big><big>5.6.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="56"></a>Seuil
+dit sous-marin ou en tunnel<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 110px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial;">Utilis&eacute;
+pour les petites pi&egrave;ces et dans un but de
+d&eacute;grappage automatique.&nbsp; <br>
+
+                  <table style="text-align: left; width: 100%;" border="0" cellpadding="5" cellspacing="0">
+
+                    <tbody>
+
+                      <tr>
+
+                        <td style="text-align: right; font-weight: bold; color: rgb(0, 102, 0); width: 30px;">A
+:</td>
+
+                        <td>D&eacute;grappage automatique </td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="text-align: right; font-weight: bold; color: rgb(204, 0, 0);">I
+:</td>
+
+                        <td>Uniquement pour les pi&egrave;ces
+simples car grosse perte de pression </td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                  <br>
+
+&nbsp;&nbsp;&nbsp; </td>
+
+                  <td><img style="width: 372px; height: 246px;" alt="" src="image_049.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 60px;"><big><big>5.7.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="57"></a>Seuil
+&agrave; tunnel courbe<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 110px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial;">Utilis&eacute;
+pour les pi&egrave;ces d&rsquo;aspect minces.&nbsp;<br>
+
+                  <table style="text-align: left; width: 100%;" border="0" cellpadding="5" cellspacing="0">
+
+                    <tbody>
+
+                      <tr>
+
+                        <td style="text-align: right; font-weight: bold; color: rgb(0, 102, 0); width: 30px;">A
+:</td>
+
+                        <td>D&eacute;grappage automatique</td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="text-align: right; font-weight: bold; color: rgb(204, 0, 0);">I
+:</td>
+
+                        <td>Usinage co&ucirc;teux Ne convient
+pas &agrave; toutes les mati&egrave;res </td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                  <br>
+
+&nbsp;&nbsp;&nbsp; </td>
+
+                  <td><img style="width: 321px; height: 180px;" alt="" src="image_050.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 60px;"><big><big>5.8.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="58"></a>Seuil
+en diaphragme (en toile)<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 110px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial;">Son
+emploi est conseill&eacute; pour des pi&egrave;ces de
+r&eacute;volution exigeant une concentricit&eacute;
+satisfaisante et des lignes de soudure r&eacute;sistante.&nbsp;<br>
+
+                  <table style="text-align: left; width: 100%;" border="0" cellpadding="5" cellspacing="0">
+
+                    <tbody>
+
+                      <tr>
+
+                        <td style="text-align: right; font-weight: bold; color: rgb(0, 102, 0); width: 30px;">A
+:</td>
+
+                        <td>Bonne concentricit&eacute; <br>
+
+Remplissage uniforme de l&rsquo;empreinte</td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="text-align: right; font-weight: bold; color: rgb(204, 0, 0);">I
+:</td>
+
+                        <td>Ligne de soudure <br>
+
+Op&eacute;ration de reprise pour enlever la carotte <br>
+
+D&eacute;chets importants</td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                  <br>
+
+&nbsp;&nbsp;&nbsp; </td>
+
+                  <td><img style="width: 362px; height: 286px;" alt="" src="image_051.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 60px;"><big><big>5.9.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="59"></a>Seuil
+dit en &eacute;toile<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 110px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial;">Son
+emploi est conseill&eacute; pour des pi&egrave;ces cylindriques
+n&rsquo;imposant des tol&eacute;rances importantes.&nbsp;<br>
+
+                  <table style="text-align: left; width: 100%;" border="0" cellpadding="5" cellspacing="0">
+
+                    <tbody>
+
+                      <tr>
+
+                        <td style="text-align: right; font-weight: bold; color: rgb(0, 102, 0); width: 30px;">A
+:</td>
+
+                        <td>D&eacute;grappage facile</td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="text-align: right; font-weight: bold; color: rgb(204, 0, 0);">I
+:</td>
+
+                        <td> Ligne de soudure <br>
+
+D&eacute;chets importants </td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                  <br>
+
+&nbsp;&nbsp;&nbsp; </td>
+
+                  <td><img style="width: 338px; height: 330px;" alt="" src="image_052.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 60px;"><big><big>5.10.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="510"></a>Seuil
+dit en queue de carpe<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 110px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial;">Permet
+un remplissage rapide des pi&egrave;ces de taille importante ou des
+sections de moule fragiles par l'interm&eacute;diaire d'une grande
+zone d'entr&eacute;e.<br>
+
+                  <table style="text-align: left; width: 100%;" border="0" cellpadding="5" cellspacing="0">
+
+                    <tbody>
+
+                      <tr>
+
+                        <td style="text-align: right; font-weight: bold; color: rgb(0, 102, 0); width: 30px;">A
+:</td>
+
+                        <td>Front &eacute;coulement uniforme
+stabilit&eacute; des cotes (gauchissement)</td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="text-align: right; font-weight: bold; color: rgb(204, 0, 0);">I
+:</td>
+
+                        <td>Op&eacute;ration de reprise pour
+enlever la carotte </td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                  <br>
+
+&nbsp;&nbsp;&nbsp; </td>
+
+                  <td><img style="width: 313px; height: 327px;" alt="" src="image_053.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>6.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="6"></a>L'&eacute;ventation
+des empreintes<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 50px;">
+            <table style="text-align: left; width: 1000px;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial;">Lors
+de l&rsquo;injection, la mati&egrave;re plastique prend la
+place de l&rsquo;air dans l&rsquo;empreinte. <br>
+
+Dans la majorit&eacute; des cas, cet &eacute;change doit se
+faire dans un temps tr&egrave;s court. <br>
+
+Des orifices plac&eacute;s correctement permettent cette
+&eacute;vacuation rapide de l&rsquo;air. <br>
+
+                  </td>
+
+                  <td><img style="width: 433px; height: 298px;" alt="" src="image_054.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 50px; text-align: justify;"><br>
+
+En g&eacute;n&eacute;ral, ces &eacute;vents sont
+plac&eacute;s sur le plan de joint de l&rsquo;outillage, autour
+des broches d&rsquo;&eacute;jection, des noyaux, des
+&eacute;l&eacute;ments rapport&eacute;s. <br>
+
+            <br>
+
+En fonction de la forme de la pi&egrave;ce, de
+l&rsquo;emplacement du point d&rsquo;injection et de
+l&rsquo;&eacute;coulement de la mati&egrave;re dans
+l&rsquo;empreinte, les &eacute;vents sont
+positionn&eacute;s diff&eacute;remment. <br>
+
+            <br>
+
+Une &eacute;ventation mal con&ccedil;ue, lors d&rsquo;une
+injection rapide, provoque une compression d&rsquo;air
+consid&eacute;rable &agrave; l&rsquo;int&eacute;rieur
+de l&rsquo;empreinte. <br>
+
+            <br>
+
+Cette augmentation de pression peut conduire &agrave; :<br>
+
+            <ul>
+
+              <li>Un retardement du remplissage de
+l&rsquo;empreinte ; </li>
+
+              <li>Une pression pr&eacute;matur&eacute;e
+sur le
+polym&egrave;re ; </li>
+
+              <li>Des br&ucirc;lures ou coups de feu
+polym&egrave;re ((effet
+diesel). </li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 50px; text-align: center;"><img style="width: 319px; height: 253px;" alt="" src="image_055.png"><br>
+
+            <span style="font-family: Arial; font-style: italic;"><br>
+
+Eventation classique<br>
+
+            <br>
+
+            <br>
+
+            <img style="width: 524px; height: 376px;" alt="" src="image_056.png"><br>
+
+            <br>
+
+Eventation Groove</span></div>
+
+            <br>
+
+            <br>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>7.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="7"></a>Fichiers</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="le_moule_fonction_alimentation.docx">Fichier word</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 5px;"></td>
+
+                  <td style="text-align: center;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="le_moule_fonction_alimentation.pdf" target="_blank">Fichier
+PDF</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+
+</body>
+</html>

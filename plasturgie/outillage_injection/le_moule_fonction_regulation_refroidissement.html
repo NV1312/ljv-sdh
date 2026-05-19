@@ -1,0 +1,951 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>Bac pro PLC -Mondeville - le moule- fonction
+r&eacute;gulation refroidissement</title>
+
+
+  <meta name="description" content="ressources">
+
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+  <tbody>
+
+    <tr>
+
+      <td>
+      <div style="text-align: center; margin-left: 40px;"></div>
+
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+        <tbody>
+
+          <tr>
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="background-color: rgb(64, 64, 64);">
+            <div id="menu">
+            <ul>
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">Le
+moule - Fonction r&eacute;gulation refroidissement</span></big></big></big></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td><span style="font-family: Arial; font-weight: bold;">1. <a href="#1"><span style="text-decoration: underline;">Facteur
+influen&ccedil;ant le refroidissement de la pi&egrave;ce</span></a></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;"> </span><span style="font-family: Arial; font-weight: bold;"></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">2. <a href="#2">Conditions de r&eacute;gulation</a><br>
+
+                  </span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">3. <a href="#3">Les canaux de refroidissement</a><br>
+
+                  </span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">4. <a href="#4">Disposition des circuits</a></span><span style="font-family: Arial; font-weight: bold;"><br>
+
+                  <br>
+
+                  </span> <span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 4.1. </span><span style="font-family: Arial; font-weight: bold;"><a href="#41">Pi&egrave;ces &agrave; surfaces planes</a><br>
+
+                  </span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 4.2. </span><span style="font-family: Arial; font-weight: bold;"><a href="#42">Pi&egrave;ces cylindriques (noyaux)</a><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"> </span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><br>
+
+5. <a href="#5">Fichiers</a></span></td>
+
+                  <td style="text-align: center;"><img style="width: 500px; height: 289px;" alt="" src="image_008.png"><br>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">La
+r&eacute;gulation des outillages
+conditionne directement la qualit&eacute; du produit
+termin&eacute; et, est le compl&eacute;ment essentiel
+&agrave; une technologie de moule et de machine avanc&eacute;e.
+            <br>
+
+            <br>
+
+II sera pratiquement impossible d'obtenir une parfaite
+reproductibilit&eacute; de moulage sans avoir
+ma&icirc;tris&eacute; la r&eacute;gulation thermique de
+l'outillage. <br>
+
+            <br>
+
+Ce facteur &agrave; lui seul peut modifier de fa&ccedil;on
+importante l'effet des autres param&egrave;tres de moulage. <br>
+
+            <br>
+
+La r&eacute;alisation de cette fonction est assur&eacute;e par
+la circulation dans l&rsquo;outillage (circuits de
+r&eacute;gulations) d&rsquo;un fluide caloporteur. Il peut
+s&rsquo;agir d&rsquo;eau pour les temp&eacute;ratures
+faibles, d&rsquo;eau pressuris&eacute;e (de 100 &deg;C
+&agrave; 180 &deg;C) ou d&rsquo;huiles, pour les fortes
+temp&eacute;ratures (250 &deg;C). &nbsp; </td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>1.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>Facteurs
+influen&ccedil;ant le refroidissement de la pi&egrave;ce</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 50px;">II
+s'agit de d&eacute;finir apr&egrave;s implantation de la forme
+de la pi&egrave;ce dans
+l'outillage le passage et la section des canaux de
+r&eacute;gulation. <br>
+
+            <br>
+
+L&rsquo;effet
+du refroidissement est fonction pour une temp&eacute;rature
+mati&egrave;re entrant
+dans l'outillage:<br>
+
+            <ul>
+
+              <li>de la conductibilit&eacute; thermique du
+mat&eacute;riau constituant le moule </li>
+
+              <li>de la surface d'&eacute;change liquide -
+moule, donc de
+la section du canal </li>
+
+              <li>de la vitesse d'&eacute;coulement du
+liquide, donc du
+d&eacute;bit dans les canaux </li>
+
+              <li>de la distance du canal &agrave; la paroi
+de la
+pi&egrave;ce </li>
+
+              <li>de la temp&eacute;rature du liquide de
+refroidissement. </li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>2.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>Conditions
+de r&eacute;gulation</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr align="center">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 50px;">Nous voyons
+que pour augmenter la vitesse de refroidissement sur un
+endroit localis&eacute;, nous pouvons agir sur la section du canal
+r&eacute;gulant cette partie et le rapprocher de la paroi. <br>
+
+            <br>
+
+On peut
+aussi en augmenter l'efficacit&eacute; en branchant ce circuit en
+direct (ind&eacute;pendant des autres). </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>3.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3"></a>Les
+canaux de refroidissement<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 50px;">Bien souvent
+la temp&eacute;rature des moules est comprise entre 40&deg;C et
+100&deg;C sans r&eacute;gulation. <br>
+
+            <br>
+
+La plupart du temps, on perce
+des trous (canal) pour faire circuler un liquide de refroidissement. <br>
+
+            <br>
+
+Les diam&egrave;tres couramment utiliser vont de &Oslash;6,
+&Oslash;8, &Oslash;10, &Oslash;12, &Oslash;14
+au-del&agrave; les diam&egrave;tres cr&eacute;&eacute;s
+un flux laminaire n&eacute;faste &agrave;
+l&rsquo;absorption des calories. <br>
+
+            <br>
+
+On prendra aussi compte du
+diam&egrave;tre des raccords de raccordement. <br>
+
+            <br>
+
+Pour une &eacute;vacuation r&eacute;guli&egrave;re des
+calories, on peut en fonction de l&rsquo;&eacute;paisseur de la
+pi&egrave;ce, adopter les de canaux suivants : </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 50px;">
+            <table style="width: 400px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="5" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center; font-weight: bold;">Epaisseur
+de paroi&nbsp;&nbsp;&nbsp;&nbsp; </td>
+
+                  <td style="font-family: Arial; text-align: center; font-weight: bold;">Diam&egrave;tre
+des canaux</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">&lt;
+2mm&nbsp;</td>
+
+                  <td style="font-family: Arial; text-align: center;">8
+&agrave; l0mm</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">&lt;
+4mm&nbsp;</td>
+
+                  <td style="font-family: Arial; text-align: center;">10
+&agrave; l2mm</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">&lt;
+6mm&nbsp;</td>
+
+                  <td style="font-family: Arial; text-align: center;">12
+&agrave; 15 mm</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 50px;"> La sortie du
+liquide doit &ecirc;tre de section plus faible que
+l'entr&eacute;e afin d'am&eacute;liorer le contact fluide
+&ndash; moule. <br>
+
+            <br>
+
+La distance des canaux &agrave; l'empreinte ou noyau (d) doit
+&ecirc;tre: d = 2 &agrave; 3 fois &Oslash; des canaux <br>
+
+            <br>
+
+L'entraxe des canaux (c) doit &ecirc;tre de : c = 3 fois maxi le
+&Oslash; des canaux </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 50px; text-align: center;"><img style="width: 615px; height: 152px;" alt="" src="image_075.png"></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>4.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="4"></a>Disposition
+des circuits</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 60px;"><big><big>4.1.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="41"></a>Pi&egrave;ces
+&agrave; surfaces planes</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 100px;">&nbsp;En
+fonction de la position du point d'injection et de son type, on peut
+d&eacute;terminer l'orientation de la mati&egrave;re pendant la
+phase de remplissage de la pi&egrave;ce. <br>
+
+            <br>
+
+On disposera, dans la
+mesure du possible, les canaux de r&eacute;gulation
+perpendiculairement &agrave; ce sens en &eacute;vitant de faire
+les pontages &agrave; l'int&eacute;rieur du moule pour les
+raisons suivantes: <br>
+
+            <ul>
+
+              <li>avoir la possibilit&eacute; de
+s&eacute;parer les
+circuits en cas de besoin ; </li>
+
+              <li>permettre un usinage et surtout un entretien
+plus
+ais&eacute; en cas d'entartrage. </li>
+
+            </ul>
+
+            <br>
+
+En fonction des r&eacute;sultats lors des essais de moulage, on
+peut d&eacute;terminer la temp&eacute;rature id&eacute;ale
+de chaque zone de fa&ccedil;on &agrave; obtenir une
+pi&egrave;ce correcte (technique et esth&eacute;tique). <br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 100px; text-align: center;"><img style="width: 551px; height: 303px;" alt="" src="image_076.png"></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 60px;"><big><big>4.2.&nbsp;</big></big></td>
+
+                  <td style="font-weight: bold; background-color: rgb(153, 153, 153); font-family: Arial;"><big><big><a name="42"></a>Pi&egrave;ces
+cylindriques (noyaux)</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 100px;">La
+solution la plus courante consiste &agrave; ex&eacute;cuter
+autour de l'empreinte rapport&eacute;e, une gorge situ&eacute;e
+entre deux joints pour assurer
+l'&eacute;tanch&eacute;it&eacute; et d'alimenter par une
+arriv&eacute;e tangente. <br>
+
+            <br>
+
+Pour le refroidissement en forme
+d'h&eacute;lice l'eau est normalement distribu&eacute;e par le
+centre pour arriver d'abord au seuil d'injection et
+s'&eacute;couler ensuite par les canaux
+h&eacute;lico&iuml;daux vers les parties du moule
+situ&eacute;es plus loin. <br>
+
+            <br>
+
+De cette mani&egrave;re, on obtient
+un refroidissement efficace &agrave; l'endroit o&ugrave; l'on
+doit &eacute;vacuer le plus de chaleur (seuil d'injection). <br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 1px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td style="text-align: center; vertical-align: middle;">
+            <div style="margin-left: 100px; text-align: center;">
+            <table style="width: 100px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td><img style="width: 395px; height: 424px;" alt="" src="image_077.png"></td>
+
+                  <td><img style="width: 305px; height: 259px;" alt="" src="image_078.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;" align="justify">
+
+            <td>
+            <div style="margin-left: 100px;">Pour les plus
+petites parties du noyau, on emploie le plus souvent ce
+qu'on appelle le refroidissement par doigt. <br>
+
+            <br>
+
+C'est un refroidissement du
+noyau par adjonction d'un tube, de pr&eacute;f&eacute;rence
+dans l'al&eacute;sage. <br>
+
+            <br>
+
+L'eau de refroidissement est ainsi
+canalis&eacute;e le long du noyau &agrave; son sommet pour
+couler ensuite vers les parties situ&eacute;es au-del&agrave;. <br>
+
+            <br>
+
+Une m&eacute;thode un peu plus simple consiste &agrave;
+r&eacute;aliser une petite chicane. <br>
+
+            <br>
+
+Ce syst&egrave;me est
+utilis&eacute; pour les noyaux relativement plus courts.</div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 100px; text-align: center;"><img style="width: 596px; height: 318px;" alt="" src="image_079.png"></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>5.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="5"></a>Fichiers</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="le_moule_fonction_regulation_refroidissement.docx">Fichier
+word</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 5px;"></td>
+
+                  <td style="text-align: center;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="le_moule_fonction_regulation_refroidissement.pdf" target="_blank">Fichier
+PDF</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+
+</body>
+</html>

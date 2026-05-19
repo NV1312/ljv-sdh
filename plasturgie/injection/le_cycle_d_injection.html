@@ -1,0 +1,6292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+
+  
+  
+  <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+
+
+  
+
+
+  
+  
+  
+  <title>Bac pro PLC -Mondeville - le cycle d'injection</title>
+  <meta content="ressources" name="description">
+
+
+
+  
+  
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  
+  
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+
+
+  
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+
+  
+  
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+
+
+
+  
+  
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+
+
+  
+  
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+
+
+  
+  
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  
+  
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  
+  
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+  <tbody>
+
+
+
+    <tr>
+
+
+
+      <td>
+      
+      
+      <div style="text-align: center;"></div>
+
+
+
+      
+      
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+        <tbody>
+
+
+
+          <tr>
+
+
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="color: rgb(64, 64, 64);">
+
+
+
+            <td style="background-color: rgb(64, 64, 64);">
+            
+            
+            <div id="menu">
+            
+            
+            <ul>
+
+
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+
+
+            
+            
+            </ul>
+
+
+
+            </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">Le cycle
+d'injection</span></big></big></big></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="color: rgb(64, 64, 64);">
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td colspan="2" rowspan="1"><span style="font-family: Arial; font-weight: bold;">1. <a href="le_cycle_d_injection.html#1"><span style="text-decoration: underline;">G&eacute;n&eacute;ralit&eacute;s</span></a></span><br style="font-family: Arial; font-weight: bold;">
+
+
+
+                  <span style="font-family: Arial; font-weight: bold;"></span><br style="font-family: Arial; font-weight: bold;">
+
+
+
+                  <span style="font-family: Arial; font-weight: bold;">2. <a href="le_cycle_d_injection.html#2">Les
+diff&eacute;rentes &eacute;tapes du cycle d'injection</a><br>
+
+
+
+                  <br>
+
+
+
+&nbsp; &nbsp; 2.1.
+&nbsp;<a href="le_cycle_d_injection.html#21">Condition
+de d&eacute;marrage</a><span style="text-decoration: underline;"><br>
+
+
+
+                  <br>
+
+
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 2.2.
+&nbsp;<a href="le_cycle_d_injection.html#22">Fermeture,
+verrouillage du moule et d&eacute;placement du
+ponton</a></span></td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><br>
+
+
+
+                  </span><span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 2.3.
+&nbsp;<a href="#23">L'injection</a><br>
+
+
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><br>
+
+
+
+&nbsp; &nbsp; 2.4.
+&nbsp;<a href="#24">La
+commutation</a><span style="text-decoration: underline;"><br>
+
+
+
+                  <br>
+
+
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 2.5.
+&nbsp;<a href="#25">Le maintien</a><br>
+
+
+
+                  <br>
+
+
+
+                  </span><span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 2.6.
+&nbsp;<a href="#26">Le
+refroidissement</a><br>
+
+
+
+                  <br>
+
+
+
+&nbsp; &nbsp; 2.7.
+&nbsp;<a href="#27">Le
+dosage</a><br>
+
+
+
+                  <br>
+
+
+
+&nbsp;
+&nbsp; 2.8.
+&nbsp;<a href="#28">La d&eacute;compression</a><br>
+
+
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><br>
+
+
+
+                  </td>
+
+
+
+                  <td style="text-align: right; vertical-align: top;"><img style="width: 535px; height: 240px;" alt="" src="image_094.png"></td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td colspan="2" rowspan="1"><span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 2.9.
+&nbsp;<a href="le_cycle_d_injection.html#29">Recul du
+ponton,ouverture du moule, sorties et
+rentr&eacute;es &eacute;jecteurs</a><br>
+
+
+
+                  <br>
+
+
+
+&nbsp;
+&nbsp; 2.10. <a href="le_cycle_d_injection.html#210">Entre
+cycle</a></span><br>
+
+
+
+                  <span style="font-family: Arial; font-weight: bold;"><span style="text-decoration: underline;"><br>
+
+
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;">3. <a href="le_cycle_d_injection.html#3">Synoptique
+du cycle d&rsquo;injection</a><br>
+
+
+
+                  <br>
+
+
+
+                  </span><span style="font-family: Arial; font-weight: bold;">4. <a href="le_cycle_d_injection.html#4">Graphe du
+temps de cycle d&rsquo;injection</a><br>
+
+
+
+                  <br>
+
+
+
+                  </span><span style="font-family: Arial; font-weight: bold;">5. <a href="le_cycle_d_injection.html#5">Les &eacute;tapes du
+cycle d&rsquo;injection</a><br>
+
+
+
+                  <br>
+
+
+
+                  </span><span style="font-family: Arial; font-weight: bold;">6. <a href="le_cycle_d_injection.html#6">Pression du cycle
+d&rsquo;injection</a><br>
+
+
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><br>
+
+
+
+                  </span><span style="font-family: Arial; font-weight: bold;">7. <a href="le_cycle_d_injection.html#7">Fichiers</a></span></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>1.&nbsp;</big></big></td>
+
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>G&eacute;n&eacute;ralit&eacute;s<br>
+
+
+
+                  </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;" align="center">
+
+
+
+            <td style="text-align: justify;">
+            
+            
+            <div style="margin-left: 52px;">Le cycle de
+moulage simplifi&eacute; d&rsquo;une pi&egrave;ce
+inject&eacute; se d&eacute;compose en plusieurs parties : <br>
+
+
+
+            <br>
+
+
+
+            
+            
+            <div style="margin-left: 40px;">-&nbsp;Fermeture
+du moule, <br>
+
+
+
+- verrouillage du moule, <br>
+
+
+
+- d&eacute;placement du ponton, <br>
+
+
+
+- injection, maintien, <br>
+
+
+
+- refroidissement, <br>
+
+
+
+- dosage, <br>
+
+
+
+- d&eacute;compression, <br>
+
+
+
+- recul ponton, <br>
+
+
+
+- ouverture moule, <br>
+
+
+
+- &eacute;jecteurs sorties, <br>
+
+
+
+- &eacute;jecteurs rentr&eacute;es, <br>
+
+
+
+- entre cycle. <br>
+
+
+
+            </div>
+
+
+
+            </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>2.&nbsp;</big></big></td>
+
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>Les
+diff&eacute;rentes &eacute;tapes du cycle d'injection<br>
+
+
+
+                  </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="width: 50px;"></td>
+
+
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>2.1.&nbsp;</big></big></td>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="21"></a>Condition
+de d&eacute;marrage<br>
+
+
+
+                  </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;">
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 105px;">
+            
+            
+            <div style="margin-left: 40px;">- Le moule est
+ouvert (<span style="color: rgb(255, 0, 0);">contact fin
+d&rsquo;ouverture allum&eacute;</span>). <br>
+
+
+
+            <br>
+
+
+
+-&nbsp;Les &eacute;jecteurs sont rentr&eacute;s (<span style="color: rgb(255, 0, 0);">contact &eacute;jecteurs
+rentr&eacute;s allum&eacute;</span>). <br>
+
+
+
+            <br>
+
+
+
+-&nbsp;Le dosage (dosage + succion) est effectu&eacute; (<span style="color: rgb(255, 0, 0);">contact fin de dosage et fin
+de d&eacute;compression allum&eacute;s</span>). <br>
+
+
+
+            <br>
+
+
+
+-&nbsp;Le ponton est recul&eacute; (<span style="color: rgb(255, 0, 0);">contact ponton
+recul&eacute; allum&eacute;</span>) selon le programme de
+cycle demand&eacute;. <br>
+
+
+
+            <br>
+
+
+
+            </div>
+
+
+
+            <span style="text-decoration: underline; font-weight: bold;">Remarque
+: </span><br>
+
+
+
+            <br>
+
+
+
+Le clapet anti-retour de la vis est ouvert. <br>
+
+
+
+            </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="width: 50px;"></td>
+
+
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>2.2.&nbsp;</big></big></td>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="22"></a>Fermeture,
+verrouillage du moule et d&eacute;placement du ponton<br>
+
+
+
+                  </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;">
+
+
+
+            <td style="text-align: justify;">
+            
+            
+            <div style="margin-left: 105px;">La partie
+mobile du moule est en contact avec la partie fixe du moule. <br>
+
+
+
+            <br>
+
+
+
+Le moule se verrouille &agrave; la pression de verrouillage
+(contact moule ferm&eacute; allum&eacute;). <br>
+
+
+
+            <br>
+
+
+
+Le ponton se d&eacute;place et r&eacute;alise son accostage
+contre le moule et le contact buse contre appui de buse. </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="width: 50px;"></td>
+
+
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>2.3.&nbsp;</big></big></td>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="23"></a>L'injection<br>
+
+
+
+                  </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;">
+
+
+
+            <td style="text-align: justify;">
+            
+            
+            <div style="margin-left: 105px;">Sous
+l&rsquo;effet de la pression dans le v&eacute;rin hydraulique
+d&rsquo;injection, la vis ce met en mouvement la pression monte et
+ferme le clapet. <br>
+
+
+
+            <br>
+
+
+
+La vis avance, provoquant ainsi le remplissage progressif de ou des
+empreintes de l&rsquo;outillage. <br>
+
+
+
+            <br>
+
+
+
+Cette phase peut durer de quelques dixi&egrave;mes de secondes
+(voir moins pour des pi&egrave;ces &agrave; parois minces)
+&agrave; plusieurs dizaines de secondes (pour les pi&egrave;ces
+tr&egrave;s massives). </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 105px; text-align: center;"><img style="width: 817px; height: 405px;" alt="" src="image_072.png"></div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <div style="text-align: center;"></div>
+
+
+
+            
+            
+            <div style="margin-left: 105px; text-align: center;"><img style="width: 817px; height: 405px;" alt="" src="image_073.png"></div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="width: 50px;"></td>
+
+
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>2.4.&nbsp;</big></big></td>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="24"></a>La
+commutation<br>
+
+
+
+                  </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;">
+
+
+
+            <td style="text-align: justify;">
+            
+            
+            <div style="margin-left: 105px;">
+            
+            
+            <div style="margin-left: 40px;">-&nbsp;Le
+remplissage de l&rsquo;empreinte ou des empreintes est
+termin&eacute;. <br>
+
+
+
+            <br>
+
+
+
+-&nbsp;La mati&egrave;re a &eacute;t&eacute;
+l&eacute;g&egrave;rement compress&eacute;e en fin de
+remplissage. <br>
+
+
+
+            <br>
+
+
+
+-&nbsp;La vis ne peut plus avancer, sa vitesse est nulle. <br>
+
+
+
+            </div>
+
+
+
+            <br>
+
+
+
+Le clapet est toujours ferm&eacute;. C&rsquo;est &agrave;
+la commutation que commence le &laquo; refroidissement
+th&eacute;orique &raquo;.<br>
+
+
+
+            <br>
+
+
+
+            <span style="font-weight: bold; text-decoration: underline;">Remarque
+: </span><br>
+
+
+
+            <br>
+
+
+
+la commutation
+n&rsquo;est pas une &eacute;tape, c&rsquo;est une
+transition. Cette transition va &laquo; commander &raquo;
+&agrave; la machine de passer d&rsquo;une phase dynamique ou
+remplissage (r&eacute;gulation de la vitesse de la vis)
+&agrave; une phase quasi-statique ou de maintien
+(r&eacute;gulation de la pression exerc&eacute;e sur la vis). </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="width: 50px;"></td>
+
+
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>2.5.&nbsp;</big></big></td>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="25"></a>Le
+maintien<br>
+
+
+
+                  </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;">
+
+
+
+            <td style="text-align: justify;">
+            
+            
+            <div style="margin-left: 105px;">Cette
+&eacute;tape doit compenser la r&eacute;traction de la
+mati&egrave;re. <br>
+
+
+
+            <br>
+
+
+
+En fin de remplissage, la mati&egrave;re est compact&eacute;e,
+ce qui va att&eacute;nuer quelque peu le
+ph&eacute;nom&egrave;ne de r&eacute;traction
+volum&eacute;trique. <br>
+
+
+
+            <br>
+
+
+
+N&eacute;anmoins, pour compenser le
+ph&eacute;nom&egrave;ne de r&eacute;traction, il faut
+maintenir la mati&egrave;re sous pression
+jusqu&rsquo;&agrave; ce que celle-ci ne puisse plus continuer
+&agrave; p&eacute;n&eacute;trer dans l&rsquo;outillage
+(temps de gel des seuils ou temps de maintien). </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 105px; text-align: center;"><img style="width: 817px; height: 405px;" alt="" src="image_074.png"></div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;">
+
+
+
+            <td style="text-align: justify;">
+            
+            
+            <div style="margin-left: 105px;"><span style="font-weight: bold; text-decoration: underline;">Remarque
+: </span><br>
+
+
+
+            <br>
+
+
+
+Le
+clapet &eacute;tant ferm&eacute;, la vis peut avancer
+tr&egrave;s l&eacute;g&egrave;rement du fait de la
+r&eacute;traction de la mati&egrave;re dans
+l&rsquo;outillage. C&rsquo;est pour cela que cette phase est
+&eacute;galement appel&eacute;e phase quasi-statique.</div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="width: 50px;"></td>
+
+
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>2.6.&nbsp;</big></big></td>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="26"></a>Le
+refroidissement<br>
+
+
+
+                  </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;">
+
+
+
+            <td style="text-align: justify;">
+            
+            
+            <div style="margin-left: 105px;">Le temps de
+refroidissement est r&eacute;gl&eacute; de fa&ccedil;on
+&agrave; ce que les &eacute;jecteurs ne marquent pas ou ne
+d&eacute;forment pas la pi&egrave;ce lors du
+d&eacute;moulage.</div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="width: 50px;"></td>
+
+
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>2.7.&nbsp;</big></big></td>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="27"></a>Le
+dosage<br>
+
+
+
+                  </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;">
+
+
+
+            <td style="text-align: justify;">
+            
+            
+            <div style="margin-left: 105px;">
+            
+            
+            <div style="margin-left: 40px;">-&nbsp;La
+pression
+est rel&acirc;ch&eacute;e
+dans le v&eacute;rin. <br>
+
+
+
+            <br>
+
+
+
+-&nbsp;Il faut pr&eacute;parer la mati&egrave;re pour le
+cycle
+suivant. <br>
+
+
+
+            <br>
+
+
+
+-&nbsp;Cette op&eacute;ration se r&eacute;alise en temps
+masqu&eacute; du temps de refroidissement.<br>
+
+
+
+            </div>
+
+
+
+            <br>
+
+
+
+Le clapet s&rsquo;est
+ouvert sous l&rsquo;effet de la pression de la mati&egrave;re
+en provenance de la tr&eacute;mie. Afin
+d&rsquo;am&eacute;liorer le malaxage de la mati&egrave;re,
+une pression d&rsquo;environ 5 bar &agrave; 10 bar est
+cr&eacute;&eacute;e dans le v&eacute;rin
+d&rsquo;injection pendant la rotation de la vis. <br>
+
+
+
+            <br>
+
+
+
+Cette pression (appel&eacute;e contre pression) va
+l&eacute;g&egrave;rement s&rsquo;opposer au recul de la vis
+pendant le dosage et donc am&eacute;liorer
+l&rsquo;homog&eacute;n&eacute;isation de la
+mati&egrave;re (la mati&egrave;re doit &ecirc;tre
+homog&egrave;ne en temp&eacute;rature, en viscosit&eacute;
+et &eacute;ventuellement en couleur). <br>
+
+
+
+            <br>
+
+
+
+Le dosage s&rsquo;effectue par mise en rotation de la vis. La
+mati&egrave;re est pouss&eacute;e au bout de la vis. La
+pression ouvre le clapet, permet le passage de la mati&egrave;re en
+bout de vis. Le ponton &eacute;tant coll&eacute; au moule, la
+mati&egrave;re reste en bout de vis. <br>
+
+
+
+            <br>
+
+
+
+La fin de dosage s&rsquo;effectue si possible &agrave; vitesse
+lente afin d&rsquo;avoir une course de dosage toujours constante de
+cycle en cycle. En effet un volume dos&eacute; constant et
+homog&egrave;ne est primordial pour avoir une injection fiable et
+r&eacute;p&eacute;titive. </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 105px; text-align: center;"><img style="width: 817px; height: 405px;" alt="" src="image_075.png"></div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 105px; text-align: center;"><img style="width: 817px; height: 405px;" alt="" src="image_076.png"></div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="width: 50px;"></td>
+
+
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>2.8.&nbsp;</big></big></td>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="28"></a>La
+d&eacute;compression<br>
+
+
+
+                  </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;">
+
+
+
+            <td style="text-align: justify;">
+            
+            
+            <div style="margin-left: 105px;">Sous
+l&rsquo;effet de la contre- pression (5 bars &agrave; 10 bars
+dans le v&eacute;rin hydraulique), la mati&egrave;re
+dos&eacute;e en bout de vis est soumise &agrave; une pression
+de 50 bar &agrave; 100 bar environ. Si le ponton recule, ou si lors
+de l&rsquo;ouverture du moule, la pi&egrave;ce est
+d&eacute;gag&eacute;e de la partie fixe de
+l&rsquo;outillage, la mati&egrave;re
+s&rsquo;&eacute;chappera de la buse et ceci malgr&eacute;
+sa viscosit&eacute;. <br>
+
+
+
+            <br>
+
+
+
+La d&eacute;compression se r&eacute;alise en temps
+masqu&eacute; du temps de refroidissement. <br>
+
+
+
+            <br>
+
+
+
+Pour contrecarrer cette fuite de mati&egrave;re, deux solutions
+existent : <br>
+
+
+
+            <br>
+
+
+
+            
+            
+            <div style="margin-left: 40px;">-&nbsp;Travailler
+avec une buse &agrave; obturation. <br>
+
+
+
+            <br>
+
+
+
+-&nbsp;Travailler en d&eacute;compressant la mati&egrave;re
+avec un
+l&eacute;ger recul de la vis (quelques millim&egrave;tres
+suffisent). Ce recul doit &ecirc;tre effectu&eacute; sans
+rotation. <br>
+
+
+
+            </div>
+
+
+
+            <br>
+
+
+
+Cette op&eacute;ration de d&eacute;compression ou de succion ne
+doit pas &ecirc;tre trop importante sous peine de prendre de
+l&rsquo;air ambiant (charg&eacute;
+d&rsquo;humidit&eacute;) dans la buse &agrave; 200
+&deg;C environ. Le d&eacute;faut en r&eacute;sultant serait
+identique &agrave; celui d&rsquo;un &eacute;tuvage
+insuffisant. </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="width: 50px;"></td>
+
+
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>2.9.&nbsp;</big></big></td>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="29"></a>Recul
+du ponton,ouverture du moule, sorties et rentr&eacute;es
+&eacute;jecteurs<br>
+
+
+
+                  </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;">
+
+
+
+            <td style="text-align: justify;">
+            
+            
+            <div style="margin-left: 105px;">Le ponton
+recule pour facilit&eacute; l&rsquo;&eacute;jection de la
+pi&egrave;ce. <br>
+
+
+
+            <br>
+
+
+
+Le moule s&rsquo;ouvre et la pi&egrave;ce est
+&eacute;ject&eacute;e par la batterie
+d&rsquo;&eacute;jection. <br>
+
+
+
+            <br>
+
+
+
+Les &eacute;jecteurs sont rentr&eacute;s. </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="width: 50px;"></td>
+
+
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>2.10.&nbsp;</big></big></td>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="210"></a>L'entre
+cycle<br>
+
+
+
+                  </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr style="font-family: Arial;">
+
+
+
+            <td style="text-align: justify;">
+            
+            
+            <div style="margin-left: 105px;">L&rsquo;entre
+cycle est une pose dans le cycle de fonctionnement.</div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>3.&nbsp;</big></big></td>
+
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3"></a>Synoptique
+du cycle d&rsquo;injection<br>
+
+
+
+                  </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 54px;">
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td>
+                  
+                  
+                  <table style="width: 651px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+                    <tbody>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="width: 2px;"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="width: 74px;"></td>
+
+
+
+                        <td style="width: 74px;"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td style="width: 25px;"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="width: 25px;"></td>
+
+
+
+                        <td style="width: 75px;"></td>
+
+
+
+                        <td style="width: 75px;"></td>
+
+
+
+                        <td style="width: 50px;"></td>
+
+
+
+                        <td colspan="2" rowspan="1" style="width: 150px; text-align: center; font-family: Arial;">
+                        
+                        
+                        <table style="width: 100%; text-align: left; margin-left: auto; margin-right: auto;" border="2" cellpadding="0" cellspacing="0">
+
+
+
+                          <tbody>
+
+
+
+                            <tr>
+
+
+
+                              <td style="text-align: center; height: 40px;"><a href="#21"><span style="font-weight: bold;">Condition de d&eacute;marrage</span></a></td>
+
+
+
+                            </tr>
+
+
+
+                          
+                          
+                          </tbody>
+                        
+                        
+                        </table>
+
+
+
+                        </td>
+
+
+
+                        <td style="width: 50px;"></td>
+
+
+
+                        <td style="width: 75px;"></td>
+
+
+
+                        <td style="width: 75px;"></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="text-align: center;" colspan="2" rowspan="1"><img style="width: 2px; height: 42px;" alt="" src="image_078.png"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td style="height: 2px;"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="5" rowspan="2"><img style="width: 307px; height: 8px;" alt="" src="image_080.png"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1" style="text-align: center;"><img style="width: 9px; height: 40px;" alt="" src="image_077.png"><br>
+
+
+
+                        </td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1">
+                        
+                        
+                        <table style="text-align: left; font-family: Arial; width: 100%; height: 40px; font-weight: bold;" border="2" cellpadding="0" cellspacing="0">
+
+
+
+                          <tbody>
+
+
+
+                            <tr>
+
+
+
+                              <td style="text-align: center; background-color: rgb(255, 204, 153);"><a href="#22">Fermeture
+moule</a></td>
+
+
+
+                            </tr>
+
+
+
+                          
+                          
+                          </tbody>
+                        
+                        
+                        </table>
+
+
+
+                        </td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1" style="text-align: center;"><img style="width: 9px; height: 40px;" alt="" src="image_077.png"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1" style="text-align: center; font-family: Arial; font-weight: bold;">
+                        
+                        
+                        <table style="width: 100%; height: 40px; text-align: left; margin-left: auto; margin-right: auto;" border="2" cellpadding="0" cellspacing="0">
+
+
+
+                          <tbody>
+
+
+
+                            <tr>
+
+
+
+                              <td style="text-align: center; background-color: rgb(255, 204, 153);"><a href="#22"><span style="font-weight: bold;">Verrouillage
+moule</span></a></td>
+
+
+
+                            </tr>
+
+
+
+                          
+                          
+                          </tbody>
+                        
+                        
+                        </table>
+
+
+
+                        </td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1" style="text-align: center;"><img style="width: 9px; height: 40px;" alt="" src="image_077.png"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1">
+                        
+                        
+                        <table style="text-align: left; width: 100%;" border="2" cellpadding="0" cellspacing="0">
+
+
+
+                          <tbody>
+
+
+
+                            <tr>
+
+
+
+                              <td style="text-align: center; background-color: rgb(153, 255, 255); height: 40px;"><a href="#22"><span style="font-weight: bold; font-family: Arial;">D&eacute;placement
+ponton</span></a></td>
+
+
+
+                            </tr>
+
+
+
+                          
+                          
+                          </tbody>
+                        
+                        
+                        </table>
+
+
+
+                        </td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1" style="text-align: center;"><img style="width: 9px; height: 40px;" alt="" src="image_077.png"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1">
+                        
+                        
+                        <table style="text-align: left; width: 100%;" border="2" cellpadding="0" cellspacing="0">
+
+
+
+                          <tbody>
+
+
+
+                            <tr>
+
+
+
+                              <td style="height: 40px; text-align: center; background-color: rgb(153, 255, 255);"><a href="#23"><span style="font-family: Arial; font-weight: bold;">Injection</span></a></td>
+
+
+
+                            </tr>
+
+
+
+                          
+                          
+                          </tbody>
+                        
+                        
+                        </table>
+
+
+
+                        </td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="text-align: center;" colspan="2" rowspan="1"><img style="width: 2px; height: 42px;" alt="" src="image_078.png"></td>
+
+
+
+                        <td style="font-family: Arial; font-weight: bold;" colspan="1" rowspan="2"><a href="#24">Commutation</a></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1" style="text-align: center;"><img style="width: 12px; height: 40px;" alt="" src="image_081.png"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td style="height: 2px;"></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td colspan="2" rowspan="1" style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="text-align: center;" colspan="2" rowspan="1"><img style="width: 9px; height: 40px;" alt="" src="image_077.png"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="text-align: center;" colspan="2" rowspan="1"><img style="width: 9px; height: 40px;" alt="" src="image_077.png"></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1">
+                        
+                        
+                        <table style="text-align: left; width: 100%;" border="2" cellpadding="0" cellspacing="0">
+
+
+
+                          <tbody>
+
+
+
+                            <tr>
+
+
+
+                              <td style="height: 40px; text-align: center; background-color: rgb(153, 255, 255);"><a href="#25"><span style="font-family: Arial; font-weight: bold;">Maintien</span></a></td>
+
+
+
+                            </tr>
+
+
+
+                          
+                          
+                          </tbody>
+                        
+                        
+                        </table>
+
+
+
+                        </td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1">
+                        
+                        
+                        <table style="text-align: left; width: 100%;" border="2" cellpadding="0" cellspacing="0">
+
+
+
+                          <tbody>
+
+
+
+                            <tr>
+
+
+
+                              <td style="height: 40px; text-align: center;"><a href="#26"><span style="font-family: Arial; font-weight: bold;">Refroidissement</span></a></td>
+
+
+
+                            </tr>
+
+
+
+                          
+                          
+                          </tbody>
+                        
+                        
+                        </table>
+
+
+
+                        </td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="text-align: center;" colspan="2" rowspan="1"><img style="width: 9px; height: 40px;" alt="" src="image_077.png"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="text-align: center;" colspan="2" rowspan="6"><img style="width: 2px; height: 264px;" alt="" src="image_078.png"></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1">
+                        
+                        
+                        <table style="text-align: left; width: 100%;" border="2" cellpadding="0" cellspacing="0">
+
+
+
+                          <tbody>
+
+
+
+                            <tr>
+
+
+
+                              <td style="height: 40px; text-align: center; background-color: rgb(153, 255, 255);"><a href="#27"><span style="font-family: Arial; font-weight: bold;">Dosage</span></a></td>
+
+
+
+                            </tr>
+
+
+
+                          
+                          
+                          </tbody>
+                        
+                        
+                        </table>
+
+
+
+                        </td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="text-align: center;" colspan="2" rowspan="1"><img style="width: 9px; height: 40px;" alt="" src="image_077.png"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1">
+                        
+                        
+                        <table style="text-align: left; width: 100%;" border="2" cellpadding="0" cellspacing="0">
+
+
+
+                          <tbody>
+
+
+
+                            <tr>
+
+
+
+                              <td style="height: 40px; text-align: center; background-color: rgb(153, 255, 255);"><a href="#28"><span style="font-family: Arial; font-weight: bold;">D&eacute;compression</span></a></td>
+
+
+
+                            </tr>
+
+
+
+                          
+                          
+                          </tbody>
+                        
+                        
+                        </table>
+
+
+
+                        </td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="text-align: center;" colspan="2" rowspan="1"><img style="width: 9px; height: 40px;" alt="" src="image_077.png"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1">
+                        
+                        
+                        <table style="text-align: left; width: 100%;" border="2" cellpadding="0" cellspacing="0">
+
+
+
+                          <tbody>
+
+
+
+                            <tr>
+
+
+
+                              <td style="height: 40px; text-align: center; background-color: rgb(153, 255, 255);"><a href="#29"><span style="font-family: Arial; font-weight: bold;">Recul ponton</span></a></td>
+
+
+
+                            </tr>
+
+
+
+                          
+                          
+                          </tbody>
+                        
+                        
+                        </table>
+
+
+
+                        </td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="text-align: center;" colspan="2" rowspan="1"><img style="width: 9px; height: 40px;" alt="" src="image_077.png"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="text-align: center;" colspan="2" rowspan="1"><img style="width: 9px; height: 40px;" alt="" src="image_077.png"></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td style="height: 2px;"></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td colspan="2" rowspan="1" style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1" style="text-align: center;"><img style="width: 9px; height: 40px;" alt="" src="image_077.png"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1" style="font-family: Arial;">
+                        
+                        
+                        <table style="width: 100%; height: 40px; text-align: left; margin-left: auto; margin-right: auto;" border="2" cellpadding="0" cellspacing="0">
+
+
+
+                          <tbody>
+
+
+
+                            <tr>
+
+
+
+                              <td style="text-align: center; background-color: rgb(255, 204, 153);"><a href="#29"><span style="font-weight: bold;">Ouverture
+moule</span></a></td>
+
+
+
+                            </tr>
+
+
+
+                          
+                          
+                          </tbody>
+                        
+                        
+                        </table>
+
+
+
+                        </td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1" style="text-align: center;"><img style="width: 9px; height: 40px;" alt="" src="image_077.png"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1" style="font-family: Arial;">
+                        
+                        
+                        <table style="width: 100%; height: 40px; text-align: left; margin-left: auto; margin-right: auto;" border="2" cellpadding="0" cellspacing="0">
+
+
+
+                          <tbody>
+
+
+
+                            <tr>
+
+
+
+                              <td style="text-align: center; background-color: rgb(255, 204, 153);"><a href="#29"><span style="font-weight: bold;">Ejecteurs
+sorties</span></a></td>
+
+
+
+                            </tr>
+
+
+
+                          
+                          
+                          </tbody>
+                        
+                        
+                        </table>
+
+
+
+                        </td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1" style="text-align: center;"><img style="width: 9px; height: 40px;" alt="" src="image_077.png"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1" style="font-family: Arial;">
+                        
+                        
+                        <table style="width: 100%; height: 40px; text-align: left; margin-left: auto; margin-right: auto;" border="2" cellpadding="0" cellspacing="0">
+
+
+
+                          <tbody>
+
+
+
+                            <tr>
+
+
+
+                              <td style="text-align: center; background-color: rgb(255, 204, 153);"><a href="#29"><span style="font-weight: bold;">Ejecteurs
+entr&eacute;es</span></a></td>
+
+
+
+                            </tr>
+
+
+
+                          
+                          
+                          </tbody>
+                        
+                        
+                        </table>
+
+
+
+                        </td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1" style="text-align: center;"><img style="width: 9px; height: 40px;" alt="" src="image_077.png"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1" style="font-family: Arial;">
+                        
+                        
+                        <table style="width: 100%; height: 40px; text-align: left; margin-left: auto; margin-right: auto;" border="2" cellpadding="0" cellspacing="0">
+
+
+
+                          <tbody>
+
+
+
+                            <tr>
+
+
+
+                              <td style="text-align: center; background-color: rgb(255, 255, 255);"><a href="#210"><span style="font-weight: bold;">entre
+cycle</span></a></td>
+
+
+
+                            </tr>
+
+
+
+                          
+                          
+                          </tbody>
+                        
+                        
+                        </table>
+
+
+
+                        </td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td colspan="2" rowspan="1" style="text-align: center;"><img style="width: 9px; height: 40px;" alt="" src="image_077.png"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td style="height: 2px;"></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td style="background-color: rgb(0, 0, 0);"></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                        <td></td>
+
+
+
+                      </tr>
+
+
+
+                    
+                    
+                    </tbody>
+                  
+                  
+                  </table>
+
+
+
+                  </td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>4.&nbsp;</big></big></td>
+
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="4"></a>Graphe
+du temps de cycle d&rsquo;injection<br>
+
+
+
+                  </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 54px; text-align: left;">
+            
+            
+            <div style="text-align: right;"></div>
+
+
+
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="vertical-align: top;">
+                  
+                  
+                  <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+                    <tbody>
+
+
+
+                      <tr style="color: rgb(102, 102, 204);">
+
+
+
+                        <td style="text-align: right; height: 30px;"><span style="font-family: Arial; font-weight: bold; color: rgb(0, 0, 0);">Phase</span></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr style="font-family: Arial;" align="right">
+
+
+
+                        <td style="height: 30px;"><a href="#21">Condition
+de demarrage</a></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr style="font-family: Arial;" align="right">
+
+
+
+                        <td style="height: 30px;"><a href="#22">Fermeture
+du moule</a></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr style="font-family: Arial;" align="right">
+
+
+
+                        <td style="height: 30px;"><a href="#22">Verrouillage
+du moule</a></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr style="font-family: Arial;" align="right">
+
+
+
+                        <td style="height: 30px;"><a href="#22">D&eacute;placement
+ponton</a></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr style="font-family: Arial;" align="right">
+
+
+
+                        <td style="height: 30px;"><a href="#23">Injection</a></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr style="font-family: Arial;" align="right">
+
+
+
+                        <td style="height: 30px;"><a href="#25">Maintien</a></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr style="font-family: Arial;" align="right">
+
+
+
+                        <td style="height: 30px;"><a href="#27">Dosage</a></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr style="font-family: Arial;" align="right">
+
+
+
+                        <td style="height: 30px;"><a href="#28">D&eacute;compression</a></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr style="font-family: Arial;" align="right">
+
+
+
+                        <td style="height: 30px;"><a href="#29">Recul
+ponton</a></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr style="font-family: Arial;" align="right">
+
+
+
+                        <td style="height: 30px;"><a href="#26">Refroidissement</a></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr style="font-family: Arial;" align="right">
+
+
+
+                        <td style="height: 30px;"><a href="#29">Ouverture
+moule</a></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr style="font-family: Arial;" align="right">
+
+
+
+                        <td style="height: 30px;"><a href="#29">Ejecteurs
+sorties</a></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr style="font-family: Arial;" align="right">
+
+
+
+                        <td style="height: 28px;"><a href="#29">Ejecteurs
+rentr&eacute;es</a></td>
+
+
+
+                      </tr>
+
+
+
+                      <tr style="font-family: Arial;" align="right">
+
+
+
+                        <td style="height: 28px;"><a href="#210">Entre
+cycle</a></td>
+
+
+
+                      </tr>
+
+
+
+                    
+                    
+                    </tbody>
+                  
+                  
+                  </table>
+
+
+
+                  </td>
+
+
+
+                  <td><img src="image_082.png" alt="" style="width: 800px; height: 491px;"><br>
+
+
+
+                  </td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td></td>
+
+
+
+                  <td style="text-align: left;">&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;<big style="font-weight: bold;"><span style="font-family: Arial;"> <a href="#24">Point
+de commutation</a></span></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>5.&nbsp;</big></big></td>
+
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="5"></a>Les
+&eacute;tapes du cycle d&rsquo;injection<br>
+
+
+
+                  </big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 54px;">
+            
+            
+            <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td></td>
+
+
+
+                  <td style="font-family: Arial; text-align: center; background-color: rgb(255, 204, 153); font-weight: bold;">Unit&eacute;
+d'injection</td>
+
+
+
+                  <td style="font-family: Arial; text-align: center; background-color: rgb(153, 255, 255); font-weight: bold;">Unit&eacute;
+de fermeture</td>
+
+
+
+                  <td style="font-family: Arial; text-align: center; font-weight: bold; width: 288px;">Remarques</td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td><img style="width: 464px; height: 167px;" alt="" src="image_083.png"></td>
+
+
+
+                  <td colspan="2" rowspan="1" style="font-family: Arial; text-align: center;"><a href="#21">Condition
+de demarrage </a><br>
+
+
+
+                  <a href="#21">du cycle</a></td>
+
+
+
+                  <td style="font-family: Arial;">Condition
+de demarrage du cycle d&rsquo;injection : <br>
+
+
+
+                  
+                  
+                  <div style="margin-left: 40px;">- moule
+ouvert ; <br>
+
+
+
+- ejecteurs rentr&eacute;es ; <br>
+
+
+
+- ponton recul&eacute; ; <br>
+
+
+
+- dosage effectu&eacute; ; <br>
+
+
+
+- s&eacute;curit&eacute;s machines effectu&eacute;es. </div>
+
+
+
+                  </td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td><img style="width: 464px; height: 167px;" alt="" src="image_092.png"></td>
+
+
+
+                  <td style="background-color: rgb(255, 204, 153); font-family: Arial; text-align: center;"></td>
+
+
+
+                  <td style="background-color: rgb(153, 255, 255); font-family: Arial; text-align: center;"><a href="#22">Fermeture
+du moule</a></td>
+
+
+
+                  <td style="font-family: Arial;">
+                  
+                  
+                  <div style="text-align: justify;">La
+fermeture du moule doit &ecirc;tre rapide tout en veillant
+&agrave; ne pas d&eacute;teriorer l&rsquo;outillage. <br>
+
+
+
+                  </div>
+
+
+
+                  <br>
+
+
+
+On respectera les phases : <br>
+
+
+
+                  
+                  
+                  <div style="margin-left: 40px;">- la
+phase de decollage du moule; <br>
+
+
+
+- phase de d&eacute;placement rapide ; <br>
+
+
+
+- phase de s&eacute;curit&eacute; moule. </div>
+
+
+
+                  </td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td><img style="width: 464px; height: 167px;" alt="" src="image_092.png"></td>
+
+
+
+                  <td style="background-color: rgb(255, 204, 153); font-family: Arial; text-align: center;"></td>
+
+
+
+                  <td style="background-color: rgb(153, 255, 255); font-family: Arial; text-align: center;"><a href="#22">Verrouillage
+du moule</a></td>
+
+
+
+                  <td style="font-family: Arial;">Passage
+en verrouillage. <br>
+
+
+
+                  <br>
+
+
+
+                  
+                  
+                  <div style="text-align: justify;">Le
+moule est ferm&eacute; herm&eacute;tiquement et il ne doit
+pas s&rsquo;ouvrir pendant l&rsquo;injection de la
+mati&egrave;re. </div>
+
+
+
+                  </td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td><img style="width: 464px; height: 167px;" alt="" src="image_084.png"></td>
+
+
+
+                  <td style="background-color: rgb(255, 204, 153); font-family: Arial; text-align: center;"><a href="#22">D&eacute;placement
+du ponton</a></td>
+
+
+
+                  <td style="background-color: rgb(153, 255, 255); font-family: Arial;"></td>
+
+
+
+                  <td style="font-family: Arial; text-align: justify;">Avance
+du ponton
+jusqu&rsquo;&agrave; l&rsquo;accostage de la buse avec le
+re&ccedil;u de buse du moule.</td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td><img style="width: 464px; height: 167px;" alt="" src="image_085.png"></td>
+
+
+
+                  <td style="background-color: rgb(255, 204, 153); font-family: Arial; text-align: center;"><a href="#23">Injection</a></td>
+
+
+
+                  <td style="background-color: rgb(153, 255, 255); font-family: Arial;"></td>
+
+
+
+                  <td style="font-family: Arial; text-align: justify;">Le
+v&eacute;rin d&rsquo;injection
+par l&rsquo;interm&eacute;diaire de la vis pousse la
+mati&egrave;re &agrave; travers la buse pour alimenter le moule
+et surtout l&rsquo;empreinte de celui-ci en mati&egrave;re
+plastique. <br>
+
+
+
+                  <br>
+
+
+
+On remplit le moule jusqu&rsquo;au point de commutation qui est le
+point de passage entre l&rsquo;injection dynamique de la
+mati&egrave;re et l&rsquo;injection statique. <br>
+
+
+
+                  <br>
+
+
+
+Ce point traduit le passage o&ugrave; on va maintenir en pression
+la mati&egrave;re dans le moule, car th&eacute;oriquement
+celui-ci est remplit. </td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td><img style="width: 464px; height: 167px;" alt="" src="image_085.png"></td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(255, 204, 153); text-align: center;"><a href="#25">Maintien</a></td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(153, 255, 255);"></td>
+
+
+
+                  <td style="font-family: Arial; text-align: justify;">Le moule
+&eacute;tant
+th&eacute;oriquement remplie, on exerce une ou plusieurs pression
+sur la mati&egrave;re, pendant un temps
+d&eacute;termin&eacute; de fa&ccedil;on &agrave;
+maintenir la pression dans la pi&egrave;ce pour que celle-ci soit
+conforme au exigences du client. <br>
+
+
+
+                  <br>
+
+
+
+Le temps de maintien correspondant au temps de gel du seuil.
+On est pass&eacute; en injection statique. </td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td><img style="width: 464px; height: 167px;" alt="" src="image_085.png"></td>
+
+
+
+                  <td style="font-family: Arial; text-align: center;" colspan="2" rowspan="1"><a href="#26">refroidissement</a></td>
+
+
+
+                  <td style="font-family: Arial; text-align: justify;">Le temps de
+refroidissement est r&eacute;gl&eacute; de fa&ccedil;on
+&agrave; ce que
+les &eacute;jecteurs ne marquent pas ou ne d&eacute;forment pas
+la
+pi&egrave;ce lors du d&eacute;moulage. </td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td><img style="width: 464px; height: 167px;" alt="" src="image_086.png"></td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(255, 204, 153); text-align: center;"><a href="#27">Dosage</a>, <a href="#28">d&eacute;compression</a></td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(153, 255, 255); text-align: center;"></td>
+
+
+
+                  <td style="font-family: Arial; text-align: justify;">A partir
+du moment o&ugrave; le
+maintien est termin&eacute;, le moteur hydraulique de la vis fait
+tourner la vis pour que la mati&egrave;re passe &agrave;
+l&rsquo;avant de la vis et fasse reculer celle-ci de
+fa&ccedil;on a assurer le dosage. <br>
+
+
+
+                  <br>
+
+
+
+La vis effectue maintenant un l&eacute;ger, mais rapide recul de
+fa&ccedil;on &agrave; mettre un peu d&rsquo;air en bout de
+vis pour &eacute;viter une perte de mati&egrave;re,
+c&rsquo;est la d&eacute;compression. </td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td><img style="width: 464px; height: 167px;" alt="" src="image_087.png"></td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(255, 204, 153); text-align: center;"><a href="#29">Recul
+du ponton</a></td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(153, 255, 255); text-align: center;"></td>
+
+
+
+                  <td style="font-family: Arial; text-align: justify;">La
+d&eacute;compression
+termin&eacute; le ponton recule de la course
+d&eacute;termin&eacute;e.</td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td><img style="width: 464px; height: 167px;" alt="" src="image_088.png"></td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(255, 204, 153); text-align: center;"></td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(153, 255, 255); text-align: center;"><a href="#29">Ouverture</a><br>
+
+
+
+                  <a href="#29">du moule</a></td>
+
+
+
+                  <td style="font-family: Arial;">
+                  
+                  
+                  <div style="text-align: justify;">L&rsquo;ouverture
+du moule doit
+&ecirc;tre rapide tout en veilant &agrave; ne pas
+d&eacute;teriorer l&rsquo;outillage. <br>
+
+
+
+                  </div>
+
+
+
+                  <br>
+
+
+
+On respectera les phases :<br>
+
+
+
+                  
+                  
+                  <div style="margin-left: 40px;">&nbsp;-
+la phase de demoullage; <br>
+
+
+
+- phase de d&eacute;placement rapide ; <br>
+
+
+
+- phase de d&eacute;c&eacute;l&eacute;ration. </div>
+
+
+
+                  </td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td><img style="width: 464px; height: 167px;" alt="" src="image_089.png"></td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(255, 204, 153); text-align: center;"></td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(153, 255, 255); text-align: center;"><a href="#29">Ejecteurs
+sorties</a></td>
+
+
+
+                  <td style="font-family: Arial; text-align: justify;">A partir
+du moment o&ugrave; le moule
+est ouvert l&rsquo;&eacute;jection de la pi&egrave;ce se
+d&eacute;clenche. <br>
+
+
+
+                  <br>
+
+
+
+Le syst&egrave;me d&rsquo;&eacute;jection sort et pousse
+les &eacute;jecteurs qui vont sortir la pi&egrave;ce de
+l&rsquo;empreinte du moule. </td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td><img style="width: 464px; height: 167px;" alt="" src="image_090.png"></td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(255, 204, 153); text-align: center;"></td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(153, 255, 255); text-align: center;"><a href="#29">Ejecteurs
+rentr&eacute;es</a></td>
+
+
+
+                  <td style="font-family: Arial;">Les
+&eacute;jecteurs sont
+rentr&eacute;es.</td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td></td>
+
+
+
+                  <td style="font-family: Arial; text-align: center;" colspan="2" rowspan="1"><a href="#210">Entre
+cycle</a></td>
+
+
+
+                  <td style="font-family: Arial; text-align: justify;">Entre
+cycle, la machine fait une pose avant de lancer un nouveau cycle.</td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;&nbsp;<big><big>6.&nbsp;</big></big></td>
+
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="6"></a>Pression
+du cycle d'injection</big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 54px; text-align: center;"><img style="width: 500px; height: 422px;" alt="" src="image_091.png"></div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <div style="margin-left: 54px;">
+            
+            
+            <table style="width: 500px; height: 180px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; width: 30px; text-align: center; color: rgb(0, 0, 0); background-color: rgb(102, 255, 153);">A</td>
+
+
+
+                  <td style="font-family: Arial; width: 280px; background-color: rgb(102, 255, 153); text-align: center; color: rgb(0, 0, 0);">Phase
+dynamique: injection</td>
+
+
+
+                  <td style="font-family: Arial; width: 30px; background-color: rgb(102, 255, 153); text-align: center; color: rgb(0, 0, 0);">1</td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(102, 255, 153); text-align: center; color: rgb(0, 0, 0);">Remplissage</td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(102, 255, 153); text-align: center; color: rgb(0, 0, 0);"></td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(102, 255, 153); text-align: center; color: rgb(0, 0, 0);"></td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(102, 255, 153); text-align: center; color: rgb(0, 0, 0);">2</td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(102, 255, 153); text-align: center; color: rgb(0, 0, 0);">Compactage</td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(255, 102, 102); text-align: center; color: rgb(0, 0, 0);">B</td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(255, 102, 102); text-align: center; color: rgb(0, 0, 0);">Phase
+quasi statique: maintien</td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(255, 102, 102); text-align: center; color: rgb(0, 0, 0);">3</td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(255, 102, 102); text-align: center; color: rgb(0, 0, 0);">Palier
+de maintien 1</td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(255, 102, 102); text-align: center; color: rgb(0, 0, 0);"></td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(255, 102, 102); text-align: center; color: rgb(0, 0, 0);"></td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(255, 102, 102); text-align: center; color: rgb(0, 0, 0);">4</td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(255, 102, 102); text-align: center; color: rgb(0, 0, 0);">Palier
+de maintien 2</td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(153, 255, 255); text-align: center; color: rgb(0, 0, 0);">C</td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(153, 255, 255); text-align: center; color: rgb(0, 0, 0);">Phase
+de dosage et d&eacute;compression</td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(153, 255, 255); text-align: center; color: rgb(0, 0, 0);">5</td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(153, 255, 255); text-align: center; color: rgb(0, 0, 0);">Dosage</td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(153, 255, 255); text-align: center; color: rgb(0, 0, 0);"></td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(153, 255, 255); text-align: center; color: rgb(0, 0, 0);"></td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(153, 255, 255); text-align: center; color: rgb(0, 0, 0);">6</td>
+
+
+
+                  <td style="font-family: Arial; background-color: rgb(153, 255, 255); text-align: center; color: rgb(0, 0, 0);">D&eacute;compression</td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </div>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>7.&nbsp;</big></big></td>
+
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="7"></a>Fichiers</big></big></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              <tbody>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="le_cycle_d_injection.docx">Fichier word</a>
+&nbsp; &nbsp;</td>
+
+
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td style="height: 5px;"></td>
+
+
+
+                  <td style="text-align: center;"></td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="le_cycle_d_injection.pdf" target="_blank">Fichier
+PDF</a>
+&nbsp; &nbsp;</td>
+
+
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+
+
+                </tr>
+
+
+
+              
+              
+              </tbody>
+            
+            
+            </table>
+
+
+
+            </td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td style="height: 10px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td>
+            
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+
+          </tr>
+
+
+
+          <tr>
+
+
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+
+
+          </tr>
+
+
+
+        
+        
+        </tbody>
+      
+      
+      </table>
+
+
+
+      </td>
+
+
+
+    </tr>
+
+
+
+  
+  
+  </tbody>
+</table>
+
+
+
+<br>
+
+
+
+</body>
+</html>

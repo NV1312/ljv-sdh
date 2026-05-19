@@ -1,0 +1,1073 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+  <title>Bac pro PLC -Mondeville - le point de commutation</title>
+
+
+  <meta content="ressources" name="description">
+
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+  <tbody>
+
+    <tr>
+
+      <td>
+      <div style="text-align: center;"></div>
+
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+        <tbody>
+
+          <tr>
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="background-color: rgb(64, 64, 64);">
+            <div id="menu">
+            <ul>
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">Le point de
+commutation</span></big></big></big></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 488px;" colspan="1" rowspan="1"><span style="font-family: Arial; font-weight: bold;">1. <a href="#1"><span style="text-decoration: underline;">Analyse
+du diagramme de pression machine / temps</span></a><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><span style="text-decoration: underline;"><br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 1.1.
+&nbsp;<a href="#11">La phase d&rsquo;injection
+dynamique </a><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><span style="text-decoration: underline;"> <br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 1.2.
+&nbsp;<a href="#12">Le point de commutation</a><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><span style="text-decoration: underline;">
+                  <br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 1.3.
+&nbsp;<a href="#13">La phase d&rsquo;injection
+quasi statique</a><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><span style="text-decoration: underline;"> <br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 1.4.
+&nbsp;<a href="#14">Le refroidissement </a><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><br style="font-family: Arial; font-weight: bold;">
+
+                  <span style="font-family: Arial; font-weight: bold;">2. <a href="#2">Analyse du diagramme de pression machine / course
+de la vis</a><br>
+
+                  <br>
+
+3. <a href="#3">Les diff&eacute;rents modes de
+commutation</a><br>
+
+                  <br>
+
+4. <a href="#4">Influence des param&egrave;tres sur
+l&rsquo;allure de la courbe</a><br>
+
+                  <span style="text-decoration: underline;">
+                  <br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 4.1.
+&nbsp;<a href="#41">Influence de la vitesse</a><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><span style="text-decoration: underline;"> <br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 4.2.
+&nbsp;<a href="#42">Influence sur le dosage</a><br>
+
+                  <br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;">5. <a href="#5">Fichiers</a></span><span style="font-family: Arial; font-weight: bold;"><br>
+
+                  </span></td>
+
+                  <td style="text-align: right; width: 556px;"><img style="width: 535px; height: 240px;" alt="" src="image_094.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>1.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>Analyse du diagramme de pression machine
+/ temps<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;" align="center">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 52px;">Diagramme de
+la pression en fonction du temps.<br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="text-align: center;"><img style="width: 784px; height: 636px;" alt="" src="image_215.png"></div>
+
+            <div style="margin-left: 52px; text-align: center;"></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>1.1.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="11"></a>La phase d&rsquo;injection dynamique
+                  <br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 105px;">C&rsquo;est
+la phase de remplissage de l&rsquo;empreinte. Elle est
+g&eacute;r&eacute;e par la vitesse et la pression. <br>
+
+            <br>
+
+Les param&egrave;tres influents sont la temp&eacute;rature de
+la mati&egrave;re, la temp&eacute;rature du moule, la
+fluidit&eacute; mati&egrave;re, les seuils etc. <br>
+
+            <br>
+
+            <span style="font-weight: bold;">Phase 1 : <br>
+
+            <br>
+
+            </span>La pression hydraulique
+s&rsquo;&eacute;tablit dans le v&eacute;rin hydraulique.
+C&rsquo;est la mise en mouvement des masses (vis
+mati&egrave;re) et de la compensation de la succion. <br>
+
+            <br>
+
+            <span style="font-weight: bold;">Phase 2 : <br>
+
+            <br>
+
+            </span>La mati&egrave;re remplie le moule et il
+faut de plus en plus d&rsquo;&eacute;nergie pour la faire
+progresser. La mont&eacute;e en pression est
+r&eacute;guli&egrave;re. <br>
+
+            <br>
+
+La pression mati&egrave;re augmente &agrave; cause du
+d&eacute;but du refroidissement (figeage) <br>
+
+            <br>
+
+            <span style="font-weight: bold;">Phase 3 : </span><br>
+
+            <br>
+
+Le moule fini de se remplir, la mati&egrave;re ne peut plus
+s&rsquo;&eacute;couler et la pression hydraulique et la
+pression mati&egrave;re augmente. <br>
+
+            <br>
+
+C&rsquo;est le compactage. </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>1.2.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="12"></a>Le point de commutation <br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 105px;"><span style="font-weight: bold;">Point 4 :</span> <br>
+
+            <br>
+
+Le point de commutation est le point de passage de la phase
+d&rsquo;injection dynamique &agrave; la phase
+d&rsquo;injection quasi statique. C&rsquo;est le point de
+pression maximum. <br>
+
+            <br>
+
+Le moule doit &ecirc;tre imp&eacute;rativement rempli lors de
+la commutation, c&rsquo;est le r&ocirc;le du compactage. </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>1.3.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="13"></a>La phase d&rsquo;injection quasi
+statique <br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 105px;"><span style="font-weight: bold;">Phase 5 : <br>
+
+            <br>
+
+            </span>Cette phase permet la
+r&eacute;organisation des
+cha&icirc;nes macromol&eacute;culaire (retrait). Ce retrait est
+compens&eacute; par un maintient en pression de la
+mati&egrave;re. Ce
+maintien en pression (g&eacute;n&eacute;ralement 20
+&agrave; 60% de la
+pression d&rsquo;injection maximum) peut se faire ou non par palier
+(un
+seul palier en g&eacute;n&eacute;ral) jusqu&rsquo;au
+figeage des seuils
+d&rsquo;injection qui d&eacute;termine le temps de maintien
+maximum.
+            <br>
+
+            <br>
+
+Afin de combler le retrait de la mati&egrave;re on utilise la
+mati&egrave;re suppl&eacute;mentaire contenue dans le matelas. <br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>1.4.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="14"></a>Le
+refroidissement<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 105px;"><span style="font-weight: bold;">Phase 6 :
+            </span><br>
+
+            <br>
+
+Arr&ecirc;t de la pression hydraulique, la pression
+r&eacute;siduelle sur la mati&egrave;re
+d&eacute;cro&icirc;t.
+C&rsquo;est la phase de dosage et de d&eacute;compression.
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>2.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>Analyse du diagramme de pression machine
+/ course de la vis<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 54px;">Sur certaines
+machines, on peut visualiser les courbes d&rsquo;injection de
+pression en fonction de la course de la vis.<br>
+
+            <br>
+
+            <div style="text-align: center;"><img style="width: 805px; height: 661px;" alt="" src="image_216.png"><br>
+
+            <br>
+
+            <br>
+
+            <img style="width: 930px; height: 605px;" alt="" src="image_217.png"></div>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>3.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3">Les diff&eacute;rents modes de commutation</a><br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="text-align: left; margin-left: 52px;">
+            <table style="width: 800px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr style="font-weight: bold;" align="center">
+
+                  <td style="width: 285px; height: 30px; background-color: rgb(204, 204, 255);" colspan="3" rowspan="1">Commutation</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="width: 200px; height: 30px; text-align: center; font-weight: bold; background-color: rgb(204, 204, 255);">Mode</td>
+
+                  <td style="width: 287px; text-align: center; font-weight: bold; background-color: rgb(204, 204, 255);">Avantages</td>
+
+                  <td style="width: 285px; text-align: center; font-weight: bold; background-color: rgb(204, 204, 255);">Inconv&eacute;nients</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="width: 200px;">Commutation par<span style="font-weight: bold;"> la course de la vis</span>,
+autrement appelle par la position de la vis&nbsp;
+                  </td>
+
+                  <td style="width: 287px;">- facile
+&agrave; mettre en
+&oelig;uvre
+                  <br>
+
+- relativement pr&eacute;cis pour grosses pi&egrave;ce ou
+presses
+                  <br>
+
+- pas trop sensible aux variations de fluidit&eacute; de
+mati&egrave;re <br>
+
+                  </td>
+
+                  <td style="width: 285px;">- ne prends
+pas en compte les variations de volumes d&ucirc; aux empreintes
+bouch&eacute;es ou
+cass&eacute;es
+                  <br>
+
+- peux pr&eacute;cis sur les petites pi&egrave;ces ou presse</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="width: 200px;">Commutation par<span style="font-weight: bold;"> le temps</span>&nbsp;
+                  </td>
+
+                  <td style="width: 287px;">- facile
+&agrave; mettre en
+&oelig;uvre
+                  <br>
+
+- facilit&eacute; de gestion du temps de cycle
+                  <br>
+
+- pr&eacute;cis si le temps d&rsquo;injection dynamique est
+long <br>
+
+                  </td>
+
+                  <td style="width: 285px;">- peu
+pr&eacute;cis sur les
+pi&egrave;ces ayant un temps d&rsquo;injection court
+                  <br>
+
+- ne prends pas en compte les variations de volumes d&ucirc; aux
+empreintes bouch&eacute;es ou cass&eacute;es</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="width: 200px;">Commutation
+par <span style="font-weight: bold;">la pression
+hydraulique&nbsp;</span>
+                  </td>
+
+                  <td style="width: 287px;">-
+pr&eacute;cis
+- tr&egrave;s bonne r&eacute;p&eacute;tabilit&eacute;
+                  <br>
+
+- s&rsquo;applique aux diff&eacute;rentes viscosit&eacute;s
+de mati&egrave;re
+                  <br>
+
+                  </td>
+
+                  <td style="width: 285px;">- ne prends
+pas en compte les canaux
+bouch&eacute;s et le gel des seuils trop rapide ce qui donnera des
+pi&egrave;ces incompl&egrave;tes
+                  <br>
+
+- varie en fonctions de la temp&eacute;rature d&rsquo;huile</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="width: 200px;">Commutation
+par <span style="font-weight: bold;">la pression dans le
+moule </span><br>
+
+                  </td>
+
+                  <td style="width: 287px;">-
+id&eacute;al&nbsp;</td>
+
+                  <td style="width: 285px;">- surplus de
+prix de l&rsquo;outillage
+                  <br>
+
+- la position des capteurs influence les r&eacute;sultats
+                  <br>
+
+- peu d&rsquo;outillages &eacute;quip&eacute;s</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>4.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="4"></a>Influence des param&egrave;tres sur
+l&rsquo;allure de la courbe</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>4.1.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="41"></a>Influence de la vitesse<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="text-align: center;"><img style="width: 785px; height: 471px;" alt="" src="image_218.png"></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>4.2.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="42"></a>Influence sur le dosage<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="text-align: center;"><img style="width: 604px; height: 471px;" alt="" src="image_219.png"><br>
+
+            <br>
+
+            <img style="width: 735px; height: 462px;" alt="" src="image_220.png"></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>5.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="5"></a>Fichiers</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="le_point_de_commutation.docx">Fichier word</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 5px;"></td>
+
+                  <td style="text-align: center;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="le_point_de_commutation.pdf" target="_blank">Fichier
+PDF</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+
+</body>
+</html>

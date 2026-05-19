@@ -1,0 +1,1364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <script><endnote><head>
+<script><endnote><head>
+<script><endnote><head>
+<script><endnote><head>
+<script><endnote><head>
+<script><endnote><head>
+<script><endnote><head>
+<script><endnote><head>
+<script><endnote><head>
+<script><endnote><head>
+<script><endnote><head>
+<script><endnote><head>
+<script><endnote><head>
+<script><endnote><head>
+<script><endnote><head>
+<script><endnote><head>
+<script><endnote><head>
+<script><endnote><head>
+<script><endnote><head>
+<script><endnote><head>
+<script><endnote><head>
+<script><endnote><head>
+<script>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<title>Bac pro PLC -Mondeville - tp_calcul de la pression de
+verrouillage feuille de calcul</title>
+<meta name="description" content="ressources">
+<script type="text/javascript"
+src="js/modernizr.custom.79639.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+  <title>aa</title>
+
+
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+<script>
+//-----------------------------------------------------------------------------------
+// fonction pour dessiner---------------------------------------------------------------
+function draw1(f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14)
+{ //Largeur width hauteur height en pixels et grille-----------------------------------
+var W=1050;H=962;
+var canvas1=document.getElementById("graphe1");
+canvas1.width=W;canvas1.height=H;
+var ctx=canvas1.getContext("2d");
+u1=eval(f1);
+u2=eval(f2);
+u3=eval(f3);
+u4=eval(f4);
+u5=eval(f5);
+u6=eval(f6);
+u7=eval(f7);
+u8=eval(f8);
+u9=eval(f9);
+u10=eval(f10);
+u11=eval(f11);
+u20=eval(f12);
+u30=eval(f13);
+u31=eval(f14);
+//ecriture-----------------------------------------------------------------------------------------------------------------------------
+X1=50;
+Y1=24;
+Sfmm=(u1*u4)+(u2*u5)+(u3*u6);
+Sfmm=Sfmm*10;
+Sfmm=Math.ceil(Sfmm);
+Sfmm=Sfmm/10;
+Sfcm=Sfmm/100;
+Pim=u7-(u7*u8/100);
+Pim=Pim*10;
+Pim=Math.ceil(Pim);
+Pim=Pim/10;
+Fim=Pim*Sfcm;
+Fim=Fim*10;
+Fim=Math.ceil(Fim);
+Fim=Fim/10;
+Pvmaxi=u9;
+Fvmaxi=u10;
+u13=Fvmaxi*1000;
+u12=Fvmaxi*100;
+Cf=u11;
+Fv=Fim+(Cf*Fim/100);
+Fv=Fv*10;
+Fv=Math.ceil(Fv);
+Fv=Fv/10;
+Fvk=Fv/100;
+Fvk=Math.ceil(Fvk);
+Pv=(Fv*Pvmaxi)/(u10*100);
+Pv=Pv*10;
+Pv=Math.ceil(Pv);
+Pv=Pv/10;
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,2,1050-2-X1,32);
+ctx.fillStyle="#CCCCCC";
+ctx.fillRect(X1,2,1050-2-X1,32);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillStyle="#000000";
+ctx.fillText("Calcul de la surface frontale en mm2",X1+10,24);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,32,1050-2-X1,32);
+ctx.fillStyle="#FFFF66";
+ctx.fillRect(X1,32,1050-2-X1,32);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.font = " 18px Arial";
+ctx.fillStyle="#000000";
+ctx.fillText("Sf = (Sf pièce x Nbre pièce) + (Sf canaux x Nbre canaux) + (Sf carotte x Nbre carotte)", X1+10, 55);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,64,1050-2-X1,54);
+ctx.fillStyle="#99FF99";
+ctx.fillRect(X1,64,1050-2-X1,54);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.font = " 18px Arial";
+ctx.fillStyle="#000000";
+ctx.fillText("Sf = ("+u1+" x "+u4+") + ("+u2+" x "+u5+") + ("+u3+" x "+u6+")", X1+10, 87);
+ctx.font = " bold 18px Arial";
+ctx.fillStyle="#FF0000";
+ctx.fillText("Sf = "+Sfmm+" mm2",X1+10,109);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,118,1050-2-X1,32);
+ctx.fillStyle="#CCCCCC";
+ctx.fillRect(X1,118,1050-2-X1,32);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillStyle="#000000";
+ctx.fillText("Calcul de la surface frontale en cm2",X1+10,140);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,150,1050-2-X1,32);
+ctx.fillStyle="#FFFF66";
+ctx.fillRect(X1,150,1050-2-X1,32);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.font = " 18px Arial";
+ctx.fillStyle="#000000";
+ctx.fillText("Sf (cm2) = Sf (mm2) / 100", X1+10, 172);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,182,1050-2-X1,54);
+ctx.fillStyle="#99FF99";
+ctx.fillRect(X1,182,1050-2-X1,54);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.font = " 18px Arial";
+ctx.fillStyle="#000000";
+ctx.fillText("Sf (cm2) = "+Sfmm+" / 100", X1+10, 204 );
+ctx.font = " bold 18px Arial";
+ctx.fillStyle="#FF0000";
+ctx.fillText("Sf (cm2) = "+Sfcm+" cm2", X1+10, 226);
+ctx.fill();
+//rectangle gris----------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,236,1050-2-X1,32);
+ctx.fillStyle="#CCCCCC";
+ctx.fillRect(X1,236,1050-2-X1,32);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillStyle="#000000";
+ctx.fillText("Calcul de la pression d'injection dans le moule: Pim",X1+10,258);
+ctx.fill();
+//rectangle jaune---------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,268,1050-2-X1,76);
+ctx.fillStyle="#FFFF66";
+ctx.fillRect(X1,268,1050-2-X1,76);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.font = " 18px Arial";
+ctx.fillStyle="#000000";
+ctx.fillText("Pi = "+u7+" bar", X1+10, 292);
+ctx.fillText("Pertes de charge = "+u8+" %", X1+10, 314);
+ctx.fillText("Pim = Pi - (Pi x Pertes de charge / 100)", X1+10, 336);
+ctx.fill();
+//rectangle vert----------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,344,1050-2-X1,54);
+ctx.fillStyle="#99FF99";
+ctx.fillRect(X1,344,1050-2-X1,54);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.font = " 18px Arial";
+ctx.fillStyle="#000000";
+ctx.fillText("Pim = "+u7+" - ("+u7+" x "+u8+" / 100)", X1+10, 368);
+ctx.font = " bold 18px Arial";
+ctx.fillStyle="#FF0000";
+ctx.fillText("Pim = "+Pim+" bar", X1+10, 390);
+ctx.fill();
+//rectangle gris----------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,398,1050-2-X1,32);
+ctx.fillStyle="#CCCCCC";
+ctx.fillRect(X1,398,1050-2-X1,32);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillStyle="#000000";
+ctx.fillText("Calcul de la force d'injection dans le moule: Fim",X1+10,420);
+ctx.fill();
+//rectangle jaune---------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,430,1050-2-X1,76);
+ctx.fillStyle="#FFFF66";
+ctx.fillRect(X1,430,1050-2-X1,76);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.font = " 18px Arial";
+ctx.fillStyle="#000000";
+ctx.fillText("Pim = "+Pim+" bar", X1+10, 452);
+ctx.fillText("Sf = "+Sfcm+" cm2", X1+10, 452+22);
+ctx.fillText("Fim = Pim x Sf", X1+10, 452+44);
+ctx.fill();
+//rectangle vert----------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,506,1050-2-X1,54);
+ctx.fillStyle="#99FF99";
+ctx.fillRect(X1,506,1050-2-X1,54);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.font = " 18px Arial";
+ctx.fillStyle="#000000";
+ctx.fillText("Fim = "+Pim+" x "+Sfcm, X1+10, 530);
+ctx.font = " bold 18px Arial";
+ctx.fillStyle="#FF0000";
+ctx.fillText("Fim = "+Fim+" daN", X1+10, 530+22);
+ctx.fill();
+//rectangle gris----------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,560,1050-2-X1,32);
+ctx.fillStyle="#CCCCCC";
+ctx.fillRect(X1,560,1050-2-X1,32);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillStyle="#000000";
+ctx.fillText("Calcul de la force de verrouillage du moule: Fv",X1+10,582);
+ctx.fill();
+//rectangle jaune---------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,592,1050-2-X1,76);
+ctx.fillStyle="#FFFF66";
+ctx.fillRect(X1,592,1050-2-X1,76);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.font = " 18px Arial";
+ctx.fillStyle="#000000";
+ctx.fillText("Fim = "+Fim+" daN", X1+10, 615);
+ctx.fillText("Coefficient de sécurité = "+Cf+" %", X1+10, 637);
+ctx.fillText("Fv = Fim x (1 + Coefficient se sécurité/100)", X1+10, 659);
+ctx.fill();
+//rectangle vert----------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,668,1050-2-X1,54);
+ctx.fillStyle="#99FF99";
+ctx.fillRect(X1,668,1050-2-X1,54);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.font = " 18px Arial";
+ctx.fillStyle="#000000";
+ctx.fillText("Fv = "+Pim+" x (1 + "+Cf+"/100)", X1+10, 691);
+ctx.font = " bold 18px Arial";
+ctx.fillStyle="#FF0000";
+ctx.fillText("Fv = "+Fv+" daN = "+Fvk+" kN", X1+10, 691+22);
+ctx.fill();
+//rectangle gris----------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,722,1050-2-X1,32);
+ctx.fillStyle="#CCCCCC";
+ctx.fillRect(X1,722,1050-2-X1,32);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillStyle="#000000";
+ctx.fillText("Calcul de la pression de verrouillage du moule (méthode analytique): Pv",X1+10,745);
+ctx.fill();
+//rectangle jaune---------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,754,1050-2-X1,98);
+ctx.fillStyle="#FFFF66";
+ctx.fillRect(X1,754,1050-2-X1,98);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.font = " 18px Arial";
+ctx.fillStyle="#000000";
+ctx.fillText("Fv = "+Fv+" daN", X1+10, 776);
+ctx.fillText("Fv maxi = "+ u10 +" kN", X1+10, 776+22);
+ctx.fillText("Pv maxi = "+Pvmaxi+" bar", X1+10, 776+44);
+ctx.fillText("Pv = (Fv x Pv maxi) / Fv maxi", X1+10, 776+66);
+ctx.fill();
+//rectangle vert----------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,852,1050-2-X1,76);
+ctx.fillStyle="#99FF99";
+ctx.fillRect(X1,852,1050-2-X1,76);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.font = " 18px Arial";
+ctx.fillStyle="#000000";
+ctx.fillText("Pv = ("+Fv+" x "+Pvmaxi+") / "+u12, X1+10, 874+22);
+ctx.fillText("Fv maxi = "+ u10 +" kN = "+u13+" N = "+u12+" daN ", X1+10, 874);
+ctx.font = " bold 18px Arial";
+ctx.fillStyle="#FF0000";
+ctx.fillText("Pv = "+Pv+" bar", X1+10, 874+44);
+ctx.fill();
+//rectangle gris----------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,928,1050-2-X1,32);
+ctx.fillStyle="#CCCCCC";
+ctx.fillRect(X1,928,1050-2-X1,32);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillStyle="#000000";
+ctx.fillText("Calcul de la pression de verrouillage du moule (méthode graphique): Pv",X1+10,952);
+ctx.fill();
+//------------------------------------------------------------------------------------------------------------------------------------
+}
+function draw2(f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14)
+{ // Largeur width hauteur height en pixels et grille---------------------------------------------------------------------------------
+var W2=1050;H2=900;
+var canvas2=document.getElementById("graphe2");
+canvas2.width=W2;canvas2.height=H2;
+var ctx=canvas2.getContext("2d");
+var sc=10;
+var scH2=40;
+var scV2=40;
+//------------------------------------------------------------------------------------------------------------------------------------
+Ex=u30;
+A=Sfcm;
+B=A/Ex;
+Ey=u31;
+C=Pv;
+D=C/Ey;
+E=Fv/(Ey*100);
+F=Pv/Ex;
+G=Fv/100;
+G=Math.ceil(G);
+H=Math.ceil(Pv);
+L= Pv/A;
+L=L*100;
+L=Math.ceil(L);
+L=L/100;
+//rectangle vert----------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,0,W2-2-X1,H2);
+ctx.fillStyle="#99FF99";
+ctx.fillRect(X1,0,W2-2-X1,H2-2);
+ctx.fill();
+// tracé du quadrillage lignes horizontales -------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.strokeStyle="#ff0000";
+ctx.lineWidth=0.5;
+for(var i=1;i<=(H2/scH2)-1;i++){
+ctx.moveTo(X1+scV2,H2-scH2*i)
+ctx.lineTo(W2-scV2,H2-scH2*i)
+}
+ctx.stroke();
+//tracé du quadrillage lignes verticales-----------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.strokeStyle="#ff0000";
+ctx.lineWidth=0.5;
+for(var i=2;i<=(W2/scV2)-2;i++){
+ctx.moveTo(scV2*i+X1,H2-scH2)
+ctx.lineTo(scV2*i+X1,scH2)
+}
+ctx.stroke();
+//axe----------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.lineWidth=1;
+ctx.strokeStyle="#000000";
+ctx.moveTo(X1+scV2,20);
+ctx.lineTo(X1+scV2,H2-scH2);
+ctx.moveTo(X1+scV2,H2-scH2);
+ctx.lineTo(W2-scV2,H2-scH2);
+ctx.stroke();
+// fleche axe -------------------------------------------------------------------------------------------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(W2-2-scV2,H2-scH2);
+ctx.lineTo(W2-2-3-scV2,H2+3-scH2);
+ctx.lineTo(W2-2-3-scV2,H2-3-scH2);
+ctx.lineTo(W2-2-scV2,H2-scH2);
+ctx.stroke();
+//fleche axe---------------------------------------------------------------------------------------------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(X1+scV2,20+3);
+ctx.lineTo(X1+scV2-3,20+3+3);
+ctx.lineTo(X1+scV2+3,20+3+3);
+ctx.lineTo(X1+scV2,20+3);
+ctx.stroke();
+//ecriture axe-------------------------------------------------------------------------------------------------------------------------
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText("bar", X1+scV2-5, 20);
+ctx.stroke();
+//ecriture axe-------------------------------------------------------------------------------------------------------------------------
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText("Pression de verrouillage", X1+scV2+5, 40);
+ctx.stroke();
+//ecriture axe-------------------------------------------------------------------------------------------------------------------------
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText("cm2", W2-48, H2-2-scH2+20);
+ctx.stroke();
+//ecriture axe-------------------------------------------------------------------------------------------------------------------------
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText("Surface frontale", W2-200, H2-scH2-8);
+ctx.stroke();
+// tracé echelle----------------------------------------------------------------------------------------------------------------------
+ctx.strokeStyle="#0000FF";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(scV2+X1,H2-scH2);
+ctx.lineTo(scV2+X1,H2-scH2-scH2);
+ctx.stroke();
+ctx.strokeStyle="#0000FF";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(scV2+X1,H2-scH2);
+ctx.lineTo(scV2+scV2+X1,H2-scH2);
+ctx.stroke();
+// tracé echelle fleche---------------------------------------------------------------------------------------------------------------
+ctx.strokeStyle="#0000FF";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(scV2+X1,H2-scH2);
+ctx.moveTo(scV2+X1,H2-scH2-scH2);
+ctx.lineTo(scV2-3+X1,H2-scH2-scH2+3);
+ctx.lineTo(scV2+3+X1,H2-scH2-scH2+3);
+ctx.lineTo(scV2+X1,H2-scH2-scH2);
+ctx.stroke();
+// tracé echelle fleche----------------------------------------------------------------------------------------------------------------
+ctx.strokeStyle="#0000FF";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(scV2+scV2+X1,H2-scH2);
+ctx.lineTo(scV2+scV2-3+X1,H2-scH2+3);
+ctx.lineTo(scV2+scV2-3+X1,H2-scH2-3);
+ctx.lineTo(scV2+scV2+X1,H2-scH2);
+ctx.stroke();
+// tracé echelle ecriture---------------------------------------------------------------------------------------------------------------
+ctx.fillStyle="#0000FF";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText(Ey, X1+scV2-25, H2-scH2-scH2);
+ctx.stroke();
+ctx.fillStyle="#0000FF";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText(Ex, scV2+scV2+X1-10, H2-2-scH2+20);
+ctx.stroke();
+ctx.fillStyle="#0000FF";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText(0, X1+scV2-5, H2-2-scH2+20);
+ctx.stroke();
+//droite-------------------------------------------------------------------------------------------------------------------------------
+ctx.strokeStyle="#6F03FA";
+ctx.lineWidth=4;
+ctx.setLineDash([]);
+ctx.beginPath();
+Xt=((scV2*200/Ex))-100;
+Yt=((scH2*D)/(scV2*B))*Xt;
+ctx.moveTo(scV2+X1,H2-scH2);
+ctx.lineTo(Xt+scV2+X1,H2-scH2-Yt);
+ctx.stroke();
+ctx.strokeStyle="#6F03FA";
+ctx.lineWidth=4;
+ctx.setLineDash([5, 5]);
+ctx.beginPath();
+ctx.moveTo((scV2*B)+scV2+X1,H2-scH2);
+ctx.lineTo((scV2*B)+scV2+X1,H2-scH2-(scH2*D));
+ctx.stroke();
+ctx.strokeStyle="#6F03FA";
+ctx.lineWidth=4;
+ctx.setLineDash([5,5]);
+ctx.beginPath();
+ctx.moveTo(scV2+X1,H2-scH2-(scH2*D));
+ctx.lineTo((scV2*B)+scV2+X1,H2-scH2-(scH2*D));
+ctx.stroke();
+ctx.fillStyle="#6F03FA";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText(A, (scV2*B)+scV2+X1, H2-2-scH2+20);
+ctx.stroke();
+ctx.fillStyle="#6F03FA";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText(C, X1+scV2-30, H2-scH2-(scH2*D));
+ctx.font = "bold 18px Arial";
+ctx.fillText("Y = "+L+" * x",(scV2*B)+scV2+X1-100,H2-scH2-(scH2*D)-10);
+ctx.stroke();
+//droite equation------------------------------------------------------------------------------------------------------------------------
+ctx.strokeStyle="#FF0000";
+ctx.lineWidth=4;
+ctx.setLineDash([]);
+ctx.beginPath();
+Xt=((scV2*200/Ex))-100;
+Yt=u20*Xt*Ex/Ey;
+ctx.moveTo(scV2+X1,H2-scH2);
+ctx.lineTo(Xt+scV2+X1,H2-scH2-(Yt));
+ctx.stroke();
+ctx.strokeStyle="#6F03FA";
+ctx.lineWidth=4;
+ctx.setLineDash([5, 5]);
+ctx.beginPath();
+ctx.moveTo((scV2*B)+scV2+X1,H2-scH2);
+ctx.lineTo((scV2*B)+scV2+X1,H2-scH2-(scH2*D));
+ctx.font = "bold 18px Arial";
+ctx.fillStyle="#FF0000";
+ctx.fillText("Y = "+u20+" * x",Xt+scV2+X1,H2-scH2-(Yt));
+ctx.stroke();
+//----------------------------------------------------------------------------------------------------------------------------------------
+}
+//----------------------------------------------------------------------------------------------------------------------------------------
+function draw3(f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14)
+{ // Largeur width hauteur height en pixels et grille-------------------------------------------------------------------------------------
+var W3=1050;H3=247;
+var canvas3=document.getElementById("graphe3");
+canvas3.width=W3;canvas3.height=H3;
+var ctx=canvas3.getContext("2d");
+L= Pv/A;
+L=L*100;
+L=Math.ceil(L);
+L=L/100;
+//----------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,0,1050-2-X1,32+66);
+ctx.fillStyle="#CCCCCC";
+ctx.fillRect(X1,0,1050-2-X1,32+66);
+ctx.fill();
+//----------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillStyle="#000000";
+ctx.fillText("Equation de la droite",X1+10,24);
+ctx.fill();
+//----------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,32,1050-2-X1,32+66);
+ctx.fillStyle="#FFFF66";
+ctx.fillRect(X1,32,1050-2-X1,32+66);
+ctx.fill();
+//----------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.font = " 18px Arial";
+ctx.fillStyle="#000000";
+ctx.fillText("Equation du type y = a*x", X1+10, 55);
+ctx.fillText("Il faut déterminer le coefficient directeur a", X1+10, 55+22);
+ctx.fillText("Il correspond au nombre d unités utilisées verticalement divisé par le nombre d unités utilisées horizontalement", X1+10, 55+22+22);
+ctx.fillText("On prendra comme unité verticale "+Pv+" et comme unité horizontale "+ A, X1+10, 55+22+22+22);
+ctx.fill();
+//----------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,130,1050-2-X1,54+30);
+ctx.fillStyle="#99FF99";
+ctx.fillRect(X1,130,1050-2-X1,54+30);
+ctx.fill();
+//----------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.font = " 18px Arial";
+ctx.fillStyle="#000000";
+ctx.fillText("a = nombre d unité verticale / nombre d unité horizontale = " + Pv + " / " + A, X1+10, 87+66);
+ctx.font = " bold 18px Arial";
+ctx.fillStyle="#FF0000";
+ctx.fillText("a = " + L ,X1+10,109+66);
+ctx.fillText("L équation est y = " + L+" *x" ,X1+10,109+66+30);
+ctx.fill();
+//-----------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,130+54+30,1050-2-X1,32);
+ctx.fillStyle="#CCCCCC";
+ctx.fillRect(X1,130+54+30,1050-2-X1,32);
+ctx.fill();
+//----------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillStyle="#000000";
+ctx.fillText("Pression de verrouillage en fonction de l'abaque",X1+10,130+54+30+24);
+ctx.fill();
+//----------------------------------------------------------------------------------------------------------------------------------------
+}
+function draw4(f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14)
+{ // Largeur width hauteur height en pixels et grille---------------------------------------------------------------------------------
+var W2=1050;H2=900;
+var canvas4=document.getElementById("graphe4");
+canvas4.width=W2;canvas4.height=H2;
+var ctx=canvas4.getContext("2d");
+var sc=10;
+var scH2=40;
+var scV2=40;
+//------------------------------------------------------------------------------------------------------------------------------------
+Ex=u30;
+A=Sfcm;
+B=A/Ex;
+Ey=u31;
+C=Pv;
+D=C/Ey;
+E=Fv/(Ey*100);
+F=Pv/Ex;
+G=Fv/100;
+G=Math.ceil(G);
+H=Math.ceil(Pv);
+L= Pv/A;
+L=L*100;
+L=Math.ceil(L);
+L=L/100;
+//rectangle vert----------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.fillStyle="#000000"; ctx.lineWidth = 2;
+ctx.strokeRect(X1,0,W2-2-X1,H2);
+ctx.fillStyle="#99FF99";
+ctx.fillRect(X1,0,W2-2-X1,H2-2);
+ctx.fill();
+ctx.stroke();
+// tracé du quadrillage lignes horizontales -------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.strokeStyle="#ff0000";
+ctx.lineWidth=0.5;
+for(var i=1;i<=(H2/scH2)-1;i++){
+ctx.moveTo(X1+scV2,H2-scH2*i)
+ctx.lineTo(W2-scV2,H2-scH2*i)
+}
+ctx.stroke();
+//tracé du quadrillage lignes verticales-----------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.strokeStyle="#ff0000";
+ctx.lineWidth=0.5;
+for(var i=2;i<=(W2/scV2)-2;i++){
+ctx.moveTo(scV2*i+X1,H2-scH2)
+ctx.lineTo(scV2*i+X1,scH2)
+}
+ctx.stroke();
+//axe----------------------------------------------------------------------------------------------------------------------------------
+ctx.beginPath();
+ctx.lineWidth=1;
+ctx.strokeStyle="#000000";
+ctx.moveTo(X1+scV2,20);
+ctx.lineTo(X1+scV2,H2-scH2);
+ctx.moveTo(X1+scV2,H2-scH2);
+ctx.lineTo(W2-scV2,H2-scH2);
+ctx.stroke();
+// fleche axe -------------------------------------------------------------------------------------------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(W2-2-scV2,H2-scH2);
+ctx.lineTo(W2-2-3-scV2,H2+3-scH2);
+ctx.lineTo(W2-2-3-scV2,H2-3-scH2);
+ctx.lineTo(W2-2-scV2,H2-scH2);
+ctx.stroke();
+//fleche axe---------------------------------------------------------------------------------------------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(X1+scV2,20+3);
+ctx.lineTo(X1+scV2-3,20+3+3);
+ctx.lineTo(X1+scV2+3,20+3+3);
+ctx.lineTo(X1+scV2,20+3);
+ctx.stroke();
+//ecriture axe-------------------------------------------------------------------------------------------------------------------------
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText("bar", X1+scV2-5, 20);
+ctx.stroke();
+//ecriture axe-------------------------------------------------------------------------------------------------------------------------
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText("Pression de verrouillage", X1+scV2+5, 40);
+ctx.stroke();
+//ecriture axe-------------------------------------------------------------------------------------------------------------------------
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText("cm2", W2-48, H2-2-scH2+20);
+ctx.stroke();
+//ecriture axe-------------------------------------------------------------------------------------------------------------------------
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText("Surface frontale", W2-200, H2-scH2-8);
+ctx.stroke();
+// tracé echelle----------------------------------------------------------------------------------------------------------------------
+ctx.strokeStyle="#0000FF";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(scV2+X1,H2-scH2);
+ctx.lineTo(scV2+X1,H2-scH2-scH2);
+ctx.stroke();
+ctx.strokeStyle="#0000FF";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(scV2+X1,H2-scH2);
+ctx.lineTo(scV2+scV2+X1,H2-scH2);
+ctx.stroke();
+// tracé echelle fleche---------------------------------------------------------------------------------------------------------------
+ctx.strokeStyle="#0000FF";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(scV2+X1,H2-scH2);
+ctx.moveTo(scV2+X1,H2-scH2-scH2);
+ctx.lineTo(scV2-3+X1,H2-scH2-scH2+3);
+ctx.lineTo(scV2+3+X1,H2-scH2-scH2+3);
+ctx.lineTo(scV2+X1,H2-scH2-scH2);
+ctx.stroke();
+// tracé echelle fleche----------------------------------------------------------------------------------------------------------------
+ctx.strokeStyle="#0000FF";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(scV2+scV2+X1,H2-scH2);
+ctx.lineTo(scV2+scV2-3+X1,H2-scH2+3);
+ctx.lineTo(scV2+scV2-3+X1,H2-scH2-3);
+ctx.lineTo(scV2+scV2+X1,H2-scH2);
+ctx.stroke();
+// tracé echelle ecriture---------------------------------------------------------------------------------------------------------------
+ctx.fillStyle="#0000FF";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText(Ey, X1+scV2-25, H2-scH2-scH2);
+ctx.stroke();
+ctx.fillStyle="#0000FF";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText(Ex, scV2+scV2+X1-10, H2-2-scH2+20);
+ctx.stroke();
+ctx.fillStyle="#0000FF";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText(0, X1+scV2-5, H2-2-scH2+20);
+ctx.stroke();
+//droite-------------------------------------------------------------------------------------------------------------------------------
+ctx.strokeStyle="#6F03FA";
+ctx.lineWidth=4;
+ctx.setLineDash([]);
+ctx.beginPath();
+Xt=((scV2*200/Ex))-100;
+Yt=((scH2*D)/(scV2*B))*Xt;
+ctx.moveTo(scV2+X1,H2-scH2);
+ctx.lineTo(Xt+scV2+X1,H2-scH2-Yt);
+ctx.stroke();
+ctx.strokeStyle="#6F03FA";
+ctx.lineWidth=4;
+ctx.setLineDash([5, 5]);
+ctx.beginPath();
+ctx.moveTo((scV2*B)+scV2+X1,H2-scH2);
+ctx.lineTo((scV2*B)+scV2+X1,H2-scH2-(scH2*D));
+ctx.stroke();
+ctx.strokeStyle="#6F03FA";
+ctx.lineWidth=4;
+ctx.setLineDash([5,5]);
+ctx.beginPath();
+ctx.moveTo(scV2+X1,H2-scH2-(scH2*D));
+ctx.lineTo((scV2*B)+scV2+X1,H2-scH2-(scH2*D));
+ctx.stroke();
+ctx.fillStyle="#6F03FA";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText(A, (scV2*B)+scV2+X1, H2-2-scH2+20);
+ctx.stroke();
+ctx.fillStyle="#6F03FA";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "18px Arial";
+ctx.fillText(C, X1+scV2-30, H2-scH2-(scH2*D));
+ctx.font = "bold 18px Arial";
+ctx.fillText("Y = "+L+" * x",(scV2*B)+scV2+X1-100,H2-scH2-(scH2*D)-10);
+ctx.stroke();
+//droite equation------------------------------------------------------------------------------------------------------------------------
+ctx.strokeStyle="#FF0000";
+ctx.lineWidth=4;
+ctx.setLineDash([]);
+ctx.beginPath();
+Xt=((scV2*200/Ex))-100;
+Yt=u20*Xt*Ex/Ey;
+ctx.moveTo(scV2+X1,H2-scH2);
+ctx.lineTo(Xt+scV2+X1,H2-scH2-(Yt));
+ctx.stroke();
+ctx.strokeStyle="#6F03FA";
+ctx.lineWidth=4;
+ctx.setLineDash([5, 5]);
+ctx.beginPath();
+ctx.moveTo((scV2*B)+scV2+X1,H2-scH2);
+ctx.lineTo((scV2*B)+scV2+X1,H2-scH2-(scH2*D));
+ctx.font = "bold 18px Arial";
+ctx.fillStyle="#FF0000";
+ctx.fillText("Y = "+u20+" * x",Xt+scV2+X1,H2-scH2-(Yt));
+ctx.stroke();
+//----------------------------------------------------------------------------------------------------------------------------------------
+}
+//-----------------------------------------------------------------------------------------------------------------------------------------
+tracer1();
+tracer2();
+tracer3();
+tracer4();
+// ----------------------------------------------------------------------------------------------------------------------------------------
+function tracer1()
+{
+var a=new Number(document.forms[0].entree01.value);
+if (a !=""){var f1="0+" + a}
+else {var f1="0"}
+var b=new Number(document.forms[0].entree02.value);
+if (b !=""){var f2="0+" + b}
+else {var f2="0"}
+var c=new Number(document.forms[0].entree03.value);
+if (c !=""){var f3="0+" + c}
+else {var f3="0"}
+var d=new Number(document.forms[0].entree04.value);
+if (d !=""){var f4="0+" + d}
+else {var f4="0"}
+var e=new Number(document.forms[0].entree05.value);
+if (e !=""){var f5="0+" + e}
+else {var f5="0"}
+var f=new Number(document.forms[0].entree06.value);
+if (f !=""){var f6="0+" + f}
+else {var f6="0"}
+var g=new Number(document.forms[0].entree07.value);
+if (g !=""){var f7="0+" + g}
+else {var f7="0"}
+var h=new Number(document.forms[0].entree08.value);
+if (h !=""){var f8="0+" + h}
+else {var f8="0"}
+var i=new Number(document.forms[0].entree09.value);
+if (i !=""){var f9="0+" + i}
+else {var f9="0"}
+var j=new Number(document.forms[0].entree10.value);
+if (j !=""){var f10="0+" + j}
+else {var f10="0"}
+var k=new Number(document.forms[0].entree11.value);
+if (k !=""){var f11="0+" + k}
+else {var f11="0"}
+var l=new Number(document.forms[0].entree12.value);
+if (l !=""){var f12="0+" + l}
+else {var f12="0"}
+var m=new Number(document.forms[0].entree13.value);
+if (m !=""){var f13="0+" + m}
+else {var f13="0"}
+var n=new Number(document.forms[0].entree14.value);
+if (n !=""){var f14="0+" + n}
+else {var f14="0"}
+;
+draw1(f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14);
+draw2(f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14);
+draw3(f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14);
+draw4(f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14);
+//--------------------------------------------------------------------------------------------------------
+}
+//-->
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+//-->
+</script>
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+  <tbody>
+
+    <tr>
+
+      <td>
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+        <tbody>
+
+          <tr>
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="background-color: rgb(64, 64, 64);">
+            <div id="menu">
+            <ul>
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">TP calcul de
+la pression de verrouillage<br>
+
+Feuille de calcul</span></big></big></big></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold;">1.
+                  <a href="#1">Feuille de calcul</a><br>
+
+                  </td>
+
+                  <td style="width: 560px; text-align: center;"><img src="image_214.png" alt="" style="width: 500px; height: 500px;"> </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;"><big><big>1.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>Feuille de calcul</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 20px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 52px;"><span style="font-family: Arial; font-weight: bold;"></span>
+            <form action="javascript:void(0)">
+              <table style="width: 800px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+                <tbody>
+
+                  <tr>
+
+                    <td style="font-family: Arial; text-align: right; height: 30px;"><span style="font-weight: bold;">Surface frontale de la
+pi&egrave;ce: &nbsp;</span> <span style="font-weight: bold;"></span></td>
+
+                    <td style="font-family: Arial;"><span style="font-weight: bold;">&nbsp;</span>&nbsp;<input value="15430" name="entree01" size="15"><span style="font-family: Arial;"><span style="font-weight: bold;"> mm&nbsp;</span></span><sup style="font-family: Arial; font-weight: bold;">2</sup></td>
+
+                    <td style="font-family: Arial; text-align: right;"><span style="font-weight: bold;">Nombre d'empreinte: &nbsp;</span></td>
+
+                    <td style="font-family: Arial;"><span style="font-weight: bold;">&nbsp;&nbsp;</span><input value="1" name="entree04" size="15">&nbsp;
+                    </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td style="font-family: Arial; text-align: right; height: 30px;"><span style="font-weight: bold;">Surface frontale des
+canaux:&nbsp;&nbsp;</span></td>
+
+                    <td style="font-family: Arial;"><span style="font-weight: bold;">&nbsp;</span> <input value="0" name="entree02" size="15"><span style="font-family: Arial;">&nbsp;<span style="font-weight: bold;">mm&nbsp;</span></span><sup style="font-family: Arial; font-weight: bold;">2</sup></td>
+
+                    <td style="font-family: Arial; text-align: right;"><span style="font-weight: bold;">Nombre de canaux: &nbsp;</span></td>
+
+                    <td style="font-family: Arial;"><span style="font-weight: bold;">&nbsp;</span>&nbsp;<input value="1" name="entree05" size="15"> </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td style="font-family: Arial; text-align: right; height: 30px;"><span style="font-weight: bold;">Surface frontale de la carotte:
+&nbsp;</span></td>
+
+                    <td style="font-family: Arial;"><span style="font-weight: bold;">&nbsp; </span><input value="0" name="entree03" size="15"><span style="font-weight: bold;">&nbsp;</span><span style="font-family: Arial;"><span style="font-weight: bold;">mm&nbsp;</span></span><sup style="font-family: Arial; font-weight: bold;">2</sup>
+                    </td>
+
+                    <td style="font-family: Arial; text-align: right;"><span style="font-weight: bold;">Nombre de carottes: &nbsp;</span></td>
+
+                    <td style="font-family: Arial;"><span style="font-weight: bold;">&nbsp;</span>&nbsp;<input value="1" name="entree06" size="15"> </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td style="text-align: right; height: 30px;"><span style="font-weight: bold; font-family: Arial;">Pression
+d'injection :</span></td>
+
+                    <td>&nbsp;&nbsp;<input value="600" name="entree07" size="15"><span style="font-family: Arial; font-weight: bold;">&nbsp;bar</span></td>
+
+                    <td></td>
+
+                    <td></td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td style="text-align: right; height: 30px;"><span style="font-weight: bold; font-family: Arial;">Pertes de
+charge :</span></td>
+
+                    <td>&nbsp;&nbsp;<input value="50" name="entree08" size="15"><span style="font-family: Arial; font-weight: bold;"> %</span></td>
+
+                    <td></td>
+
+                    <td></td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td style="text-align: right; height: 30px;"><span style="font-weight: bold; font-family: Arial;">Coefficient
+de s&eacute;curit&eacute; :</span></td>
+
+                    <td>&nbsp;&nbsp;<input value="10" name="entree11" size="15"><span style="font-family: Arial; font-weight: bold;"> %</span></td>
+
+                    <td></td>
+
+                    <td></td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td style="text-align: right; height: 30px;"><span style="font-weight: bold; font-family: Arial;">Pression
+d'injection maxi :</span></td>
+
+                    <td>&nbsp;&nbsp;<input value="180" name="entree09" size="15"><span style="font-family: Arial; font-weight: bold;"> bar</span></td>
+
+                    <td></td>
+
+                    <td></td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td style="text-align: right; height: 30px;"><span style="font-weight: bold; font-family: Arial;">Force de
+verrouillage maxi :</span></td>
+
+                    <td>&nbsp;&nbsp;<input value="251" name="entree10" size="15"><span style="font-family: Arial; font-weight: bold;"> kN</span></td>
+
+                    <td></td>
+
+                    <td></td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td style="text-align: right; height: 30px;"><span style="font-family: Arial; font-weight: bold;">Equation de
+la droite:</span></td>
+
+                    <td style="font-family: Arial; font-weight: bold;" colspan="3" rowspan="1">&nbsp;Y = <input value="2.37" name="entree12" size="15"> . X</td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td style="text-align: right; font-family: Arial; font-weight: bold; height: 30px;">Echelle
+du
+graphe:</td>
+
+                    <td style="font-family: Arial; font-weight: bold;" colspan="3" rowspan="1">&nbsp;sur l'axe x <input value="10" name="entree13" size="15">&nbsp;sur l'axe y
+&nbsp;<input value="10" name="entree14" size="15"></td>
+
+                  </tr>
+
+                </tbody>
+              </table>
+
+              <br>
+
+              <p style="font-family: Arial; text-align: center;"><input name="Envoi" value="Calcul" onclick="tracer1()" type="submit"></p>
+
+            </form>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;">
+            <p><canvas id="graphe1" width="1" height="1"></canvas><canvas id="graphe2" width="400" height="1"></canvas><canvas id="graphe3" width="1" height="1"></canvas><canvas id="graphe4" width="1" height="1"></canvas></p>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+</body>
+</html>

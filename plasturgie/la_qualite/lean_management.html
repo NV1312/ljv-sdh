@@ -1,0 +1,3660 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+  
+  <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+
+  
+
+
+  
+  <title>lean management</title>
+  <meta content="ressources" name="description">
+
+
+  
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+  
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+
+
+  
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+
+  
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+
+  
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+  
+  <script>
+// fonction pour dessiner
+function draw1()
+{ // Largeur et hauteur en pixels
+var W1=1000;H1=450;
+var canvas1=document.getElementById("graphe");
+canvas1.width=W1;canvas1.height=H1;
+var ctx=canvas1.getContext("2d");
+// etape 1 -----------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=4;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(10, 100, 90, 50);ctx.stroke();
+ctx.rect(10, 100, 90, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 100, 100, 50);ctx.stroke();
+ctx.rect(150, 100, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 300, 100, 50);ctx.stroke();
+ctx.rect(150, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 200, 100, 50);ctx.stroke();
+ctx.rect(300, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 300, 100, 50);ctx.stroke();
+ctx.rect(300, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(450, 200, 100, 50);ctx.stroke();
+ctx.rect(450, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(600, 250, 100, 50);ctx.stroke();
+ctx.rect(600, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(750, 250, 100, 50);ctx.stroke();
+ctx.rect(750, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(900, 250, 90, 50);ctx.stroke();
+ctx.rect(900, 250, 90, 50);ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Début", 30, 130);
+ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("A", 190, 130);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("B", 190, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("C", 340, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("D", 340, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("E", 490, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("F", 640, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("G", 790, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Fin", 930, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("Le graphe s ecrit de la gauche vers la droite.", 50, 20);
+ctx.fillText("On évite, au maximum, de couper les transitions (flèches).", 50, 40);
+ctx.fillText("On commence le graphe par une case début.On finit le graphe par une case fin.", 50, 60);
+ctx.stroke();
+// --------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(100,125);
+ctx.lineTo(100+50,125);
+// --------------------------
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125-5);
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125+5);
+// --------------------------
+ctx.moveTo(100,125);
+ctx.lineTo(100+30,325);
+ctx.lineTo(100+50,325);
+// --------------------------
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325-5);
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325+5);
+ctx.moveTo(250,325);
+ctx.lineTo(250+50,325);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325-5);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325+5);
+// --------------------------
+ctx.moveTo(250,325);
+ctx.lineTo(300-20,225+10);
+ctx.lineTo(300,225+10);
+ctx.lineTo(300-10,225-5+10);
+ctx.moveTo(300,225+10);
+ctx.lineTo(300-10,225+5+10);
+// --------------------------
+ctx.moveTo(250,125);
+ctx.lineTo(300-20,225-10);
+ctx.lineTo(300,225-10);
+// --------------------------
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225-5-10);
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225+5-10);
+// --------------------------
+ctx.moveTo(400,225);
+ctx.lineTo(450,225);
+// --------------------------
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225-5);
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225+5);
+// --------------------------
+ctx.moveTo(550,225);
+ctx.lineTo(600-20,275-10);
+ctx.lineTo(600,275-10);
+// --------------------------
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265-5);
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265+5);
+// --------------------------
+ctx.moveTo(400,325);
+ctx.lineTo(600-20,265+20);
+ctx.lineTo(600,265+20);
+// --------------------------
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285-5);
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285+5);
+// --------------------------
+ctx.moveTo(700,275);
+ctx.lineTo(750,275);
+// --------------------------
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275-5);
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275+5);
+// --------------------------
+ctx.moveTo(850,275);
+ctx.lineTo(900,275);
+// --------------------------
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275-5);
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275+5);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("4", 235, 145);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("7", 235, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 385, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("12", 380, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("3", 535, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("6", 685, 295);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 835, 295);
+ctx.stroke();
+// --------------------------
+}
+function draw2()
+{ // Largeur et hauteur en pixels
+var W2=1000;H2=450;
+var canvas2=document.getElementById("graphe");
+canvas2.width=W2;canvas2.height=H2;
+var ctx=canvas2.getContext("2d");
+// etape 1 -----------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=4;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(10, 100, 90, 50);ctx.stroke();
+ctx.rect(10, 100, 90, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 100, 100, 50);ctx.stroke();
+ctx.rect(150, 100, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 300, 100, 50);ctx.stroke();
+ctx.rect(150, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 200, 100, 50);ctx.stroke();
+ctx.rect(300, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 300, 100, 50);ctx.stroke();
+ctx.rect(300, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(450, 200, 100, 50);ctx.stroke();
+ctx.rect(450, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(600, 250, 100, 50);ctx.stroke();
+ctx.rect(600, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(750, 250, 100, 50);ctx.stroke();
+ctx.rect(750, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(900, 250, 90, 50);ctx.stroke();
+ctx.rect(900, 250, 90, 50);ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Début", 30, 130);
+ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("A", 190, 130);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("B", 190, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("C", 340, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("D", 340, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("E", 490, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("F", 640, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("G", 790, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Fin", 930, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("La durée du projet est calculée en partant de la gauche vers la droite.", 50, 20);
+ctx.fillText("On écrit pour chaque tâche le début et la fin de la tâche.", 50, 40);
+ctx.stroke();
+// --------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(100,125);
+ctx.lineTo(100+50,125);
+// --------------------------
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125-5);
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125+5);
+// --------------------------
+ctx.moveTo(100,125);
+ctx.lineTo(100+30,325);
+ctx.lineTo(100+50,325);
+// --------------------------
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325-5);
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325+5);
+ctx.moveTo(250,325);
+ctx.lineTo(250+50,325);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325-5);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325+5);
+// --------------------------
+ctx.moveTo(250,325);
+ctx.lineTo(300-20,225+10);
+ctx.lineTo(300,225+10);
+ctx.lineTo(300-10,225-5+10);
+ctx.moveTo(300,225+10);
+ctx.lineTo(300-10,225+5+10);
+// --------------------------
+ctx.moveTo(250,125);
+ctx.lineTo(300-20,225-10);
+ctx.lineTo(300,225-10);
+// --------------------------
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225-5-10);
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225+5-10);
+// --------------------------
+ctx.moveTo(400,225);
+ctx.lineTo(450,225);
+// --------------------------
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225-5);
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225+5);
+// --------------------------
+ctx.moveTo(550,225);
+ctx.lineTo(600-20,275-10);
+ctx.lineTo(600,275-10);
+// --------------------------
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265-5);
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265+5);
+// --------------------------
+ctx.moveTo(400,325);
+ctx.lineTo(600-20,265+20);
+ctx.lineTo(600,265+20);
+// --------------------------
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285-5);
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285+5);
+// --------------------------
+ctx.moveTo(700,275);
+ctx.lineTo(750,275);
+// --------------------------
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275-5);
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275+5);
+// --------------------------
+ctx.moveTo(850,275);
+ctx.lineTo(900,275);
+// --------------------------
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275-5);
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275+5);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("4", 235, 145);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("7", 235, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 385, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("12", 380, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("3", 535, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("6", 685, 295);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 835, 295);
+ctx.stroke();
+// etape 2 ----------------------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 170);
+ctx.fillText("4", 235, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 370);
+ctx.fillText("7", 235, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 270);
+ctx.fillText("9", 385, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 370);
+ctx.fillText("19", 380, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("9", 455, 270);
+ctx.fillText("12", 530, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 320);
+ctx.fillText("25", 675, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 320);
+ctx.fillText("27", 825, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 325);
+ctx.stroke();
+}
+//---------------------------------------------
+function draw3()
+{ // Largeur et hauteur en pixels
+var W1=1000;H1=450;
+var canvas=document.getElementById("graphe");
+canvas.width=W1;canvas.height=H1;
+var ctx=canvas.getContext("2d");
+// etape 1 -----------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=4;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(10, 100, 90, 50);ctx.stroke();
+ctx.rect(10, 100, 90, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 100, 100, 50);ctx.stroke();
+ctx.rect(150, 100, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 300, 100, 50);ctx.stroke();
+ctx.rect(150, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 200, 100, 50);ctx.stroke();
+ctx.rect(300, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 300, 100, 50);ctx.stroke();
+ctx.rect(300, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(450, 200, 100, 50);ctx.stroke();
+ctx.rect(450, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(600, 250, 100, 50);ctx.stroke();
+ctx.rect(600, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(750, 250, 100, 50);ctx.stroke();
+ctx.rect(750, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(900, 250, 90, 50);ctx.stroke();
+ctx.rect(900, 250, 90, 50);ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Début", 30, 130);
+ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("A", 190, 130);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("B", 190, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("C", 340, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("D", 340, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("E", 490, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("F", 640, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("G", 790, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Fin", 930, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("On écrit le chemin en partant de la droite vers la gauche.", 50, 20);
+ctx.stroke();
+// --------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(100,125);
+ctx.lineTo(100+50,125);
+// --------------------------
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125-5);
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125+5);
+// --------------------------
+ctx.moveTo(100,125);
+ctx.lineTo(100+30,325);
+ctx.lineTo(100+50,325);
+// --------------------------
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325-5);
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325+5);
+ctx.moveTo(250,325);
+ctx.lineTo(250+50,325);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325-5);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325+5);
+// --------------------------
+ctx.moveTo(250,325);
+ctx.lineTo(300-20,225+10);
+ctx.lineTo(300,225+10);
+ctx.lineTo(300-10,225-5+10);
+ctx.moveTo(300,225+10);
+ctx.lineTo(300-10,225+5+10);
+// --------------------------
+ctx.moveTo(250,125);
+ctx.lineTo(300-20,225-10);
+ctx.lineTo(300,225-10);
+// --------------------------
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225-5-10);
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225+5-10);
+// --------------------------
+ctx.moveTo(400,225);
+ctx.lineTo(450,225);
+// --------------------------
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225-5);
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225+5);
+// --------------------------
+ctx.moveTo(550,225);
+ctx.lineTo(600-20,275-10);
+ctx.lineTo(600,275-10);
+// --------------------------
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265-5);
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265+5);
+// --------------------------
+ctx.moveTo(400,325);
+ctx.lineTo(600-20,265+20);
+ctx.lineTo(600,265+20);
+// --------------------------
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285-5);
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285+5);
+// --------------------------
+ctx.moveTo(700,275);
+ctx.lineTo(750,275);
+// --------------------------
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275-5);
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275+5);
+// --------------------------
+ctx.moveTo(850,275);
+ctx.lineTo(900,275);
+// --------------------------
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275-5);
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275+5);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("4", 235, 145);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("7", 235, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 385, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("12", 380, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("3", 535, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("6", 685, 295);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 835, 295);
+ctx.stroke();
+// etape 2 ----------------------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 170);
+ctx.fillText("4", 235, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 370);
+ctx.fillText("7", 235, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 270);
+ctx.fillText("9", 385, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 370);
+ctx.fillText("19", 380, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("9", 455, 270);
+ctx.fillText("12", 530, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 320);
+ctx.fillText("25", 675, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 320);
+ctx.fillText("27", 825, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 325);
+ctx.stroke();
+// etape 3 ----------------------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 90);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("10", 155, 90);
+ctx.fillText("14", 230, 90);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 290);
+ctx.fillText("7", 235, 290);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("14", 305, 190);
+ctx.fillText("16", 380, 190);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 290);
+ctx.fillText("19", 380, 290);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("16", 455, 190);
+ctx.fillText("19", 530, 190);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 240);
+ctx.fillText("25", 675, 240);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 240);
+ctx.fillText("27", 825, 240);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 245);
+ctx.stroke();
+}
+//---------------------------------------------
+function draw4()
+{ // Largeur et hauteur en pixels
+var W1=1000;H1=450;
+var canvas=document.getElementById("graphe");
+canvas.width=W1;canvas.height=H1;
+var ctx=canvas.getContext("2d");
+// etape 1 -----------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=4;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(10, 100, 90, 50);ctx.stroke();
+ctx.rect(10, 100, 90, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 100, 100, 50);ctx.stroke();
+ctx.rect(150, 100, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 300, 100, 50);ctx.stroke();
+ctx.rect(150, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 200, 100, 50);ctx.stroke();
+ctx.rect(300, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 300, 100, 50);ctx.stroke();
+ctx.rect(300, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(450, 200, 100, 50);ctx.stroke();
+ctx.rect(450, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(600, 250, 100, 50);ctx.stroke();
+ctx.rect(600, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(750, 250, 100, 50);ctx.stroke();
+ctx.rect(750, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(900, 250, 90, 50);ctx.stroke();
+ctx.rect(900, 250, 90, 50);ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Début", 30, 130);
+ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("A", 190, 130);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("B", 190, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("C", 340, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("D", 340, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("E", 490, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("F", 640, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("G", 790, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Fin", 930, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("On calcul les marges pour chaque tâche.", 50, 20);
+ctx.stroke();
+// --------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(100,125);
+ctx.lineTo(100+50,125);
+// --------------------------
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125-5);
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125+5);
+// --------------------------
+ctx.moveTo(100,125);
+ctx.lineTo(100+30,325);
+ctx.lineTo(100+50,325);
+// --------------------------
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325-5);
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325+5);
+ctx.moveTo(250,325);
+ctx.lineTo(250+50,325);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325-5);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325+5);
+// --------------------------
+ctx.moveTo(250,325);
+ctx.lineTo(300-20,225+10);
+ctx.lineTo(300,225+10);
+ctx.lineTo(300-10,225-5+10);
+ctx.moveTo(300,225+10);
+ctx.lineTo(300-10,225+5+10);
+// --------------------------
+ctx.moveTo(250,125);
+ctx.lineTo(300-20,225-10);
+ctx.lineTo(300,225-10);
+// --------------------------
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225-5-10);
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225+5-10);
+// --------------------------
+ctx.moveTo(400,225);
+ctx.lineTo(450,225);
+// --------------------------
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225-5);
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225+5);
+// --------------------------
+ctx.moveTo(550,225);
+ctx.lineTo(600-20,275-10);
+ctx.lineTo(600,275-10);
+// --------------------------
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265-5);
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265+5);
+// --------------------------
+ctx.moveTo(400,325);
+ctx.lineTo(600-20,265+20);
+ctx.lineTo(600,265+20);
+// --------------------------
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285-5);
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285+5);
+// --------------------------
+ctx.moveTo(700,275);
+ctx.lineTo(750,275);
+// --------------------------
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275-5);
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275+5);
+// --------------------------
+ctx.moveTo(850,275);
+ctx.lineTo(900,275);
+// --------------------------
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275-5);
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275+5);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("4", 235, 145);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("7", 235, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 385, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("12", 380, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("3", 535, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("6", 685, 295);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 835, 295);
+ctx.stroke();
+// etape 2 ----------------------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 170);
+ctx.fillText("4", 235, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 370);
+ctx.fillText("7", 235, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 270);
+ctx.fillText("9", 385, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 370);
+ctx.fillText("19", 380, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("9", 455, 270);
+ctx.fillText("12", 530, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 320);
+ctx.fillText("25", 675, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 320);
+ctx.fillText("27", 825, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 325);
+ctx.stroke();
+// etape 3 ----------------------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 90);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("10", 155, 90);
+ctx.fillText("14", 230, 90);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 290);
+ctx.fillText("7", 235, 290);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("14", 305, 190);
+ctx.fillText("16", 380, 190);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 290);
+ctx.fillText("19", 380, 290);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("16", 455, 190);
+ctx.fillText("19", 530, 190);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 240);
+ctx.fillText("25", 675, 240);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 240);
+ctx.fillText("27", 825, 240);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 245);
+ctx.stroke();
+// etape 4 -----------------------------------
+// --------------------------
+ctx.fillStyle="#FF0000";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("10", 235-7, 145-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 235, 345-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 385, 245-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 380, 345-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 535, 245-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 685, 295-25);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 835, 295-25);
+ctx.stroke();
+}
+//---------------------------------------------
+function draw5()
+{ // Largeur et hauteur en pixels
+var W1=1000;H1=450;
+var canvas=document.getElementById("graphe");
+canvas.width=W1;canvas.height=H1;
+var ctx=canvas.getContext("2d");
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("Le chemin critique est le chemin ou les marges sont à zéro.", 50, 20);
+ctx.stroke();
+// etape 1 -----------------------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=4;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.fillStyle = "#FFFF00";
+ctx.fillRect(10, 100, 90, 50);ctx.stroke();
+ctx.rect(10, 100, 90, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(150, 100, 100, 50);ctx.stroke();
+ctx.rect(150, 100, 100, 50);ctx.stroke();
+ctx.fillStyle = "#FFFF00";
+ctx.fillRect(150, 300, 100, 50);ctx.stroke();
+ctx.rect(150, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(300, 200, 100, 50);ctx.stroke();
+ctx.rect(300, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "#FFFF00";
+ctx.fillRect(300, 300, 100, 50);ctx.stroke();
+ctx.rect(300, 300, 100, 50);ctx.stroke();
+ctx.fillStyle = "Thistle";
+ctx.fillRect(450, 200, 100, 50);ctx.stroke();
+ctx.rect(450, 200, 100, 50);ctx.stroke();
+ctx.fillStyle = "#FFFF00";
+ctx.fillRect(600, 250, 100, 50);ctx.stroke();
+ctx.rect(600, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "#FFFF00";
+ctx.fillRect(750, 250, 100, 50);ctx.stroke();
+ctx.rect(750, 250, 100, 50);ctx.stroke();
+ctx.fillStyle = "#FFFF00";
+ctx.fillRect(900, 250, 90, 50);ctx.stroke();
+ctx.rect(900, 250, 90, 50);ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Début", 30, 130);
+ctx.stroke();
+ctx.fillStyle="#071907";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("A", 190, 130);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("B", 190, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("C", 340, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("D", 340, 330);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("E", 490, 230);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("F", 640, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 20px Arial";
+ctx.fillText("G", 790, 130+150);
+ctx.stroke();
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Fin", 930, 130+150);
+ctx.stroke();
+// --------------------------
+ctx.strokeStyle="#071907";
+ctx.lineWidth=2;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.moveTo(100,125);
+ctx.lineTo(100+50,125);
+// --------------------------
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125-5);
+ctx.moveTo(150,125);
+ctx.lineTo(150-10,125+5);
+// --------------------------
+ctx.moveTo(100,125);
+ctx.lineTo(100+30,325);
+ctx.lineTo(100+50,325);
+// --------------------------
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325-5);
+ctx.moveTo(150,325);
+ctx.lineTo(150-10,325+5);
+ctx.moveTo(250,325);
+ctx.lineTo(250+50,325);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325-5);
+ctx.moveTo(300,325);
+ctx.lineTo(300-10,325+5);
+// --------------------------
+ctx.moveTo(250,325);
+ctx.lineTo(300-20,225+10);
+ctx.lineTo(300,225+10);
+ctx.lineTo(300-10,225-5+10);
+ctx.moveTo(300,225+10);
+ctx.lineTo(300-10,225+5+10);
+// --------------------------
+ctx.moveTo(250,125);
+ctx.lineTo(300-20,225-10);
+ctx.lineTo(300,225-10);
+// --------------------------
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225-5-10);
+ctx.moveTo(300,225-10);
+ctx.lineTo(300-10,225+5-10);
+// --------------------------
+ctx.moveTo(400,225);
+ctx.lineTo(450,225);
+// --------------------------
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225-5);
+ctx.moveTo(450,225);
+ctx.lineTo(450-10,225+5);
+// --------------------------
+ctx.moveTo(550,225);
+ctx.lineTo(600-20,275-10);
+ctx.lineTo(600,275-10);
+// --------------------------
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265-5);
+ctx.moveTo(600,265);
+ctx.lineTo(600-10,265+5);
+// --------------------------
+ctx.moveTo(400,325);
+ctx.lineTo(600-20,265+20);
+ctx.lineTo(600,265+20);
+// --------------------------
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285-5);
+ctx.moveTo(600,285);
+ctx.lineTo(600-10,285+5);
+// --------------------------
+ctx.moveTo(700,275);
+ctx.lineTo(750,275);
+// --------------------------
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275-5);
+ctx.moveTo(750,275);
+ctx.lineTo(750-10,275+5);
+// --------------------------
+ctx.moveTo(850,275);
+ctx.lineTo(900,275);
+// --------------------------
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275-5);
+ctx.moveTo(900,275);
+ctx.lineTo(900-10,275+5);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("4", 235, 145);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("7", 235, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 385, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("12", 380, 345);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("3", 535, 245);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("6", 685, 295);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 14px Arial";
+ctx.fillText("2", 835, 295);
+ctx.stroke();
+// etape 2 ----------------------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 170);
+ctx.fillText("4", 235, 170);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 370);
+ctx.fillText("7", 235, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 270);
+ctx.fillText("9", 385, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 370);
+ctx.fillText("19", 380, 370);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("9", 455, 270);
+ctx.fillText("12", 530, 270);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 320);
+ctx.fillText("25", 675, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 320);
+ctx.fillText("27", 825, 320);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#0000CD";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 325);
+ctx.stroke();
+// etape 3 ----------------------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 90, 90);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("10", 155, 90);
+ctx.fillText("14", 230, 90);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 155, 290);
+ctx.fillText("7", 235, 290);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("14", 305, 190);
+ctx.fillText("16", 380, 190);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 305, 290);
+ctx.fillText("19", 380, 290);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("16", 455, 190);
+ctx.fillText("19", 530, 190);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("19", 605, 240);
+ctx.fillText("25", 675, 240);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("25", 755, 240);
+ctx.fillText("27", 825, 240);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#556B2F";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 24px Arial";
+ctx.fillText("27", 905, 245);
+ctx.stroke();
+// etape 4 -----------------------------------
+// --------------------------
+ctx.fillStyle="#FF0000";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("10", 235-7, 145-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 235, 345-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 385, 245-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 380, 345-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("7", 535, 245-27);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 685, 295-25);
+ctx.stroke();
+// --------------------------
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 16px Arial";
+ctx.fillText("0", 835, 295-25);
+ctx.stroke();
+// --------------------------
+ctx.fillStyle="#000000";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 18px Arial";
+ctx.fillText("Chemin critique: début - B - D - F - G - fin", 335, 420);
+ctx.stroke();
+}
+//---------------------------------------------
+//---------------------------------------------
+function draw6()
+{ // Largeur et hauteur en pixels
+var W1=1000;H1=450;
+var canvas=document.getElementById("graphe");
+canvas.width=W1;canvas.height=H1;
+var ctx=canvas.getContext("2d");
+ctx.fillStyle="#000000";
+ctx.lineWidth=1;
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.font = "bold 22px Arial";
+ctx.fillText("Tracé du graphe PERT", 335, 220);
+ctx.stroke();
+}
+  </script>
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+
+<br>
+
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td>
+      
+      <div style="text-align: left;"></div>
+
+
+      
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+
+        <tbody>
+
+
+          <tr>
+
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+
+          </tr>
+
+
+          <tr style="color: rgb(64, 64, 64);">
+
+
+            <td style="background-color: rgb(64, 64, 64);">
+            
+            <div id="menu">
+            
+            <ul>
+
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+
+            
+            </ul>
+
+
+            </div>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+          </tr>
+
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">Lean
+Management</span></big></big></big></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+          </tr>
+
+
+          <tr style="color: rgb(64, 64, 64);">
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 992px; height: 392px;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold;">1.
+                  <a href="#1"><span style="text-decoration: underline;">Histoire</span></a><br>
+
+
+                  <br>
+
+
+                  <span style="font-family: Arial; font-weight: bold;">2. <a href="#2"><span style="text-decoration: underline;">Les
+5 Principes
+du Lean Management</span></a></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span><br>
+
+
+                  <span style="font-family: Arial; font-weight: bold;"><br>
+
+
+3. <a href="#3"><span style="text-decoration: underline;">Les outils du Lean
+Management</span></a><br>
+
+
+                  <br>
+
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><a href="#4"><span style="text-decoration: underline;"></span></a></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span>&nbsp;
+&nbsp; 3.1.&nbsp;<a href="#31">Les 5S</a><br>
+
+
+                  <span style="font-family: Arial; font-weight: bold;"><br>
+
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span>&nbsp;
+&nbsp; 3.2. <a href="#32"><span style="text-decoration: underline;">La VSM (Value Stream
+Mapping)</span></a><br>
+
+
+                  <span style="font-family: Arial; font-weight: bold;"><br>
+
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span>&nbsp;
+&nbsp; 3.3. <a href="#33">Kaisen</a><br>
+
+
+                  <span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span>&nbsp;
+&nbsp;&nbsp;<span style="font-family: Arial; font-weight: bold;"><br>
+
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span>&nbsp;
+&nbsp; 3.4. <a href="#34">Just &nbsp;in time
+(JIT) ou Juste &agrave; temps</a><br>
+
+
+                  <span style="font-family: Arial; font-weight: bold;"><br>
+
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span>&nbsp;
+&nbsp; 3.5. <a href="#35"><span style="text-decoration: underline;">Le
+Kanban</span></a><br>
+
+
+&nbsp;&nbsp;<span style="font-family: Arial; font-weight: bold;"><br>
+
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span>&nbsp;
+&nbsp; 3.6. <a href="#36">Le SMED (Single Minute Exchange of Die)</a><br>
+
+
+                  <span style="font-family: Arial; font-weight: bold;"><br>
+
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span>&nbsp;
+&nbsp; 3.7. <a href="#37">Le TMP (Total Productive Maintenance)</a><br>
+
+
+                  <span style="font-family: Arial; font-weight: bold;"><br>
+
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span><span style="font-family: Arial; font-weight: bold;">4. <a href="#4"><span style="text-decoration: underline;">En r&eacute;sum&eacute;</span></a><br>
+
+
+                  <br>
+
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span><span style="font-family: Arial; font-weight: bold;">5. <a href="#5"><span style="text-decoration: underline;">Fichiers</span></a></span><br>
+
+
+                  <span style="font-family: Arial; font-weight: bold;"><span style="text-decoration: underline;"></span></span></td>
+
+
+                  <td style="width: 560px; text-align: center;"><img style="width: 405px; height: 400px;" alt="" src="image_050.png"><br>
+
+
+                  </td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr style="font-family: Arial;">
+
+
+            <td>
+            
+            <div style="text-align: center;">Le <big><span style="font-weight: bold;">&laquo; Lean management
+&raquo;</span></big>
+est une m&eacute;thode de gestion qui vise &agrave;
+l&rsquo;am&eacute;lioration continue des
+processus pour maximiser la valeur produite et r&eacute;duire le
+gaspillage. <br>
+
+
+            </div>
+
+
+            <br>
+
+
+            
+            <div style="text-align: center;">Il est aussi
+appel&eacute; <big><span style="font-weight: bold;">Lean
+Thinking</span></big> ou <big><span style="font-weight: bold;">Lean Enterprise</span></big>.
+            <br>
+
+
+            </div>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;"><big><big>1.&nbsp;</big></big></td>
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>Histoire</big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr style="font-family: Arial;">
+
+
+            <td style="text-align: justify;">
+            
+            <div style="margin-left: 54px;">
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td><img style="width: 235px; height: 236px;" alt="" src="image_051.png"></td>
+
+
+                  <td style="width: 20px;"></td>
+
+
+                  <td><br>
+
+
+                  <br>
+
+
+                  
+                  <div style="text-align: justify;">Entre
+1948 et 1975, Taiichi Ohno, ing&eacute;nieur chez Toyota, a
+d&eacute;velopp&eacute; le <big><span style="font-weight: bold;">Toyota Production System</span></big>
+(<big><span style="font-weight: bold;">TPS</span></big>),
+pr&eacute;curseur du Lean, visant
+&agrave; am&eacute;liorer la production, les relations
+fournisseurs-clients et
+&eacute;liminer le gaspillage (muda). <br>
+
+
+                  <br>
+
+
+Contrairement au taylorisme, le Lean prend en compte
+le&nbsp;bien-&ecirc;tre des
+employ&eacute;s. <br>
+
+
+                  <br>
+
+
+Le Lean management a &eacute;t&eacute; rapproch&eacute; de
+la gestion de projet en 1988
+gr&acirc;ce &agrave; John Krafcik, puis popularis&eacute;
+par le livre The Machine That
+Changed the World. <br>
+
+
+                  <br>
+
+
+Il a inspir&eacute; de nombreuses m&eacute;thodes modernes
+:Agile, Kanban, Scrum. </div>
+
+
+                  </td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </div>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;"><big><big>2.&nbsp;</big></big></td>
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>Les 5 principes
+du Lean Management</big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr style="font-family: Arial;">
+
+
+            <td style="text-align: left;">
+            
+            <div style="margin-left: 54px;">Les 5
+principes du Lean Management sont : <br>
+
+
+            <br>
+
+
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="width: 20px;"></td>
+
+
+                  <td>
+                  
+                  <div style="text-align: justify;"><span style="font-weight: bold;">1. Identifier la valeur :</span>
+d&eacute;finir ce qui est important pour le client
+et les parties prenantes.
+Toute activit&eacute; ou processus qui ne cr&eacute;e pas de
+valeur pour le client
+est consid&eacute;r&eacute; comme un gaspillage (Il existe
+7sources de gaspillage:
+surproduction, stocks excessifs, d&eacute;placements inutiles,
+d&eacute;fauts/rebuts,
+op&eacute;rations inutiles, temps d&rsquo;attente, transports
+inutiles, &eacute;quipes
+divis&eacute;es). <br>
+
+
+                  </div>
+
+
+                  <br>
+
+
+                  
+                  <div style="text-align: justify;"><span style="font-weight: bold;">2. Cartographier la
+cha&icirc;ne de valeur :</span> visualiser toutes les
+&eacute;tapes du
+processus pour identifier les actions sans valeur ajout&eacute;e. <br>
+
+
+                  </div>
+
+
+                  <br>
+
+
+                  
+                  <div style="text-align: justify;"><span style="font-weight: bold;">3. Cr&eacute;er un
+flux de travail continu :</span> &eacute;viter les
+interruptions et goulots
+d&rsquo;&eacute;tranglement. <br>
+
+
+                  </div>
+
+
+                  <br>
+
+
+                  
+                  <div style="text-align: justify;"><span style="font-weight: bold;">4. Instaurer une
+m&eacute;thode de r&eacute;gulation (Pull) : </span>chaque
+&eacute;tape commence
+seulement lorsque la pr&eacute;c&eacute;dente est
+termin&eacute;e, pour un processus plus
+fluide (juste-&agrave;-temps). <br>
+
+
+                  </div>
+
+
+                  <br>
+
+
+                  
+                  <div style="text-align: justify;"><span style="font-weight: bold;">5. Am&eacute;lioration
+continue (Kaizen)*:</span> optimiser constamment les processus
+et encourager la culture du feedback. &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+
+
+                  </td>
+
+
+                  <td style="width: 20px;"></td>
+
+
+                  <td><img style="width: 352px; height: 348px;" alt="" src="image_050.png"></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            <span style="font-weight: bold;"></span></div>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;"><big><big>3.&nbsp;</big></big></td>
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3"></a>Les outils du Lean Management </big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr style="font-family: Arial;">
+
+
+            <td style="height: 10px; text-align: right;">
+            
+            <div style="margin-left: 54px; text-align: center;">Il
+existe une multitude d&rsquo;outils du Lean Management dont voici
+quelque uns.<br>
+
+
+            </div>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr style="font-family: Arial;">
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="width: 50px;"></td>
+
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>3.1.&nbsp;</big></big></td>
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="31"></a>Les 5 S </big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr style="font-family: Arial;">
+
+
+            <td style="text-align: justify;">
+            
+            <div style="margin-left: 105px;">Les 5S sont
+une m&eacute;thode japonaise pour organiser l&rsquo;espace de
+travail et am&eacute;liorer l&rsquo;efficacit&eacute;. <br>
+
+
+&nbsp; <br>
+
+
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="width: 20px;"></td>
+
+
+                  <td><big><span style="font-weight: bold;">&bull; Seiri (Trier) :</span></big>
+&eacute;liminer ce qui n&rsquo;est pas n&eacute;cessaire. <br>
+
+
+                  <br>
+
+
+                  <big><span style="font-weight: bold;">&bull;
+Seiton (Ranger) :</span></big> organiser le
+n&eacute;cessaire pour qu&rsquo;il soit facile &agrave;
+trouver. <br>
+
+
+                  <br>
+
+
+                  <big><span style="font-weight: bold;">&bull;
+Seiso (Nettoyer):</span></big> nettoyer et maintenir la
+propret&eacute;. <br>
+
+
+                  <br>
+
+
+                  <big><span style="font-weight: bold;">&bull;
+Seiketsu (Maintenir l&rsquo;ordre) : </span></big>standardiser
+les pratiques pour maintenir l&rsquo;ordre. <br>
+
+
+                  <br>
+
+
+                  <big><span style="font-weight: bold;">&bull;
+Shitsuke (Suivre) : </span></big>encourager la discipline
+et le respect des standards.</td>
+
+
+                  <td style="width: 20px;"></td>
+
+
+                  <td><img style="width: 369px; height: 253px;" alt="" src="image_049.png"></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </div>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;">
+            
+            <div style="margin-left: 54px;"><br>
+
+
+            </div>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="width: 50px;"></td>
+
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>3.2.&nbsp;</big></big></td>
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="32"></a>La
+VSM (Value Stream Mapping) </big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr style="font-family: Arial;">
+
+
+            <td>
+            
+            <div style="margin-left: 105px;">
+            
+            <div style="text-align: justify;">La <big><span style="font-weight: bold;">cartographie de la
+cha&icirc;ne de valeur </span></big>permet de
+visualiser les
+processus, identifier les gaspillages et am&eacute;liorer le flux
+de
+production ou de services. <br>
+
+
+            </div>
+
+
+            <br>
+
+
+La <big><span style="font-weight: bold;">VSM</span></big>
+permet de voir les activit&eacute;s &agrave; valeur
+ajout&eacute;e et non &agrave; valeur
+ajout&eacute;e et aide &agrave; identifier les
+d&eacute;lais, les stocks inutiles et les
+&eacute;tapes superflues. <br>
+
+
+            </div>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="width: 50px;"></td>
+
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>3.3.&nbsp;</big></big></td>
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="33"></a>Kaisen</big></big><big><big><br>
+
+
+                  </big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr style="font-family: Arial;">
+
+
+            <td>
+            
+            <div style="margin-left: 105px;">
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td><img style="width: 300px; height: 289px;" alt="" src="image_053.png"></td>
+
+
+                  <td style="width: 20px;"></td>
+
+
+                  <td style="text-align: justify;">Le <big><span style="font-weight: bold;">&laquo; Kaizen &raquo;</span></big>
+est une d&eacute;marche d&rsquo;am&eacute;lioration
+continue concernant de
+petites am&eacute;liorations r&eacute;guli&egrave;res et
+participatives. <br>
+
+
+                  <br>
+
+
+Il implique tous les niveaux de l&rsquo;entreprise, du management
+aux
+op&eacute;rateurs avec comme objectif de r&eacute;duire les
+gaspillages et am&eacute;liorer
+la qualit&eacute; et la productivit&eacute;. </td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            <br>
+
+
+            <br>
+
+
+            <br>
+
+
+            <br>
+
+
+            </div>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="width: 50px;"></td>
+
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>3.4.&nbsp;</big></big></td>
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="34"></a>Just
+in time (JIT) ou Juste &agrave; temps<br>
+
+
+                  </big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr style="font-family: Arial;">
+
+
+            <td>
+            
+            <div style="margin-left: 105px;">
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="text-align: justify;" colspan="1" rowspan="1"><big><span style="font-weight: bold;">Just
+in time (JIT)</span></big> ou <big><span style="font-weight: bold;">Juste &agrave; temps</span></big>&nbsp;
+vise &agrave; produire ou fournir seulement ce qui est
+n&eacute;cessaire, au
+moment o&ugrave; c&rsquo;est n&eacute;cessaire en
+r&eacute;duisant les stocks et les co&ucirc;ts li&eacute;s
+au
+stockage et en am&eacute;liorant le flux de production et la
+r&eacute;activit&eacute; aux
+besoins du client.
+                  </td>
+
+
+                  <td style="width: 20px;"></td>
+
+
+                  <td><img style="width: 300px; height: 191px;" alt="" src="image_052.png"></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </div>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="width: 50px;"></td>
+
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>3.5.&nbsp;</big></big></td>
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="35"></a>Le
+Kanpan<br>
+
+
+                  </big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr style="font-family: Arial;">
+
+
+            <td>
+            
+            <div style="margin-left: 105px;"><big><span style="font-weight: bold;">Le Kanban</span></big>
+est un outil visuel pour g&eacute;rer le flux de
+production avec des
+outils sous formes de cartes ou tableaux qui indiquent
+l&rsquo;&eacute;tat des
+t&acirc;ches ou des stocks. Il permet de limiter le travail en
+cours et
+d&rsquo;&eacute;viter les surproductions.
+            <br>
+
+
+            <br>
+
+
+            <br>
+
+
+            </div>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="width: 50px;"></td>
+
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>3.6.&nbsp;</big></big></td>
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="36"></a>Le SMED (Single Minute Exchange of Die<br>
+
+
+                  </big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr style="font-family: Arial;">
+
+
+            <td style="height: 10px;">
+            
+            <div style="margin-left: 105px;">
+            
+            <div style="text-align: justify;"><big><span style="font-weight: bold;">Le SMED</span></big>
+permet de r&eacute;duire les temps de changement
+d&rsquo;outils ou de
+configuration en r&eacute;duisant les temps
+d&rsquo;arr&ecirc;t et augmentant la
+flexibilit&eacute; de production.
+            <br>
+
+
+            </div>
+
+
+            </div>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="width: 50px;"></td>
+
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>3.7.&nbsp;</big></big></td>
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="37"></a>Le
+TMP ( Total Productive Maintenance)<br>
+
+
+                  </big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr style="font-family: Arial;">
+
+
+            <td style="height: 10px;">
+            
+            <div style="margin-left: 105px;"><big><span style="font-weight: bold;">Le TPM</span></big>
+vise &agrave; maximiser la disponibilit&eacute; des
+&eacute;quipements en faisant une
+maintenance pr&eacute;ventive et autonome net en impliquant tous
+les
+op&eacute;rateurs dans l&rsquo;entretien et
+l&rsquo;am&eacute;lioration des machines.
+            <br>
+
+
+            <br>
+
+
+            </div>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>4.&nbsp;</big></big></td>
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="4"></a>En
+r&eacute;sum&eacute;</big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr style="font-family: Arial;">
+
+
+            <td style="height: 10px;">
+            
+            <div style="margin-left: 54px;"><big><span style="font-weight: bold;">Le Lean management</span></big>
+cherche &agrave; &eacute;quilibrer
+co&ucirc;t, qualit&eacute; et conditions de
+travail.
+            <br>
+
+
+            <br>
+
+
+            
+            <div style="text-align: justify;">Il
+s&rsquo;applique dans tous les secteurs et s&rsquo;appuie
+souvent sur des
+logiciels de gestion de projet, permettant de visualiser, planifier et
+suivre les processus pour maximiser la valeur tout en
+&eacute;liminant le
+gaspillage.</div>
+
+
+            </div>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>5.&nbsp;</big></big></td>
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="5"></a>Fichiers</big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="lean_management.docx">Fichier word</a>&nbsp;
+&nbsp;</td>
+
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="height: 5px;"></td>
+
+
+                  <td style="text-align: center;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="lean_management.pdf" target="_blank">Fichier
+PDF</a>&nbsp;&nbsp; &nbsp;</td>
+
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+
+          </tr>
+
+
+        
+        </tbody>
+      
+      </table>
+
+
+      </td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+</body>
+</html>

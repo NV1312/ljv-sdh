@@ -1,0 +1,1479 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+  <title>Bac pro PLC -Mondeville - relation entre la pression
+d'injection et la pression en bout de vis</title>
+
+
+  <meta content="ressources" name="description">
+
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+hr {
+height: 1px;
+background-color: #404040;
+border: 0;
+}
+  </style><!--[if !IE]> <-->
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+  <tbody>
+
+    <tr>
+
+      <td>
+      <div style="text-align: center;"></div>
+
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+        <tbody>
+
+          <tr>
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="background-color: rgb(64, 64, 64);">
+            <div id="menu">
+            <ul>
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">Relation
+entre pression d'injection et&nbsp;pression en bout de vis</span></big></big></big></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td><span style="font-family: Arial; font-weight: bold;">1. <a href="relation_entre_la_pression_d_injection_et_la_pression_en_bout_de_vis.html#1"><span style="text-decoration: underline;">Relation
+entre&nbsp;pression d'injection et&nbsp;pression en bout de vis</span></a><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><br>
+
+&nbsp; &nbsp; 1.1.
+&nbsp;<a href="relation_entre_la_pression_d_injection_et_la_pression_en_bout_de_vis.html#11">Mise
+en &eacute;vidence de la pression</a><span style="text-decoration: underline;"><br>
+
+                  <br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp; 1.2.
+&nbsp;<a href="relation_entre_la_pression_d_injection_et_la_pression_en_bout_de_vis.html#12">D&eacute;termination
+de la pression en bout de vis</a><br>
+
+                  <br>
+
+2. <a href="relation_entre_la_pression_d_injection_et_la_pression_en_bout_de_vis.html#2">Notion
+de pression dans le moule</a><br>
+
+                  <br>
+
+3. <a href="relation_entre_la_pression_d_injection_et_la_pression_en_bout_de_vis.html#3">En
+r&eacute;sum&eacute;</a><br>
+
+                  <br>
+
+4. <a href="relation_entre_la_pression_d_injection_et_la_pression_en_bout_de_vis.html#4">Fichiers</a></span></td>
+
+                  <td><img style="width: 535px; height: 240px;" alt="" src="image_094.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>1.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>Relation
+entre pression d&rsquo;injection et&nbsp;pression en bout de vis<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;" align="center">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 52px; text-align: center;"><img style="width: 731px; height: 598px;" alt="" src="image_118.png"><br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 54px;">La figure ci
+dessus repr&eacute;sente l&rsquo;ensemble vis fourreau et le
+v&eacute;rin d&rsquo;injection d&rsquo;une presse
+&agrave; injecter. <br>
+
+            <br>
+
+Dans ce syst&egrave;me on peut distinguer deux chambres
+o&ugrave; vont s&rsquo;exercer des pressions sur des surfaces :
+            <br>
+
+            <br>
+
+            <div style="margin-left: 40px;">-&nbsp;<span style="font-weight: bold;">Chambre
+1 : </span>c&rsquo;est l&rsquo;endroit
+o&ugrave; va s&rsquo;exercer la pression hydraulique (issue du
+syst&egrave;me du groupe hydraulique) sur la surface du piston S1. <br>
+
+            <br>
+
+-&nbsp;<span style="font-weight: bold;">Chambre 2 :</span>
+c&rsquo;est l&rsquo;endroit
+o&ugrave; l&rsquo;on fait na&icirc;tre la pression sur la
+mati&egrave;re P2. </div>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>1.1.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="11"></a>Mise
+en &eacute;vidence de la pression<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 105px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="text-align: center;"><img style="width: 370px; height: 306px;" alt="" src="image_119.png"></td>
+
+                  <td>R&eacute;sistance ou obstacle = <span style="font-weight: bold; color: rgb(255, 0, 0);">pression</span>
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="text-align: center;"></td>
+
+                  <td></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="text-align: center;"><img style="width: 370px; height: 306px;" alt="" src="image_120.png"></td>
+
+                  <td>Pas de r&eacute;sistance = <span style="font-weight: bold; color: rgb(255, 0, 0);">pas de
+pression</span> </td>
+
+                </tr>
+
+                <tr>
+
+                  <td></td>
+
+                  <td></td>
+
+                </tr>
+
+                <tr>
+
+                  <td colspan="2" rowspan="1">
+                  <table style="width: 450px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+                    <tbody>
+
+                      <tr>
+
+                        <td style="text-align: center;">
+                        <table style="background-color: rgb(255, 102, 102); width: 150px; height: 40px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="0" cellspacing="0">
+
+                          <tbody>
+
+                            <tr>
+
+                              <td style="text-align: center;"><span style="font-weight: bold;">F = P x S</span></td>
+
+                            </tr>
+
+                          </tbody>
+                        </table>
+
+                        </td>
+
+                        <td>&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;F en daN<br>
+
+avec: &nbsp;&nbsp; P en bar<br>
+
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; S en&nbsp;cm&sup2;<span style="font-family: System;"></span><span style="font-family: Symbol;"></span></td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 105px;">
+            <table style="width: 800px; height: 155px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="text-align: center;"><span style="font-family: Arial;"><span style="font-weight: bold;">Exemple n &deg; 1
+d&rsquo;application :</span> </span><br style="font-family: Arial;">
+
+                  <span style="font-family: Arial;">F = 30
+daN </span><br style="font-family: Arial;">
+
+                  <span style="font-family: Arial;">Section
+= 100&nbsp;</span>cm&sup2;<br>
+
+                  <span style="font-family: Arial;"><br>
+
+                  </span>
+                  <table style="width: 250px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+                    <tbody>
+
+                      <tr>
+
+                        <td colspan="1" rowspan="3" style="font-family: Arial; text-align: right;">pression = P
+=&nbsp; </td>
+
+                        <td style="font-family: Arial; text-align: center;">F</td>
+
+                        <td colspan="1" rowspan="3" style="font-family: Arial; text-align: left;">&nbsp;=&nbsp;</td>
+
+                        <td style="font-family: Arial; text-align: center;">30</td>
+
+                        <td colspan="1" rowspan="3" style="font-family: Arial; text-align: center;">&nbsp;=
+0,3 bar</td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="font-family: Arial; text-align: center;">
+                        <hr style="height: 1px; width: 100%;"></td>
+
+                        <td style="font-family: Arial; text-align: center;">
+                        <hr style="height: 1px; width: 100%;"></td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="font-family: Arial; text-align: center;">S</td>
+
+                        <td style="font-family: Arial; text-align: center;">100</td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                  <span style="font-family: Arial;"></span></td>
+
+                  <td style="text-align: center;"><span style="font-family: Arial;"><span style="font-weight: bold;">Exemple n &deg; 2
+d&rsquo;application :</span> </span><br style="font-family: Arial;">
+
+                  <span style="font-family: Arial;">F =
+100
+daN </span><br style="font-family: Arial;">
+
+                  <span style="font-family: Arial;">Section
+= 100&nbsp;</span>cm&sup2;<br>
+
+                  <span style="font-family: Arial;"><br>
+
+                  </span>
+                  <table style="width: 250px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+                    <tbody>
+
+                      <tr>
+
+                        <td colspan="1" rowspan="3" style="font-family: Arial; text-align: right;">pression = P
+=&nbsp; </td>
+
+                        <td style="font-family: Arial; text-align: center;">F</td>
+
+                        <td colspan="1" rowspan="3" style="font-family: Arial; text-align: left;">&nbsp;=&nbsp;
+                        </td>
+
+                        <td style="font-family: Arial; text-align: center;">100</td>
+
+                        <td colspan="1" rowspan="3" style="font-family: Arial; text-align: center;">&nbsp;=
+1 bar</td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="font-family: Arial; text-align: center;">
+                        <hr style="height: 1px; width: 100%;"></td>
+
+                        <td style="font-family: Arial; text-align: center;">
+                        <hr style="height: 1px; width: 100%;"></td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="font-family: Arial; text-align: center;">S</td>
+
+                        <td style="font-family: Arial; text-align: center;">100</td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                  <span style="font-family: Arial;"></span></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 50px;"></td>
+
+                  <td style="width: 50px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153); text-align: right;"><big><big>1.2.&nbsp;</big></big></td>
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="12"></a>D&eacute;termination
+de la pression en bout de vis<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 105px;">Supposons que
+dans une chambre du v&eacute;rin d&rsquo;injection il
+r&egrave;gne une pression P1. <br>
+
+            <br>
+
+On peut donc dire que la force F1 qui agit sur la vis est issue de la
+pression P1 sur la surface S1. <br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 105px;">
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td colspan="1" rowspan="3" style="font-family: Arial; text-align: right;"><span style="font-weight: bold;">F1 = P1 x S1</span> avec
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+
+                  <td style="font-family: Arial;">F1 en daN</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial;">P1 en bar</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial;">S1
+en&nbsp;cm&sup2;</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 105px;">Cette force
+est int&eacute;gralement retransmise &agrave; l&rsquo;avant
+de la vis pour donner naissance &agrave; la pression P2 sur la
+surface S2.</div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td></td>
+
+          </tr>
+
+          <tr style="font-family: Arial; font-weight: bold;" align="center">
+
+            <td>
+            <div style="margin-left: 105px;">F1 = F2</div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 225px;">&nbsp;On
+peut d&eacute;terminer la pression P2.</div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-weight: bold; font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 105px; text-align: center;">F2
+= P2 x S2
+&rArr; P2 = F2 / S2</div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 225px;">On peut alors
+dire.</div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 105px; font-weight: bold;">
+            <table style="width: 150px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-weight: bold; text-align: right;"><span style="font-family: Arial;">P2</span></td>
+
+                  <td style="font-weight: bold;"><span style="font-family: Arial;">&nbsp;= F2 / S2</span></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-weight: bold;"></td>
+
+                  <td style="font-weight: bold;"><span style="font-family: Arial;">&nbsp;=
+F1 / S2 </span></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-weight: bold;"></td>
+
+                  <td style="font-weight: bold;"><span style="font-family: Arial;">&nbsp;= F1 x S1 / S2</span></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            <span style="font-family: Arial;"></span></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 105px;">&nbsp;
+On constate donc que P2 (pression sur la mati&egrave;re) est
+fonction de la pression dans le v&eacute;rin hydraulique
+d&rsquo;injection (P1) et du rapport des surfaces S1 et S2 (piston
+d&rsquo;injection et vis). </div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 105px;">
+            <table style="background-color: rgb(255, 102, 102); width: 130px; height: 65px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td>
+                  <table style="text-align: left; width: 120px; height: 65px;" border="0" cellpadding="0" cellspacing="0">
+
+                    <tbody>
+
+                      <tr>
+
+                        <td colspan="1" rowspan="3" style="font-family: Arial; font-weight: bold; text-align: right;">P2
+= P1 x&nbsp; </td>
+
+                        <td style="font-family: Arial; font-weight: bold;">S1</td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="font-family: Arial; font-weight: bold;">
+                        <hr style="width: 100%; height: 2px;"></td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td style="font-family: Arial; font-weight: bold;">S2</td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial; text-decoration: underline; font-weight: bold;">
+
+            <td>
+            <div style="margin-left: 105px;">Exemple:</div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 105px;">Supposons une
+pression P1 de 100 bars sur l&rsquo;huile. <br>
+
+P1 agit sur un piston de
+75 mm (&Oslash;<span style="font-family: Symbol;"></span>
+= 7,5 cm). <br>
+
+Le diam&egrave;tre de la vis est de 24 mm (&Oslash;
+=
+2,4 cm). <br>
+
+            <br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 105px;"><span style="text-decoration: underline;">Quelle sera
+la
+pression sur la mati&egrave;re
+?</span> </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;">
+            <div style="margin-left: 120px;"></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 225px;">
+            <table style="text-align: left; width: 400px;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: left; width: 250px;" colspan="1" rowspan="3">Surface
+du piston d&rsquo;injection S1 =&nbsp;</td>
+
+                  <td style="text-align: center; font-family: Arial;">&pi;
+x&nbsp;7,5&sup2;</td>
+
+                  <td style="font-family: Arial;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial;">
+                  <hr style="height: 1px; width: 100%;"></td>
+
+                  <td style="font-family: Arial;">&nbsp;=
+44,18&nbsp;cm&sup2; </td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="text-align: center; font-family: Arial;">4</td>
+
+                  <td style="font-family: Arial;"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;">
+            <div style="margin-left: 120px;"></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 225px;">
+            <table style="text-align: left; width: 400px;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: left; width: 170px;" colspan="1" rowspan="3">Surface
+de la vis S2 =&nbsp;</td>
+
+                  <td style="text-align: center; font-family: Arial;">&pi;
+x 2,4&sup2;</td>
+
+                  <td style="font-family: Arial;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial;">
+                  <hr style="height: 1px; width: 100%;"></td>
+
+                  <td style="font-family: Arial;">&nbsp;=
+4,52&nbsp;cm&sup2; </td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="text-align: center; font-family: Arial;">4</td>
+
+                  <td style="font-family: Arial;"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;">
+            <div style="margin-left: 120px;"></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 225px;">
+            <table style="text-align: left; width: 400px;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;" colspan="1" rowspan="3">Donc &nbsp; P2 =&nbsp;</td>
+
+                  <td style="font-family: Arial; text-align: center;">(
+P1 x S1 )</td>
+
+                  <td style="font-family: Arial; text-align: center;"></td>
+
+                  <td style="font-family: Arial; text-align: center;">(
+100 x 44,18 )</td>
+
+                  <td colspan="1" rowspan="3" style="font-family: Arial; text-align: left;">&nbsp;=
+977 bars</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">
+                  <hr style="height: 1px; width: 100%; margin-left: auto; margin-right: auto;"></td>
+
+                  <td style="font-family: Arial; text-align: center;">&nbsp;=
+&nbsp;</td>
+
+                  <td style="font-family: Arial; text-align: center;">
+                  <hr style="height: 1px; width: 100%; margin-left: auto; margin-right: auto;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">S2</td>
+
+                  <td style="font-family: Arial; text-align: center;"></td>
+
+                  <td style="font-family: Arial; text-align: center;">4,52</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;">
+            <div style="margin-left: 120px;"></div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 105px;">On voit
+clairement appara&icirc;tre le r&ocirc;le de
+multiplicateur que joue la vis. La pression P2 est
+multipli&eacute;e 10 fois plus importante que la pression P1 (par
+le jeu du rapport des surfaces).</div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 105px;">Sur certaines
+machines, il existe des graphiques appel&eacute;s abaque qui permet
+de lire directement la multiplication de pression.</div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 105px; text-align: center;"><img style="width: 728px; height: 425px;" alt="" src="image_121.png"></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 105px;">Nota : Ces
+abaques sont &eacute;labor&eacute;s par le constructeur pour un
+type bien pr&eacute;cis de presse. Il n&rsquo;est pas possible
+de s&rsquo;en servir pour d&rsquo;autres presses du fait
+du&nbsp;&Oslash;
+de v&eacute;rins diff&eacute;rents.</div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>2.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>Notion
+de pression dans le moule<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 54px;">Apr&egrave;s
+les calculs de pressions en bout de vis, nous pouvons
+conna&icirc;tre la pression dans le moule. <br>
+
+            <br>
+
+Si l&rsquo;on avait &agrave; faire &agrave; un fluide
+parfait, la pression sur la mati&egrave;re &agrave;
+l&rsquo;avant de la vis serait presque int&eacute;gralement
+retransmise dans l&rsquo;empreinte, mais avec les
+mati&egrave;res plastiques ce n&rsquo;est pas le cas. <br>
+
+            <br>
+
+La mati&egrave;re plastique m&ecirc;me &agrave;
+l&rsquo;&eacute;tat fondu est un fluide plus ou moins visqueux
+et l&rsquo;on constate &agrave; l&rsquo;avant de la vis et
+dans l&rsquo;empreinte une diminution de pression. <br>
+
+            <br>
+
+Cette diminution
+de pression est appel&eacute;e &laquo; perte de charges
+&raquo; (leurs causes sont nombreuses) : <br>
+
+            <br>
+
+            <div style="margin-left: 40px;">-
+Viscosit&eacute; de la mati&egrave;re &agrave;
+l&rsquo;&eacute;tat fondu ; <br>
+
+- Longueur de cheminement de la mati&egrave;re ; <br>
+
+- Section des canaux ; <br>
+
+- Epaisseur de la pi&egrave;ce ; <br>
+
+- Changements de direction que doit subir la mati&egrave;re ; <br>
+
+- Temp&eacute;rature du moule ; <br>
+
+- Temp&eacute;rature de la mati&egrave;re ; <br>
+
+- Etat de surface de l&rsquo;empreinte ;<br>
+
+- Etc.<br>
+
+            <br>
+
+            </div>
+
+On voit donc que chaque moule est un cas particulier. Il existe des
+formules permettant d&rsquo;approcher, par le calcul, le taux de
+pertes de charges. Ces formules sont utilis&eacute;es par les
+bureaux d&rsquo;&eacute;tudes. </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 54px;"><span style="font-weight: bold; text-decoration: underline;">Exemple
+: </span><br>
+
+            <br>
+
+Calcul de la pression dans le moule P3. <br>
+
+            <br>
+
+On donne : <br>
+
+            <div style="margin-left: 40px;">- P2 = 1000
+bars <br>
+
+-&nbsp;Pc = 40 % (Pc = Perte de Charge) <br>
+
+            </div>
+
+            <br>
+
+            <div style="text-align: center;"><span style="font-weight: bold;">P3 = P2 &ndash; Pc = 1000
+&ndash; (1000 40 %) = 600 bars</span> </div>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>3.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3"></a>En
+r&eacute;sum&eacute;</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td> <img style="width: 1050px; height: 572px;" alt="" src="image_122.png"> </td>
+
+          </tr>
+
+          <tr>
+
+            <td></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>4.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="4"></a>Fichiers</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="relation_entre_pression_d_injection_et_pression_en_bout_de_vis.docx">Fichier
+word</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 5px;"></td>
+
+                  <td style="text-align: center;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="relation_entre_pression_d_injection_et_pression_en_bout_de_vis.pdf" target="_blank">Fichier
+PDF</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+
+</body>
+</html>

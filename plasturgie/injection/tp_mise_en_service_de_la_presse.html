@@ -1,0 +1,1156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+  <title>Bac pro PLC -Mondeville - tp mise en service de la presse</title>
+
+
+  <meta content="ressources" name="description">
+
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+  <tbody>
+
+    <tr>
+
+      <td>
+      <div style="text-align: center;"></div>
+
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+        <tbody>
+
+          <tr>
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="background-color: rgb(64, 64, 64);">
+            <div id="menu">
+            <ul>
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">TP mise en
+service de la presse</span></big></big></big></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td><span style="font-family: Arial; font-weight: bold;">1. <a href="#1"><span style="text-decoration: underline;">Pr&eacute;ambule</span></a></span><br style="font-family: Arial; font-weight: bold;">
+
+                  <span style="font-family: Arial; font-weight: bold;"></span><br style="font-family: Arial; font-weight: bold;">
+
+                  <span style="font-family: Arial; font-weight: bold;"><span style="text-decoration: underline;"></span></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span><span style="font-family: Arial; font-weight: bold;">2. <span style="text-decoration: underline;"><a href="#2">Proc&eacute;dure</a><br>
+
+                  <br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;"><a href="#3"><span style="text-decoration: underline;"></span></a></span><span style="font-family: Arial; font-weight: bold;">3. <a href="#3">Fichiers</a></span></td>
+
+                  <td style="text-align: right; width: 560px;"><img style="width: 652px; height: 451px;" alt="" src="image_225.png"><br>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>1.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>Pr&eacute;ambule<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;" align="center">
+
+            <td>
+            <div style="text-align: left;"></div>
+
+            <div text-align="" left="">
+            <div style="text-align: left;"><span style="text-decoration: underline; font-weight: bold;">Objectif
+: <br>
+
+            <br>
+
+            </span>&Ecirc;tre capable de mettre en service et
+arr&ecirc;ter une machine en toute s&eacute;curit&eacute;. <br>
+
+            <br>
+
+            <span style="font-weight: bold; text-decoration: underline;">Comp&eacute;tences
+vis&eacute;es : </span><br>
+
+            <br>
+
+C 11 : Identifier les &eacute;l&eacute;ments
+repr&eacute;sent&eacute;s : dispositifs de
+s&eacute;curit&eacute; <br>
+
+C 18 : Renseigner les documents. <br>
+
+C 02 : Appliquer la proc&eacute;dure : assurer la mise route de la
+presse et assurer l&rsquo;arr&ecirc;t m&eacute;thodique de
+la presse.
+            <br>
+
+C 09 : Effectuer les contr&ocirc;les : proc&eacute;der aux
+v&eacute;rifications afin d&rsquo;assurer la
+s&eacute;curit&eacute; des
+personnes et des moyens de production.
+            <br>
+
+C 17 : Remettre le poste de travail en &eacute;tat. <br>
+
+C 06 : Assurer la s&eacute;curit&eacute;. <br>
+
+            <br>
+
+            <span style="font-weight: bold; text-decoration: underline;">On
+donne :</span> <br>
+
+            <br>
+
+- La proc&eacute;dure de mise en service de la presse <br>
+
+- La proc&eacute;dure d&rsquo;arr&ecirc;t de la presse <br>
+
+- Les machines
+Objectif
+: <span style="font-weight: bold; text-decoration: underline;"><br>
+
+            </span>&nbsp;&nbsp; &nbsp;<br>
+
+            <span style="font-weight: bold; text-decoration: underline;">On
+demande :</span><br>
+
+            </div>
+
+            <br>
+
+            <table style="text-align: left; width: 900px;" border="1" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 100px; height: 30px; font-weight: bold; text-align: center; background-color: rgb(255, 204, 255);">Comp&eacute;tence</td>
+
+                  <td style="font-weight: bold; text-align: center; background-color: rgb(255, 204, 255); width: 350px;">Travail
+et
+crit&egrave;res
+d&rsquo;&eacute;valuation</td>
+
+                  <td style="font-weight: bold; text-align: center; background-color: rgb(255, 204, 255); width: 338px;" colspan="2" rowspan="1">Bar&egrave;me</td>
+
+                  <td style="font-weight: bold; text-align: center; background-color: rgb(255, 204, 255);">Note</td>
+
+                </tr>
+
+                <tr>
+
+                  <td colspan="1" rowspan="1">C 11,
+C 18&nbsp; </td>
+
+                  <td colspan="1" rowspan="1" style="width: 350px;">Indiquer sur les sch&eacute;mas en
+page 4 la position :
+                  <br>
+
+- des arr&ecirc;ts d&rsquo;urgence<br>
+
+- des vannes d&rsquo;eau
+                  <br>
+
+- vanne d&rsquo;air
+                  <br>
+
+- circuits d&rsquo;eau <br>
+
+- circuit d&rsquo;air
+                  <br>
+
+                  <br>
+
+                  </td>
+
+                  <td style="width: 338px; height: 30px;">
+-1 pt par &eacute;l&eacute;ment manquant ou mal
+positionn&eacute;&nbsp;
+                  </td>
+
+                  <td style="text-align: center;">10 pts</td>
+
+                  <td style="width: 50px;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td colspan="1" rowspan="1">C
+2</td>
+
+                  <td colspan="1" rowspan="1" style="width: 350px;">Mettre la machine en service et
+appeler le professeur pour valider la m&eacute;thode de mise en
+service
+                  <br>
+
+                  </td>
+
+                  <td style="width: 338px; height: 30px;">-
+La m&eacute;thode de mise en service est :
+                  <br>
+
+- correcte 10 pts
+                  <br>
+
+- partiellement correcte -1 pt par erreur ou oubli&nbsp;
+                  </td>
+
+                  <td style="text-align: center;">10 pts</td>
+
+                  <td></td>
+
+                </tr>
+
+                <tr>
+
+                  <td>C 9</td>
+
+                  <td style="width: 350px;">
+Proc&eacute;der au test des diff&eacute;rentes
+s&eacute;curit&eacute;s appeler le professeur pour valider la
+m&eacute;thode de test&nbsp;</td>
+
+                  <td style="width: 338px;">La
+m&eacute;thode de test est :
+                  <br>
+
+- correcte 10 pts
+                  <br>
+
+- partiellement correcte -1 pt par erreur ou oubli&nbsp;
+                  </td>
+
+                  <td style="text-align: center;">10 pts</td>
+
+                  <td></td>
+
+                </tr>
+
+                <tr>
+
+                  <td colspan="1" rowspan="1">C 2</td>
+
+                  <td colspan="1" rowspan="1" style="width: 350px;">Mettre la machine hors service et
+appeler le professeur pour valider la m&eacute;thode de mise hors
+service&nbsp;</td>
+
+                  <td style="width: 338px; height: 30px;">La
+m&eacute;thode de mise hors service est :
+                  <br>
+
+- correcte 10 pts
+                  <br>
+
+- partiellement correcte -1 pt par erreur ou oubli&nbsp;</td>
+
+                  <td style="text-align: center;">10 pts</td>
+
+                  <td></td>
+
+                </tr>
+
+                <tr>
+
+                  <td colspan="1" rowspan="1">C 17</td>
+
+                  <td colspan="1" rowspan="1" style="width: 350px;">Remettre le poste de travail en
+&eacute;tat
+                  <br>
+
+                  </td>
+
+                  <td style="width: 338px; height: 30px;">Le
+poste de travail est en &eacute;tat <br>
+
+- correcte 10 pts
+                  <br>
+
+- partiellement correcte -1 pt par erreur ou oubli
+                  </td>
+
+                  <td style="text-align: center;">10 pts</td>
+
+                  <td></td>
+
+                </tr>
+
+                <tr>
+
+                  <td></td>
+
+                  <td style="width: 350px;">&nbsp;Participation
+&agrave; la vie
+de l&rsquo;&eacute;quipe de production.</td>
+
+                  <td style="width: 338px; height: 30px;"></td>
+
+                  <td style="text-align: center;">5 pts </td>
+
+                  <td></td>
+
+                </tr>
+
+                <tr>
+
+                  <td>C 06</td>
+
+                  <td style="width: 350px;">Respect des
+consignes.&nbsp;</td>
+
+                  <td style="width: 338px; height: 30px;"></td>
+
+                  <td style="text-align: center;">5 pts</td>
+
+                  <td></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 30px;">C 18</td>
+
+                  <td>Soins de la r&eacute;daction du document</td>
+
+                  <td></td>
+
+                  <td style="text-align: center;">5 pts</td>
+
+                  <td></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 30px;"></td>
+
+                  <td style="width: 350px;"></td>
+
+                  <td style="width: 338px;"></td>
+
+                  <td style="text-align: center;"><span style="font-weight: bold;">65 pts</span></td>
+
+                  <td></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>2.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>Proc&eacute;dure<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td> <big> </big><big> </big>
+            <table style="width: 900px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="5" cellspacing="0">
+
+              <tbody>
+
+                <tr style="font-weight: bold; font-family: Arial;">
+
+                  <td style="text-align: center; background-color: rgb(204, 204, 255);" colspan="2" rowspan="1"><big>Proc&eacute;dure
+de mise en service
+                  <br>
+
+presse Boy 25 et Boy 50 </big></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center; font-weight: bold; background-color: rgb(204, 204, 255);"><big>N&deg;
+                  </big></td>
+
+                  <td style="font-family: Arial; text-align: center; font-weight: bold; background-color: rgb(204, 204, 255);"><big>Op&eacute;rations</big></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">1
+                  </td>
+
+                  <td style="font-family: Arial;">Porter
+une tenue de travail adapt&eacute;e &agrave; l&rsquo;action
+&agrave; r&eacute;aliser
+                  <br>
+
+- Combinaison de travail
+                  <br>
+
+- Chaussures de s&eacute;curit&eacute;
+                  <br>
+
+- Pas de v&ecirc;tements flottant
+                  <br>
+
+- pas de cheveux flottant
+                  <br>
+
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">2</td>
+
+                  <td style="font-family: Arial;">Contr&ocirc;ler
+visuellement l&rsquo;&eacute;tat des fils
+&eacute;lectriques et des flexibles
+hydrauliques&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">3</td>
+
+                  <td style="font-family: Arial;">Ouvrir
+les vannes d&rsquo;eau de la machine&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">4</td>
+
+                  <td style="font-family: Arial;">Ouvrir
+la vanne d&rsquo;air de la machine&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td colspan="1" rowspan="1" style="background-color: rgb(255, 255, 255); font-family: Arial; text-align: center;"><span style="font-weight: bold;"></span> 5</td>
+
+                  <td style="font-family: Arial;"><span style="font-weight: bold;"></span>Ouvrir les vannes
+d&rsquo;eau du ponton (boite &agrave; eau)&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">6
+                  </td>
+
+                  <td style="font-family: Arial;">Ouvrir
+les vannes d&rsquo;eau du moule si besoin (boite &agrave; eau,
+r&eacute;gulation)&nbsp; </td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">
+7</td>
+
+                  <td style="font-family: Arial;"><span style="font-weight: bold;"></span> Mettre en route la
+r&eacute;gulation d&rsquo;eau externe si besoin&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">8</td>
+
+                  <td style="font-family: Arial;">Effectuer
+la mise sous tension g&eacute;n&eacute;rale de la machine
+(bouton S)
+En cas de non fonctionnement v&eacute;rifier qu&rsquo;il
+n&rsquo;y a aucun arr&ecirc;t d&rsquo;urgence
+enclench&eacute;&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">9</td>
+
+                  <td style="font-family: Arial;">D&eacute;marrer
+le moteur hydraulique et laisser chauffer si besoin
+(bouton-poussoir lumineux S01E)&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="background-color: rgb(204, 0, 0); color: rgb(255, 255, 255); font-family: Arial; font-weight: bold;"></td>
+
+                  <td style="background-color: rgb(204, 0, 0); color: rgb(255, 255, 255); font-family: Arial; font-weight: bold;">Faire
+valider par le professeur.</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">10</td>
+
+                  <td style="font-family: Arial;">V&eacute;rifier
+les fixations du moule et le resserrer si besoin&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">11</td>
+
+                  <td style="font-family: Arial;">V&eacute;rifier
+la queue d&rsquo;&eacute;jection&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">12</td>
+
+                  <td style="font-family: Arial;">V&eacute;rifier
+tous les organes de s&eacute;curit&eacute; (carters, capots,
+portes ARU etc)
+pour cela vous devrez effectuer un mouvement et l&rsquo;interrompre
+&agrave; l&rsquo;aide
+d&rsquo;un &eacute;l&eacute;ment de
+s&eacute;curit&eacute;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="background-color: rgb(204, 0, 0); color: rgb(255, 255, 255); font-family: Arial; font-weight: bold;"></td>
+
+                  <td style="background-color: rgb(204, 0, 0); color: rgb(255, 255, 255); font-family: Arial; font-weight: bold;">Faire
+valider par le professeur.</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr align="center">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td> <big> </big><big> </big>
+            <table style="width: 900px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="5" cellspacing="0">
+
+              <tbody>
+
+                <tr style="font-weight: bold; font-family: Arial;">
+
+                  <td style="text-align: center; background-color: rgb(204, 204, 255);" colspan="2" rowspan="1"><big>Proc&eacute;dure
+d'arr&ecirc;t
+                  <br>
+
+presse Boy 25 et Boy 50 </big></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center; font-weight: bold; background-color: rgb(204, 204, 255);"><big>N&deg;
+                  </big></td>
+
+                  <td style="font-family: Arial; text-align: center; font-weight: bold; background-color: rgb(204, 204, 255);"><big>Op&eacute;rations</big></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center; width: 20px;">1
+                  </td>
+
+                  <td style="font-family: Arial;">Fermer
+le moule sans le verrouiller&nbsp;
+                  <br>
+
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">2</td>
+
+                  <td style="font-family: Arial;">Reculer
+la tr&eacute;mie d&rsquo;alimentation&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">3</td>
+
+                  <td style="font-family: Arial;">Purger
+la tr&eacute;mie d&rsquo;alimentation (si
+n&eacute;cessaire)&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">4</td>
+
+                  <td style="font-family: Arial;">Reculer
+l&rsquo;unit&eacute; de plastification et d&rsquo;injection
+(si n&eacute;cessaire)&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td colspan="1" rowspan="1" style="background-color: rgb(255, 255, 255); font-family: Arial; text-align: center;"><span style="font-weight: bold;"></span> 5</td>
+
+                  <td style="font-family: Arial;"><span style="font-weight: bold;"></span>Purger si
+n&eacute;cessaire la mati&egrave;re (si
+n&eacute;cessaire)&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">6
+                  </td>
+
+                  <td style="font-family: Arial;">
+Eteindre les chauffes de la machine (si n&eacute;cessaire)&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">
+7</td>
+
+                  <td style="font-family: Arial;"><span style="font-weight: bold;"></span>Eteindre le moteur
+hydraulique
+bouton-poussoir (S01A)&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">8</td>
+
+                  <td style="font-family: Arial;">Effectuer
+la mise hors tension de la r&eacute;gulation si besoin&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">9</td>
+
+                  <td style="font-family: Arial;">Effectuer
+la mise hors tension g&eacute;n&eacute;rale de la machine
+(bouton S)&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">10</td>
+
+                  <td style="font-family: Arial;">Fermer
+les vannes d&rsquo;eau du ponton (boite &agrave; eau)&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">11</td>
+
+                  <td style="font-family: Arial;">Fermer
+les vannes d&rsquo;eau du moule si besoin (boite &agrave; eau,
+r&eacute;gulation)&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">12</td>
+
+                  <td style="font-family: Arial;">Fermer
+les vannes d&rsquo;eau de la machine&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">13</td>
+
+                  <td style="font-family: Arial;">Fermer
+la vanne d&rsquo;air de la machine&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">14</td>
+
+                  <td style="font-family: Arial;">Ranger
+les outils&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: center;">15</td>
+
+                  <td style="font-family: Arial;">Nettoyer
+la machine ainsi que l&rsquo;aire de travail et les abords</td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="background-color: rgb(204, 0, 0);"></td>
+
+                  <td style="background-color: rgb(204, 0, 0); color: rgb(255, 255, 255); font-family: Arial; font-weight: bold;">Faire
+valider par le professeur.</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td> <big> </big><big> </big>
+            <table style="width: 900px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="5" cellspacing="0">
+
+              <tbody>
+
+                <tr style="font-weight: bold; font-family: Arial;">
+
+                  <td style="text-align: center; background-color: rgb(204, 204, 255);" colspan="2" rowspan="1"><big>Sch&eacute;ma
+&agrave; compl&eacute;ter<br>
+
+presse Boy 25 et Boy 50 </big></td>
+
+                </tr>
+
+                <tr>
+
+                  <td colspan="2" rowspan="1" style="font-family: Arial; width: 20px; text-align: center;"><img style="width: 768px; height: 625px;" alt="" src="image_222.png"><br>
+
+                  <br>
+
+                  <br>
+
+                  <img style="width: 462px; height: 199px;" alt="" src="image_223.png"><br>
+
+                  <br>
+
+                  <big style="color: rgb(255, 0, 0);"><big><span style="font-weight: bold;">Attention aux soins des
+trac&egrave;s</span></big></big><br>
+
+                  <br>
+
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="background-color: rgb(204, 0, 0);"></td>
+
+                  <td style="background-color: rgb(204, 0, 0); color: rgb(255, 255, 255); font-family: Arial; font-weight: bold;">Faire
+valider par le professeur.</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td> <big> </big><big> </big>
+            <table style="width: 900px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="5" cellspacing="0">
+
+              <tbody>
+
+                <tr style="font-weight: bold; font-family: Arial;">
+
+                  <td style="text-align: center; background-color: rgb(204, 204, 255);" colspan="2" rowspan="1"><big>Sch&eacute;ma des interrupteurs marche-arr&ecirc;t<br>
+
+presse Boy 25 et Boy 50 </big></td>
+
+                </tr>
+
+                <tr>
+
+                  <td colspan="2" rowspan="1" style="font-family: Arial; width: 20px; text-align: center;"><img style="width: 545px; height: 685px;" alt="" src="image_224.png"><br>
+
+                  </td>
+
+                </tr>
+
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+
+
+
+
+
+
+
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp; <big><big>3.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3"></a>Fichiers</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="tp_mise_en_service_de_la_presse.docx">Fichier word</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 5px;"></td>
+
+                  <td style="text-align: center;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="tp_mise_en_service_de_la_presse.pdf" target="_blank">Fichier
+PDF</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+
+</body>
+</html>

@@ -1,0 +1,1060 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+  
+  <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+
+  
+
+
+  
+  <title>Bac pro PLC -Mondeville - tp rendement de la vis feuille de calcul</title>
+  <meta content="ressources" name="description">
+
+
+  
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+  
+  <link href="css" rel="stylesheet" type="text/css">
+
+
+  
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+
+  
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+
+  
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+</head>
+
+
+<body onload="initCalc();" class="default">
+
+
+<div class="container">
+<div class="row"><section class="col-lg-5 col-md-6 col-sm-6" id="contenu"></section>
+<script language="JavaScript">
+<!--
+function IsFloat(strString, err_msg, text_name, calc_type)
+{
+var strValidChars = "0123456789.-";
+var strChar;
+var blnResult = true;
+var Decimal_Count = new Number(0);
+for (i = 0; i < strString.length && blnResult == true; i++)
+{
+strChar = strString.charAt(i);
+if (strChar == ".")
+{
+Decimal_Count = Decimal_Count + 1;
+}
+if ((strValidChars.indexOf(strChar) == -1) || (Decimal_Count > 1))
+{
+var err_msg_alert = 'Merci de rentrer un nombre décimal valide. Utiliser le point et non la virgule : par exemple 2.3 et non 2,3.'
+' textbox';
+eval('window.document.Calculation_Form.' + text_name + '.select()');
+alert(err_msg_alert);
+blnResult = false;
+this.select;
+return blnResult;
+}
+}
+return blnResult;
+}
+function RectCalc()
+{
+var blnNoNull = true;
+// .....................................................................................
+if (window.document.Calculation_Form.R_entree_cote_nominale.value == "0")
+{
+window.document.Calculation_Form.R_entree_cote_nominale.select();
+alert("Merci de bien vouloir rentrer une cote nominale en mm");
+blnNoNull = false;
+}
+else
+{
+blnNoNull = true;
+}
+if (blnNoNull)
+{
+var R_entree_cote_nominale = new Number(window.document.Calculation_Form.R_entree_cote_nominale.value);
+var R_entree_alesage_ecart_sup = new Number(window.document.Calculation_Form.R_entree_alesage_ecart_sup.value);
+var R_entree_alesage_ecart_inf = new Number(window.document.Calculation_Form.R_entree_alesage_ecart_inf.value);
+var R_entree_arbre_ecart_sup = new Number(window.document.Calculation_Form.R_entree_arbre_ecart_sup.value);
+var R_entree_arbre_ecart_inf = new Number(window.document.Calculation_Form.R_entree_arbre_ecart_inf.value);
+// .................................................................................... alesage .........................
+var resultat_alesage_ecart_sup= R_entree_alesage_ecart_sup;
+var resultat_alesage_ecart_inf= R_entree_alesage_ecart_inf;
+var resultat_cote_nominale= R_entree_cote_nominale;
+var resultat_alesage_cote_maxi= Math.floor((R_entree_cote_nominale+R_entree_alesage_ecart_sup)*100000)/100000;
+var resultat_alesage_cote_mini= Math.floor((R_entree_cote_nominale+R_entree_alesage_ecart_inf)*100000)/100000;
+var resultat_alesage_it= Math.floor((R_entree_alesage_ecart_sup-R_entree_alesage_ecart_inf)*100000)/100000;
+var resultat_alesage_cote_moyenne1= Math.floor((resultat_alesage_cote_mini+resultat_alesage_cote_maxi)*100000)/100000;
+var resultat_alesage_cote_moyenne2= Math.floor((resultat_alesage_cote_moyenne1/2)*100000)/100000;
+window.document.Calculation_Form.resultat_alesage_ecart_sup1.value = resultat_alesage_ecart_sup;
+window.document.Calculation_Form.resultat_alesage_ecart_inf1.value = resultat_alesage_ecart_inf;
+window.document.Calculation_Form.resultat_alesage_it1.value = resultat_alesage_it;
+window.document.Calculation_Form.resultat_alesage_cote_maxi1.value = resultat_alesage_cote_maxi;
+window.document.Calculation_Form.resultat_cote_nominale1.value = resultat_cote_nominale;
+window.document.Calculation_Form.resultat_alesage_ecart_sup2.value = resultat_alesage_ecart_sup;
+window.document.Calculation_Form.resultat_alesage_cote_mini1.value = resultat_alesage_cote_mini;
+window.document.Calculation_Form.resultat_cote_nominale3.value = resultat_cote_nominale;
+window.document.Calculation_Form.resultat_alesage_ecart_inf2.value = resultat_alesage_ecart_inf;
+window.document.Calculation_Form.resultat_alesage_cote_mini2.value = resultat_alesage_cote_mini;
+window.document.Calculation_Form.resultat_alesage_cote_maxi2.value = resultat_alesage_cote_maxi;
+window.document.Calculation_Form.resultat_alesage_cote_moyenne1.value = resultat_alesage_cote_moyenne1;
+window.document.Calculation_Form.resultat_alesage_cote_moyenne2.value = resultat_alesage_cote_moyenne2;
+// .................................................................................... arbre ...........................
+var resultat_arbre_ecart_sup= R_entree_arbre_ecart_sup;
+var resultat_arbre_ecart_inf= R_entree_arbre_ecart_inf;
+var resultat_arbre_it= Math.floor((R_entree_arbre_ecart_sup-R_entree_arbre_ecart_inf)*100000)/100000;
+var resultat_arbre_cote_maxi= Math.floor((R_entree_cote_nominale+R_entree_arbre_ecart_sup)*100000)/100000;
+var resultat_arbre_cote_mini= Math.floor((R_entree_cote_nominale+R_entree_arbre_ecart_inf)*100000)/100000;
+var resultat_arbre_cote_moyenne1= Math.floor((resultat_arbre_cote_mini+resultat_arbre_cote_maxi)*100000)/100000;
+var resultat_arbre_cote_moyenne2= Math.floor((resultat_arbre_cote_moyenne1/2)*100000)/100000;
+window.document.Calculation_Form.resultat_arbre_ecart_sup1.value = resultat_arbre_ecart_sup;
+window.document.Calculation_Form.resultat_arbre_ecart_inf1.value = resultat_arbre_ecart_inf;
+window.document.Calculation_Form.resultat_arbre_it1.value = resultat_arbre_it;
+window.document.Calculation_Form.resultat_arbre_cote_maxi1.value = resultat_arbre_cote_maxi;
+window.document.Calculation_Form.resultat_cote_nominale2.value = resultat_cote_nominale;
+window.document.Calculation_Form.resultat_arbre_ecart_sup2.value = resultat_arbre_ecart_sup;
+window.document.Calculation_Form.resultat_arbre_cote_mini1.value = resultat_arbre_cote_mini;
+window.document.Calculation_Form.resultat_cote_nominale4.value = resultat_cote_nominale;
+window.document.Calculation_Form.resultat_arbre_ecart_inf2.value = resultat_arbre_ecart_inf;
+window.document.Calculation_Form.resultat_arbre_cote_mini2.value = resultat_arbre_cote_mini;
+window.document.Calculation_Form.resultat_arbre_cote_maxi2.value = resultat_arbre_cote_maxi;
+window.document.Calculation_Form.resultat_arbre_cote_moyenne1.value = resultat_arbre_cote_moyenne1;
+window.document.Calculation_Form.resultat_arbre_cote_moyenne2.value = resultat_arbre_cote_moyenne2;
+// .....................................................................................
+}
+}
+//-->
+</script>
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td>
+      
+      <div style="text-align: right;"></div>
+
+
+      
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+
+        <tbody>
+
+
+          <tr>
+
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+
+          </tr>
+
+
+          <tr style="color: rgb(64, 64, 64);">
+
+
+            <td style="background-color: rgb(64, 64, 64);">
+            
+            <div id="menu">
+            
+            <ul>
+
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+
+            
+            </ul>
+
+
+            </div>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+          </tr>
+
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">Cotes
+tol&eacute;ranc&eacute;es<br>
+
+
+Fiche de calcul</span></big></big></big></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+          </tr>
+
+
+          <tr style="color: rgb(64, 64, 64);">
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td><span style="font-family: Arial; font-weight: bold;">1. <a href="#0"><span style="text-decoration: underline;">Feuille
+de calcul</span></a></span><span style="font-family: Arial; font-weight: bold;"></span><br>
+
+
+                  <span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><br>
+
+
+                  </span><span style="font-family: Arial; font-weight: bold;">2. <a href="#8">Fichiers</a></span><br>
+
+
+                  <span style="font-family: Arial; font-weight: bold;"></span></td>
+
+
+                  <td style="text-align: right;"><img src="image065.png" alt="" style="width: 600px; height: 400px;"></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+          </tr>
+
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>1.&nbsp;</big></big></td>
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="0"></a>Feuille calcul<br>
+
+
+                  </big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;">
+            
+            <form name="Calculation_Form">
+              
+              <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+                <tbody>
+
+
+                  <tr style="font-family: Arial; font-weight: bold;">
+
+
+                    <td style="background-color: rgb(204, 204, 204);" colspan="4" rowspan="1">
+                    
+                    <div style="margin-left: 54px;"><big><a name="1"></a>Saisir
+les
+donn&eacute;es et valeurs</big></div>
+
+
+                    </td>
+
+
+                  </tr>
+
+
+                  <tr>
+
+
+                    <td colspan="4" rowspan="1">
+                    
+                    <div style="margin-left: 54px;">
+                    
+                    <table style="text-align: left; width: 100%;" border="1" cellpadding="5" cellspacing="0">
+
+
+                      <tbody>
+
+
+                        <tr style="font-family: Arial; font-weight: bold;" align="center">
+
+
+                          <td style="height: 40px; background-color: rgb(255, 204, 153);" colspan="2" rowspan="1">Cote nominale CN &nbsp;<input value="0" size="8" onchange="return IsFloat(this.value, 'entree cote nominale', 'R_entree_cote_nominale', 'RectCalc()')" name="R_entree_cote_nominale"> &nbsp;mm</td>
+
+
+                        </tr>
+
+
+                        <tr>
+
+
+                          <td style="height: 30px; text-align: center; font-weight: bold; font-family: Arial; width: 492px;">Al&eacute;sage</td>
+
+
+                          <td style="text-align: center; font-weight: bold; font-family: Arial;">Arbre</td>
+
+
+                        </tr>
+
+
+                        <tr>
+
+
+                          <td style="font-family: Arial; font-weight: bold; height: 40px; background-color: rgb(255, 204, 153);">Ecart
+sup&eacute;rieur ES : <input value="0" name="R_entree_alesage_ecart_sup" onchange="return IsFloat(this.value, 'entree alesage ecart sup', 'R_entree_alesage_ecart_sup', 'RectCalc()')" size="8"> &nbsp;mm</td>
+
+
+                          <td style="font-family: Arial; font-weight: bold; background-color: rgb(255, 204, 153);">Ecart
+sup&eacute;rieur ES :&nbsp;<input value="0" name="R_entree_arbre_ecart_sup" onchange="return IsFloat(this.value, 'entree arbre ecart sup', 'R_entree_arbre_ecart_sup', 'RectCalc()')" size="8"> &nbsp;mm </td>
+
+
+                        </tr>
+
+
+                        <tr>
+
+
+                          <td style="font-family: Arial; font-weight: bold; height: 40px; background-color: rgb(255, 204, 153);">Ecart
+Inf&eacute;rieur EI: <input value="0" size="8" onchange="return IsFloat(this.value, 'entree alesageecart inf', 'R_entree_alesage_ecart_inf', 'RectCalc()')" name="R_entree_alesage_ecart_inf"> &nbsp;mm</td>
+
+
+                          <td style="font-family: Arial; font-weight: bold; background-color: rgb(255, 204, 153);">Ecart
+Inf&eacute;rieur EI:&nbsp;<input value="0" size="8" onchange="return IsFloat(this.value, 'entree arbre ecart inf', 'R_entree_arbre_ecart_inf', 'RectCalc()')" name="R_entree_arbre_ecart_inf"> mm </td>
+
+
+                        </tr>
+
+
+                        <tr>
+
+
+                          <td colspan="2" rowspan="1">
+                          
+                          <center><input onclick="RectCalc()" value=" Calcul " style="width: 130px; height: 50px; font-size: 1em; background-color: steelblue; color: white; font-weight: bold; cursor: pointer;" type="button"> </center>
+
+
+                          </td>
+
+
+                        </tr>
+
+
+                        <tr style="font-family: Arial; font-weight: bold;">
+
+
+                          <td style="background-color: rgb(204, 204, 204);" colspan="2" rowspan="1">Calcul de l'intervalle de tol&eacute;rance</td>
+
+
+                        </tr>
+
+
+                        <tr>
+
+
+                          <td style="font-family: Arial; font-weight: bold; height: 80px; background-color: rgb(255, 255, 102);">IT
+= &eacute;cart sup&eacute;rieur - &eacute;cart
+inf&eacute;rieur<br>
+
+
+                          <br>
+
+
+&nbsp; &nbsp; &nbsp;= ES - EI</td>
+
+
+                          <td style="background-color: rgb(255, 255, 102); font-family: Arial; font-weight: bold;">it&nbsp;=
+&eacute;cart sup&eacute;rieur - &eacute;cart
+inf&eacute;rieur<br>
+
+
+                          <br>
+
+
+&nbsp; &nbsp;= es - ei</td>
+
+
+                        </tr>
+
+
+                        <tr>
+
+
+                          <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 255, 153);">&nbsp;
+&nbsp; &nbsp;=&nbsp; &nbsp;<input value="0" name="resultat_alesage_ecart_sup1" size="8">
+&nbsp;- &nbsp;<input value="0" name="resultat_alesage_ecart_inf1" size="8"><br>
+
+
+                          <br>
+
+
+&nbsp; &nbsp; &nbsp;= &nbsp; <input value="0" name="resultat_alesage_it1" size="8"> &nbsp;mm</td>
+
+
+                          <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 255, 153);">&nbsp;
+&nbsp; &nbsp;=&nbsp; &nbsp;<input value="0" name="resultat_arbre_ecart_sup1" size="8">
+&nbsp;- &nbsp;<input value="0" name="resultat_arbre_ecart_inf1" size="8"><br>
+
+
+                          <br>
+
+
+&nbsp; &nbsp; &nbsp;= &nbsp; <input value="0" name="resultat_arbre_it1" size="8"> &nbsp;mm</td>
+
+
+                        </tr>
+
+
+                        <tr style="font-weight: bold; font-family: Arial;">
+
+
+                          <td style="background-color: rgb(204, 204, 204);" colspan="2" rowspan="1">Calcul
+de la cote maxi</td>
+
+
+                        </tr>
+
+
+                        <tr>
+
+
+                          <td style="font-family: Arial; font-weight: bold; height: 80px; background-color: rgb(255, 255, 102);">cote
+maxi = cote nominale + &eacute;cart sup&eacute;rieur<br>
+
+
+                          <br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;= CN + ES</td>
+
+
+                          <td style="font-family: Arial; font-weight: bold; height: 80px; background-color: rgb(255, 255, 102);">cote
+maxi = cote nominale + &eacute;cart sup&eacute;rieur<br>
+
+
+                          <br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;= CN + es</td>
+
+
+                        </tr>
+
+
+                        <tr>
+
+
+                          <td style="font-family: Arial; font-weight: bold; height: 80px; background-color: rgb(153, 255, 153);">&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;= <input value="0" name="resultat_cote_nominale1" size="8"> &nbsp;+
+&nbsp;<input value="0" name="resultat_alesage_ecart_sup2" size="8"><br>
+
+
+                          <br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;&nbsp; = <input value="0" name="resultat_alesage_cote_maxi1" size="8">
+&nbsp;mm</td>
+
+
+                          <td style="font-family: Arial; font-weight: bold; height: 80px; background-color: rgb(153, 255, 153);">&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;= <input value="0" name="resultat_cote_nominale2" size="8"> &nbsp;+
+&nbsp;<input value="0" name="resultat_arbre_ecart_sup2" size="8"><br>
+
+
+                          <br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;&nbsp; = <input value="0" name="resultat_arbre_cote_maxi1" size="8">
+&nbsp;mm</td>
+
+
+                        </tr>
+
+
+                        <tr style="font-family: Arial; font-weight: bold;">
+
+
+                          <td style="background-color: rgb(204, 204, 204);" colspan="2" rowspan="1">Calcul
+de la cote mini</td>
+
+
+                        </tr>
+
+
+                        <tr>
+
+
+                          <td style="font-family: Arial; font-weight: bold; height: 80px; background-color: rgb(255, 255, 102);">cote
+mini = cote nominale + &eacute;cart inf&eacute;rieur<br>
+
+
+                          <br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;= CN + EI</td>
+
+
+                          <td style="font-family: Arial; font-weight: bold; height: 80px; background-color: rgb(255, 255, 102);">cote
+maxi = cote nominale + &eacute;cart inf&eacute;rieur<br>
+
+
+                          <br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;= CN + ei</td>
+
+
+                        </tr>
+
+
+                        <tr>
+
+
+                          <td style="font-family: Arial; font-weight: bold; height: 80px; background-color: rgb(153, 255, 153);">&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;= <input value="0" name="resultat_cote_nominale3" size="8"> &nbsp;+
+&nbsp;<input value="0" name="resultat_alesage_ecart_inf2" size="8"><br>
+
+
+                          <br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;&nbsp; = <input value="0" name="resultat_alesage_cote_mini1" size="8">
+&nbsp;mm</td>
+
+
+                          <td style="font-family: Arial; font-weight: bold; height: 80px; background-color: rgb(153, 255, 153);">&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;= <input value="0" name="resultat_cote_nominale4" size="8"> &nbsp;+
+&nbsp;<input value="0" name="resultat_arbre_ecart_inf2" size="8"><br>
+
+
+                          <br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;&nbsp; = <input value="0" name="resultat_arbre_cote_mini1" size="8">
+&nbsp;mm</td>
+
+
+                        </tr>
+
+
+                        <tr style="font-weight: bold; font-family: Arial;">
+
+
+                          <td style="background-color: rgb(204, 204, 204);" colspan="2" rowspan="1">Calcul
+de la cote moyenne</td>
+
+
+                        </tr>
+
+
+                        <tr>
+
+
+                          <td style="font-family: Arial; font-weight: bold; background-color: rgb(255, 255, 102); height: 40px;">cote
+moyenne = ( cote maxi + cote mini ) / 2</td>
+
+
+                          <td style="font-family: Arial; font-weight: bold; background-color: rgb(255, 255, 102); height: 40px;">cote
+moyenne = ( cote maxi + cote mini ) / 2</td>
+
+
+                        </tr>
+
+
+                        <tr>
+
+
+                          <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 255, 153); height: 130px;">&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+&nbsp; &nbsp;= ( <input value="0" name="resultat_alesage_cote_maxi2" size="8">
+&nbsp;+
+&nbsp;<input value="0" name="resultat_alesage_cote_mini2" size="8"> &nbsp;) / 2<br>
+
+
+                          <br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+&nbsp; &nbsp;&nbsp; = <input value="0" name="resultat_alesage_cote_moyenne1" size="8">
+&nbsp;/ &nbsp;2<br>
+
+
+                          <br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp;= <input value="0" name="resultat_alesage_cote_moyenne2" size="8">
+&nbsp;mm</td>
+
+
+                          <td style="font-family: Arial; font-weight: bold; background-color: rgb(153, 255, 153); height: 130px;">&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;= ( <input value="0" name="resultat_arbre_cote_maxi2" size="8">
+&nbsp;+
+&nbsp;<input value="0" name="resultat_arbre_cote_mini2" size="8"> &nbsp;) / 2<br>
+
+
+                          <br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; = <input value="0" name="resultat_arbre_cote_moyenne1" size="8">
+&nbsp;/ &nbsp;2<br>
+
+
+                          <br>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;= <input value="0" name="resultat_arbre_cote_moyenne2" size="8">
+&nbsp;mm</td>
+
+
+                        </tr>
+
+
+                        <tr>
+
+
+                        </tr>
+
+
+                      
+                      </tbody>
+                    
+                    </table>
+
+
+                    </div>
+
+
+                    </td>
+
+
+                  </tr>
+
+
+                
+                </tbody>
+              
+              </table>
+
+
+            </form>
+
+
+            </td>
+
+
+          </tr>
+
+
+        
+        </tbody><tbody>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>2.&nbsp;</big></big></td>
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="8"></a>Fichiers</big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="cotes_tolerancees_fiche_calcul.docx">Fichier
+word</a>
+&nbsp; &nbsp;</td>
+
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="height: 5px;"></td>
+
+
+                  <td style="text-align: center;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="cotes_tolerancees_fiche_calcul.pdf" target="_blank">Fichier
+PDF</a>
+&nbsp; &nbsp;</td>
+
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="image_002.png"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td></td>
+
+
+          </tr>
+
+
+        
+        </tbody>
+      
+      </table>
+
+
+      </td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+</div>
+
+
+</div>
+
+
+</body>
+</html>

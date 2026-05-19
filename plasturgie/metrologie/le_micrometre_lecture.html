@@ -1,0 +1,920 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>Bac pro PLC -Mondeville - le micrometre (lecture)</title>
+
+
+  <meta name="description" content="ressources">
+
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+  <tbody>
+
+    <tr>
+
+      <td>
+      <div style="text-align: center;"></div>
+
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+        <tbody>
+
+          <tr>
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="background-color: rgb(64, 64, 64);">
+            <div id="menu">
+            <ul>
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">Le
+microm&egrave;tre (lecture)</span></big></big></big></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td><span style="font-family: Arial; font-weight: bold;">1. <a href="#1"><span style="text-decoration: underline;">Fonction</span></a><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"></span><br style="font-family: Arial; font-weight: bold;">
+
+                  <span style="font-family: Arial; font-weight: bold;">2. <a href="#2">Constitution</a></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;"><br>
+
+3. <a href="#3">Les diff&eacute;rents types de
+microm&egrave;tres</a></span><a href="#33"><span style="font-family: Arial; font-weight: bold;"></span></a><br>
+
+                  <span style="font-family: Arial; font-weight: bold;"> <br>
+
+4. <a href="#4">Principe de lecture<br>
+
+                  </a></span><span style="font-family: Arial; font-weight: bold;"><br>
+
+5. <a href="#5">Principe d'utilisation</a><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><br>
+
+6. <a href="#6">Exemples de lecture</a><br>
+
+                  </span><span style="font-family: Arial; font-weight: bold;"><br>
+
+7. <a href="#7">Fichiers</a></span></td>
+
+                  <td style="text-align: center;"><img style="width: 388px; height: 207px;" alt="" src="image_010.png"><br>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>1.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>Fonction<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify; height: 54px;">
+            <div style="margin-left: 50px;">Le
+microm&egrave;tre est un instrument de mesure directe permettant de
+mesurer des dimensions dans une tol&eacute;rance de plus ou moins
+1/100e de millim&egrave;tre pour des mesures allant
+jusqu&rsquo;&agrave; 1500 mm. Il existe des
+microm&egrave;tres donc la pr&eacute;cision de lecture est le
+micron (&micro; m) soit 0,001 mm. </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>2.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>Constitution<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;" align="justify">
+
+            <td>
+            <div style="margin-left: 50px;">Ils sont
+constitu&eacute;s d&rsquo;une touche fixe et
+d&rsquo;une touche mobile actionn&eacute;e par un tambour muni
+d&rsquo;un limiteur de couple afin d&rsquo;assurer une pression
+constante lors des mesures.</div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;">
+            <div style="margin-left: 54px; text-align: center;"><br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;">
+            <div style="text-align: center;"><img style="width: 596px; height: 385px;" alt="" src="image_042.png"></div>
+
+            <div style="margin-left: 50px; text-align: center;"></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 50px;">Il se compose
+: <br>
+
+            <ul>
+
+              <li>d&rsquo;une partie en U ou demi-circulaire
+poss&eacute;dant une
+touche fixe et une touche mobile, appel&eacute;e broche,
+actionn&eacute; par un tambour ;</li>
+
+              <li>d&rsquo;une douille cylindrique,
+gradu&eacute;e en
+millim&egrave;tre ; </li>
+
+              <li>d&rsquo;un tambour compos&eacute;
+d&rsquo;une vis
+microm&eacute;trique en acier trait&eacute;e et
+rectifi&eacute;e ; </li>
+
+              <li>de graduations sur la circonf&eacute;rence
+du tambour (50
+divisions) pour permettre une lecture au 1/100 &egrave;me, ce qui
+correspond &agrave; &frac12; mm; </li>
+
+              <li>d&rsquo;un limiteur de couple permettant de
+man&oelig;uvrer le
+microm&egrave;tre sans le d&eacute;t&eacute;riorer ; </li>
+
+              <li>d&rsquo;un syst&egrave;me de blocage ; </li>
+
+              <li>d&rsquo;un syst&egrave;me
+d&rsquo;&eacute;talonnage. </li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>3.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3"></a>Les
+diff&eacute;rents types de microm&egrave;tres<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 50px;">Il en existe
+diff&eacute;rents types suivant la mesure &agrave; effectuer :<br>
+
+            <br>
+
+            <table style="text-align: left; width: 1000px;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="vertical-align: top; text-align: center; width: 330px; font-style: italic;"><small>Microm&egrave;tre
+d&rsquo;ext&eacute;rieur<br>
+
+                  <br>
+
+                  <img style="width: 335px; height: 179px;" alt="" src="image_043.png"><br>
+
+                  <br>
+
+pour mesurer les &eacute;paisseurs</small></td>
+
+                  <td style="vertical-align: top; text-align: center; font-style: italic;"><small>Microm&egrave;tre
+d&rsquo;int&eacute;rieur<br>
+
+                  <br>
+
+                  <img style="width: 290px; height: 219px;" alt="" src="image_044.png"><br>
+
+                  <br>
+
+                  <img style="width: 320px; height: 118px;" alt="" src="image_046.png"><br>
+
+                  <br>
+
+                  <br>
+
+pour mesurer des al&eacute;sages<br>
+
+                  </small></td>
+
+                  <td style="vertical-align: top; text-align: center; font-style: italic;"><small>Jauge
+de profondeur<br>
+
+                  <br>
+
+                  <img style="width: 155px; height: 317px;" alt="" src="image_045.png"><br>
+
+                  <br>
+
+pour mesurer des profondeurs de trous &eacute;paul&eacute;s </small></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            <br>
+
+Les microm&egrave;tres peuvent &ecirc;tre comme les calibres
+&agrave; coulisse &agrave; affichage num&eacute;rique.<br>
+
+            <br>
+
+            <div style="text-align: center;"><img style="width: 446px; height: 192px;" alt="" src="image_047.png"></div>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64); font-family: Arial;">
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>4.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="4"></a>Principe
+de lecture<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify; height: 10px;">
+            <div style="margin-left: 105px;"><br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="height: 10px;">
+            <div style="margin-left: 50px;"><span style="font-weight: bold;">1&egrave;re
+&eacute;tape : </span>la lecture des millim&egrave;tres.
+            <br>
+
+            <br>
+
+            <table style="text-align: left; width: 1000px;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td><img style="width: 553px; height: 381px;" alt="" src="image_048.png"></td>
+
+                  <td>La lecture des mm s&rsquo;effectue sur
+la douille gradu&eacute;e. <br>
+
+                  <br>
+
+Lire la derni&egrave;re graduation visible sur la douille
+cot&eacute;e &eacute;chelle des mm. <br>
+
+                  <br>
+
+Dans le cas de la figure, on lit 8 mm. <br>
+
+                  <br>
+
+Lire &eacute;ventuellement les &frac12; mm au dessus de la
+ligne de foi.<br>
+
+                  <br>
+
+Dans le cas de la figure, on lit 0.5 mm. </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            <br>
+
+            <span style="font-weight: bold;">2&egrave;me
+&eacute;tape :</span> la lecture des 1/100 de mm (0,01
+mm).
+Dans ce cas, la longueur mesur&eacute;e est donc : 8,55 mm.<br>
+
+            <br>
+
+            <table style="text-align: left; width: 1000px;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td><img style="width: 576px; height: 352px;" alt="" src="image_049.png"></td>
+
+                  <td>La lecture des 1/100 de mm
+s&rsquo;effectue sur le tambour gradu&eacute;. <br>
+
+                  <br>
+
+Le relev&eacute; de l&rsquo;&eacute;chelle des 1/100 est la
+graduation devant la ligne de foi de la douille gradu&eacute;e. <br>
+
+                  <br>
+
+Le sens de lecture du tambour gradu&eacute; est dans le sens
+contraire des aiguilles d&rsquo;une montre.<br>
+
+                  <br>
+
+Dans ce cas la figure, on lit <span style="font-weight: bold;">0,05
+mm. </span><br>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            <br>
+
+            <br>
+
+            <div style="text-align: center;">La valeur
+pour cet exemple, est <span style="font-weight: bold;">8
++ 0,5 + 0,05 = 8,55 mm.</span><br>
+
+            </div>
+
+            <br>
+
+La valeur pour cet exemple, est<span style="font-weight: bold;">
+8 + 0,5 + 0,05 = 8,55 mm.</span><br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>5.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="5"></a>Principe
+d'utilisation<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr align="center">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="height: 10px;">
+            <div style="margin-left: 50px;">
+            <ul>
+
+              <li>Avant la
+mesure, essuyer la surface de la touche fixe et de la broche avec un
+chiffon propre. Le retrait des &eacute;ventuelles
+poussi&egrave;res et particules permet une mesure
+pr&eacute;cise. </li>
+
+              <li>Tenir le microm&egrave;tre entre le pouce
+et l&rsquo;index de
+la main gauche et pincer le tambour avec le pouce et l&rsquo;index
+de la main droite. </li>
+
+              <li>Etalonner le microm&egrave;tre. </li>
+
+              <li>Serrer la cible entre la touche fixe et la
+broche, tourner le limiteur
+de couple jusqu&rsquo;&agrave; ce qu&rsquo;il saute. </li>
+
+              <li>Lire la valeur sur
+l&rsquo;&eacute;chelle principale
+situ&eacute;e sur la douille et sur l&rsquo;&eacute;chelle
+du tambour. </li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>6.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="6"></a>Exemples
+de lecture<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 50px;">
+            <table style="text-align: left; width: 1000px;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td><img style="width: 293px; height: 189px;" alt="" src="image_050.png"></td>
+
+                  <td style="font-family: Arial;">Douille
+gradu&eacute;e : 16 mm <br>
+
+Les &frac12; mm : 0,0 mm <br>
+
+Tambour gradu&eacute; : 0,00 mm <br>
+
+                  <br>
+
+La valeur pour cet exemple, est <span style="font-weight: bold;">16
++ 0 + 0,00 = 16 mm.</span> </td>
+
+                </tr>
+
+                <tr>
+
+                  <td><img style="width: 293px; height: 189px;" alt="" src="image_051.png"></td>
+
+                  <td style="font-family: Arial;">Douille
+gradu&eacute;e : 11 mm <br>
+
+Les &frac12; mm : 0,5 mm <br>
+
+Tambour gradu&eacute; : 0,35 mm <br>
+
+                  <br>
+
+La valeur pour cet exemple, est <span style="font-weight: bold;">11+
+0,5 + 0,35 = 11,85 mm.</span> </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>7.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="7"></a>Fichiers</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="le_micrometre_lecture.docx">Fichier word</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 5px;"></td>
+
+                  <td style="text-align: center;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="le_micrometre_lecture.pdf" target="_blank">Fichier
+PDF</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+
+</body>
+</html>

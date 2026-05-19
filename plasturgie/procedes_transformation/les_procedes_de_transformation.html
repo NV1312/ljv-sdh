@@ -1,0 +1,1582 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+  <title>Bac pro PLC -Mondeville - Les
+proc&eacute;d&eacute;s de transformation</title>
+
+
+  <meta content="ressources" name="description">
+
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+  <tbody>
+
+    <tr>
+
+      <td>
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+        <tbody>
+
+          <tr>
+
+            <td style="vertical-align: top; height: 110px;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="background-color: rgb(64, 64, 64);">
+            <div id="menu">
+            <ul>
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">Les
+proc&eacute;d&eacute;s de transformation</span></big></big></big></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td><span style="font-family: Arial; font-weight: bold;">1. <a href="#1"><span style="text-decoration: underline;">L'injection</span></a></span><br style="font-family: Arial; font-weight: bold;">
+
+                  <br style="font-family: Arial; font-weight: bold;">
+
+                  <span style="font-family: Arial; font-weight: bold;">2. <a href="#2"><span style="text-decoration: underline;">L'extrusion</span></a></span><br style="font-family: Arial; font-weight: bold;">
+
+                  <br style="font-family: Arial; font-weight: bold;">
+
+                  <span style="font-family: Arial; font-weight: bold;">3. <a href="#3"><span style="text-decoration: underline;">L'extrusion
+soufflage</span></a></span><br style="font-family: Arial; font-weight: bold;">
+
+                  <br style="font-family: Arial; font-weight: bold;">
+
+                  <span style="font-family: Arial; font-weight: bold;">4. <span style="text-decoration: underline;"><a href="#4">L'extrusion
+gonflage</a><br>
+
+                  <br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">5. <span style="text-decoration: underline;"><a href="#5">Le
+calandrage</a><br>
+
+                  <br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">6. <span style="text-decoration: underline;"><a href="#6">L'enduction</a><br>
+
+                  <br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">7. <span style="text-decoration: underline;"><a href="#7">Le
+rotomoulage</a><br>
+
+                  <br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">8. <span style="text-decoration: underline;"><a href="#8">L'extpansion</a><br>
+
+                  <br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">9. <span style="text-decoration: underline;"><a href="#9">La
+pultrusion</a><br>
+
+                  <br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">10. <span style="text-decoration: underline;"><a href="#10">Le
+thermoformage</a><br>
+
+                  <br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">11. <span style="text-decoration: underline;"><a href="#11">La
+stratification ( composite)</a><br>
+
+                  <br>
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;">12. <a href="#12"><span style="text-decoration: underline;">La
+chaudronnerie</span></a></span><br>
+
+                  <span style="font-family: Arial; font-weight: bold;"><span style="text-decoration: underline;"></span> <br>
+
+13. <a href="#13">Fichiers</a></span></td>
+
+                  <td style="text-align: center;"><img style="width: 512px; height: 368px;" alt="" src="image_011.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>1.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>L'injection</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td>
+            <div style="margin-left: 52px;"><br>
+
+            <br>
+
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="text-align: justify;"><img style="width: 500px; height: 245px;" alt="" src="image_001.png"></td>
+
+                  <td style="text-align: justify;">La
+mati&egrave;re plastique sous forme de granul&eacute;s, est
+vers&eacute;e dans une tr&eacute;mie pour alimenter une vis
+sans fin log&eacute;e dans un tube chauff&eacute;. <br>
+
+                  <br>
+
+Elle y est
+comprim&eacute;e, malax&eacute;e et chauff&eacute;e. <br>
+
+                  <br>
+
+Ce
+traitement m&eacute;canique et thermique fournit une p&acirc;te
+fondante et homog&egrave;ne sans bulle qui est pouss&eacute;e
+par la vis en rotation vers un orifice. <br>
+
+                  <br>
+
+La mati&egrave;re
+expuls&eacute;e sous pression par la vis d&rsquo;injection
+&agrave; travers ce trou vient remplir un moule ferm&eacute; et
+refroidi. <br>
+
+                  <br>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+Au contact des parois froides, elle prend la forme du moule
+et se solidifie. <br>
+
+            <br>
+
+Le moule s&rsquo;ouvre ensuite pour faire sortir
+la pi&egrave;ce. <br>
+
+            <br>
+
+Pour changer la forme de la pi&egrave;ce, il
+suffit de changer de moule. <br>
+
+            <br>
+
+Ce proc&eacute;d&eacute; permet une transformation en
+discontinu des thermoplastiques. <br>
+
+            <br>
+
+C&rsquo;est une m&eacute;thode
+de production tr&egrave;s rapide pour produire des objets en
+tr&egrave;s grande quantit&eacute;. <br>
+
+            <br>
+
+La technique de fabrication
+est fr&eacute;quente pour fabriquer des objets moul&eacute;s de
+qualit&eacute;, parfois de forme compliqu&eacute;e dans le
+domaine de l&rsquo;automobile, du jouet ou de
+l&rsquo;&eacute;lectronique. <br>
+
+            <br>
+
+On peut r&eacute;aliser des
+objets tr&egrave;s volumineux, par contre, il n&rsquo;est pas
+possible de faire des parois sup&eacute;rieures &agrave; 6 mm.<br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 52px; text-align: center;"><a href="injection.MPG"><span style="font-family: Arial;">animation</span></a></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>2.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>L'extrusion</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td>
+            <div style="margin-left: 52px;">L&rsquo;extrusion
+est un proc&eacute;d&eacute; de transformation en continu. <br>
+
+            <br>
+
+Comme pour l&rsquo;injection, le granul&eacute; entre dans un
+tube chauff&eacute; muni d&rsquo;une vis sans fin. <br>
+
+            <br>
+
+La
+mati&egrave;re molle homog&eacute;n&eacute;is&eacute;e
+est pouss&eacute;e, comprim&eacute;e, puis passe &agrave;
+travers une fili&egrave;re pour &ecirc;tre mise &agrave; la
+forme souhait&eacute;e. <br>
+
+            <br>
+
+C&rsquo;est une sorte de &laquo;
+machine &agrave; spaghettis &raquo; qui permet obtenir des
+produits semi-finis de formes diverses. <br>
+
+            <br>
+
+On fabrique avec cette
+technique de transformation des produits de grande longueur comme des
+profil&eacute;s pour les portes et les fen&ecirc;tres, des
+canalisations, des c&acirc;bles, des fibres optiques, des tubes,
+des grillages, des plaques et des feuilles plastique&hellip; <br>
+
+            <br>
+
+Le
+tube ou le profil&eacute; sort en continu, il est refroidi pour
+&ecirc;tre ensuite coup&eacute; &agrave; la longueur
+voulue. <br>
+
+            <br>
+
+En additionnant plusieurs couches de mati&egrave;re on peut
+r&eacute;aliser des produits ayant des
+propri&eacute;t&eacute;s combin&eacute;es.<br>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 20px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 52px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-style: italic;"><img style="width: 588px; height: 309px;" alt="" src="image_002.png"></td>
+
+                  <td style="font-family: Arial; font-style: italic;">1.
+La mati&egrave;re est ins&eacute;r&eacute;e dans
+l&rsquo;extrudeuse (granul&eacute; ou poudre) <br>
+
+                  <br>
+
+2. Le cylindre chauffant permet de ramollir la mati&egrave;re <br>
+
+                  <br>
+
+3. La vis sans fin tourne et permet de fondre et
+homog&eacute;n&eacute;iser la mati&egrave;re, celle-ci
+monte en pression en bout de vis. <br>
+
+                  <br>
+
+4. La mati&egrave;re passe au travers la fili&egrave;re, qui va
+donner la forme finale du produit <br>
+
+                  <br>
+
+5. La mati&egrave;re est refroidie et conform&eacute;e
+g&eacute;n&eacute;ralement sous vide (pour conserver les
+dimensions) <br>
+
+                  <br>
+
+6. Les profil&eacute;s sont tir&eacute;s en bout de ligne puis
+coup&eacute;s &agrave; longueur et palettiser </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 52px; text-align: center;"><a href="extrusion%20tube%20profile.MPG"><span style="font-family: Arial;">animation</span></a></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>3.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3"></a>L'extrusion soufflage</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td>
+            <div style="margin-left: 52px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial;">L&rsquo;extrusion
+soufflage permet de fabriquer des corps creux. <br>
+
+                  <br>
+
+Cela commence par l&rsquo;extrusion d&rsquo;un tube plein
+appel&eacute; la paraison. <br>
+
+                  <br>
+
+Ce tube de plastique encore chaud sortant de la fili&egrave;re est
+coup&eacute; et un moule froid en deux parties se referme autour de
+lui. <br>
+
+                  <br>
+
+Ensuite, de l&rsquo;air est inject&eacute; dans la
+mati&egrave;re par
+une canne de soufflage et le polym&egrave;re vient se plaquer sur
+les
+parois int&eacute;rieures du moule qui est rapidement refroidit. <br>
+
+                  <br>
+
+Le proc&eacute;d&eacute; se termine par le
+d&eacute;moulage, le
+d&eacute;carottage et l&rsquo;&eacute;limination des
+d&eacute;chets de
+moulage de la pi&egrave;ce.</td>
+
+                  <td><img style="width: 546px; height: 289px;" alt="" src="image_003.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 52px; text-align: center;"><a href="extrusion%20soufflage.MPG"><span style="font-family: Arial;">animation</span></a></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>4.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big style="font-family: Arial;"><a name="4"></a>L'extrusion
+gonflage</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 52px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: justify;">C&rsquo;est
+une variante de l&rsquo;extrusion qui permet de fabriquer des films
+plastiques. <br>
+
+                  <br>
+
+Ce proc&eacute;d&eacute; consiste en sortie de
+l&rsquo;extrudeuse &agrave; dilater avec de l&rsquo;air
+comprim&eacute; une gaine polym&egrave;re
+pr&eacute;c&eacute;demment form&eacute;e.<br>
+
+                  <br>
+
+La sortie de
+l&rsquo;extrudeuse est verticale, on insuffle de l&rsquo;air
+comprim&eacute; dans la mati&egrave;re fondue qui se gonfle et
+s&rsquo;&eacute;l&egrave;ve verticalement en une longue
+bulle de film. <br>
+
+                  <br>
+
+Apr&egrave;s refroidissement, des rouleaux
+aplatissent le film en une gaine plane qui s&rsquo;enroule sur des
+bobines. <br>
+
+                  <br>
+
+On fabrique ainsi des films utilis&eacute;s dans la
+fabrication d&rsquo;emballages, de sacs-poubelles, de sacs de
+cong&eacute;lation, des poches m&eacute;dicales pour perfusion
+et des feuilles souples et fines de rev&ecirc;tements pour serres
+horticoles. </td>
+
+                  <td><img src="image_004.png" alt="" style="width: 560px; height: 350px;"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 52px; text-align: center;"><a href="extrusion%20gonflage.MPG"><span style="font-family: Arial;">animation</span></a></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>5.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big style="font-family: Arial;"><a name="5"></a>Le
+calandrage</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 52px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td>
+                  <div style="text-align: justify;"><span style="font-family: Arial;">Le calandrage est un
+proc&eacute;d&eacute; de laminage utilis&eacute; pour la
+production de feuilles et de films plastiques. <br>
+
+                  <br>
+
+La r&eacute;sine thermoplastique chauff&eacute;e et fondue est
+plac&eacute;e entre des rouleaux chauffants qui op&egrave;rent
+comme les anciennes essoreuses. <br>
+
+                  <br>
+
+Les rouleaux sont de plusieurs tailles et tournent donc &agrave;
+des vitesses l&eacute;g&egrave;rement diff&eacute;rentes
+pour transformer le plastique en feuilles ou en fine pellicule. <br>
+
+                  <br>
+
+                  </span></div>
+
+                  </td>
+
+                  <td><img style="width: 599px; height: 212px;" alt="" src="image_005.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td colspan="2" rowspan="1"><span style="font-family: Arial;">Le film est ensuite refroidi
+puis enroul&eacute; sur de grosses bobines.<br>
+
+                  <br>
+
+Ce
+proc&eacute;d&eacute; est souvent utilis&eacute; pour
+transformer le PVC en produits plats
+de grande largeur comme des nappes, des rev&ecirc;tements
+d&rsquo;ameublement ou de
+maroquinerie car on peut donner par exemple une texture sur des
+mat&eacute;riaux synth&eacute;tiques qui imitent le cuir.</span></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>6.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big style="font-family: Arial;"><a name="6"></a>L'
+enduction</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 52px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td><img style="width: 450px; height: 219px;" alt="" src="image_006.png"></td>
+
+                  <td style="font-family: Arial; text-align: justify;">Le principe
+de l&rsquo;enduction consiste &agrave; d&eacute;poser une
+r&eacute;sine thermoplastique &agrave; l'&eacute;tat
+p&acirc;teux sur un support continu (tissu, papier), puis
+pass&eacute;e au four. <br>
+
+                  <br>
+
+Le film, qui peut &ecirc;tre d&eacute;cor&eacute;, sert de
+protection ou de rev&ecirc;tement. <br>
+
+                  <br>
+
+Ce proc&eacute;d&eacute; sert &agrave; fabriquer des sols,
+des murs, des v&ecirc;tements, du mobilier&hellip; </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>7.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big style="font-family: Arial;"><a name="7"></a>Le
+rotomoulage</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 52px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: justify;">Ce
+proc&eacute;d&eacute; est utilis&eacute; pour fabriquer des
+corps creux
+comme des kayaks, des planches &agrave; voile, des cuves ou des
+conteneurs. <br>
+
+                  <br>
+
+Une fine poudre thermoplastique ou un plastisol est enferm&eacute;
+dans
+un moule chauffant qui est mis en rotation suivant deux axes. <br>
+
+                  <br>
+
+Le mat&eacute;riau se r&eacute;partit uniform&eacute;ment
+sur les parois du moule. <br>
+
+                  <br>
+
+                  <span style="font-weight: bold;">Plastisol
+                  </span>[&eacute;tymologie
+possible : &laquo; plasti(que) + sol(vant) &raquo;] est une
+p&acirc;te
+obtenue par m&eacute;lange d'une r&eacute;sine
+synth&eacute;tique
+poudreuse dans un plastifiant liquide. </td>
+
+                  <td><img style="width: 600px; height: 391px;" alt="" src="image_007.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 52px; text-align: center;"><a href="PLASTURGIE%20-%20ROTOMOULAGE.mp4"><span style="font-family: Arial;">animation</span></a></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>8.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big style="font-family: Arial;"><a name="8"></a>L'expansion</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 52px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td><img style="width: 377px; height: 307px;" alt="" src="image_008.png"></td>
+
+                  <td style="font-family: Arial; text-align: justify;">Le
+polystyr&egrave;ne est un polym&egrave;re qui se
+pr&eacute;sente avant transformation sous forme de petites billes
+non expans&eacute;es. <br>
+
+                  <br>
+
+Elles renferment des micro-inclusions &agrave;
+l&rsquo;&eacute;tat liquide qui se transforment en gaz lors de
+l&rsquo;expansion. <br>
+
+                  <br>
+
+Dans une chaudi&egrave;re, en pr&eacute;sence de vapeur
+d&rsquo;eau, la mati&egrave;re se ramollit et le gaz
+qu&rsquo;elle contient se dilate. <br>
+
+                  <br>
+
+Les petites billes gonflent, comme du pop-corn, en gardant une forme
+sph&eacute;rique r&eacute;guli&egrave;re. <br>
+
+                  <br>
+
+Cette premi&egrave;re expansion est r&eacute;alis&eacute;e
+dans de grandes cuves en inox et
+permet d&rsquo;obtenir jusqu&rsquo;&agrave; 30 fois le
+volume initial du polystyr&egrave;ne non
+expans&eacute;.<br>
+
+                  </td>
+
+                </tr>
+
+                <tr style="font-family: Arial;">
+
+                  <td colspan="2" rowspan="1">Dans
+un deuxi&egrave;me temps, apr&egrave;s s&eacute;chage, les
+billes pr&eacute;-expans&eacute;es sont
+introduites dans un moule ferm&eacute; et sont soumises
+&agrave; une nouvelle
+expansion gr&acirc;ce &agrave; l&rsquo;injection de vapeur
+d&rsquo;eau. <br>
+
+                  <br>
+
+Les billes augmentent de volume et collent les unes aux autres dans le
+volume int&eacute;rieur du moule. <br>
+
+                  <br>
+
+Cette
+technique est utilis&eacute;e pour fabriquer toutes sortes
+d&rsquo;emballages en
+polystyr&egrave;ne expans&eacute; : emballages de protection
+pour appareils fragiles,
+caisses &agrave; poissons, barquettes alimentaires &hellip;</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>9.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big style="font-family: Arial;"><a name="9"></a>La
+pultrusion (composite)</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 52px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: justify;">La
+pultrusion est un proc&egrave;de automatise permettant la
+production de
+profiles &agrave; section constante de mani&egrave;re continue.
+                  <br>
+
+                  <br>
+
+Elle consiste &agrave; faire passer des fibres
+impr&eacute;gn&eacute;es
+de r&eacute;sine dans une fili&egrave;re chauff&eacute;e
+o&ugrave; a
+lieu la polym&eacute;risation. <br>
+
+                  <br>
+
+On obtient, apr&egrave;s refroidissement, un profil&eacute;
+rigide produit en continu.</td>
+
+                  <td><img style="width: 523px; height: 192px;" alt="" src="image_009.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>10.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big style="font-family: Arial;"><a name="10"></a>Le
+thermoformage</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 52px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial;">C&rsquo;est
+un proc&eacute;d&eacute; de seconde transformation dans lequel
+la mati&egrave;re arrive sous forme de plaques, de tubes ou de
+profil&eacute;s. <br>
+
+                  <br>
+
+Le mat&eacute;riau est ramolli par chauffage avant
+d&rsquo;&ecirc;tre d&eacute;form&eacute; et mis en
+forme par un moule m&eacute;tallique. <br>
+
+                  <br>
+
+La parfaite adh&eacute;sion du polym&egrave;re sur le moule se
+fait par aspiration sous vide ou par plaquage par injection
+d&rsquo;air. <br>
+
+                  <br>
+
+Il est possible de r&eacute;aliser des pi&egrave;ces dont les
+parois sont fines et des pi&egrave;ces de grande taille. <br>
+
+                  <br>
+
+Les plaques de polystyr&egrave;ne ou d&rsquo;ABS sont
+particuli&egrave;rement adapt&eacute;es &agrave; ce type de
+transformation. <br>
+
+                  <br>
+
+Cette technique est utilis&eacute;e pour produire des objets aux
+formes g&eacute;om&eacute;triques simples comme des pots de
+yaourts, des cabines de douche, des baignoires, des
+&eacute;l&eacute;ments de carrosserie. <br>
+
+                  <br>
+
+Il comprend cinq phases : <br>
+
+                  <div style="margin-left: 40px;">&ndash;
+chauffage de la feuille,<br>
+
+&ndash; suppression du chauffage et mont&eacute;e du
+mod&egrave;le,<br>
+
+&ndash; aspiration de l&rsquo;air dans l&rsquo;espace
+feuille/mod&egrave;le,<br>
+
+&ndash; refroidissement par soufflage,<br>
+
+&ndash; d&eacute;moulage </div>
+
+                  </td>
+
+                  <td><img style="width: 544px; height: 678px;" alt="" src="image_010.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 52px; text-align: center;"><a href="thermoformage.MPG"><span style="font-family: Arial;">animation</span></a></div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>11.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big style="font-family: Arial;"><a name="11"></a>La
+stratification (composite)</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">
+            <div style="margin-left: 52px;">Le
+proc&eacute;d&eacute; consiste &agrave; superposer des
+couches de supports tels que bois, papier, textiles
+impr&eacute;gn&eacute;es de r&eacute;sine thermodurcissable
+puis press&eacute;es et chauff&eacute;es sous haute pression
+pour provoquer la polym&eacute;risation. <br>
+
+            <br>
+
+Ce
+proc&eacute;d&eacute; r&eacute;serv&eacute; aux
+thermodurcissables n'est applicable qu'&agrave; l'obtention de
+produits plats. <br>
+
+            <br>
+
+On le retrouve pour l&rsquo;h&ocirc;tellerie
+(plateaux), ameublement, panneaux, &hellip; </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>12.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big style="font-family: Arial;"><a name="12"></a>La
+chaudronnerie</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 52px;">La
+mati&egrave;re, sous forme de semi-produits
+manufactur&eacute;s, est transform&eacute;e par
+proc&eacute;d&eacute; m&eacute;canique, pour
+r&eacute;pondre aux besoins de l'industrie en
+g&eacute;n&eacute;ral, dans les probl&egrave;mes de
+stockage ou transport de substances corrosives ou non. <br>
+
+            <br>
+
+Cette technique
+comporte des op&eacute;rations de d&eacute;coupe, de formage
+&agrave; chaud, d'usinage et d'assemblage par soudure avec ou sans
+apport de mati&egrave;re. <br>
+
+            <br>
+
+On retrouve la chaudronnerie dans la
+chimie, ing&eacute;nierie, agroalimentaire, BTP, &hellip; </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>13.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="13"></a>Fichiers</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="les_procedes_de_transformation.docx">Fichier word</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 5px;"></td>
+
+                  <td style="text-align: center;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="les_procedes_de_transformation.pdf" target="_blank">Fichier
+PDF</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+
+</body>
+</html>

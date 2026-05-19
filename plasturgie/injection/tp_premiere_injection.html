@@ -1,0 +1,2783 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+  
+  <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+
+  
+
+
+  
+  <title>Bac pro PLC -Mondeville - tp premi&egrave;re injection</title>
+  <meta content="ressources" name="description">
+
+
+  
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+  
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+
+
+  
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+
+  
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+
+  
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td>
+      
+      <div style="text-align: center;"></div>
+
+
+      
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+
+        <tbody>
+
+
+          <tr>
+
+
+            <td style="vertical-align: top; height: 110px; text-align: center;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+
+          </tr>
+
+
+          <tr style="color: rgb(64, 64, 64);">
+
+
+            <td style="background-color: rgb(64, 64, 64);">
+            
+            <div id="menu">
+            
+            <ul>
+
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+
+            
+            </ul>
+
+
+            </div>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+          </tr>
+
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">TP
+premi&egrave;re injection</span></big></big></big></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+          </tr>
+
+
+          <tr style="color: rgb(64, 64, 64);">
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td><span style="font-family: Arial; font-weight: bold;">1. <a href="#1"><span style="text-decoration: underline;">Pr&eacute;ambule</span></a></span><br style="font-family: Arial; font-weight: bold;">
+
+
+                  <span style="font-family: Arial; font-weight: bold;"></span><br style="font-family: Arial; font-weight: bold;">
+
+
+                  <span style="font-family: Arial; font-weight: bold;"><span style="text-decoration: underline;"></span></span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="font-weight: bold;"></span></span><span style="font-family: Arial; font-weight: bold;">2. <span style="text-decoration: underline;"><a href="#2">Tableau des relev&eacute;s</a><br>
+                  <br>
+3. <a href="#3">Proc&eacute;dure</a><br>
+                  <br>
+4. <a href="#4">Pages &eacute;cran</a><br>
+
+
+                  <br>
+
+
+                  </span></span><span style="font-family: Arial; font-weight: bold;"><a href="#3"><span style="text-decoration: underline;"></span></a></span><span style="font-family: Arial; font-weight: bold;">5. <a href="#5">Fichiers</a></span></td>
+
+
+                  <td style="text-align: right; width: 560px;"><img style="width: 652px; height: 451px;" alt="" src="image_225.png"><br>
+
+
+                  </td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+          </tr>
+
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>1.&nbsp;</big></big></td>
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>Pr&eacute;ambule<br>
+
+
+                  </big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr style="font-family: Arial;" align="center">
+
+
+            <td>
+            
+            <div style="text-align: left;"></div>
+
+
+            
+            <div text-align="" left="">
+            
+            <div style="text-align: left;"><span style="text-decoration: underline; font-weight: bold;">Objectif
+: <br>
+
+
+            <br>
+
+
+            </span>&nbsp;Etre capable d&rsquo;afficher
+des param&egrave;tres pour injecter sur une presse. <br>
+
+
+            <br>
+
+
+            <span style="font-weight: bold; text-decoration: underline;">Comp&eacute;tences
+vis&eacute;es : </span><br>
+
+
+            <br>
+
+
+Identifier sur le site : les mati&egrave;res premi&egrave;res
+et semi-produits; les
+diff&eacute;rents composants; les &eacute;quipements, les
+outillages, les outils; les
+moyens de contr&ocirc;le; les dispositifs de
+s&eacute;curit&eacute;. <br>
+
+
+Collecter les informations &eacute;crites, orales ou
+informatis&eacute;es li&eacute;es au fonctionnement de
+l&rsquo;aire
+et/ou du poste de fabrication. <br>
+
+
+Rendre compte du travail effectu&eacute;. <br>
+
+
+Participer &agrave; la vie de l&rsquo;&eacute;quipe de
+production. <br>
+
+
+Proc&eacute;der aux v&eacute;rifications afin
+d&rsquo;assurer la
+s&eacute;curit&eacute; des personnes et des moyens de
+production pour
+respecter l&rsquo;environnement. <br>
+
+
+Afficher les r&eacute;glages des machines, des
+p&eacute;riph&eacute;riques, des &eacute;quipements. <br>
+
+
+Assurer l&rsquo;arr&ecirc;t m&eacute;thodique de la
+fabrication en
+appliquant les proc&eacute;dures, les modes op&eacute;ratoires
+et les
+consignes. <br>
+
+
+D&eacute;monter, ranger les p&eacute;riph&eacute;riques,
+les outils, les accessoires. <br>
+
+
+V&eacute;rifier la conformit&eacute; de la
+r&eacute;f&eacute;rence des mati&egrave;res
+d&rsquo;&oelig;uvre. <br>
+
+
+            <br>
+
+
+            <span style="font-weight: bold; text-decoration: underline;">On
+donne :</span> <br>
+
+
+            <br>
+
+
+- les machines et leurs moules <br>
+
+
+- la fiche de r&eacute;glage de la machine <br>
+
+
+- les fiches mati&egrave;res <br>
+
+
+- le mode op&eacute;ratoire <br>
+
+
+&nbsp;&nbsp; &nbsp;<br>
+
+
+            <span style="font-weight: bold; text-decoration: underline;">On
+demande :</span><br>
+
+
+            </div>
+
+
+            <br>
+
+
+            
+            <table style="text-align: left; width: 900px;" border="1" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="width: 100px; height: 30px; font-weight: bold; text-align: center; background-color: rgb(255, 204, 255);">Comp&eacute;tence</td>
+
+
+                  <td style="font-weight: bold; text-align: center; background-color: rgb(255, 204, 255); width: 350px;">Travail
+et
+crit&egrave;res
+d&rsquo;&eacute;valuation</td>
+
+
+                  <td style="font-weight: bold; text-align: center; background-color: rgb(255, 204, 255); width: 56px;" colspan="2" rowspan="1">Bar&egrave;me</td>
+
+
+                  <td style="font-weight: bold; text-align: center; background-color: rgb(255, 204, 255); width: 46px;">Note</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td colspan="1" rowspan="1">C 02,
+C 09 <br>
+
+
+                  </td>
+
+
+                  <td colspan="1" rowspan="1" style="width: 350px;">Mettre la presse en service, tester
+les s&eacute;curit&eacute;s et faire valider par le professeur
+(TP 1). <br>
+
+
+                  <br>
+
+
+                  </td>
+
+
+                  <td style="height: 30px; width: 336px;">-
+La mise en route est correcte 2pts <br>
+
+
+- Les s&eacute;curit&eacute;s sont correctement
+test&eacute;es 3 pts (-1 pt par &eacute;l&eacute;ment mal
+test&eacute; ou oubli&eacute; lors du test des
+s&eacute;curit&eacute;s) </td>
+
+
+                  <td style="text-align: center; width: 56px;">5
+pts&nbsp;</td>
+
+
+                  <td style="width: 46px;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td colspan="1" rowspan="1">C
+18&nbsp;</td>
+
+
+                  <td colspan="1" rowspan="1" style="width: 350px;">Indiquer la mati&egrave;re
+travaill&eacute;e sur le tableau des relev&eacute;s.&nbsp; </td>
+
+
+                  <td style="height: 30px; width: 336px;">-
+La
+marque, la r&eacute;f&eacute;rence et le lot de la
+mati&egrave;re sont indiqu&eacute;s et corrects 3pts
+(- 1pt par &eacute;l&eacute;ment manquant ou
+incorrect)&nbsp; </td>
+
+
+                  <td style="text-align: center; width: 56px;">3
+pts&nbsp;</td>
+
+
+                  <td style="width: 46px;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td>C 25&nbsp;</td>
+
+
+                  <td style="width: 350px;">Valider la
+disponibilit&eacute; de la mati&egrave;re sur la fiche du
+tableau des relev&eacute;s&nbsp;</td>
+
+
+                  <td style="width: 336px;">- La
+validation
+est faite 0.5 pt <br>
+
+
+- La validation n&rsquo;est pas faite 0 pt&nbsp;</td>
+
+
+                  <td style="text-align: center; width: 56px;">0,5
+pts&nbsp;</td>
+
+
+                  <td style="width: 46px;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td>C 01, C 08&nbsp;</td>
+
+
+                  <td style="width: 350px;">A
+l&rsquo;aide de la fiche
+mati&egrave;re d&eacute;terminer les temp&eacute;ratures de
+chauffe&nbsp;</td>
+
+
+                  <td style="width: 336px;">- Les
+t&deg; sont correctes 4 pts
+(- 1 pt par t&deg; incorrectes)&nbsp;</td>
+
+
+                  <td style="width: 56px; text-align: center;">4
+pts</td>
+
+
+                  <td style="width: 46px;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td>C 04&nbsp;</td>
+
+
+                  <td style="width: 350px;">Mettre en
+chauffe et faire valider par le
+professeur&nbsp;</td>
+
+
+                  <td style="width: 336px;">- Les
+t&deg; sont correctement
+affich&eacute;es 4 pts
+(- 1 pt par erreur d&rsquo;affichage ou incoh&eacute;rence avec
+la fiche mati&egrave;re)&nbsp;</td>
+
+
+                  <td style="width: 56px; text-align: center;">4
+pts&nbsp;</td>
+
+
+                  <td style="width: 46px;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td>C 14&nbsp;</td>
+
+
+                  <td style="width: 350px;">Pr&eacute;parer
+1 godet de
+mati&egrave;re et les verser dans le fourreau&nbsp;</td>
+
+
+                  <td style="width: 336px;">-
+L&rsquo;op&eacute;ration est
+effectu&eacute;e 0.5 pt <br>
+
+
+- L&rsquo;op&eacute;ration n&rsquo;est pas
+effectu&eacute;e 0pt </td>
+
+
+                  <td style="width: 56px;">0,5
+pts&nbsp;</td>
+
+
+                  <td style="width: 46px;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td colspan="1" rowspan="1">C 03</td>
+
+
+                  <td colspan="1" rowspan="1" style="width: 350px;">Afficher les param&egrave;tres
+pour les &eacute;crans 3100, 3200, 4000 et 5100</td>
+
+
+                  <td style="height: 30px; width: 336px;">-
+2 pts par param&egrave;tre correctement affich&eacute; <br>
+
+
+- le contr&ocirc;le par le professeur est demand&eacute; <br>
+
+
+2 pts <br>
+
+
+- le contr&ocirc;le par le professeur n&rsquo;est pas
+demand&eacute; &ndash;3pts</td>
+
+
+                  <td style="text-align: center; width: 56px;">14
+pts&nbsp;</td>
+
+
+                  <td style="width: 46px;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td>C 18&nbsp;</td>
+
+
+                  <td style="width: 350px;">Consigner les
+valeurs dans la 5100&nbsp; </td>
+
+
+                  <td style="width: 336px;">Toutes la
+valeurs sont consign&eacute;es
+(- 0 ,5 pts par &eacute;l&eacute;ment manquant)&nbsp; </td>
+
+
+                  <td style="width: 56px; text-align: center;">8
+pts&nbsp;</td>
+
+
+                  <td style="width: 46px;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td>C 13&nbsp;</td>
+
+
+                  <td style="width: 350px;">Etalonner la
+balance&nbsp;</td>
+
+
+                  <td style="width: 336px;">- La balance
+est &eacute;talonn&eacute;e 1pt <br>
+
+
+- La balance n&rsquo;est pas &eacute;talonn&eacute;e
+0pt&nbsp;</td>
+
+
+                  <td style="width: 56px; text-align: center;">1
+pts&nbsp;</td>
+
+
+                  <td style="width: 46px;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td>C 03&nbsp;</td>
+
+
+                  <td style="width: 350px;">Peser la
+purge, relever la valeur, consigner celle-ci et calculer la moyenne des
+poids des purges sur la feuille de relev&eacute;s&nbsp;</td>
+
+
+                  <td style="width: 336px;">- Les poids de
+purge sont relev&eacute;s
+5pts
+(-1 pt par ligne absente ou incorrecte) <br>
+
+
+- La moyenne des poids est calcul&eacute;e et correcte 5 pts <br>
+
+
+- La moyenne est justifi&eacute;e et incorrecte 3 pts <br>
+
+
+- La moyenne est injustifi&eacute;e et incorrecte 0 pt&nbsp;</td>
+
+
+                  <td style="width: 56px; text-align: center;">10
+pts&nbsp;</td>
+
+
+                  <td style="width: 46px;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td>C 03, C 17&nbsp;</td>
+
+
+                  <td style="width: 350px;">Purger la vis,
+vider la tr&eacute;mie et remettre le poste de travail en
+configuration initiale&nbsp;</td>
+
+
+                  <td style="width: 336px;">- La purge est
+faite 2pts <br>
+
+
+- La tr&eacute;mie est vid&eacute;e 1pt <br>
+
+
+- Le poste est en configuration initiale 2 pts</td>
+
+
+                  <td style="width: 56px; text-align: center;">6
+pts </td>
+
+
+                  <td style="width: 46px;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td><br>
+
+
+                  </td>
+
+
+                  <td style="width: 350px;">&nbsp;Participation
+&agrave; la vie
+de l&rsquo;&eacute;quipe de production.</td>
+
+
+                  <td style="height: 30px; width: 336px;"></td>
+
+
+                  <td style="text-align: center; width: 56px;">5
+pts </td>
+
+
+                  <td style="width: 46px;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td>C 06</td>
+
+
+                  <td style="width: 350px;">Respect des
+consignes.&nbsp;</td>
+
+
+                  <td style="height: 30px; width: 336px;"></td>
+
+
+                  <td style="text-align: center; width: 56px;">5
+pts</td>
+
+
+                  <td style="width: 46px;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="height: 30px;">C 18</td>
+
+
+                  <td style="width: 350px;">Soins de la
+r&eacute;daction du document</td>
+
+
+                  <td style="width: 336px;"></td>
+
+
+                  <td style="text-align: center; width: 56px;">5
+pts</td>
+
+
+                  <td style="width: 46px;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="height: 30px;"></td>
+
+
+                  <td style="width: 350px;"></td>
+
+
+                  <td style="width: 336px;"></td>
+
+
+                  <td style="text-align: center; width: 56px;"><span style="font-weight: bold;">108 pts</span></td>
+
+
+                  <td style="width: 46px;"></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </div>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>2.&nbsp;</big></big></td>
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>Tableau des relev&eacute;s<br>
+
+
+                  </big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="width: 900px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="5" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr style="font-family: Arial; font-weight: bold;" align="center">
+
+
+                  <td style="background-color: rgb(204, 204, 255);">Tableau
+des relev&eacute;s</td>
+
+
+                </tr>
+
+
+                <tr style="font-family: Arial; font-weight: bold; color: rgb(255, 255, 255);">
+
+
+                  <td style="background-color: rgb(204, 0, 0);">Condition
+d'essais</td>
+
+
+                </tr>
+
+
+                <tr style="font-family: Arial; font-weight: bold;">
+
+
+                  <td colspan="1" rowspan="1" style="width: 356px;">Machine : <span style="font-weight: normal;">. . .
+. . . . . . . . . . . . &nbsp;.</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . .</span><span style="font-weight: normal;"></span></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td><span style="font-family: Arial; font-weight: bold;">Temp&eacute;rature
+de chauffe: <br>
+
+
+                  <br>
+
+
+                  </span>
+                  
+                  <table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+
+
+                    <tbody>
+
+
+                      <tr>
+
+
+                        <td><img style="width: 427px; height: 170px;" alt="" src="image_180.png"><br>
+
+
+                        </td>
+
+
+                        <td style="font-family: Arial;">Buse:
+. . . . . . . . . . .<br>
+
+
+                        <br>
+
+
+Zone 4 : . . . . . . . . . . <br>
+
+
+                        <br>
+
+
+Zone 2 : . . . . . . . . . .<br>
+
+
+                        <br>
+
+
+Zone 1 : . . . . . . . . . .</td>
+
+
+                      </tr>
+
+
+                    
+                    </tbody>
+                  
+                  </table>
+
+
+                  <span style="font-family: Arial; font-weight: bold;"></span></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td><span style="font-family: Arial; font-weight: bold;">Mati&egrave;re:<br>
+
+
+                  </span>
+                  
+                  <table style="width: 800px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="0" cellspacing="0">
+
+
+                    <tbody>
+
+
+                      <tr>
+
+
+                        <td style="font-family: Arial; text-align: center;">Abr&eacute;viation
+                        </td>
+
+
+                        <td style="font-family: Arial; text-align: center;">Marque </td>
+
+
+                        <td style="font-family: Arial; text-align: center;">R&eacute;f&eacute;rence
+                        </td>
+
+
+                        <td style="font-family: Arial; text-align: center;">Densit&eacute;
+                        </td>
+
+
+                        <td style="font-family: Arial; text-align: center;">Disponibilit&eacute;
+                        <br>
+
+
+(oui/non)</td>
+
+
+                      </tr>
+
+
+                      <tr>
+
+
+                        <td style="font-family: Arial; text-align: center;">................</td>
+
+
+                        <td style="font-family: Arial; text-align: center;">................</td>
+
+
+                        <td style="font-family: Arial; text-align: center;">................</td>
+
+
+                        <td style="font-family: Arial; text-align: center;">................</td>
+
+
+                        <td style="font-family: Arial; text-align: center;">................</td>
+
+
+                      </tr>
+
+
+                    
+                    </tbody>
+                  
+                  </table>
+
+
+                  <br>
+
+
+                  </td>
+
+
+                </tr>
+
+
+                <tr style="font-family: Arial; color: rgb(255, 255, 255); font-weight: bold;">
+
+
+                  <td style="background-color: rgb(204, 0, 0);">Essai</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td><span style="font-family: Arial; font-weight: bold;">Essai:</span><br>
+
+
+                  <br>
+
+
+                  
+                  <table style="width: 800px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="0" cellspacing="0">
+
+
+                    <tbody>
+
+
+                      <tr>
+
+
+                        <td style="font-weight: bold; text-align: center; width: 150px; height: 30px; font-family: Arial;">Essai</td>
+
+
+                        <td style="font-weight: bold; text-align: center; width: 321px; font-family: Arial;">Masse
+de la
+purge</td>
+
+
+                        <td style="font-weight: bold; text-align: center; font-family: Arial;">Volume
+r&eacute;el</td>
+
+
+                      </tr>
+
+
+                      <tr>
+
+
+                        <td style="height: 30px; text-align: center; font-family: Arial;">Essai
+1</td>
+
+
+                        <td style="font-weight: bold; text-align: center; font-family: Arial;"></td>
+
+
+                        <td style="font-weight: bold; text-align: center; font-family: Arial;"></td>
+
+
+                      </tr>
+
+
+                      <tr>
+
+
+                        <td style="height: 30px; text-align: center; font-family: Arial;">Essai
+2</td>
+
+
+                        <td style="font-family: Arial;"></td>
+
+
+                        <td style="font-family: Arial;"></td>
+
+
+                      </tr>
+
+
+                      <tr>
+
+
+                        <td style="height: 30px; text-align: center; font-family: Arial;">Essai
+3</td>
+
+
+                        <td style="font-family: Arial;"></td>
+
+
+                        <td style="font-family: Arial;"></td>
+
+
+                      </tr>
+
+
+                      <tr>
+
+
+                        <td style="height: 30px; text-align: center; font-family: Arial;">Essai
+4</td>
+
+
+                        <td style="font-family: Arial;"></td>
+
+
+                        <td style="font-family: Arial;"></td>
+
+
+                      </tr>
+
+
+                      <tr>
+
+
+                        <td style="height: 30px; text-align: center; font-family: Arial;">Essai
+5</td>
+
+
+                        <td style="font-family: Arial;"></td>
+
+
+                        <td style="font-family: Arial;"></td>
+
+
+                      </tr>
+
+
+                    
+                    </tbody>
+                  
+                  </table>
+
+
+                  <br>
+
+
+                  </td>
+
+
+                </tr>
+
+
+                <tr style="font-family: Arial; font-weight: bold; color: rgb(255, 255, 255);">
+
+
+                  <td style="background-color: rgb(204, 0, 0);">Feuille
+de calculs</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; width: 356px;" colspan="1" rowspan="1">Calcul
+de la moyenne de la masse des purges :<br>
+
+
+                  <span style="font-weight: normal;">. . .
+. . . . . . . . . . . . &nbsp;.</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . .</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">
+. . . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . .
+.&nbsp;</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . . . .&nbsp;</span><span style="font-weight: normal;">. . . . . . . . . . . . . . .</span><span style="font-weight: normal;"> . . . . . . . . . . . . . . .
+&nbsp;.</span><span style="font-weight: normal;">.
+. . . . . . . . . . . . .</span> </td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>3.&nbsp;</big></big></td>
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3"></a>Proc&eacute;dure<br>
+
+
+                  </big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td> <big> </big><big> </big>
+            
+            <table style="width: 900px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="5" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr style="font-weight: bold; font-family: Arial;">
+
+
+                  <td style="text-align: center; background-color: rgb(204, 204, 255);" colspan="2" rowspan="1"><big>Proc&eacute;dure
+de mise en service <br>
+
+
+presse Boy 25 et Boy 50 </big></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; text-align: center; font-weight: bold; background-color: rgb(204, 204, 255);"><big>N&deg;
+                  </big></td>
+
+
+                  <td style="font-family: Arial; text-align: center; font-weight: bold; background-color: rgb(204, 204, 255);"><big>Op&eacute;rations</big></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; text-align: center;">1
+                  </td>
+
+
+                  <td style="font-family: Arial;">Mettre
+en service la presse (TP mise en service de la presse). <br>
+
+
+                  <br>
+
+
+                  </td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; text-align: center;">2</td>
+
+
+                  <td style="font-family: Arial;">Ouvrir
+les &eacute;nergies : eau, &eacute;lectricit&eacute; (TP
+mise en service de la presse). <br>
+
+
+                  </td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; text-align: center;">3</td>
+
+
+                  <td style="font-family: Arial;">V&eacute;rifier
+le bon fonctionnement de la machine : arr&ecirc;ts
+d&rsquo;urgence,
+des carters, des t&eacute;moins lumineux (TP mise en service de la
+presse).</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="background-color: rgb(204, 0, 0);"></td>
+
+
+                  <td style="background-color: rgb(204, 0, 0); color: rgb(255, 255, 255); font-family: Arial; font-weight: bold;">Faire
+valider par le professeur.</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; text-align: center; background-color: rgb(204, 204, 204);"></td>
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(204, 204, 204);">R&eacute;gler
+les param&egrave;tres de chauffage.<br>
+
+
+                  </td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td colspan="1" rowspan="1" style="background-color: rgb(255, 255, 255); font-family: Arial; text-align: center;"><span style="font-weight: bold;"></span> 4</td>
+
+
+                  <td style="font-family: Arial;"><span style="font-weight: bold;">S&eacute;lectionner la page
+temp&eacute;ratures zones de chauffage. <br>
+
+
+                  <br>
+
+
+                  </span>
+                  
+                  <table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+
+
+                    <tbody>
+
+
+                      <tr>
+
+
+                        <td style="width: 384px;">S&eacute;lectionner
+la page sur le volet rabattable et valider.&nbsp;</td>
+
+
+                        <td style="width: 450px;"><img style="width: 73px; height: 74px;" alt="" src="image_226.png"></td>
+
+
+                      </tr>
+
+
+                      <tr>
+
+
+                        <td style="width: 384px;">La page
+temp&eacute;ratures zones de chauffage s&rsquo;affiche.</td>
+
+
+                        <td style="width: 450px;"></td>
+
+
+                      </tr>
+
+
+                    
+                    </tbody>
+                  
+                  </table>
+
+
+                  <span style="font-weight: bold;"></span></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; text-align: center;">5
+                  </td>
+
+
+                  <td style="font-family: Arial;"><span style="font-weight: bold;">S&eacute;lectionner une zone
+de saisie. </span><br>
+
+
+                  <br>
+
+
+Utiliser les 4 fl&egrave;ches du volet rabattable, &darr; pour
+descendre, &uarr; pour monter, &rarr; pour aller &agrave;
+droite, &larr; pour aller &agrave; gauche pour
+s&eacute;lectionner la zone de saisie. <br>
+
+
+                  <br>
+
+
+Choisir la zone (cons &deg;C, Buse) :<br>
+
+
+                  <br>
+
+
+                  
+                  <div style="text-align: center;"><img style="width: 580px; height: 72px;" alt="" src="image_227.png"></div>
+
+
+                  </td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; text-align: center;">6</td>
+
+
+                  <td style="font-family: Arial;"><span style="font-weight: bold;">Rentrer les consignes. <br>
+
+
+                  <br>
+
+
+                  </span>
+                  
+                  <table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+
+
+                    <tbody>
+
+
+                      <tr>
+
+
+                        <td style="width: 396px;">Entrer
+la valeur 190 pour la zone buse. </td>
+
+
+                        <td style="width: 438px;"></td>
+
+
+                      </tr>
+
+
+                      <tr>
+
+
+                        <td style="width: 396px;">Valider
+la consigne avec la touche du clavier rabattable.</td>
+
+
+                        <td style="width: 438px;"><img style="width: 106px; height: 51px;" alt="" src="image_228.png"></td>
+
+
+                      </tr>
+
+
+                      <tr>
+
+
+                        <td style="width: 396px;">La
+consigne est prise en compte.</td>
+
+
+                        <td style="width: 438px;"></td>
+
+
+                      </tr>
+
+
+                    
+                    </tbody>
+                  
+                  </table>
+
+
+                  <span style="font-weight: bold;"></span><span style="font-weight: bold;"></span></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; text-align: center;">7</td>
+
+
+                  <td style="font-family: Arial;"><span style="font-weight: bold;">Rentrer les consignes. </span><br>
+
+
+                  <br>
+
+
+Entrer la valeur 180&deg; C pour la zone 4, 170&deg; C pour la
+zone 2, 160&deg; C pour la zone 1. <br>
+
+
+                  <br>
+
+
+Valider chaque consigne avec la touche du clavier rabattable. <br>
+
+
+                  <br>
+
+
+Les consignes sont prises en compte. <br>
+
+
+                  </td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="background-color: rgb(204, 0, 0); color: rgb(255, 255, 255); font-family: Arial; font-weight: bold;"></td>
+
+
+                  <td style="background-color: rgb(204, 0, 0); color: rgb(255, 255, 255); font-family: Arial; font-weight: bold;">Faire
+valider par le professeur.</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(204, 204, 204);"></td>
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(204, 204, 204);">R&eacute;gler
+les param&egrave;tres de chauffage en fonction des consignes du
+tableau.</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; text-align: center;">8</td>
+
+
+                  <td style="font-family: Arial;"><span style="font-weight: bold;">Rentrer les consignes. </span><br>
+
+
+                  <br>
+
+
+Rentrer les consignes du tableau des relev&eacute;s en fonction de
+la mati&egrave;re. </td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-weight: bold; font-family: Arial; background-color: rgb(204, 204, 204);"></td>
+
+
+                  <td style="font-weight: bold; font-family: Arial; background-color: rgb(204, 204, 204);">R&eacute;gler
+les param&egrave;tres de plastification.</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; text-align: center;">9</td>
+
+
+                  <td style="font-family: Arial;"><span style="font-weight: bold;">S&eacute;lectionner la page
+plastification. </span><br>
+
+
+                  <br>
+
+
+                  
+                  <table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+
+
+                    <tbody>
+
+
+                      <tr>
+
+
+                        <td style="width: 382px;">S&eacute;lectionner
+la page sur le volet rabattable et valider. </td>
+
+
+                        <td style="width: 452px;"><img style="width: 76px; height: 75px;" alt="" src="image_229.png"></td>
+
+
+                      </tr>
+
+
+                      <tr>
+
+
+                        <td style="width: 382px;">La page
+plastification s&rsquo;affiche.</td>
+
+
+                        <td style="width: 452px;"></td>
+
+
+                      </tr>
+
+
+                    
+                    </tbody>
+                  
+                  </table>
+
+
+                  </td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; text-align: center;">10</td>
+
+
+                  <td style="font-family: Arial;"><span style="font-weight: bold;">Rentrer les consignes. </span><br>
+
+
+                  <br>
+
+
+Rentrer les consignes de fa fiche plastification. </td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="background-color: rgb(204, 204, 204); font-weight: bold; font-family: Arial;"></td>
+
+
+                  <td style="background-color: rgb(204, 204, 204); font-weight: bold; font-family: Arial;">R&eacute;gler
+les param&egrave;tres injection phase de remplissage.</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial;">11</td>
+
+
+                  <td style="font-family: Arial;"><span style="font-weight: bold;">S&eacute;lectionner la page
+injection phase de remplissage. </span><br>
+
+
+                  <br>
+
+
+                  
+                  <table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+
+
+                    <tbody>
+
+
+                      <tr>
+
+
+                        <td style="width: 372px;">S&eacute;lectionner
+la page sur le volet rabattable et valider.</td>
+
+
+                        <td style="width: 462px;"><img style="width: 76px; height: 75px;" alt="" src="image_230.png"></td>
+
+
+                      </tr>
+
+
+                      <tr>
+
+
+                        <td style="width: 372px;"><br>
+
+
+La page plastification s&rsquo;affiche.</td>
+
+
+                        <td style="width: 462px;"></td>
+
+
+                      </tr>
+
+
+                    
+                    </tbody>
+                  
+                  </table>
+
+
+                  </td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial;">12</td>
+
+
+                  <td style="font-family: Arial;"><span style="font-weight: bold;">Rentrer les consignes. </span><br>
+
+
+                  <br>
+
+
+Rentrer les consignes de fa fiche injection phase de remplissage.</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(204, 204, 204);"></td>
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(204, 204, 204);">R&eacute;gler
+les param&egrave;tres injection phase de maintien.&nbsp; </td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial;">13</td>
+
+
+                  <td style="font-family: Arial;"><span style="font-weight: bold;">S&eacute;lectionner la page
+injection phase de maintien. </span><br>
+
+
+                  <br>
+
+
+                  
+                  <table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+
+
+                    <tbody>
+
+
+                      <tr>
+
+
+                        <td style="width: 384px;">S&eacute;lectionner
+la page sur le volet rabattable et valider. </td>
+
+
+                        <td style="width: 450px;"><img style="width: 76px; height: 75px;" alt="" src="image_232.png"></td>
+
+
+                      </tr>
+
+
+                      <tr>
+
+
+                        <td style="width: 384px;">La page
+plastification s&rsquo;affiche.&nbsp;</td>
+
+
+                        <td style="width: 450px;"></td>
+
+
+                      </tr>
+
+
+                    
+                    </tbody>
+                  
+                  </table>
+
+
+                  </td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial;">14</td>
+
+
+                  <td style="font-family: Arial;"><span style="font-weight: bold;">Rentrer les consignes. </span><br>
+
+
+                  <br>
+
+
+Rentrer les consignes de fa fiche injection phase de maintien.</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="background-color: rgb(204, 0, 0); color: rgb(255, 255, 255); font-family: Arial; font-weight: bold;"></td>
+
+
+                  <td style="background-color: rgb(204, 0, 0); color: rgb(255, 255, 255); font-family: Arial; font-weight: bold;">Faire
+valider par le professeur.</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(204, 204, 204);"></td>
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(204, 204, 204);">Mettre
+les chauffes en route.</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial;">15</td>
+
+
+                  <td style="font-family: Arial;">
+                  
+                  <table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+
+
+                    <tbody>
+
+
+                      <tr>
+
+
+                        <td style="width: 230px; text-align: center;"><img style="width: 206px; height: 260px;" alt="" src="image_231.png"></td>
+
+
+                        <td style="width: 604px;">L&rsquo;allumage
+des chauffes s&rsquo;effectue &agrave; l&rsquo;aide du
+commutateur (S80) &agrave; deux positions &bdquo;Chauffage
+ARRET&ldquo; (0) et &bdquo;Chauffage
+pr&eacute;par&eacute;&ldquo; (1) ainsi
+qu&rsquo;&agrave; l&rsquo;aide du bouton-poussoir lumineux
+(S80E) &bdquo;Chauffage pr&ecirc;t&ldquo;. <br>
+
+
+                        <br>
+
+
+- Mettre le S80 &agrave; 1 ; <br>
+
+
+                        <br>
+
+
+- appuyer sur le bouton poussoir S80E (bouton voyant allum&eacute;)
+                        </td>
+
+
+                      </tr>
+
+
+                    
+                    </tbody>
+                  
+                  </table>
+
+
+                  </td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; background-color: rgb(204, 0, 0);"></td>
+
+
+                  <td style="background-color: rgb(204, 0, 0); color: rgb(255, 255, 255); font-family: Arial; font-weight: bold;">Faire
+valider par le professeur.</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; background-color: rgb(204, 204, 204);"></td>
+
+
+                  <td style="font-family: Arial; background-color: rgb(204, 204, 204);"><span style="font-weight: bold;">Pr&eacute;paration de la
+mati&egrave;re.</span></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial;">16</td>
+
+
+                  <td style="font-family: Arial;"><span style="font-weight: bold;"></span>Attendre que les
+chauffes soient &agrave; temp&eacute;rature. <br>
+
+
+                  <br>
+
+
+                  
+                  <div style="text-align: center;"><img style="width: 592px; height: 97px;" alt="" src="image_233.png"><br>
+
+
+                  <br>
+
+
+                  </div>
+
+
+Regarder la temp&eacute;rature r&eacute;elle dans le fourreau
+par rapport aux consignes que vous avez rentr&eacute;. <br>
+
+
+                  <br>
+
+
+Si l&rsquo;&eacute;cart entre la valeur r&eacute;elle et la
+consigne est trop importante, la presse indique une alarme (voyant
+allum&eacute;). </td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial;">17</td>
+
+
+                  <td style="font-family: Arial;">Pr&eacute;parer
+un godet de mati&egrave;re et le verser dans le fourreau.</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(204, 204, 204);"></td>
+
+
+                  <td style="font-family: Arial; font-weight: bold; background-color: rgb(204, 204, 204);">Injection
+(purge).</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial;">18</td>
+
+
+                  <td style="font-family: Arial;">Sur le
+tableau, appuyer sur le bouton de rotation de la vis (touche
+plastification &agrave; droite) jusqu&rsquo;&agrave;
+l&rsquo;arr&ecirc;t de la vis. <br>
+
+
+                  <br>
+
+
+                  
+                  <div style="text-align: center;"><img style="width: 325px; height: 72px;" alt="" src="image_234.png"><br>
+
+
+                  </div>
+
+
+                  <br>
+
+
+V&eacute;rifier que la led fin de dosage soit allum&eacute;. <br>
+
+
+                  </td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial;">19</td>
+
+
+                  <td style="font-family: Arial;">V&eacute;rifier
+que la led d&eacute;compression soit allum&eacute;. <br>
+
+
+                  <br>
+
+
+                  
+                  <div style="text-align: center;"><img style="width: 340px; height: 75px;" alt="" src="image_235.png"><br>
+
+
+                  </div>
+
+
+                  <br>
+
+
+Si la d&eacute;compression n&rsquo;est pas faite, appuyer
+d&eacute;compression jusqu&rsquo;au moment ou la led
+s&rsquo;allume. <br>
+
+
+                  </td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial;">20</td>
+
+
+                  <td style="font-family: Arial;">Appuyer
+et maintenir le bouton injection jusqu&rsquo;&agrave; la fin de
+la phase d&rsquo;injection. <br>
+
+
+                  <br>
+
+
+                  
+                  <div style="text-align: center;"><img style="width: 431px; height: 74px;" alt="" src="image_236.png"><br>
+
+
+                  </div>
+
+
+                  <br>
+
+
+                  </td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial;">21</td>
+
+
+                  <td style="font-family: Arial;">Ramasser
+la purge. Attention aux EPI. </td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial;">22</td>
+
+
+                  <td style="font-family: Arial;">R&eacute;p&eacute;ter
+les op&eacute;rations 18 &agrave; 21, 5 fois.</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-weight: bold; font-family: Arial; background-color: rgb(204, 204, 204);"><br>
+
+
+                  </td>
+
+
+                  <td style="font-weight: bold; font-family: Arial; background-color: rgb(204, 204, 204);">Arr&ecirc;t
+de la machine et remettre le poste de travail en &eacute;tat</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial;">23</td>
+
+
+                  <td style="font-family: Arial;">Purger
+la machine (&eacute;tape 18 &agrave; 21) jusqu&rsquo;au
+moment ou la vis de plastification n&rsquo;arrive plus &agrave;
+doser. </td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; background-color: rgb(204, 0, 0);"></td>
+
+
+                  <td style="background-color: rgb(204, 0, 0); color: rgb(255, 255, 255); font-family: Arial; font-weight: bold;">Faire
+valider par le professeur.</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial;">24</td>
+
+
+                  <td style="font-family: Arial;">Eteindre
+les chauffes. <br>
+
+
+&nbsp; &nbsp; &nbsp;- appuyer sur le bouton poussoir S80E
+(bouton voyant &eacute;teint) <br>
+
+
+&nbsp; &nbsp; &nbsp;- Mettre
+le S80 &agrave; 0&nbsp;</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial;">25</td>
+
+
+                  <td style="font-family: Arial;">Arr&ecirc;ter
+la machine (TP mise en service de la presse).</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial;">26</td>
+
+
+                  <td style="font-family: Arial;">Fermer
+les &eacute;nergies : eau, &eacute;lectricit&eacute; (TP
+mise en service de la
+presse).&nbsp;</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial;">27</td>
+
+
+                  <td style="font-family: Arial;">Nettoyer
+et remettre le poste de travail en &eacute;tat.&nbsp;</td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; background-color: rgb(204, 0, 0);"></td>
+
+
+                  <td style="background-color: rgb(204, 0, 0); color: rgb(255, 255, 255); font-family: Arial; font-weight: bold;">Faire
+valider par le professeur.</td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>4.&nbsp;</big></big></td>
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="4"></a>Pages &eacute;cran<br>
+
+
+                  </big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr align="center">
+
+
+            <td style="height: 10px;"><img style="width: 736px; height: 644px;" alt="" src="image_237.png"></td>
+
+
+          </tr>
+
+
+          <tr align="center">
+
+
+            <td style="height: 10px;"><br>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px; text-align: center;"><img style="width: 735px; height: 814px;" alt="" src="image_238.png"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr align="center">
+
+
+            <td><img style="width: 734px; height: 841px;" alt="" src="image_239.png"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr align="center">
+
+
+            <td><img style="width: 725px; height: 678px;" alt="" src="image_240.png"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp; <big><big>5.&nbsp;</big></big></td>
+
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="5"></a>Fichiers</big></big></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+
+              <tbody>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="tp_premiere_injection.docx">Fichier word</a>
+&nbsp; &nbsp;</td>
+
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="height: 5px;"></td>
+
+
+                  <td style="text-align: center;"></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="tp_premiere_injection.pdf" target="_blank">Fichier
+PDF</a>
+&nbsp; &nbsp;</td>
+
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+
+                </tr>
+
+
+              
+              </tbody>
+            
+            </table>
+
+
+            </td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td style="height: 10px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td>
+            
+            <hr style="width: 100%; height: 2px;"></td>
+
+
+          </tr>
+
+
+          <tr>
+
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+
+          </tr>
+
+
+        
+        </tbody>
+      
+      </table>
+
+
+      </td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<br>
+
+
+</body>
+</html>

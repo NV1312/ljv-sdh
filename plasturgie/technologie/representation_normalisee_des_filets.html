@@ -1,0 +1,658 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+  <title>Bac pro PLC -Mondeville - repr&eacute;sentation
+normalis&eacute;e des filets</title>
+
+
+  <meta content="ressources" name="description">
+
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link href="css" rel="stylesheet" type="text/css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/dropdown.vertical.css">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="css/default.css">
+
+  <style type="text/CSS">
+#menu {
+height:10px;
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+background-color:#404040;
+}
+#menu li a {
+display:block;
+width:100px;
+color:#ffffff;
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+}
+#menu ul li ul {
+display:none;
+}
+#menu ul li:hover ul {
+display:block;
+}
+#menu li:hover ul li {
+float:none;
+}
+  </style><!--[if !IE]> <-->
+  <style type="text/CSS">#menu li ul {
+position:absolute;
+}
+  </style><!----><!--[endif]--><!--[if IE 8]-->
+  <style type="text/css">
+a:hover {
+color:red;
+text-decoration:none;
+}
+  </style><!--[endif]-->
+</head>
+
+
+<body style="color: rgb(64, 64, 64); background-color: rgb(255, 255, 255);" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+  <tbody>
+
+    <tr>
+
+      <td>
+      <table style="width: 1050px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+        <tbody>
+
+          <tr>
+
+            <td style="vertical-align: top; height: 110px;"><img src="../../images/image_001.png" alt="" style="width: 1050px; height: 110px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="background-color: rgb(64, 64, 64);">
+            <div id="menu">
+            <ul>
+
+              <li style="font-family: Arial;"><a href="../../accueil.html">Accueil </a></li>
+
+              <li style="font-family: Arial;"><a href="../generalites.html">G&eacute;n&eacute;ralit&eacute;s</a></li>
+
+              <li style="font-family: Arial;"><a href="../classe.html">Classes</a></li>
+
+              <li style="font-family: Arial;"><a href="../pfmp.html">PFMP</a></li>
+
+              <li style="font-family: Arial;"><a href="../referentiel.html" ="">R&eacute;f&eacute;rentiel</a></li>
+
+              <li style="font-family: Arial;"><a href="../ressources.html">Ressources</a></li>
+
+              <li style="font-family: Arial;"><a href="../dictionnaire.html">Dictionnaire</a></li>
+
+              <li style="font-family: Arial;"><a href="../atelier.html">Atelier</a></li>
+
+            </ul>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);" align="center">
+
+            <td><big><big><big><span style="font-family: Arial; font-weight: bold;">Repr&eacute;sentation
+normalis&eacute;e des filets</span></big></big></big></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 607px;"><span style="font-family: Arial;"><span style="font-weight: bold;">1. <a href="#1"><span style="text-decoration: underline;">Repr&eacute;sentation
+des tiges filet&eacute;es (vis)</span></a></span></span><span style="font-family: Arial;"></span><span style="font-family: Arial;"><span style="font-weight: bold;"><a href="#13"><span style="text-decoration: underline;"></span></a></span><br style="font-weight: bold;">
+
+                  </span><span style="font-family: Arial;"><span style="font-weight: bold;"></span> <br style="font-weight: bold;">
+
+                  <span style="font-weight: bold;">2. <a href="#2">Repr&eacute;sentation des trous
+taraud&eacute;s </a><br>
+
+                  </span></span><span style="font-family: Arial;"><span style="font-weight: bold;"><a href="representation_de_la_cotation.html#3"><span style="text-decoration: underline;"></span></a></span></span><span style="font-family: Arial; font-weight: bold;"><span style="text-decoration: underline;"></span></span><span style="font-family: Arial; font-weight: bold;">&nbsp;
+&nbsp;</span><span style="font-family: Arial; font-weight: bold;"></span><span style="font-family: Arial; font-weight: bold;"><span style="text-decoration: underline;"></span></span><span style="font-family: Arial;"><span style="font-weight: bold;"></span></span><br style="font-weight: bold;">
+
+                  <span style="font-family: Arial;"><span style="font-weight: bold;">3. <a href="#3"><span style="text-decoration: underline;">Assemblage des
+&eacute;l&eacute;ments filet&eacute;s</span></a></span><br style="font-weight: bold;">
+
+                  </span><span style="font-family: Arial;"></span><span style="font-family: Arial;"><br style="font-weight: bold;">
+
+                  <span style="font-weight: bold;"><a href="#6"><span style="text-decoration: underline;"></span></a></span></span><span style="font-family: Arial;"><span style="font-weight: bold;"><a href="le_dessin_technique.html#annexe"><span style="text-decoration: underline;"></span></a></span><span style="font-weight: bold;"><a href="atomes_et_molecules_des_matieres_plastiques.html#5"><span style="text-decoration: underline;"></span></a></span></span><span style="font-family: Arial;"><span style="font-weight: bold;"></span><span style="font-weight: bold;"><a href="le_dessin_technique.html#5"><span style="text-decoration: underline;"></span></a></span></span><span style="font-family: Arial;"><span style="font-weight: bold;"><a href="#annexe"><span style="text-decoration: underline;"></span></a></span><span style="font-weight: bold;"><a href="atomes_et_molecules_des_matieres_plastiques.html#5"><span style="text-decoration: underline;"></span></a></span><span style="font-weight: bold;"></span></span><span style="font-family: Arial;"><span style="font-weight: bold;"></span><span style="font-weight: bold;"><a href="#5"><span style="text-decoration: underline;"></span></a></span><span style="font-weight: bold;">4. <a href="#4">Cotation
+des &eacute;l&eacute;ments filet&eacute;s</a><br>
+
+                  </span></span><span style="font-family: Arial;"><br style="font-weight: bold;">
+
+                  <span style="font-weight: bold;"><a href="representation_normalisee_des_filets.html#6"><span style="text-decoration: underline;"></span></a></span></span><span style="font-family: Arial;"><span style="font-weight: bold;"><a href="le_dessin_technique.html#annexe"><span style="text-decoration: underline;"></span></a></span><span style="font-weight: bold;"><a href="atomes_et_molecules_des_matieres_plastiques.html#5"><span style="text-decoration: underline;"></span></a></span></span><span style="font-family: Arial;"><span style="font-weight: bold;"></span><span style="font-weight: bold;"><a href="le_dessin_technique.html#5"><span style="text-decoration: underline;"></span></a></span></span><span style="font-family: Arial;"><span style="font-weight: bold;"><a href="representation_normalisee_des_filets.html#annexe"><span style="text-decoration: underline;"></span></a></span><span style="font-weight: bold;"><a href="atomes_et_molecules_des_matieres_plastiques.html#5"><span style="text-decoration: underline;"></span></a></span><span style="font-weight: bold;"></span></span><span style="font-family: Arial;"><span style="font-weight: bold;"></span><span style="font-weight: bold;"><a href="representation_normalisee_des_filets.html#5"><span style="text-decoration: underline;"></span></a></span><span style="font-weight: bold;">5. <a href="#5">Fichiers</a></span></span></td>
+
+                  <td style="width: 437px; text-align: center;"><img style="width: 500px; height: 242px;" alt="" src="image090.png"><br>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td style="text-align: justify;">La
+repr&eacute;sentation conventionnelle permet un dessin
+simplifi&eacute; des filetages et pi&egrave;ces
+filet&eacute;es. <br>
+
+            <br>
+
+La normalisation est internationale (ISO). Le principe est : <br>
+
+            <br>
+
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="width: 30px;">&nbsp;
+&nbsp; &nbsp;-</td>
+
+                  <td>le sommet des filets est limit&eacute;
+par un trait fort ; <br>
+
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td>&nbsp; &nbsp; &nbsp;-</td>
+
+                  <td>le fond par un trait continu fin; </td>
+
+                </tr>
+
+                <tr>
+
+                  <td>&nbsp; &nbsp; &nbsp;-</td>
+
+                  <td>le chanfrein est normalement omis dans les
+vues en bout ; <br>
+
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td>&nbsp; &nbsp; &nbsp;-</td>
+
+                  <td>un &frac34; de cercle dans les vues en
+bout pour repr&eacute;senter les filetages et taraudages (fond des
+filets) ; </td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="vertical-align: top;">&nbsp;
+&nbsp; &nbsp;-</td>
+
+                  <td>dans le cas des filetages cach&eacute;s
+(formes int&eacute;rieures...), les sommets
+des filets, les fonds de filets et les limites du filetage sont
+repr&eacute;sent&eacute;s par des traits interrompus fins.</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial; color: rgb(64, 64, 64);" align="justify">
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>1.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="1"></a>Repr&eacute;sentation des tiges
+filet&eacute;es (vis)</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="text-align: center;"></div>
+
+            <div style="margin-left: 52px;">
+            <div style="text-align: center;"><img style="width: 779px; height: 425px;" alt="" src="image091.png"><br>
+
+            </div>
+
+            <br>
+
+            <span style="font-weight: bold; text-decoration: underline;">Exemple
+:</span>
+repr&eacute;sentation d&rsquo;une vis &agrave;
+t&ecirc;te hexagonale<br>
+
+            <br>
+
+            <div style="text-align: center;"><img style="width: 765px; height: 437px;" alt="" src="image092.png"><br>
+
+            </div>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>2.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="2"></a>Repr&eacute;sentation des trous
+taraud&eacute;s <br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr style="color: rgb(64, 64, 64);">
+
+            <td style="height: 10px;"><br>
+
+            </td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="text-align: center;"></div>
+
+            <div style="margin-left: 52px;">
+            <div style="text-align: center;"><span style="font-weight: bold; text-decoration: underline;"><img style="width: 700px; height: 506px;" alt="" src="image093.png"></span><br>
+
+            <span style="font-weight: bold; text-decoration: underline;"></span></div>
+
+            <span style="font-weight: bold; text-decoration: underline;"><br>
+
+Exemple :</span><span style="text-decoration: underline;"></span>
+repr&eacute;sentation d&rsquo;un &eacute;crou hexagonal<br>
+
+            <br>
+
+            <div style="text-align: center;"><img style="width: 737px; height: 285px;" alt="" src="image094.png"></div>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"> </td>
+
+          </tr>
+
+          <tr style="font-family: Arial; font-weight: bold;">
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>3.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="3"></a>Assemblage des
+&eacute;l&eacute;ments filet&eacute;s<br>
+
+                  </big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr style="font-family: Arial;">
+
+            <td>
+            <div style="margin-left: 52px;">Les filetages
+ext&eacute;rieurs cachent toujours les filetages
+int&eacute;rieurs.<br>
+
+            <br>
+
+            <div style="text-align: center;"><img style="width: 800px; height: 255px;" alt="" src="image095.png"><br>
+
+            </div>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"><br>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>4.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="4"></a>Cotation des
+&eacute;l&eacute;ments filet&eacute;s</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div style="margin-left: 52px;">
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; text-align: justify;">Le
+profil utilis&eacute; et ses dimensions sont indiqu&eacute;s &agrave;
+l&rsquo;aide des d&eacute;signations normalis&eacute;es.
+<br>
+                  <br>
+Le diam&egrave;tre &agrave; cot&eacute; est le diam&egrave;tre nominal, commun &agrave; la vis et &agrave; l&rsquo;&eacute;crou.
+                  <br>
+                  <br>
+Le sens de l&rsquo;h&eacute;lice est indiqu&eacute; par :
+                  <br>
+&nbsp; &nbsp; &nbsp;- RH h&eacute;lice &agrave; droite
+                  <br>
+&nbsp; &nbsp; &nbsp;- LH h&eacute;lice &agrave; gauche
+                  <br>
+                  <br>
+En r&egrave;gle g&eacute;n&eacute;rale, le sens de l'h&eacute;lice &agrave; droite n'est jamais.
+                  </td>
+
+                  <td><img style="width: 500px; height: 449px;" alt="" src="image096.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(153, 153, 153); width: 50px;">&nbsp;
+                  <big><big>5.&nbsp;</big></big></td>
+
+                  <td style="width: 960px; font-family: Arial; font-weight: bold; background-color: rgb(153, 153, 153);"><big><big><a name="5"></a>Fichiers</big></big></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <table style="width: 300px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="representation_normalisee_des_filets.docx">Fichier
+word </a>&nbsp;
+&nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 25px; height: 25px;" alt="" src="../../images/word.png"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="height: 5px;"></td>
+
+                  <td style="text-align: center;"></td>
+
+                </tr>
+
+                <tr>
+
+                  <td style="font-family: Arial; color: rgb(0, 0, 0); text-align: right;"><a href="representation_normalisee_des_filets.pdf" target="_blank">Fichier
+PDF</a>
+&nbsp; &nbsp;</td>
+
+                  <td style="height: 25px; width: 25px; text-align: center;"><img style="width: 18px; height: 25px;" alt="" src="../../images/pdf.png"></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="height: 10px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <hr style="width: 100%; height: 2px;"></td>
+
+          </tr>
+
+          <tr>
+
+            <td><img style="width: 1050px; height: 20px;" alt="" src="../../images/image_002.png"></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+
+</body>
+</html>
